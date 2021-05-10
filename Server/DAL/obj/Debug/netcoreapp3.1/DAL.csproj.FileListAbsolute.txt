@@ -1,0 +1,12 @@
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\bin\Debug\netcoreapp3.1\BO.dll
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\bin\Debug\netcoreapp3.1\BO.pdb
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

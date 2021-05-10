@@ -1,0 +1,8 @@
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.csprojAssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.MainForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.Properties.Resources.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.csproj.GenerateResource.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.AssemblyInfoInputs.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.AssemblyInfo.cs
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\DesktopClient\obj\Debug\net5.0-windows\DesktopClient.csproj.CoreCompileInputs.cache

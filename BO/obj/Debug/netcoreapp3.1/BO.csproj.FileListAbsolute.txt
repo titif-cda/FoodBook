@@ -1,0 +1,8 @@
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\bin\Debug\netcoreapp3.1\BO.deps.json
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\bin\Debug\netcoreapp3.1\BO.dll
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\bin\Debug\netcoreapp3.1\BO.pdb
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\obj\Debug\netcoreapp3.1\BO.AssemblyInfoInputs.cache
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\obj\Debug\netcoreapp3.1\BO.AssemblyInfo.cs
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\obj\Debug\netcoreapp3.1\BO.csproj.CoreCompileInputs.cache
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\obj\Debug\netcoreapp3.1\BO.dll
+C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\BO\obj\Debug\netcoreapp3.1\BO.pdb

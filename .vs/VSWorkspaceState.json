@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Server",
+    "\\Server\\API",
+    "\\Server\\API\\Controllers",
+    "\\Server\\BLL",
+    "\\Server\\DAL",
+    "\\Server\\DAL\\Repository"
+  ],
+  "SelectedNode": "\\Server\\API\\API.csproj",
+  "PreviewInSolutionExplorer": false
+}

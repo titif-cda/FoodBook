@@ -10,17 +10,16 @@ namespace BLLC.Services
       
        
         Task<Ingredient> CreateIngredient(Ingredient ingredient);
+        Task<PageResponse<Ingredient>> GetAllIngredients(PageRequest pageRequest);
+        Task<Ingredient> ModifyIngredient(Ingredient ingredient);
+        Task<bool> DeleteIngredient(Ingredient ingredient);
+
+
 
         Task<Client> CreateClient(Client client);
         Task<PageResponse<Client>> GetAllClients(PageRequest pageRequest);
 
         Task<Client> PutClient(Client client);
       
-        Task<PageResponse<Ingredient>> GetAllIngredients(PageRequest pageRequest);
-       
-       
-        Task<Ingredient> ModifyIngredient(Ingredient ingredient);
-       
-        Task<bool> DeleteIngredient(Ingredient ingredient);
     }
 }

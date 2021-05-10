@@ -81,8 +81,8 @@ namespace BLLC.Services
             {
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
-                    Client ingredientModified = await JsonSerializer.DeserializeAsync<Client>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return ingredientModified;
+                    Client clientModified = await JsonSerializer.DeserializeAsync<Client>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return clientModified;
                 }
             }
             else
@@ -108,6 +108,91 @@ namespace BLLC.Services
             }
             return false;
 
+        }
+
+
+        #endregion
+        #region Reservations
+        public async Task<Reservation> CreateReservations(Reservation reservation)
+        {
+             var reponse = await _httpClient.PostAsync("reservations",
+                new StringContent(
+                    JsonSerializer.Serialize(reservation), Encoding.UTF8, "application/json"
+                    )
+                );
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Reservation reservationtNew = await JsonSerializer.DeserializeAsync<Reservation>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return reservationtNew;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<PageResponse<Reservation>> GetAllReservations(PageRequest pageRequest)
+        {
+            //  var reponse = await _httpClient.GetAsync($"books?page={pageRequest.Page}&pageSize={pageRequest.PageSize}");
+            var reponse = await _httpClient.GetAsync($"reservations{pageRequest.ToUriQuery()}");
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    PageResponse<Reservation> reservationPage = await JsonSerializer.DeserializeAsync<PageResponse<Reservation>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return reservationPage;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<Reservation> PutReservations(Reservation reservation)
+        {
+            var reponse = await _httpClient.PutAsync($"reservations/" + reservation.IdResa
+                ,
+                new StringContent(
+                    JsonSerializer.Serialize(reservation), Encoding.UTF8, "application/json"
+                    )
+                );
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Reservation reservationModified = await JsonSerializer.DeserializeAsync<Reservation>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return reservationModified;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<bool> DeleteReservations(Reservation reservation)
+        {
+            if (reservation?.IdResa != null)
+            {
+                try
+                {
+                    await _httpClient.DeleteAsync($"reservations/{reservation.IdResa}");
+                    return true;
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    return false;
+                }
+            }
+            return false;
         }
         #endregion
     }

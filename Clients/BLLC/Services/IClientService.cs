@@ -16,5 +16,12 @@ namespace BLLC.Services
 
         Task<Client> PutClient(Client client);
         Task<bool> DeleteClient(Client client);
+
+
+        Task<Reservation> CreateReservations(Reservation reservation);
+        Task<PageResponse<Reservation>> GetAllReservations(PageRequest pageRequest);
+
+        Task<Reservation> PutReservations(Reservation reservation);
+        Task<bool> DeleteReservations(Reservation reservation);
     }
 }

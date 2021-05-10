@@ -43,10 +43,10 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Permert de récupérer un clients avec son identifiant unique
+        /// Permet de récupérer un client avec son identifiant unique
         /// </summary>
         /// <param name="id">Identifiant unique du clients</param>
-        /// <returns>Renvoi le clients définit par l'identifiant unique</returns>
+        /// <returns>Renvoi le client définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

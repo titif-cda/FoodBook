@@ -13,7 +13,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\bin\Debug\net5.0\BO.de
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\bin\Debug\net5.0\BO.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\bin\Debug\net5.0\ref\BO.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\bin\Debug\net5.0\BO.pdb
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\obj\Debug\net5.0\BO.csprojAssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\obj\Debug\net5.0\BO.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\obj\Debug\net5.0\BO.AssemblyInfoInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\BO\obj\Debug\net5.0\BO.AssemblyInfo.cs

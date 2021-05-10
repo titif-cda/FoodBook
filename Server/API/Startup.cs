@@ -30,7 +30,7 @@ namespace API
         {
             services.AddControllers();
 
-           
+
             //Unique dans toute mon application (même instance dans toute l'aplication)
 
             ////A chaque fois qu'on demande un Ilibrairi service => nouvelle instance
@@ -40,7 +40,7 @@ namespace API
             //services.AddScoped<ILibrairiService, LibrairiService>();
 
 
-            //Changer le mode d'exploration d api avec la version dans l'url
+            //Versioning
             services.AddApiVersioning(config =>
             {
                 config.ReportApiVersions = true;
@@ -48,13 +48,13 @@ namespace API
                 //config.AssumeDefaultVersionWhenUnspecified = true;
             });
 
-            //Documentation Client API
+            //Changer le mode d'exploration d'api avec la version dans l'url!
             services.AddVersionedApiExplorer(option =>
             {
                 option.SubstituteApiVersionInUrl= true;
 
             });
-            // Register the Swagger services
+            //Documentation Client API
             services.AddOpenApiDocument(config =>
             {
                 config.DocumentName = "v1.0";

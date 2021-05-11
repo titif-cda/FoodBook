@@ -21,6 +21,6 @@
 	  <EmbeddedResource Include="_site\**\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties docfx_1json__JsonSchema="https://json.schemastore.org/drone.json" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties docfx_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

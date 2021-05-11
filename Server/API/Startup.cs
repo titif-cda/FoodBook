@@ -107,8 +107,7 @@ namespace API
                 endpoints.MapControllers();
             });
 
-        });
-            // MiddleWare docFx
+
             app.UseDocFx(config =>
             {
                 config.roothPath = "/doc";

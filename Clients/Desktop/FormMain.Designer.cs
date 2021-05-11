@@ -68,7 +68,7 @@ namespace Desktop
             this.formMainTbl.Name = "formMainTbl";
             this.formMainTbl.RowCount = 1;
             this.formMainTbl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.formMainTbl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.formMainTbl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.formMainTbl.Size = new System.Drawing.Size(1089, 513);
             this.formMainTbl.TabIndex = 0;
             // 
@@ -129,6 +129,7 @@ namespace Desktop
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

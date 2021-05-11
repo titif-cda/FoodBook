@@ -88,7 +88,11 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Permet de supprimer un Client par le biais de son Identifiant
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -107,7 +111,12 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Permet de modifier un client grâce à son identifiant
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="client"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

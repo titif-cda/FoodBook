@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BLL;
+using DocFx.AspNetCore;
 
 namespace API
 {
@@ -30,6 +31,7 @@ namespace API
         {
             services.AddControllers();
 
+            services.AddBLL();
 
             //Unique dans toute mon application (même instance dans toute l'aplication)
 
@@ -44,14 +46,15 @@ namespace API
             services.AddApiVersioning(config =>
             {
                 config.ReportApiVersions = true;
-                config.DefaultApiVersion = new ApiVersion(1, 0);
-                //config.AssumeDefaultVersionWhenUnspecified = true;
+               
             });
 
             //Changer le mode d'exploration d'api avec la version dans l'url!
             services.AddVersionedApiExplorer(option =>
             {
+               
                 option.SubstituteApiVersionInUrl= true;
+               
 
             });
             //Documentation Client API
@@ -61,7 +64,7 @@ namespace API
                 config.PostProcess = document =>
                 {
                     document.Info.Version = "v1";
-                    document.Info.Title = "Public API connector";
+                    document.Info.Title = "FoodBook Abdel";
                     document.Info.Description = "A simple ASP.NET Core web API";
                     document.Info.TermsOfService = "None";
                     document.Info.Contact = new NSwag.OpenApiContact
@@ -72,7 +75,7 @@ namespace API
                     };
                     document.Info.License = new NSwag.OpenApiLicense
                     {
-                        Name = "Use under LICX",
+                        Name = "Api FoodBook",
                         Url = ""
                     };
                 };
@@ -80,7 +83,7 @@ namespace API
 
             });
 
-            services.AddBLL();
+         
 
 
         }
@@ -104,7 +107,12 @@ namespace API
                 endpoints.MapControllers();
             });
 
-
+        });
+            // MiddleWare docFx
+            app.UseDocFx(config =>
+            {
+                config.roothPath = "/doc";
+            });
             // MiddleWare de generation du OpenApi.Json
             app.UseOpenApi(config =>
             {

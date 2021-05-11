@@ -18,7 +18,7 @@ namespace BLLC.Services
         public ClientService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:5001/api/");
+            _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
             
         }
         #region Client

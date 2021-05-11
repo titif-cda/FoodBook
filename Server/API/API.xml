@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:API.Controllers.ClientsController.GetAll(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des clients
+            </summary>
+            <returns>La liste des clients</returns>
+        </member>
+        <member name="M:API.Controllers.ClientsController.GetClientById(System.Int32)">
+            <summary>
+            Permet de récupérer un client avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du clients</param>
+            <returns>Renvoi le client définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.ClientsController.CreateClient(BO.Entity.Client)">
+            <summary>
+            Créer un clients et l'ajoute en BDD
+            </summary>
+            <param name="book">clients à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le clients avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.ClientsController.DeleteClient(System.Int32)">
+            <summary>
+            Permet de supprimer un Client par le biais de son Identifiant
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ClientsController.ModifyClient(System.Int32,BO.Entity.Client)">
+            <summary>
+            Permet de modifier un client grâce à son identifiant
+            </summary>
+            <param name="id"></param>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.IngredientsController.GetAll(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des livres
+            </summary>
+            <returns>La liste des livres</returns>
+        </member>
+        <member name="M:API.Controllers.IngredientsController.GetIngredientById(System.Int32)">
+            <summary>
+            Permert de récupérer un livre avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du livre</param>
+            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.IngredientsController.CreateIngredient(BO.Entity.Ingredient)">
+            <summary>
+            Créer un livre et l'ajoute en BDD
+            </summary>
+            <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le livre avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.MenusController.GetAll(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des livres
+            </summary>
+            <returns>La liste des livres</returns>
+        </member>
+        <member name="M:API.Controllers.MenusController.GetMenuById(System.Int32)">
+            <summary>
+            Permert de récupérer un livre avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du livre</param>
+            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.MenusController.CreateRepas(BO.Entity.Menu)">
+            <summary>
+            Créer un livre et l'ajoute en BDD
+            </summary>
+            <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le livre avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.RepasController.GetAll(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)">
+            <summary>
+            Permet de récupérer la liste des repas
+            </summary>
+            <returns>La liste des repas</returns>
+        </member>
+        <member name="M:API.Controllers.RepasController.GetRepasById(System.Int32)">
+            <summary>
+            Permert de récupérer un livre avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du livre</param>
+            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.RepasController.CreateRepas(BO.Entity.Repas)">
+            <summary>
+            Créer un livre et l'ajoute en BDD
+            </summary>
+            <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le livre avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.ReservationsController.GetAllResa(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des livres
+            </summary>
+            <returns>La liste des livres</returns>
+        </member>
+        <member name="M:API.Controllers.ReservationsController.GetResaById(System.Int32)">
+            <summary>
+            Permert de récupérer un livre avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du livre</param>
+            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.ReservationsController.CreateResa(BO.Entity.Reservation)">
+            <summary>
+            Créer un livre et l'ajoute en BDD
+            </summary>
+            <param name="resa">Livre à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le livre avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.TypeRepasController.GetAllTypeRepas(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des livres
+            </summary>
+            <returns>La liste des livres</returns>
+        </member>
+        <member name="M:API.Controllers.TypeRepasController.GetTypeRepasById(System.Int32)">
+            <summary>
+            Permert de récupérer un livre avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du livre</param>
+            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.TypeRepasController.CreateTypeRepas(BO.Entity.TypeRepas)">
+            <summary>
+            Créer un livre et l'ajoute en BDD
+            </summary>
+            <param name="tRepas">Livre à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le livre avec l'identifiant généré</returns>
+        </member>
+    </members>
+</doc>

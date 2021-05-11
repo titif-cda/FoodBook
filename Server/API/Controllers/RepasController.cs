@@ -13,6 +13,7 @@ using BO.DTO.Responses;
 namespace API.Controllers
 {
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("apiv{version:apiVersion=}/repas")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]

@@ -108,10 +108,12 @@ namespace API
             });
 
 
-            app.UseDocFx(config =>
-            {
-                config.roothPath = "/doc";
-            });
+            //app.UseDocFx(config =>
+            //{
+            //    config.roothPath = "/doc";
+            //});
+
+
             // MiddleWare de generation du OpenApi.Json
             app.UseOpenApi(config =>
             {

@@ -16,7 +16,10 @@ namespace Desktop
         public ClientsControl(Client client)
         {
             InitializeComponent();
-            NomClientTbx.Text = client.NomClient; 
+            NomClientTbx.Text = client.NomClient;
+            PrenomTbx.Text = client.PrenomClient;
+            EmailTbx.Text = client.EmailClient;
+            TelTbx.Text = client.TelClient;
         }
 
        

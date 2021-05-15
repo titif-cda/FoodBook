@@ -32,7 +32,6 @@ namespace Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listClients));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.clientFlp = new System.Windows.Forms.FlowLayoutPanel();
-            this.clientsControl1 = new Desktop.ClientsControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.clientFlp.SuspendLayout();
             this.SuspendLayout();
@@ -61,14 +60,6 @@ namespace Desktop
             this.clientFlp.Name = "clientFlp";
             this.clientFlp.Size = new System.Drawing.Size(852, 381);
             this.clientFlp.TabIndex = 0;
-            // 
-            // clientsControl1
-            // 
-            this.clientsControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clientsControl1.BackgroundImage")));
-            this.clientsControl1.Location = new System.Drawing.Point(3, 3);
-            this.clientsControl1.Name = "clientsControl1";
-            this.clientsControl1.Size = new System.Drawing.Size(189, 188);
-            this.clientsControl1.TabIndex = 0;
             // 
             // listClients
             // 

@@ -16,7 +16,7 @@ namespace Desktop
 {
     public partial class listClients : Form
     {
-        private readonly IClientService _clientService;
+        private readonly IClientService _clientService = new ClientService();
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize = 10;
@@ -29,13 +29,14 @@ namespace Desktop
 
         private async void LoadClients()
         {
+
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
             PageResponse<Client> clientPage = await clientPageTask;
             maxPage = clientPage.TotalPages.GetValueOrDefault();
             bindingSource.DataSource = clientPage.Data;
-            foreach (var item in clientPage.Data )
+            foreach (var client in clientPage.Data )
             {
-                clientFlp.Controls.Add(this);  
+                clientFlp.Controls.Add(new ClientsControl(client));  
                     
             }
             //Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));

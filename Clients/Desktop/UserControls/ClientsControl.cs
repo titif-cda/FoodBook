@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,10 @@ namespace Desktop
 {
     public partial class ClientsControl : UserControl
     {
-        public ClientsControl()
+        public ClientsControl(Client client)
         {
             InitializeComponent();
+            NomClientTbx.Text = client.NomClient; 
         }
 
        

@@ -34,7 +34,7 @@ namespace Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NomClientTbx = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -84,14 +84,14 @@ namespace Desktop
             this.label5.TabIndex = 4;
             this.label5.Text = "Telephone";
             // 
-            // textBox1
+            // NomClientTbx
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(89, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 16);
-            this.textBox1.TabIndex = 5;
+            this.NomClientTbx.BackColor = System.Drawing.Color.White;
+            this.NomClientTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NomClientTbx.Location = new System.Drawing.Point(89, 48);
+            this.NomClientTbx.Name = "NomClientTbx";
+            this.NomClientTbx.Size = new System.Drawing.Size(100, 16);
+            this.NomClientTbx.TabIndex = 5;
             // 
             // textBox2
             // 
@@ -128,13 +128,13 @@ namespace Desktop
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NomClientTbx);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "ClientsControl";
-            this.Size = new System.Drawing.Size(189, 188);
+            this.Size = new System.Drawing.Size(204, 175);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +146,7 @@ namespace Desktop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NomClientTbx;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;

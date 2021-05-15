@@ -22,6 +22,10 @@ namespace UnitTest.Services
 
         public Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
+            if (ingredient.NomIngr == null)
+            {
+                return Task.FromResult<Ingredient>(null);
+            }
             return Task.FromResult(ingredient);
         }
 
@@ -101,6 +105,10 @@ namespace UnitTest.Services
             if (ingredient.IdIngr == null)
                 return null;
             var _Ingredient = IngredientsDB.Find(b => b.IdIngr == ingredient.IdIngr);
+            if (_Ingredient == null)
+            {
+                return Task.FromResult<Ingredient>(null);
+            }
             _Ingredient.NomIngr = ingredient.NomIngr;
             _Ingredient.PrixIngr = ingredient.PrixIngr;
 

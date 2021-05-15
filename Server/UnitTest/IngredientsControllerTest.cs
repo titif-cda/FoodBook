@@ -69,12 +69,12 @@ namespace UnitTest
             };
             Ingredient poivre = new Ingredient()
             {
-                NomIngr = "poivre",
+              
                 PrixIngr = 1
             };
             //Act
-           var IngredientActionResult = await ingredientController.CreateIngredient(sel);
-            var actionResultV2 = await ingredientController.CreateIngredient(poivre);
+            CreatedAtActionResult IngredientActionResult = await ingredientController.CreateIngredient(sel) as CreatedAtActionResult;
+            BadRequestResult actionResultV2 = await ingredientController.CreateIngredient(poivre) as BadRequestResult;
 
             //Asserts
             Assert.NotNull(IngredientActionResult);
@@ -88,37 +88,42 @@ namespace UnitTest
         {
             Ingredient sel = new Ingredient()
             {
+                IdIngr = 1,
                 NomIngr = "sel",
                 PrixIngr = 1
             };
             Ingredient poivre = new Ingredient()
             {
+                IdIngr = 198,
                 NomIngr = "poivre",
                 PrixIngr = 1
             };
+
             //Arrange
             IRestaurantService restaurantService = new FakeRestaurantService();
             IngredientsController ingredientController = new IngredientsController(restaurantService);
 
-            //Act
-            var IngredientActionResult = await ingredientController.ModifyIngredient(1,sel);
-            var actionResultV2 = await ingredientController.ModifyIngredient(12, poivre);
-
-            //Asserts
-            Assert.NotNull(IngredientActionResult);
-            Assert.NotNull(actionResultV2);
+   
 
             ////Act
-            //OkObjectResult createdAtActionResult = await ingredientController.ModifyIngredient(1, sel) as OkObjectResult;
-            //NotFoundResult notFoundingredientActionResult = await ingredientController.ModifyIngredient(12, poivre) as NotFoundResult;
+            OkObjectResult modifyIngredient = await ingredientController.ModifyIngredient(1, sel) as OkObjectResult;
+            BadRequestResult badRequestResult = await ingredientController.ModifyIngredient(1, null) as BadRequestResult;
+            BadRequestResult badRequestResult1 = await ingredientController.ModifyIngredient(3, sel) as BadRequestResult;
+            NotFoundResult notFoundingredientActionResult = await ingredientController.ModifyIngredient(198, poivre) as NotFoundResult;
 
             ////Asserts
-            //Assert.NotNull(createdAtActionResult);
-            //Assert.Equal(201, createdAtActionResult.StatusCode);
+            ///
+            Assert.NotNull(modifyIngredient);
+            Assert.Equal(200, modifyIngredient.StatusCode);
 
-            //Assert.NotNull(notFoundingredientActionResult);
-            //Assert.Equal(400, notFoundingredientActionResult.StatusCode);
+            Assert.NotNull(badRequestResult);
+            Assert.Equal(400, badRequestResult.StatusCode);
 
+            Assert.NotNull(badRequestResult1);
+            Assert.Equal(400, badRequestResult1.StatusCode);
+
+            Assert.NotNull(notFoundingredientActionResult);
+            Assert.Equal(404, notFoundingredientActionResult.StatusCode);
 
         }
         [Fact]

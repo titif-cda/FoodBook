@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BO</name>
+    </assembly>
+    <members>
+        <member name="P:BO.DTO.Requests.PageRequest.Page">
+            <summary>
+            Current Page
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.PageRequest.PageSize">
+            <summary>
+            Limit entities on one page
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.PageResponse`1.Page">
+            <summary>
+            Current Page
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.PageResponse`1.PageSize">
+            <summary>
+            Limit entities on one page
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.PageResponse`1.TotalRecords">
+            <summary>
+            Total count entities repository
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.PageResponse`1.TotalPages">
+            <summary>
+            TotalPages
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.PageResponse`1.Data">
+            <summary>
+            List entities of the current page
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Author.Nom">
+            <summary>
+            ISBN unique du livre
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Author.Prenom">
+            <summary>
+            Titre du livre
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.NomClient">
+            <summary>
+            ISBN unique du livre
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.PrenomClient">
+            <summary>
+            Titre du livre
+            </summary>
+        </member>
+    </members>
+</doc>

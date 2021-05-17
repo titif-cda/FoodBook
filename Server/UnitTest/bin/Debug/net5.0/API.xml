@@ -72,7 +72,7 @@
             <param name="id">Identifiant unique du livre</param>
             <returns>Renvoi le livre définit par l'identifiant unique</returns>
         </member>
-        <member name="M:API.Controllers.MenusController.CreateRepas(BO.Entity.Menu)">
+        <member name="M:API.Controllers.MenusController.CreateMenu(BO.Entity.Menu)">
             <summary>
             Créer un livre et l'ajoute en BDD
             </summary>

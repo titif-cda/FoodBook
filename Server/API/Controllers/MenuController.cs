@@ -71,7 +71,7 @@ namespace API.Controllers
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateRepas([FromBody] Menu menus)
+        public async Task<IActionResult> CreateMenu([FromBody] Menu menus)
         {
             // Ajout du client avec la bll server
             Menu newmenus = await _restaurantService.CreateMenu(menus);

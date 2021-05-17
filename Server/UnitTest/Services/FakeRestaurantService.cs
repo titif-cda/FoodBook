@@ -13,12 +13,75 @@ namespace UnitTest.Services
     {
         public List<Ingredient> IngredientsDB = new List<Ingredient>()
         {
-             new Ingredient(1,"persil",15),
+            new Ingredient(1,"persil",15),
             new Ingredient(2,"ail",15),
             new Ingredient(3,"gingembre",3)
-        }; 
-    
-    
+        };
+
+        public List<Menu> MenuDb = new List<Menu>()
+                {
+                    new Menu()
+                    {
+                        DateMenu = DateTime.Now,
+                        IdMenu = 1,
+                        ListPlats = new List<Repas>()
+                        {
+                            new Repas
+                            {
+                                IdRepas = 1,
+                                DescRepas = "DescRepas1",
+                                IdTypeRepas = 1,
+                                LibelleRepas = "LibelleRepas1"
+                            },
+                            new Repas
+                            {
+                                IdRepas = 2,
+                                DescRepas = "DescRepas2",
+                                IdTypeRepas = 2,
+                                LibelleRepas = "LibelleRepas2"
+                            },
+                            new Repas
+                            {
+                                IdRepas = 3,
+                                DescRepas = "DescRepas3",
+                                IdTypeRepas = 3,
+                                LibelleRepas = "LibelleRepas3"
+                            }
+                        }
+                    },
+                    new Menu()
+                    {
+                        DateMenu = DateTime.Now.AddDays(1),
+                        IdMenu = 5,
+                        ListPlats = new List<Repas>()
+                        {
+                            new Repas
+                            {
+                                IdRepas = 4,
+                                DescRepas = "DescRepas4",
+                                IdTypeRepas = 1,
+                                LibelleRepas = "LibelleRepas4"
+                            },
+                            new Repas
+                            {
+                                IdRepas = 5,
+                                DescRepas = "DescRepas5",
+                                IdTypeRepas = 2,
+                                LibelleRepas = "LibelleRepas5"
+                            },
+                            new Repas
+                            {
+                                IdRepas = 6,
+                                DescRepas = "DescRepas6",
+                                IdTypeRepas = 3,
+                                LibelleRepas = "LibelleRepas6"
+                            }
+                        }
+                    }
+                };
+
+
+
 
         public Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
@@ -31,17 +94,29 @@ namespace UnitTest.Services
 
         public Task<Menu> CreateMenu(Menu Menus)
         {
-            throw new NotImplementedException();
+            if (Menus.NomMenu== null)
+            {
+                return Task.FromResult<Menu>(null);
+            }
+            return Task.FromResult(Menus);
         }
 
         public Task<Repas> CreateRepas(Repas Repas)
         {
-            throw new NotImplementedException();
+            if (Repas.LibelleRepas == null)
+            {
+                return Task.FromResult<Repas>(null);
+            }
+            return Task.FromResult(Repas);
         }
 
         public Task<TypeRepas> CreateTypeRepas(TypeRepas tRepas)
         {
-            throw new NotImplementedException();
+            if (tRepas.LibelleTypeRepas == null)
+            {
+                return Task.FromResult<TypeRepas>(null);
+            }
+            return Task.FromResult(tRepas);
         }
 
         public Task<PageResponse<Ingredient>> GetAllIngredients(PageRequest pageRequest)
@@ -67,7 +142,91 @@ namespace UnitTest.Services
 
         public Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest)
         {
-            throw new NotImplementedException();
+            List<Menu> data = null;
+            if (pageRequest.Page * pageRequest.PageSize < MenuDb.Count)
+            {
+                int firstIndex = (pageRequest.Page * pageRequest.PageSize);
+                int lastIndex = ((pageRequest.Page * pageRequest.PageSize) + pageRequest.PageSize);
+                Math.Clamp(lastIndex, 0, MenuDb.Count);
+
+                data = MenuDb.GetRange(firstIndex, lastIndex - firstIndex);
+
+            }
+            return Task.FromResult(new PageResponse<Menu>()
+            {
+                Page = pageRequest.Page,
+                PageSize = pageRequest.PageSize,
+                TotalRecords = MenuDb.Count,
+                Data = data
+            });
+
+            //return Task.FromResult(new PageResponse<Menu>()
+            //{
+            //    Data = new List<Menu>()
+            //    {
+            //        new Menu()
+            //        {
+            //            DateMenu = DateTime.Now,
+            //            IdMenu = 1,
+            //            ListPlats = new List<Repas>()
+            //            {
+            //                new Repas
+            //                {
+            //                    IdRepas = 1,
+            //                    DescRepas = "DescRepas1",
+            //                    IdTypeRepas = 1,
+            //                    LibelleRepas = "LibelleRepas1"
+            //                },
+            //                new Repas
+            //                {
+            //                    IdRepas = 2,
+            //                    DescRepas = "DescRepas2",
+            //                    IdTypeRepas = 2,
+            //                    LibelleRepas = "LibelleRepas2"
+            //                },
+            //                new Repas
+            //                {
+            //                    IdRepas = 3,
+            //                    DescRepas = "DescRepas3",
+            //                    IdTypeRepas = 3,
+            //                    LibelleRepas = "LibelleRepas3"
+            //                }
+            //            }
+            //        },
+            //        new Menu()
+            //        {
+            //            DateMenu = DateTime.Now.AddDays(1),
+            //            IdMenu = 1,
+            //            ListPlats = new List<Repas>()
+            //            {
+            //                new Repas
+            //                {
+            //                    IdRepas = 4,
+            //                    DescRepas = "DescRepas4",
+            //                    IdTypeRepas = 1,
+            //                    LibelleRepas = "LibelleRepas4"
+            //                },
+            //                new Repas
+            //                {
+            //                    IdRepas = 5,
+            //                    DescRepas = "DescRepas5",
+            //                    IdTypeRepas = 2,
+            //                    LibelleRepas = "LibelleRepas5"
+            //                },
+            //                new Repas
+            //                {
+            //                    IdRepas = 6,
+            //                    DescRepas = "DescRepas6",
+            //                    IdTypeRepas = 3,
+            //                    LibelleRepas = "LibelleRepas6"
+            //                }
+            //            }
+            //        }
+            //    },
+            //    Page = pageRequest.Page,
+            //    PageSize = pageRequest.PageSize,
+            //    TotalRecords = pageRequest.PageSize * 10,
+            //});
         }
 
         public Task<PageResponse<Repas>> GetAllRepas(PageRequest pageRequest, Filter filter)
@@ -87,7 +246,7 @@ namespace UnitTest.Services
 
         public Task<Menu> GetMenuById(int id)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(MenuDb.Find(b => b.IdMenu == id));
         }
 
         public Task<Repas> GetRepasById(int id)
@@ -115,9 +274,20 @@ namespace UnitTest.Services
             return Task.FromResult(_Ingredient);
         }
 
-        public Task<Menu> ModifyMenu(Menu Menus)
+        public Task<Menu> ModifyMenu(Menu menus)
         {
-            throw new NotImplementedException();
+
+            if (menus.IdMenu == null)
+                return null;
+            var _Menu = MenuDb.Find(b => b.IdMenu == menus.IdMenu);
+            if (_Menu == null)
+            {
+                return Task.FromResult<Menu>(null);
+            }
+            _Menu.NomMenu = menus.NomMenu;
+            _Menu.DateMenu = menus.DateMenu;
+
+            return Task.FromResult(_Menu);
         }
 
         public Task<Repas> ModifyRepas(Repas Repas)
@@ -138,7 +308,8 @@ namespace UnitTest.Services
 
         public Task<bool> RemoveMenuById(int id)
         {
-            throw new NotImplementedException();
+            int i = MenuDb.RemoveAll(b => b.IdMenu == id);
+            return Task.FromResult(i > 0);
         }
 
         public Task<bool> RemoveRepasById(int id)

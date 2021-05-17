@@ -7,6 +7,6 @@ namespace DAL.UOW
         void BeginTransaction();
         void Commit();
         void Rollback();
-        T GetRepository<T>();
+        T GetRepository<T>() where T : class;
     }
 }

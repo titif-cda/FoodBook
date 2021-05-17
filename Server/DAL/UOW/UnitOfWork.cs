@@ -37,7 +37,7 @@ namespace DAL.UOW
         public void Dispose() => _session.Transaction?.Dispose();
 
 
-        public T GetRepository<T>()
+        public T GetRepository<T>() where T : class
         {
            return _serviceProvider.GetRequiredService<T>();
         }

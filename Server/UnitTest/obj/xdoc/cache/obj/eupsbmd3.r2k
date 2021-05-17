@@ -1,0 +1,5511 @@
+id: UnitTest
+language: CSharp
+name:
+  Default: UnitTest
+qualifiedName:
+  Default: UnitTest
+type: Assembly
+modifiers: {}
+items:
+- id: UnitTest
+  commentId: N:UnitTest
+  language: CSharp
+  name:
+    CSharp: UnitTest
+    VB: UnitTest
+  nameWithType:
+    CSharp: UnitTest
+    VB: UnitTest
+  qualifiedName:
+    CSharp: UnitTest
+    VB: UnitTest
+  type: Namespace
+  assemblies:
+  - UnitTest
+  modifiers: {}
+  items:
+  - id: UnitTest.IngredientsControllerTest
+    commentId: T:UnitTest.IngredientsControllerTest
+    language: CSharp
+    name:
+      CSharp: IngredientsControllerTest
+      VB: IngredientsControllerTest
+    nameWithType:
+      CSharp: IngredientsControllerTest
+      VB: IngredientsControllerTest
+    qualifiedName:
+      CSharp: UnitTest.IngredientsControllerTest
+      VB: UnitTest.IngredientsControllerTest
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest
+    source:
+      remote:
+        path: Server/UnitTest/IngredientsControllerTest.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: IngredientsControllerTest
+      path: ../UnitTest/IngredientsControllerTest.cs
+      startLine: 13
+    syntax:
+      content:
+        CSharp: public class IngredientsControllerTest
+        VB: Public Class IngredientsControllerTest
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: UnitTest.IngredientsControllerTest.TestGetIngredientID
+      commentId: M:UnitTest.IngredientsControllerTest.TestGetIngredientID
+      language: CSharp
+      name:
+        CSharp: TestGetIngredientID()
+        VB: TestGetIngredientID()
+      nameWithType:
+        CSharp: IngredientsControllerTest.TestGetIngredientID()
+        VB: IngredientsControllerTest.TestGetIngredientID()
+      qualifiedName:
+        CSharp: UnitTest.IngredientsControllerTest.TestGetIngredientID()
+        VB: UnitTest.IngredientsControllerTest.TestGetIngredientID()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/IngredientsControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestGetIngredientID
+        path: ../UnitTest/IngredientsControllerTest.cs
+        startLine: 16
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestGetIngredientID()
+          VB: >-
+            <Fact>
+
+            Public Sub TestGetIngredientID
+      overload: UnitTest.IngredientsControllerTest.TestGetIngredientID*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.IngredientsControllerTest.TestDeleteIngredient
+      commentId: M:UnitTest.IngredientsControllerTest.TestDeleteIngredient
+      language: CSharp
+      name:
+        CSharp: TestDeleteIngredient()
+        VB: TestDeleteIngredient()
+      nameWithType:
+        CSharp: IngredientsControllerTest.TestDeleteIngredient()
+        VB: IngredientsControllerTest.TestDeleteIngredient()
+      qualifiedName:
+        CSharp: UnitTest.IngredientsControllerTest.TestDeleteIngredient()
+        VB: UnitTest.IngredientsControllerTest.TestDeleteIngredient()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/IngredientsControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestDeleteIngredient
+        path: ../UnitTest/IngredientsControllerTest.cs
+        startLine: 36
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestDeleteIngredient()
+          VB: >-
+            <Fact>
+
+            Public Sub TestDeleteIngredient
+      overload: UnitTest.IngredientsControllerTest.TestDeleteIngredient*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.IngredientsControllerTest.TestCreateIngredient
+      commentId: M:UnitTest.IngredientsControllerTest.TestCreateIngredient
+      language: CSharp
+      name:
+        CSharp: TestCreateIngredient()
+        VB: TestCreateIngredient()
+      nameWithType:
+        CSharp: IngredientsControllerTest.TestCreateIngredient()
+        VB: IngredientsControllerTest.TestCreateIngredient()
+      qualifiedName:
+        CSharp: UnitTest.IngredientsControllerTest.TestCreateIngredient()
+        VB: UnitTest.IngredientsControllerTest.TestCreateIngredient()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/IngredientsControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestCreateIngredient
+        path: ../UnitTest/IngredientsControllerTest.cs
+        startLine: 56
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestCreateIngredient()
+          VB: >-
+            <Fact>
+
+            Public Sub TestCreateIngredient
+      overload: UnitTest.IngredientsControllerTest.TestCreateIngredient*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.IngredientsControllerTest.TestModifyIngredient
+      commentId: M:UnitTest.IngredientsControllerTest.TestModifyIngredient
+      language: CSharp
+      name:
+        CSharp: TestModifyIngredient()
+        VB: TestModifyIngredient()
+      nameWithType:
+        CSharp: IngredientsControllerTest.TestModifyIngredient()
+        VB: IngredientsControllerTest.TestModifyIngredient()
+      qualifiedName:
+        CSharp: UnitTest.IngredientsControllerTest.TestModifyIngredient()
+        VB: UnitTest.IngredientsControllerTest.TestModifyIngredient()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/IngredientsControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestModifyIngredient
+        path: ../UnitTest/IngredientsControllerTest.cs
+        startLine: 85
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestModifyIngredient()
+          VB: >-
+            <Fact>
+
+            Public Sub TestModifyIngredient
+      overload: UnitTest.IngredientsControllerTest.TestModifyIngredient*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.IngredientsControllerTest.GetAll
+      commentId: M:UnitTest.IngredientsControllerTest.GetAll
+      language: CSharp
+      name:
+        CSharp: GetAll()
+        VB: GetAll()
+      nameWithType:
+        CSharp: IngredientsControllerTest.GetAll()
+        VB: IngredientsControllerTest.GetAll()
+      qualifiedName:
+        CSharp: UnitTest.IngredientsControllerTest.GetAll()
+        VB: UnitTest.IngredientsControllerTest.GetAll()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/IngredientsControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAll
+        path: ../UnitTest/IngredientsControllerTest.cs
+        startLine: 128
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void GetAll()
+          VB: >-
+            <Fact>
+
+            Public Sub GetAll
+      overload: UnitTest.IngredientsControllerTest.GetAll*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: UnitTest.MenusControllerTest
+    commentId: T:UnitTest.MenusControllerTest
+    language: CSharp
+    name:
+      CSharp: MenusControllerTest
+      VB: MenusControllerTest
+    nameWithType:
+      CSharp: MenusControllerTest
+      VB: MenusControllerTest
+    qualifiedName:
+      CSharp: UnitTest.MenusControllerTest
+      VB: UnitTest.MenusControllerTest
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest
+    source:
+      remote:
+        path: Server/UnitTest/MenusControllerTest.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: MenusControllerTest
+      path: ../UnitTest/MenusControllerTest.cs
+      startLine: 14
+    syntax:
+      content:
+        CSharp: public class MenusControllerTest
+        VB: Public Class MenusControllerTest
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: UnitTest.MenusControllerTest.TestGetMenuID
+      commentId: M:UnitTest.MenusControllerTest.TestGetMenuID
+      language: CSharp
+      name:
+        CSharp: TestGetMenuID()
+        VB: TestGetMenuID()
+      nameWithType:
+        CSharp: MenusControllerTest.TestGetMenuID()
+        VB: MenusControllerTest.TestGetMenuID()
+      qualifiedName:
+        CSharp: UnitTest.MenusControllerTest.TestGetMenuID()
+        VB: UnitTest.MenusControllerTest.TestGetMenuID()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/MenusControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestGetMenuID
+        path: ../UnitTest/MenusControllerTest.cs
+        startLine: 17
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestGetMenuID()
+          VB: >-
+            <Fact>
+
+            Public Sub TestGetMenuID
+      overload: UnitTest.MenusControllerTest.TestGetMenuID*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.MenusControllerTest.GetAll
+      commentId: M:UnitTest.MenusControllerTest.GetAll
+      language: CSharp
+      name:
+        CSharp: GetAll()
+        VB: GetAll()
+      nameWithType:
+        CSharp: MenusControllerTest.GetAll()
+        VB: MenusControllerTest.GetAll()
+      qualifiedName:
+        CSharp: UnitTest.MenusControllerTest.GetAll()
+        VB: UnitTest.MenusControllerTest.GetAll()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/MenusControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAll
+        path: ../UnitTest/MenusControllerTest.cs
+        startLine: 37
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void GetAll()
+          VB: >-
+            <Fact>
+
+            Public Sub GetAll
+      overload: UnitTest.MenusControllerTest.GetAll*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.MenusControllerTest.TestDeleteMenu
+      commentId: M:UnitTest.MenusControllerTest.TestDeleteMenu
+      language: CSharp
+      name:
+        CSharp: TestDeleteMenu()
+        VB: TestDeleteMenu()
+      nameWithType:
+        CSharp: MenusControllerTest.TestDeleteMenu()
+        VB: MenusControllerTest.TestDeleteMenu()
+      qualifiedName:
+        CSharp: UnitTest.MenusControllerTest.TestDeleteMenu()
+        VB: UnitTest.MenusControllerTest.TestDeleteMenu()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/MenusControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestDeleteMenu
+        path: ../UnitTest/MenusControllerTest.cs
+        startLine: 64
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestDeleteMenu()
+          VB: >-
+            <Fact>
+
+            Public Sub TestDeleteMenu
+      overload: UnitTest.MenusControllerTest.TestDeleteMenu*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.MenusControllerTest.TestCreateMenu
+      commentId: M:UnitTest.MenusControllerTest.TestCreateMenu
+      language: CSharp
+      name:
+        CSharp: TestCreateMenu()
+        VB: TestCreateMenu()
+      nameWithType:
+        CSharp: MenusControllerTest.TestCreateMenu()
+        VB: MenusControllerTest.TestCreateMenu()
+      qualifiedName:
+        CSharp: UnitTest.MenusControllerTest.TestCreateMenu()
+        VB: UnitTest.MenusControllerTest.TestCreateMenu()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/MenusControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestCreateMenu
+        path: ../UnitTest/MenusControllerTest.cs
+        startLine: 85
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestCreateMenu()
+          VB: >-
+            <Fact>
+
+            Public Sub TestCreateMenu
+      overload: UnitTest.MenusControllerTest.TestCreateMenu*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.MenusControllerTest.TestModifyMenu
+      commentId: M:UnitTest.MenusControllerTest.TestModifyMenu
+      language: CSharp
+      name:
+        CSharp: TestModifyMenu()
+        VB: TestModifyMenu()
+      nameWithType:
+        CSharp: MenusControllerTest.TestModifyMenu()
+        VB: MenusControllerTest.TestModifyMenu()
+      qualifiedName:
+        CSharp: UnitTest.MenusControllerTest.TestModifyMenu()
+        VB: UnitTest.MenusControllerTest.TestModifyMenu()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/MenusControllerTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: TestModifyMenu
+        path: ../UnitTest/MenusControllerTest.cs
+        startLine: 166
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void TestModifyMenu()
+          VB: >-
+            <Fact>
+
+            Public Sub TestModifyMenu
+      overload: UnitTest.MenusControllerTest.TestModifyMenu*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: UnitTest.RestaurationServiceTest
+    commentId: T:UnitTest.RestaurationServiceTest
+    language: CSharp
+    name:
+      CSharp: RestaurationServiceTest
+      VB: RestaurationServiceTest
+    nameWithType:
+      CSharp: RestaurationServiceTest
+      VB: RestaurationServiceTest
+    qualifiedName:
+      CSharp: UnitTest.RestaurationServiceTest
+      VB: UnitTest.RestaurationServiceTest
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest
+    source:
+      remote:
+        path: Server/UnitTest/RestaurationServiceTest.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: RestaurationServiceTest
+      path: ../UnitTest/RestaurationServiceTest.cs
+      startLine: 12
+    syntax:
+      content:
+        CSharp: public class RestaurationServiceTest
+        VB: Public Class RestaurationServiceTest
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: UnitTest.RestaurationServiceTest.Test
+      commentId: M:UnitTest.RestaurationServiceTest.Test
+      language: CSharp
+      name:
+        CSharp: Test()
+        VB: Test()
+      nameWithType:
+        CSharp: RestaurationServiceTest.Test()
+        VB: RestaurationServiceTest.Test()
+      qualifiedName:
+        CSharp: UnitTest.RestaurationServiceTest.Test()
+        VB: UnitTest.RestaurationServiceTest.Test()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest
+      source:
+        remote:
+          path: Server/UnitTest/RestaurationServiceTest.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: Test
+        path: ../UnitTest/RestaurationServiceTest.cs
+        startLine: 15
+      syntax:
+        content:
+          CSharp: >-
+            [Fact]
+
+            public void Test()
+          VB: >-
+            <Fact>
+
+            Public Sub Test
+      overload: UnitTest.RestaurationServiceTest.Test*
+      attributes:
+      - type: Xunit.FactAttribute
+        ctor: Xunit.FactAttribute.#ctor
+        arguments: []
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+- id: UnitTest.Services
+  commentId: N:UnitTest.Services
+  language: CSharp
+  name:
+    CSharp: UnitTest.Services
+    VB: UnitTest.Services
+  nameWithType:
+    CSharp: UnitTest.Services
+    VB: UnitTest.Services
+  qualifiedName:
+    CSharp: UnitTest.Services
+    VB: UnitTest.Services
+  type: Namespace
+  assemblies:
+  - UnitTest
+  modifiers: {}
+  items:
+  - id: UnitTest.Services.FakeMenuRepository
+    commentId: T:UnitTest.Services.FakeMenuRepository
+    language: CSharp
+    name:
+      CSharp: FakeMenuRepository
+      VB: FakeMenuRepository
+    nameWithType:
+      CSharp: FakeMenuRepository
+      VB: FakeMenuRepository
+    qualifiedName:
+      CSharp: UnitTest.Services.FakeMenuRepository
+      VB: UnitTest.Services.FakeMenuRepository
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest.Services
+    source:
+      remote:
+        path: Server/UnitTest/Services/FakeMenuRepository.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: FakeMenuRepository
+      path: ../UnitTest/Services/FakeMenuRepository.cs
+      startLine: 9
+    syntax:
+      content:
+        CSharp: 'class FakeMenuRepository : IMenuRepository, IGenericRepository<Menu>'
+        VB: >-
+          Class FakeMenuRepository
+
+              Implements IMenuRepository, IGenericRepository(Of Menu)
+    inheritance:
+    - System.Object
+    implements:
+    - DAL.Repository.IMenuRepository
+    - DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - class
+      VB:
+      - Class
+    items:
+    - id: UnitTest.Services.FakeMenuRepository.#ctor
+      commentId: M:UnitTest.Services.FakeMenuRepository.#ctor
+      language: CSharp
+      name:
+        CSharp: FakeMenuRepository()
+        VB: FakeMenuRepository()
+      nameWithType:
+        CSharp: FakeMenuRepository.FakeMenuRepository()
+        VB: FakeMenuRepository.FakeMenuRepository()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.FakeMenuRepository()
+        VB: UnitTest.Services.FakeMenuRepository.FakeMenuRepository()
+      type: Constructor
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: .ctor
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 11
+      syntax:
+        content:
+          CSharp: public FakeMenuRepository()
+          VB: Public Sub New
+      overload: UnitTest.Services.FakeMenuRepository.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.DeleteAsync(System.Int64)
+      commentId: M:UnitTest.Services.FakeMenuRepository.DeleteAsync(System.Int64)
+      language: CSharp
+      name:
+        CSharp: DeleteAsync(Int64)
+        VB: DeleteAsync(Int64)
+      nameWithType:
+        CSharp: FakeMenuRepository.DeleteAsync(Int64)
+        VB: FakeMenuRepository.DeleteAsync(Int64)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.DeleteAsync(System.Int64)
+        VB: UnitTest.Services.FakeMenuRepository.DeleteAsync(System.Int64)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: DeleteAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 17
+      syntax:
+        content:
+          CSharp: public Task<int> DeleteAsync(long id)
+          VB: Public Function DeleteAsync(id As Long) As Task(Of Integer)
+        parameters:
+        - id: id
+          type: System.Int64
+        return:
+          type: System.Threading.Tasks.Task{System.Int32}
+      overload: UnitTest.Services.FakeMenuRepository.DeleteAsync*
+      implements:
+      - DAL.Repository.IGenericRepository{BO.Entity.Menu}.DeleteAsync(System.Int64)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+      commentId: M:UnitTest.Services.FakeMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+      language: CSharp
+      name:
+        CSharp: GetAllAsync(PageRequest)
+        VB: GetAllAsync(PageRequest)
+      nameWithType:
+        CSharp: FakeMenuRepository.GetAllAsync(PageRequest)
+        VB: FakeMenuRepository.GetAllAsync(PageRequest)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+        VB: UnitTest.Services.FakeMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 26
+      syntax:
+        content:
+          CSharp: public Task<PageResponse<Menu>> GetAllAsync(PageRequest pageRequest)
+          VB: Public Function GetAllAsync(pageRequest As PageRequest) As Task(Of PageResponse(Of Menu))
+        parameters:
+        - id: pageRequest
+          type: BO.DTO.Requests.PageRequest
+        return:
+          type: System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Menu}}
+      overload: UnitTest.Services.FakeMenuRepository.GetAllAsync*
+      implements:
+      - DAL.Repository.IMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.GetAllAsync
+      commentId: M:UnitTest.Services.FakeMenuRepository.GetAllAsync
+      language: CSharp
+      name:
+        CSharp: GetAllAsync()
+        VB: GetAllAsync()
+      nameWithType:
+        CSharp: FakeMenuRepository.GetAllAsync()
+        VB: FakeMenuRepository.GetAllAsync()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.GetAllAsync()
+        VB: UnitTest.Services.FakeMenuRepository.GetAllAsync()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 31
+      syntax:
+        content:
+          CSharp: public Task<IEnumerable<Menu>> GetAllAsync()
+          VB: Public Function GetAllAsync As Task(Of IEnumerable(Of Menu))
+        return:
+          type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BO.Entity.Menu}}
+      overload: UnitTest.Services.FakeMenuRepository.GetAllAsync*
+      implements:
+      - DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAllAsync
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.GetAsync(System.Int32)
+      commentId: M:UnitTest.Services.FakeMenuRepository.GetAsync(System.Int32)
+      language: CSharp
+      name:
+        CSharp: GetAsync(Int32)
+        VB: GetAsync(Int32)
+      nameWithType:
+        CSharp: FakeMenuRepository.GetAsync(Int32)
+        VB: FakeMenuRepository.GetAsync(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.GetAsync(System.Int32)
+        VB: UnitTest.Services.FakeMenuRepository.GetAsync(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 36
+      syntax:
+        content:
+          CSharp: public Task<Menu> GetAsync(int id)
+          VB: Public Function GetAsync(id As Integer) As Task(Of Menu)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Menu}
+      overload: UnitTest.Services.FakeMenuRepository.GetAsync*
+      implements:
+      - DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAsync(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.InsertAsync(BO.Entity.Menu)
+      commentId: M:UnitTest.Services.FakeMenuRepository.InsertAsync(BO.Entity.Menu)
+      language: CSharp
+      name:
+        CSharp: InsertAsync(Menu)
+        VB: InsertAsync(Menu)
+      nameWithType:
+        CSharp: FakeMenuRepository.InsertAsync(Menu)
+        VB: FakeMenuRepository.InsertAsync(Menu)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.InsertAsync(BO.Entity.Menu)
+        VB: UnitTest.Services.FakeMenuRepository.InsertAsync(BO.Entity.Menu)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: InsertAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 44
+      syntax:
+        content:
+          CSharp: public Task<Menu> InsertAsync(Menu entity)
+          VB: Public Function InsertAsync(entity As Menu) As Task(Of Menu)
+        parameters:
+        - id: entity
+          type: BO.Entity.Menu
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Menu}
+      overload: UnitTest.Services.FakeMenuRepository.InsertAsync*
+      implements:
+      - DAL.Repository.IGenericRepository{BO.Entity.Menu}.InsertAsync(BO.Entity.Menu)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeMenuRepository.UpdateAsync(BO.Entity.Menu)
+      commentId: M:UnitTest.Services.FakeMenuRepository.UpdateAsync(BO.Entity.Menu)
+      language: CSharp
+      name:
+        CSharp: UpdateAsync(Menu)
+        VB: UpdateAsync(Menu)
+      nameWithType:
+        CSharp: FakeMenuRepository.UpdateAsync(Menu)
+        VB: FakeMenuRepository.UpdateAsync(Menu)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeMenuRepository.UpdateAsync(BO.Entity.Menu)
+        VB: UnitTest.Services.FakeMenuRepository.UpdateAsync(BO.Entity.Menu)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeMenuRepository.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: UpdateAsync
+        path: ../UnitTest/Services/FakeMenuRepository.cs
+        startLine: 49
+      syntax:
+        content:
+          CSharp: public Task UpdateAsync(Menu entity)
+          VB: Public Function UpdateAsync(entity As Menu) As Task
+        parameters:
+        - id: entity
+          type: BO.Entity.Menu
+        return:
+          type: System.Threading.Tasks.Task
+      overload: UnitTest.Services.FakeMenuRepository.UpdateAsync*
+      implements:
+      - DAL.Repository.IGenericRepository{BO.Entity.Menu}.UpdateAsync(BO.Entity.Menu)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: UnitTest.Services.FakeRestaurantService
+    commentId: T:UnitTest.Services.FakeRestaurantService
+    language: CSharp
+    name:
+      CSharp: FakeRestaurantService
+      VB: FakeRestaurantService
+    nameWithType:
+      CSharp: FakeRestaurantService
+      VB: FakeRestaurantService
+    qualifiedName:
+      CSharp: UnitTest.Services.FakeRestaurantService
+      VB: UnitTest.Services.FakeRestaurantService
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest.Services
+    source:
+      remote:
+        path: Server/UnitTest/Services/FakeRestaurantService.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: FakeRestaurantService
+      path: ../UnitTest/Services/FakeRestaurantService.cs
+      startLine: 11
+    syntax:
+      content:
+        CSharp: 'class FakeRestaurantService : IRestaurantService'
+        VB: >-
+          Class FakeRestaurantService
+
+              Implements IRestaurantService
+    inheritance:
+    - System.Object
+    implements:
+    - BLL.Services.IRestaurantService
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - class
+      VB:
+      - Class
+    items:
+    - id: UnitTest.Services.FakeRestaurantService.IngredientsDB
+      commentId: F:UnitTest.Services.FakeRestaurantService.IngredientsDB
+      language: CSharp
+      name:
+        CSharp: IngredientsDB
+        VB: IngredientsDB
+      nameWithType:
+        CSharp: FakeRestaurantService.IngredientsDB
+        VB: FakeRestaurantService.IngredientsDB
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.IngredientsDB
+        VB: UnitTest.Services.FakeRestaurantService.IngredientsDB
+      type: Field
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: IngredientsDB
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 13
+      syntax:
+        content:
+          CSharp: public List<Ingredient> IngredientsDB
+          VB: Public IngredientsDB As List(Of Ingredient)
+        return:
+          type: System.Collections.Generic.List{BO.Entity.Ingredient}
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.MenuDb
+      commentId: F:UnitTest.Services.FakeRestaurantService.MenuDb
+      language: CSharp
+      name:
+        CSharp: MenuDb
+        VB: MenuDb
+      nameWithType:
+        CSharp: FakeRestaurantService.MenuDb
+        VB: FakeRestaurantService.MenuDb
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.MenuDb
+        VB: UnitTest.Services.FakeRestaurantService.MenuDb
+      type: Field
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: MenuDb
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 20
+      syntax:
+        content:
+          CSharp: public List<Menu> MenuDb
+          VB: Public MenuDb As List(Of Menu)
+        return:
+          type: System.Collections.Generic.List{BO.Entity.Menu}
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+      commentId: M:UnitTest.Services.FakeRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+      language: CSharp
+      name:
+        CSharp: CreateIngredient(Ingredient)
+        VB: CreateIngredient(Ingredient)
+      nameWithType:
+        CSharp: FakeRestaurantService.CreateIngredient(Ingredient)
+        VB: FakeRestaurantService.CreateIngredient(Ingredient)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+        VB: UnitTest.Services.FakeRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: CreateIngredient
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 85
+      syntax:
+        content:
+          CSharp: public Task<Ingredient> CreateIngredient(Ingredient ingredient)
+          VB: Public Function CreateIngredient(ingredient As Ingredient) As Task(Of Ingredient)
+        parameters:
+        - id: ingredient
+          type: BO.Entity.Ingredient
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Ingredient}
+      overload: UnitTest.Services.FakeRestaurantService.CreateIngredient*
+      implements:
+      - BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.CreateMenu(BO.Entity.Menu)
+      commentId: M:UnitTest.Services.FakeRestaurantService.CreateMenu(BO.Entity.Menu)
+      language: CSharp
+      name:
+        CSharp: CreateMenu(Menu)
+        VB: CreateMenu(Menu)
+      nameWithType:
+        CSharp: FakeRestaurantService.CreateMenu(Menu)
+        VB: FakeRestaurantService.CreateMenu(Menu)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.CreateMenu(BO.Entity.Menu)
+        VB: UnitTest.Services.FakeRestaurantService.CreateMenu(BO.Entity.Menu)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: CreateMenu
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 94
+      syntax:
+        content:
+          CSharp: public Task<Menu> CreateMenu(Menu Menus)
+          VB: Public Function CreateMenu(Menus As Menu) As Task(Of Menu)
+        parameters:
+        - id: Menus
+          type: BO.Entity.Menu
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Menu}
+      overload: UnitTest.Services.FakeRestaurantService.CreateMenu*
+      implements:
+      - BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.CreateRepas(BO.Entity.Repas)
+      commentId: M:UnitTest.Services.FakeRestaurantService.CreateRepas(BO.Entity.Repas)
+      language: CSharp
+      name:
+        CSharp: CreateRepas(Repas)
+        VB: CreateRepas(Repas)
+      nameWithType:
+        CSharp: FakeRestaurantService.CreateRepas(Repas)
+        VB: FakeRestaurantService.CreateRepas(Repas)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.CreateRepas(BO.Entity.Repas)
+        VB: UnitTest.Services.FakeRestaurantService.CreateRepas(BO.Entity.Repas)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: CreateRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 103
+      syntax:
+        content:
+          CSharp: public Task<Repas> CreateRepas(Repas Repas)
+          VB: Public Function CreateRepas(Repas As Repas) As Task(Of Repas)
+        parameters:
+        - id: Repas
+          type: BO.Entity.Repas
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Repas}
+      overload: UnitTest.Services.FakeRestaurantService.CreateRepas*
+      implements:
+      - BLL.Services.IRestaurantService.CreateRepas(BO.Entity.Repas)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+      commentId: M:UnitTest.Services.FakeRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+      language: CSharp
+      name:
+        CSharp: CreateTypeRepas(TypeRepas)
+        VB: CreateTypeRepas(TypeRepas)
+      nameWithType:
+        CSharp: FakeRestaurantService.CreateTypeRepas(TypeRepas)
+        VB: FakeRestaurantService.CreateTypeRepas(TypeRepas)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+        VB: UnitTest.Services.FakeRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: CreateTypeRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 112
+      syntax:
+        content:
+          CSharp: public Task<TypeRepas> CreateTypeRepas(TypeRepas tRepas)
+          VB: Public Function CreateTypeRepas(tRepas As TypeRepas) As Task(Of TypeRepas)
+        parameters:
+        - id: tRepas
+          type: BO.Entity.TypeRepas
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.TypeRepas}
+      overload: UnitTest.Services.FakeRestaurantService.CreateTypeRepas*
+      implements:
+      - BLL.Services.IRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+      language: CSharp
+      name:
+        CSharp: GetAllIngredients(PageRequest)
+        VB: GetAllIngredients(PageRequest)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetAllIngredients(PageRequest)
+        VB: FakeRestaurantService.GetAllIngredients(PageRequest)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+        VB: UnitTest.Services.FakeRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllIngredients
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 121
+      syntax:
+        content:
+          CSharp: public Task<PageResponse<Ingredient>> GetAllIngredients(PageRequest pageRequest)
+          VB: Public Function GetAllIngredients(pageRequest As PageRequest) As Task(Of PageResponse(Of Ingredient))
+        parameters:
+        - id: pageRequest
+          type: BO.DTO.Requests.PageRequest
+        return:
+          type: System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Ingredient}}
+      overload: UnitTest.Services.FakeRestaurantService.GetAllIngredients*
+      implements:
+      - BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+      language: CSharp
+      name:
+        CSharp: GetAllMenu(PageRequest)
+        VB: GetAllMenu(PageRequest)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetAllMenu(PageRequest)
+        VB: FakeRestaurantService.GetAllMenu(PageRequest)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+        VB: UnitTest.Services.FakeRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllMenu
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 142
+      syntax:
+        content:
+          CSharp: public Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest)
+          VB: Public Function GetAllMenu(pageRequest As PageRequest) As Task(Of PageResponse(Of Menu))
+        parameters:
+        - id: pageRequest
+          type: BO.DTO.Requests.PageRequest
+        return:
+          type: System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Menu}}
+      overload: UnitTest.Services.FakeRestaurantService.GetAllMenu*
+      implements:
+      - BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+      language: CSharp
+      name:
+        CSharp: GetAllRepas(PageRequest, Filter)
+        VB: GetAllRepas(PageRequest, Filter)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetAllRepas(PageRequest, Filter)
+        VB: FakeRestaurantService.GetAllRepas(PageRequest, Filter)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest, BO.DTO.Requests.Filter)
+        VB: UnitTest.Services.FakeRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest, BO.DTO.Requests.Filter)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 231
+      syntax:
+        content:
+          CSharp: public Task<PageResponse<Repas>> GetAllRepas(PageRequest pageRequest, Filter filter)
+          VB: Public Function GetAllRepas(pageRequest As PageRequest, filter As Filter) As Task(Of PageResponse(Of Repas))
+        parameters:
+        - id: pageRequest
+          type: BO.DTO.Requests.PageRequest
+        - id: filter
+          type: BO.DTO.Requests.Filter
+        return:
+          type: System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Repas}}
+      overload: UnitTest.Services.FakeRestaurantService.GetAllRepas*
+      implements:
+      - BLL.Services.IRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+      language: CSharp
+      name:
+        CSharp: GetAllTypeRepas(PageRequest)
+        VB: GetAllTypeRepas(PageRequest)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetAllTypeRepas(PageRequest)
+        VB: FakeRestaurantService.GetAllTypeRepas(PageRequest)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+        VB: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetAllTypeRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 236
+      syntax:
+        content:
+          CSharp: public Task<PageResponse<TypeRepas>> GetAllTypeRepas(PageRequest pageRequest)
+          VB: Public Function GetAllTypeRepas(pageRequest As PageRequest) As Task(Of PageResponse(Of TypeRepas))
+        parameters:
+        - id: pageRequest
+          type: BO.DTO.Requests.PageRequest
+        return:
+          type: System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.TypeRepas}}
+      overload: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas*
+      implements:
+      - BLL.Services.IRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetIngredientById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetIngredientById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: GetIngredientById(Int32)
+        VB: GetIngredientById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetIngredientById(Int32)
+        VB: FakeRestaurantService.GetIngredientById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetIngredientById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.GetIngredientById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetIngredientById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 241
+      syntax:
+        content:
+          CSharp: public Task<Ingredient> GetIngredientById(int id)
+          VB: Public Function GetIngredientById(id As Integer) As Task(Of Ingredient)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Ingredient}
+      overload: UnitTest.Services.FakeRestaurantService.GetIngredientById*
+      implements:
+      - BLL.Services.IRestaurantService.GetIngredientById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetMenuById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetMenuById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: GetMenuById(Int32)
+        VB: GetMenuById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetMenuById(Int32)
+        VB: FakeRestaurantService.GetMenuById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetMenuById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.GetMenuById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetMenuById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 246
+      syntax:
+        content:
+          CSharp: public Task<Menu> GetMenuById(int id)
+          VB: Public Function GetMenuById(id As Integer) As Task(Of Menu)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Menu}
+      overload: UnitTest.Services.FakeRestaurantService.GetMenuById*
+      implements:
+      - BLL.Services.IRestaurantService.GetMenuById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetRepasById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetRepasById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: GetRepasById(Int32)
+        VB: GetRepasById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetRepasById(Int32)
+        VB: FakeRestaurantService.GetRepasById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetRepasById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.GetRepasById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetRepasById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 251
+      syntax:
+        content:
+          CSharp: public Task<Repas> GetRepasById(int id)
+          VB: Public Function GetRepasById(id As Integer) As Task(Of Repas)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Repas}
+      overload: UnitTest.Services.FakeRestaurantService.GetRepasById*
+      implements:
+      - BLL.Services.IRestaurantService.GetRepasById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.GetTypeRepasById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.GetTypeRepasById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: GetTypeRepasById(Int32)
+        VB: GetTypeRepasById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.GetTypeRepasById(Int32)
+        VB: FakeRestaurantService.GetTypeRepasById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.GetTypeRepasById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.GetTypeRepasById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetTypeRepasById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 256
+      syntax:
+        content:
+          CSharp: public Task<TypeRepas> GetTypeRepasById(int id)
+          VB: Public Function GetTypeRepasById(id As Integer) As Task(Of TypeRepas)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.TypeRepas}
+      overload: UnitTest.Services.FakeRestaurantService.GetTypeRepasById*
+      implements:
+      - BLL.Services.IRestaurantService.GetTypeRepasById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+      commentId: M:UnitTest.Services.FakeRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+      language: CSharp
+      name:
+        CSharp: ModifyIngredient(Ingredient)
+        VB: ModifyIngredient(Ingredient)
+      nameWithType:
+        CSharp: FakeRestaurantService.ModifyIngredient(Ingredient)
+        VB: FakeRestaurantService.ModifyIngredient(Ingredient)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+        VB: UnitTest.Services.FakeRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: ModifyIngredient
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 261
+      syntax:
+        content:
+          CSharp: public Task<Ingredient> ModifyIngredient(Ingredient ingredient)
+          VB: Public Function ModifyIngredient(ingredient As Ingredient) As Task(Of Ingredient)
+        parameters:
+        - id: ingredient
+          type: BO.Entity.Ingredient
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Ingredient}
+      overload: UnitTest.Services.FakeRestaurantService.ModifyIngredient*
+      implements:
+      - BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.ModifyMenu(BO.Entity.Menu)
+      commentId: M:UnitTest.Services.FakeRestaurantService.ModifyMenu(BO.Entity.Menu)
+      language: CSharp
+      name:
+        CSharp: ModifyMenu(Menu)
+        VB: ModifyMenu(Menu)
+      nameWithType:
+        CSharp: FakeRestaurantService.ModifyMenu(Menu)
+        VB: FakeRestaurantService.ModifyMenu(Menu)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.ModifyMenu(BO.Entity.Menu)
+        VB: UnitTest.Services.FakeRestaurantService.ModifyMenu(BO.Entity.Menu)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: ModifyMenu
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 276
+      syntax:
+        content:
+          CSharp: public Task<Menu> ModifyMenu(Menu menus)
+          VB: Public Function ModifyMenu(menus As Menu) As Task(Of Menu)
+        parameters:
+        - id: menus
+          type: BO.Entity.Menu
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Menu}
+      overload: UnitTest.Services.FakeRestaurantService.ModifyMenu*
+      implements:
+      - BLL.Services.IRestaurantService.ModifyMenu(BO.Entity.Menu)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.ModifyRepas(BO.Entity.Repas)
+      commentId: M:UnitTest.Services.FakeRestaurantService.ModifyRepas(BO.Entity.Repas)
+      language: CSharp
+      name:
+        CSharp: ModifyRepas(Repas)
+        VB: ModifyRepas(Repas)
+      nameWithType:
+        CSharp: FakeRestaurantService.ModifyRepas(Repas)
+        VB: FakeRestaurantService.ModifyRepas(Repas)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.ModifyRepas(BO.Entity.Repas)
+        VB: UnitTest.Services.FakeRestaurantService.ModifyRepas(BO.Entity.Repas)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: ModifyRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 292
+      syntax:
+        content:
+          CSharp: public Task<Repas> ModifyRepas(Repas Repas)
+          VB: Public Function ModifyRepas(Repas As Repas) As Task(Of Repas)
+        parameters:
+        - id: Repas
+          type: BO.Entity.Repas
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.Repas}
+      overload: UnitTest.Services.FakeRestaurantService.ModifyRepas*
+      implements:
+      - BLL.Services.IRestaurantService.ModifyRepas(BO.Entity.Repas)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+      commentId: M:UnitTest.Services.FakeRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+      language: CSharp
+      name:
+        CSharp: ModifyTypeRepas(TypeRepas)
+        VB: ModifyTypeRepas(TypeRepas)
+      nameWithType:
+        CSharp: FakeRestaurantService.ModifyTypeRepas(TypeRepas)
+        VB: FakeRestaurantService.ModifyTypeRepas(TypeRepas)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+        VB: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: ModifyTypeRepas
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 297
+      syntax:
+        content:
+          CSharp: public Task<TypeRepas> ModifyTypeRepas(TypeRepas tRepas)
+          VB: Public Function ModifyTypeRepas(tRepas As TypeRepas) As Task(Of TypeRepas)
+        parameters:
+        - id: tRepas
+          type: BO.Entity.TypeRepas
+        return:
+          type: System.Threading.Tasks.Task{BO.Entity.TypeRepas}
+      overload: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas*
+      implements:
+      - BLL.Services.IRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.RemoveIngredientById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.RemoveIngredientById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: RemoveIngredientById(Int32)
+        VB: RemoveIngredientById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.RemoveIngredientById(Int32)
+        VB: FakeRestaurantService.RemoveIngredientById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.RemoveIngredientById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.RemoveIngredientById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: RemoveIngredientById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 302
+      syntax:
+        content:
+          CSharp: public Task<bool> RemoveIngredientById(int id)
+          VB: Public Function RemoveIngredientById(id As Integer) As Task(Of Boolean)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{System.Boolean}
+      overload: UnitTest.Services.FakeRestaurantService.RemoveIngredientById*
+      implements:
+      - BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.RemoveMenuById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.RemoveMenuById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: RemoveMenuById(Int32)
+        VB: RemoveMenuById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.RemoveMenuById(Int32)
+        VB: FakeRestaurantService.RemoveMenuById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.RemoveMenuById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.RemoveMenuById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: RemoveMenuById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 308
+      syntax:
+        content:
+          CSharp: public Task<bool> RemoveMenuById(int id)
+          VB: Public Function RemoveMenuById(id As Integer) As Task(Of Boolean)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{System.Boolean}
+      overload: UnitTest.Services.FakeRestaurantService.RemoveMenuById*
+      implements:
+      - BLL.Services.IRestaurantService.RemoveMenuById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.RemoveRepasById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.RemoveRepasById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: RemoveRepasById(Int32)
+        VB: RemoveRepasById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.RemoveRepasById(Int32)
+        VB: FakeRestaurantService.RemoveRepasById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.RemoveRepasById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.RemoveRepasById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: RemoveRepasById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 314
+      syntax:
+        content:
+          CSharp: public Task<bool> RemoveRepasById(int id)
+          VB: Public Function RemoveRepasById(id As Integer) As Task(Of Boolean)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{System.Boolean}
+      overload: UnitTest.Services.FakeRestaurantService.RemoveRepasById*
+      implements:
+      - BLL.Services.IRestaurantService.RemoveRepasById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById(System.Int32)
+      commentId: M:UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById(System.Int32)
+      language: CSharp
+      name:
+        CSharp: RemoveTypeRepasById(Int32)
+        VB: RemoveTypeRepasById(Int32)
+      nameWithType:
+        CSharp: FakeRestaurantService.RemoveTypeRepasById(Int32)
+        VB: FakeRestaurantService.RemoveTypeRepasById(Int32)
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById(System.Int32)
+        VB: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById(System.Int32)
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeRestaurantService.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: RemoveTypeRepasById
+        path: ../UnitTest/Services/FakeRestaurantService.cs
+        startLine: 319
+      syntax:
+        content:
+          CSharp: public Task<bool> RemoveTypeRepasById(int id)
+          VB: Public Function RemoveTypeRepasById(id As Integer) As Task(Of Boolean)
+        parameters:
+        - id: id
+          type: System.Int32
+        return:
+          type: System.Threading.Tasks.Task{System.Boolean}
+      overload: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById*
+      implements:
+      - BLL.Services.IRestaurantService.RemoveTypeRepasById(System.Int32)
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: UnitTest.Services.FakeUnitOfWork
+    commentId: T:UnitTest.Services.FakeUnitOfWork
+    language: CSharp
+    name:
+      CSharp: FakeUnitOfWork
+      VB: FakeUnitOfWork
+    nameWithType:
+      CSharp: FakeUnitOfWork
+      VB: FakeUnitOfWork
+    qualifiedName:
+      CSharp: UnitTest.Services.FakeUnitOfWork
+      VB: UnitTest.Services.FakeUnitOfWork
+    type: Class
+    assemblies:
+    - UnitTest
+    namespace: UnitTest.Services
+    source:
+      remote:
+        path: Server/UnitTest/Services/FakeUnitOfWork.cs
+        branch: master
+        repo: https://github.com/titif-cda/FoodBook.git
+      id: FakeUnitOfWork
+      path: ../UnitTest/Services/FakeUnitOfWork.cs
+      startLine: 10
+    syntax:
+      content:
+        CSharp: 'class FakeUnitOfWork : IUnitOfWork, IDisposable'
+        VB: >-
+          Class FakeUnitOfWork
+
+              Implements IUnitOfWork, IDisposable
+    inheritance:
+    - System.Object
+    implements:
+    - DAL.UOW.IUnitOfWork
+    - System.IDisposable
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - class
+      VB:
+      - Class
+    items:
+    - id: UnitTest.Services.FakeUnitOfWork.BeginTransaction
+      commentId: M:UnitTest.Services.FakeUnitOfWork.BeginTransaction
+      language: CSharp
+      name:
+        CSharp: BeginTransaction()
+        VB: BeginTransaction()
+      nameWithType:
+        CSharp: FakeUnitOfWork.BeginTransaction()
+        VB: FakeUnitOfWork.BeginTransaction()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeUnitOfWork.BeginTransaction()
+        VB: UnitTest.Services.FakeUnitOfWork.BeginTransaction()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeUnitOfWork.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: BeginTransaction
+        path: ../UnitTest/Services/FakeUnitOfWork.cs
+        startLine: 13
+      syntax:
+        content:
+          CSharp: public void BeginTransaction()
+          VB: Public Sub BeginTransaction
+      overload: UnitTest.Services.FakeUnitOfWork.BeginTransaction*
+      implements:
+      - DAL.UOW.IUnitOfWork.BeginTransaction
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeUnitOfWork.Commit
+      commentId: M:UnitTest.Services.FakeUnitOfWork.Commit
+      language: CSharp
+      name:
+        CSharp: Commit()
+        VB: Commit()
+      nameWithType:
+        CSharp: FakeUnitOfWork.Commit()
+        VB: FakeUnitOfWork.Commit()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeUnitOfWork.Commit()
+        VB: UnitTest.Services.FakeUnitOfWork.Commit()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeUnitOfWork.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: Commit
+        path: ../UnitTest/Services/FakeUnitOfWork.cs
+        startLine: 18
+      syntax:
+        content:
+          CSharp: public void Commit()
+          VB: Public Sub Commit
+      overload: UnitTest.Services.FakeUnitOfWork.Commit*
+      implements:
+      - DAL.UOW.IUnitOfWork.Commit
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeUnitOfWork.Dispose
+      commentId: M:UnitTest.Services.FakeUnitOfWork.Dispose
+      language: CSharp
+      name:
+        CSharp: Dispose()
+        VB: Dispose()
+      nameWithType:
+        CSharp: FakeUnitOfWork.Dispose()
+        VB: FakeUnitOfWork.Dispose()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeUnitOfWork.Dispose()
+        VB: UnitTest.Services.FakeUnitOfWork.Dispose()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeUnitOfWork.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: Dispose
+        path: ../UnitTest/Services/FakeUnitOfWork.cs
+        startLine: 23
+      syntax:
+        content:
+          CSharp: public void Dispose()
+          VB: Public Sub Dispose
+      overload: UnitTest.Services.FakeUnitOfWork.Dispose*
+      implements:
+      - System.IDisposable.Dispose
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeUnitOfWork.GetRepository``1
+      commentId: M:UnitTest.Services.FakeUnitOfWork.GetRepository``1
+      language: CSharp
+      name:
+        CSharp: GetRepository<T>()
+        VB: GetRepository(Of T)()
+      nameWithType:
+        CSharp: FakeUnitOfWork.GetRepository<T>()
+        VB: FakeUnitOfWork.GetRepository(Of T)()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeUnitOfWork.GetRepository<T>()
+        VB: UnitTest.Services.FakeUnitOfWork.GetRepository(Of T)()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeUnitOfWork.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: GetRepository
+        path: ../UnitTest/Services/FakeUnitOfWork.cs
+        startLine: 28
+      syntax:
+        content:
+          CSharp: >-
+            public T GetRepository<T>()
+
+                where T : class
+          VB: Public Function GetRepository(Of T As Class) As T
+        typeParameters:
+        - id: T
+        return:
+          type: '{T}'
+      overload: UnitTest.Services.FakeUnitOfWork.GetRepository*
+      implements:
+      - DAL.UOW.IUnitOfWork.GetRepository``1
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: UnitTest.Services.FakeUnitOfWork.Rollback
+      commentId: M:UnitTest.Services.FakeUnitOfWork.Rollback
+      language: CSharp
+      name:
+        CSharp: Rollback()
+        VB: Rollback()
+      nameWithType:
+        CSharp: FakeUnitOfWork.Rollback()
+        VB: FakeUnitOfWork.Rollback()
+      qualifiedName:
+        CSharp: UnitTest.Services.FakeUnitOfWork.Rollback()
+        VB: UnitTest.Services.FakeUnitOfWork.Rollback()
+      type: Method
+      assemblies:
+      - UnitTest
+      namespace: UnitTest.Services
+      source:
+        remote:
+          path: Server/UnitTest/Services/FakeUnitOfWork.cs
+          branch: master
+          repo: https://github.com/titif-cda/FoodBook.git
+        id: Rollback
+        path: ../UnitTest/Services/FakeUnitOfWork.cs
+        startLine: 42
+      syntax:
+        content:
+          CSharp: public void Rollback()
+          VB: Public Sub Rollback
+      overload: UnitTest.Services.FakeUnitOfWork.Rollback*
+      implements:
+      - DAL.UOW.IUnitOfWork.Rollback
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  UnitTest.IngredientsControllerTest.TestGetIngredientID*:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest.TestGetIngredientID*
+        name: TestGetIngredientID
+        nameWithType: IngredientsControllerTest.TestGetIngredientID
+        qualifiedName: UnitTest.IngredientsControllerTest.TestGetIngredientID
+      VB:
+      - id: UnitTest.IngredientsControllerTest.TestGetIngredientID*
+        name: TestGetIngredientID
+        nameWithType: IngredientsControllerTest.TestGetIngredientID
+        qualifiedName: UnitTest.IngredientsControllerTest.TestGetIngredientID
+    isDefinition: true
+    commentId: Overload:UnitTest.IngredientsControllerTest.TestGetIngredientID
+  Xunit:
+    name:
+      CSharp:
+      - name: Xunit
+        nameWithType: Xunit
+        qualifiedName: Xunit
+        isExternal: true
+      VB:
+      - name: Xunit
+        nameWithType: Xunit
+        qualifiedName: Xunit
+    isDefinition: true
+    commentId: N:Xunit
+  Xunit.FactAttribute:
+    name:
+      CSharp:
+      - id: Xunit.FactAttribute
+        name: FactAttribute
+        nameWithType: FactAttribute
+        qualifiedName: Xunit.FactAttribute
+        isExternal: true
+      VB:
+      - id: Xunit.FactAttribute
+        name: FactAttribute
+        nameWithType: FactAttribute
+        qualifiedName: Xunit.FactAttribute
+        isExternal: true
+    isDefinition: true
+    parent: Xunit
+    commentId: T:Xunit.FactAttribute
+  Xunit.FactAttribute.#ctor:
+    name:
+      CSharp:
+      - id: Xunit.FactAttribute.#ctor
+        name: FactAttribute
+        nameWithType: FactAttribute.FactAttribute
+        qualifiedName: Xunit.FactAttribute.FactAttribute
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: Xunit.FactAttribute.#ctor
+        name: FactAttribute
+        nameWithType: FactAttribute.FactAttribute
+        qualifiedName: Xunit.FactAttribute.FactAttribute
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: Xunit.FactAttribute
+    commentId: M:Xunit.FactAttribute.#ctor
+  UnitTest.IngredientsControllerTest.TestDeleteIngredient*:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest.TestDeleteIngredient*
+        name: TestDeleteIngredient
+        nameWithType: IngredientsControllerTest.TestDeleteIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestDeleteIngredient
+      VB:
+      - id: UnitTest.IngredientsControllerTest.TestDeleteIngredient*
+        name: TestDeleteIngredient
+        nameWithType: IngredientsControllerTest.TestDeleteIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestDeleteIngredient
+    isDefinition: true
+    commentId: Overload:UnitTest.IngredientsControllerTest.TestDeleteIngredient
+  UnitTest.IngredientsControllerTest.TestCreateIngredient*:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest.TestCreateIngredient*
+        name: TestCreateIngredient
+        nameWithType: IngredientsControllerTest.TestCreateIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestCreateIngredient
+      VB:
+      - id: UnitTest.IngredientsControllerTest.TestCreateIngredient*
+        name: TestCreateIngredient
+        nameWithType: IngredientsControllerTest.TestCreateIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestCreateIngredient
+    isDefinition: true
+    commentId: Overload:UnitTest.IngredientsControllerTest.TestCreateIngredient
+  UnitTest.IngredientsControllerTest.TestModifyIngredient*:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest.TestModifyIngredient*
+        name: TestModifyIngredient
+        nameWithType: IngredientsControllerTest.TestModifyIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestModifyIngredient
+      VB:
+      - id: UnitTest.IngredientsControllerTest.TestModifyIngredient*
+        name: TestModifyIngredient
+        nameWithType: IngredientsControllerTest.TestModifyIngredient
+        qualifiedName: UnitTest.IngredientsControllerTest.TestModifyIngredient
+    isDefinition: true
+    commentId: Overload:UnitTest.IngredientsControllerTest.TestModifyIngredient
+  UnitTest.IngredientsControllerTest.GetAll*:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest.GetAll*
+        name: GetAll
+        nameWithType: IngredientsControllerTest.GetAll
+        qualifiedName: UnitTest.IngredientsControllerTest.GetAll
+      VB:
+      - id: UnitTest.IngredientsControllerTest.GetAll*
+        name: GetAll
+        nameWithType: IngredientsControllerTest.GetAll
+        qualifiedName: UnitTest.IngredientsControllerTest.GetAll
+    isDefinition: true
+    commentId: Overload:UnitTest.IngredientsControllerTest.GetAll
+  UnitTest.IngredientsControllerTest:
+    name:
+      CSharp:
+      - id: UnitTest.IngredientsControllerTest
+        name: IngredientsControllerTest
+        nameWithType: IngredientsControllerTest
+        qualifiedName: UnitTest.IngredientsControllerTest
+      VB:
+      - id: UnitTest.IngredientsControllerTest
+        name: IngredientsControllerTest
+        nameWithType: IngredientsControllerTest
+        qualifiedName: UnitTest.IngredientsControllerTest
+    isDefinition: true
+    commentId: T:UnitTest.IngredientsControllerTest
+  UnitTest.MenusControllerTest.TestGetMenuID*:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest.TestGetMenuID*
+        name: TestGetMenuID
+        nameWithType: MenusControllerTest.TestGetMenuID
+        qualifiedName: UnitTest.MenusControllerTest.TestGetMenuID
+      VB:
+      - id: UnitTest.MenusControllerTest.TestGetMenuID*
+        name: TestGetMenuID
+        nameWithType: MenusControllerTest.TestGetMenuID
+        qualifiedName: UnitTest.MenusControllerTest.TestGetMenuID
+    isDefinition: true
+    commentId: Overload:UnitTest.MenusControllerTest.TestGetMenuID
+  UnitTest.MenusControllerTest.GetAll*:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest.GetAll*
+        name: GetAll
+        nameWithType: MenusControllerTest.GetAll
+        qualifiedName: UnitTest.MenusControllerTest.GetAll
+      VB:
+      - id: UnitTest.MenusControllerTest.GetAll*
+        name: GetAll
+        nameWithType: MenusControllerTest.GetAll
+        qualifiedName: UnitTest.MenusControllerTest.GetAll
+    isDefinition: true
+    commentId: Overload:UnitTest.MenusControllerTest.GetAll
+  UnitTest.MenusControllerTest.TestDeleteMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest.TestDeleteMenu*
+        name: TestDeleteMenu
+        nameWithType: MenusControllerTest.TestDeleteMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestDeleteMenu
+      VB:
+      - id: UnitTest.MenusControllerTest.TestDeleteMenu*
+        name: TestDeleteMenu
+        nameWithType: MenusControllerTest.TestDeleteMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestDeleteMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.MenusControllerTest.TestDeleteMenu
+  UnitTest.MenusControllerTest.TestCreateMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest.TestCreateMenu*
+        name: TestCreateMenu
+        nameWithType: MenusControllerTest.TestCreateMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestCreateMenu
+      VB:
+      - id: UnitTest.MenusControllerTest.TestCreateMenu*
+        name: TestCreateMenu
+        nameWithType: MenusControllerTest.TestCreateMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestCreateMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.MenusControllerTest.TestCreateMenu
+  UnitTest.MenusControllerTest.TestModifyMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest.TestModifyMenu*
+        name: TestModifyMenu
+        nameWithType: MenusControllerTest.TestModifyMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestModifyMenu
+      VB:
+      - id: UnitTest.MenusControllerTest.TestModifyMenu*
+        name: TestModifyMenu
+        nameWithType: MenusControllerTest.TestModifyMenu
+        qualifiedName: UnitTest.MenusControllerTest.TestModifyMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.MenusControllerTest.TestModifyMenu
+  UnitTest.MenusControllerTest:
+    name:
+      CSharp:
+      - id: UnitTest.MenusControllerTest
+        name: MenusControllerTest
+        nameWithType: MenusControllerTest
+        qualifiedName: UnitTest.MenusControllerTest
+      VB:
+      - id: UnitTest.MenusControllerTest
+        name: MenusControllerTest
+        nameWithType: MenusControllerTest
+        qualifiedName: UnitTest.MenusControllerTest
+    isDefinition: true
+    commentId: T:UnitTest.MenusControllerTest
+  UnitTest.RestaurationServiceTest.Test*:
+    name:
+      CSharp:
+      - id: UnitTest.RestaurationServiceTest.Test*
+        name: Test
+        nameWithType: RestaurationServiceTest.Test
+        qualifiedName: UnitTest.RestaurationServiceTest.Test
+      VB:
+      - id: UnitTest.RestaurationServiceTest.Test*
+        name: Test
+        nameWithType: RestaurationServiceTest.Test
+        qualifiedName: UnitTest.RestaurationServiceTest.Test
+    isDefinition: true
+    commentId: Overload:UnitTest.RestaurationServiceTest.Test
+  UnitTest.RestaurationServiceTest:
+    name:
+      CSharp:
+      - id: UnitTest.RestaurationServiceTest
+        name: RestaurationServiceTest
+        nameWithType: RestaurationServiceTest
+        qualifiedName: UnitTest.RestaurationServiceTest
+      VB:
+      - id: UnitTest.RestaurationServiceTest
+        name: RestaurationServiceTest
+        nameWithType: RestaurationServiceTest
+        qualifiedName: UnitTest.RestaurationServiceTest
+    isDefinition: true
+    commentId: T:UnitTest.RestaurationServiceTest
+  UnitTest:
+    name:
+      CSharp:
+      - name: UnitTest
+        nameWithType: UnitTest
+        qualifiedName: UnitTest
+      VB:
+      - name: UnitTest
+        nameWithType: UnitTest
+        qualifiedName: UnitTest
+    isDefinition: true
+    commentId: N:UnitTest
+  DAL.Repository:
+    name:
+      CSharp:
+      - name: DAL.Repository
+        nameWithType: DAL.Repository
+        qualifiedName: DAL.Repository
+      VB:
+      - name: DAL.Repository
+        nameWithType: DAL.Repository
+        qualifiedName: DAL.Repository
+    isDefinition: true
+    commentId: N:DAL.Repository
+  DAL.Repository.IMenuRepository:
+    name:
+      CSharp:
+      - id: DAL.Repository.IMenuRepository
+        name: IMenuRepository
+        nameWithType: IMenuRepository
+        qualifiedName: DAL.Repository.IMenuRepository
+      VB:
+      - id: DAL.Repository.IMenuRepository
+        name: IMenuRepository
+        nameWithType: IMenuRepository
+        qualifiedName: DAL.Repository.IMenuRepository
+    isDefinition: true
+    parent: DAL.Repository
+    commentId: T:DAL.Repository.IMenuRepository
+  DAL.Repository.IGenericRepository`1:
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1
+        name: IGenericRepository
+        nameWithType: IGenericRepository
+        qualifiedName: DAL.Repository.IGenericRepository
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: DAL.Repository.IGenericRepository`1
+        name: IGenericRepository
+        nameWithType: IGenericRepository
+        qualifiedName: DAL.Repository.IGenericRepository
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:DAL.Repository.IGenericRepository`1
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}:
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1
+        name: IGenericRepository
+        nameWithType: IGenericRepository
+        qualifiedName: DAL.Repository.IGenericRepository
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: DAL.Repository.IGenericRepository`1
+        name: IGenericRepository
+        nameWithType: IGenericRepository
+        qualifiedName: DAL.Repository.IGenericRepository
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1
+    parent: DAL.Repository
+    commentId: T:DAL.Repository.IGenericRepository{BO.Entity.Menu}
+  UnitTest.Services.FakeMenuRepository.#ctor*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.#ctor*
+        name: FakeMenuRepository
+        nameWithType: FakeMenuRepository.FakeMenuRepository
+        qualifiedName: UnitTest.Services.FakeMenuRepository.FakeMenuRepository
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.#ctor*
+        name: FakeMenuRepository
+        nameWithType: FakeMenuRepository.FakeMenuRepository
+        qualifiedName: UnitTest.Services.FakeMenuRepository.FakeMenuRepository
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.#ctor
+  System.Threading.Tasks.Task`1:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TResult
+        nameWithType: TResult
+        qualifiedName: TResult
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TResult
+        nameWithType: TResult
+        qualifiedName: TResult
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Threading.Tasks.Task`1
+  System.Threading.Tasks:
+    name:
+      CSharp:
+      - name: System.Threading.Tasks
+        nameWithType: System.Threading.Tasks
+        qualifiedName: System.Threading.Tasks
+        isExternal: true
+      VB:
+      - name: System.Threading.Tasks
+        nameWithType: System.Threading.Tasks
+        qualifiedName: System.Threading.Tasks
+    isDefinition: true
+    commentId: N:System.Threading.Tasks
+  System.Threading.Tasks.Task{System.Int32}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{System.Int32}
+  System.Int64:
+    name:
+      CSharp:
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+      VB:
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Int64
+  UnitTest.Services.FakeMenuRepository.DeleteAsync*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.DeleteAsync*
+        name: DeleteAsync
+        nameWithType: FakeMenuRepository.DeleteAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.DeleteAsync
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.DeleteAsync*
+        name: DeleteAsync
+        nameWithType: FakeMenuRepository.DeleteAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.DeleteAsync
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.DeleteAsync
+  DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+        name: DeleteAsync
+        nameWithType: IGenericRepository<TEntity>.DeleteAsync
+        qualifiedName: DAL.Repository.IGenericRepository<TEntity>.DeleteAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+        name: DeleteAsync
+        nameWithType: IGenericRepository(Of TEntity).DeleteAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of TEntity).DeleteAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}.DeleteAsync(System.Int64):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+        name: DeleteAsync
+        nameWithType: IGenericRepository<Menu>.DeleteAsync
+        qualifiedName: DAL.Repository.IGenericRepository<BO.Entity.Menu>.DeleteAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+        name: DeleteAsync
+        nameWithType: IGenericRepository(Of Menu).DeleteAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of BO.Entity.Menu).DeleteAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int64
+        name: Int64
+        nameWithType: Int64
+        qualifiedName: System.Int64
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)
+    parent: DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    commentId: M:DAL.Repository.IGenericRepository{BO.Entity.Menu}.DeleteAsync(System.Int64)
+  System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Menu}}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Menu}}
+  BO.DTO.Requests:
+    name:
+      CSharp:
+      - name: BO.DTO.Requests
+        nameWithType: BO.DTO.Requests
+        qualifiedName: BO.DTO.Requests
+      VB:
+      - name: BO.DTO.Requests
+        nameWithType: BO.DTO.Requests
+        qualifiedName: BO.DTO.Requests
+    isDefinition: true
+    commentId: N:BO.DTO.Requests
+  BO.DTO.Requests.PageRequest:
+    name:
+      CSharp:
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      VB:
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+    isDefinition: true
+    parent: BO.DTO.Requests
+    commentId: T:BO.DTO.Requests.PageRequest
+  UnitTest.Services.FakeMenuRepository.GetAllAsync*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.GetAllAsync*
+        name: GetAllAsync
+        nameWithType: FakeMenuRepository.GetAllAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.GetAllAsync
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.GetAllAsync*
+        name: GetAllAsync
+        nameWithType: FakeMenuRepository.GetAllAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.GetAllAsync
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.GetAllAsync
+  DAL.Repository.IMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest):
+    name:
+      CSharp:
+      - id: DAL.Repository.IMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+        name: GetAllAsync
+        nameWithType: IMenuRepository.GetAllAsync
+        qualifiedName: DAL.Repository.IMenuRepository.GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+        name: GetAllAsync
+        nameWithType: IMenuRepository.GetAllAsync
+        qualifiedName: DAL.Repository.IMenuRepository.GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: DAL.Repository.IMenuRepository
+    commentId: M:DAL.Repository.IMenuRepository.GetAllAsync(BO.DTO.Requests.PageRequest)
+  System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BO.Entity.Menu}}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.Collections.Generic.IEnumerable`1
+        name: IEnumerable
+        nameWithType: IEnumerable
+        qualifiedName: System.Collections.Generic.IEnumerable
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.Collections.Generic.IEnumerable`1
+        name: IEnumerable
+        nameWithType: IEnumerable
+        qualifiedName: System.Collections.Generic.IEnumerable
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BO.Entity.Menu}}
+  DAL.Repository.IGenericRepository`1.GetAllAsync:
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.GetAllAsync
+        name: GetAllAsync
+        nameWithType: IGenericRepository<TEntity>.GetAllAsync
+        qualifiedName: DAL.Repository.IGenericRepository<TEntity>.GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.GetAllAsync
+        name: GetAllAsync
+        nameWithType: IGenericRepository(Of TEntity).GetAllAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of TEntity).GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:DAL.Repository.IGenericRepository`1.GetAllAsync
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAllAsync:
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.GetAllAsync
+        name: GetAllAsync
+        nameWithType: IGenericRepository<Menu>.GetAllAsync
+        qualifiedName: DAL.Repository.IGenericRepository<BO.Entity.Menu>.GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.GetAllAsync
+        name: GetAllAsync
+        nameWithType: IGenericRepository(Of Menu).GetAllAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of BO.Entity.Menu).GetAllAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1.GetAllAsync
+    parent: DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    commentId: M:DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAllAsync
+  System.Threading.Tasks.Task{BO.Entity.Menu}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.Entity.Menu}
+  System.Int32:
+    name:
+      CSharp:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      VB:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Int32
+  UnitTest.Services.FakeMenuRepository.GetAsync*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.GetAsync*
+        name: GetAsync
+        nameWithType: FakeMenuRepository.GetAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.GetAsync
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.GetAsync*
+        name: GetAsync
+        nameWithType: FakeMenuRepository.GetAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.GetAsync
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.GetAsync
+  DAL.Repository.IGenericRepository`1.GetAsync(System.Int32):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+        name: GetAsync
+        nameWithType: IGenericRepository<TEntity>.GetAsync
+        qualifiedName: DAL.Repository.IGenericRepository<TEntity>.GetAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+        name: GetAsync
+        nameWithType: IGenericRepository(Of TEntity).GetAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of TEntity).GetAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAsync(System.Int32):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+        name: GetAsync
+        nameWithType: IGenericRepository<Menu>.GetAsync
+        qualifiedName: DAL.Repository.IGenericRepository<BO.Entity.Menu>.GetAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+        name: GetAsync
+        nameWithType: IGenericRepository(Of Menu).GetAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of BO.Entity.Menu).GetAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)
+    parent: DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    commentId: M:DAL.Repository.IGenericRepository{BO.Entity.Menu}.GetAsync(System.Int32)
+  BO.Entity:
+    name:
+      CSharp:
+      - name: BO.Entity
+        nameWithType: BO.Entity
+        qualifiedName: BO.Entity
+      VB:
+      - name: BO.Entity
+        nameWithType: BO.Entity
+        qualifiedName: BO.Entity
+    isDefinition: true
+    commentId: N:BO.Entity
+  BO.Entity.Menu:
+    name:
+      CSharp:
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      VB:
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+    isDefinition: true
+    parent: BO.Entity
+    commentId: T:BO.Entity.Menu
+  UnitTest.Services.FakeMenuRepository.InsertAsync*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.InsertAsync*
+        name: InsertAsync
+        nameWithType: FakeMenuRepository.InsertAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.InsertAsync
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.InsertAsync*
+        name: InsertAsync
+        nameWithType: FakeMenuRepository.InsertAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.InsertAsync
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.InsertAsync
+  DAL.Repository.IGenericRepository`1.InsertAsync(`0):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+        name: InsertAsync
+        nameWithType: IGenericRepository<TEntity>.InsertAsync
+        qualifiedName: DAL.Repository.IGenericRepository<TEntity>.InsertAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+        name: InsertAsync
+        nameWithType: IGenericRepository(Of TEntity).InsertAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of TEntity).InsertAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}.InsertAsync(BO.Entity.Menu):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+        name: InsertAsync
+        nameWithType: IGenericRepository<Menu>.InsertAsync
+        qualifiedName: DAL.Repository.IGenericRepository<BO.Entity.Menu>.InsertAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+        name: InsertAsync
+        nameWithType: IGenericRepository(Of Menu).InsertAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of BO.Entity.Menu).InsertAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1.InsertAsync(`0)
+    parent: DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    commentId: M:DAL.Repository.IGenericRepository{BO.Entity.Menu}.InsertAsync(BO.Entity.Menu)
+  System.Threading.Tasks.Task:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      VB:
+      - id: System.Threading.Tasks.Task
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+    isDefinition: true
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task
+  UnitTest.Services.FakeMenuRepository.UpdateAsync*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository.UpdateAsync*
+        name: UpdateAsync
+        nameWithType: FakeMenuRepository.UpdateAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.UpdateAsync
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository.UpdateAsync*
+        name: UpdateAsync
+        nameWithType: FakeMenuRepository.UpdateAsync
+        qualifiedName: UnitTest.Services.FakeMenuRepository.UpdateAsync
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeMenuRepository.UpdateAsync
+  DAL.Repository.IGenericRepository`1.UpdateAsync(`0):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+        name: UpdateAsync
+        nameWithType: IGenericRepository<TEntity>.UpdateAsync
+        qualifiedName: DAL.Repository.IGenericRepository<TEntity>.UpdateAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+        name: UpdateAsync
+        nameWithType: IGenericRepository(Of TEntity).UpdateAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of TEntity).UpdateAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: TEntity
+        nameWithType: TEntity
+        qualifiedName: TEntity
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+  DAL.Repository.IGenericRepository{BO.Entity.Menu}.UpdateAsync(BO.Entity.Menu):
+    name:
+      CSharp:
+      - id: DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+        name: UpdateAsync
+        nameWithType: IGenericRepository<Menu>.UpdateAsync
+        qualifiedName: DAL.Repository.IGenericRepository<BO.Entity.Menu>.UpdateAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+        name: UpdateAsync
+        nameWithType: IGenericRepository(Of Menu).UpdateAsync
+        qualifiedName: DAL.Repository.IGenericRepository(Of BO.Entity.Menu).UpdateAsync
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: DAL.Repository.IGenericRepository`1.UpdateAsync(`0)
+    parent: DAL.Repository.IGenericRepository{BO.Entity.Menu}
+    commentId: M:DAL.Repository.IGenericRepository{BO.Entity.Menu}.UpdateAsync(BO.Entity.Menu)
+  UnitTest.Services.FakeMenuRepository:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeMenuRepository
+        name: FakeMenuRepository
+        nameWithType: FakeMenuRepository
+        qualifiedName: UnitTest.Services.FakeMenuRepository
+      VB:
+      - id: UnitTest.Services.FakeMenuRepository
+        name: FakeMenuRepository
+        nameWithType: FakeMenuRepository
+        qualifiedName: UnitTest.Services.FakeMenuRepository
+    isDefinition: true
+    commentId: T:UnitTest.Services.FakeMenuRepository
+  BLL.Services:
+    name:
+      CSharp:
+      - name: BLL.Services
+        nameWithType: BLL.Services
+        qualifiedName: BLL.Services
+      VB:
+      - name: BLL.Services
+        nameWithType: BLL.Services
+        qualifiedName: BLL.Services
+    isDefinition: true
+    commentId: N:BLL.Services
+  BLL.Services.IRestaurantService:
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService
+        name: IRestaurantService
+        nameWithType: IRestaurantService
+        qualifiedName: BLL.Services.IRestaurantService
+      VB:
+      - id: BLL.Services.IRestaurantService
+        name: IRestaurantService
+        nameWithType: IRestaurantService
+        qualifiedName: BLL.Services.IRestaurantService
+    isDefinition: true
+    parent: BLL.Services
+    commentId: T:BLL.Services.IRestaurantService
+  System.Collections.Generic.List`1:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.List`1
+  System.Collections.Generic:
+    name:
+      CSharp:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+        isExternal: true
+      VB:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+    isDefinition: true
+    commentId: N:System.Collections.Generic
+  System.Collections.Generic.List{BO.Entity.Ingredient}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.List`1
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.List{BO.Entity.Ingredient}
+  System.Collections.Generic.List{BO.Entity.Menu}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.List`1
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.List{BO.Entity.Menu}
+  System.Threading.Tasks.Task{BO.Entity.Ingredient}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.Entity.Ingredient}
+  BO.Entity.Ingredient:
+    name:
+      CSharp:
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      VB:
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+    isDefinition: true
+    parent: BO.Entity
+    commentId: T:BO.Entity.Ingredient
+  UnitTest.Services.FakeRestaurantService.CreateIngredient*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.CreateIngredient*
+        name: CreateIngredient
+        nameWithType: FakeRestaurantService.CreateIngredient
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateIngredient
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.CreateIngredient*
+        name: CreateIngredient
+        nameWithType: FakeRestaurantService.CreateIngredient
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateIngredient
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.CreateIngredient
+  BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+        name: CreateIngredient
+        nameWithType: IRestaurantService.CreateIngredient
+        qualifiedName: BLL.Services.IRestaurantService.CreateIngredient
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+        name: CreateIngredient
+        nameWithType: IRestaurantService.CreateIngredient
+        qualifiedName: BLL.Services.IRestaurantService.CreateIngredient
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient)
+  UnitTest.Services.FakeRestaurantService.CreateMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.CreateMenu*
+        name: CreateMenu
+        nameWithType: FakeRestaurantService.CreateMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateMenu
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.CreateMenu*
+        name: CreateMenu
+        nameWithType: FakeRestaurantService.CreateMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.CreateMenu
+  BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)
+        name: CreateMenu
+        nameWithType: IRestaurantService.CreateMenu
+        qualifiedName: BLL.Services.IRestaurantService.CreateMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)
+        name: CreateMenu
+        nameWithType: IRestaurantService.CreateMenu
+        qualifiedName: BLL.Services.IRestaurantService.CreateMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)
+  System.Threading.Tasks.Task{BO.Entity.Repas}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.Entity.Repas}
+  BO.Entity.Repas:
+    name:
+      CSharp:
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      VB:
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+    isDefinition: true
+    parent: BO.Entity
+    commentId: T:BO.Entity.Repas
+  UnitTest.Services.FakeRestaurantService.CreateRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.CreateRepas*
+        name: CreateRepas
+        nameWithType: FakeRestaurantService.CreateRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.CreateRepas*
+        name: CreateRepas
+        nameWithType: FakeRestaurantService.CreateRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.CreateRepas
+  BLL.Services.IRestaurantService.CreateRepas(BO.Entity.Repas):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.CreateRepas(BO.Entity.Repas)
+        name: CreateRepas
+        nameWithType: IRestaurantService.CreateRepas
+        qualifiedName: BLL.Services.IRestaurantService.CreateRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.CreateRepas(BO.Entity.Repas)
+        name: CreateRepas
+        nameWithType: IRestaurantService.CreateRepas
+        qualifiedName: BLL.Services.IRestaurantService.CreateRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.CreateRepas(BO.Entity.Repas)
+  System.Threading.Tasks.Task{BO.Entity.TypeRepas}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.Entity.TypeRepas}
+  BO.Entity.TypeRepas:
+    name:
+      CSharp:
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      VB:
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+    isDefinition: true
+    parent: BO.Entity
+    commentId: T:BO.Entity.TypeRepas
+  UnitTest.Services.FakeRestaurantService.CreateTypeRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.CreateTypeRepas*
+        name: CreateTypeRepas
+        nameWithType: FakeRestaurantService.CreateTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateTypeRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.CreateTypeRepas*
+        name: CreateTypeRepas
+        nameWithType: FakeRestaurantService.CreateTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.CreateTypeRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.CreateTypeRepas
+  BLL.Services.IRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+        name: CreateTypeRepas
+        nameWithType: IRestaurantService.CreateTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.CreateTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+        name: CreateTypeRepas
+        nameWithType: IRestaurantService.CreateTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.CreateTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.CreateTypeRepas(BO.Entity.TypeRepas)
+  System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Ingredient}}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Ingredient}}
+  UnitTest.Services.FakeRestaurantService.GetAllIngredients*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllIngredients*
+        name: GetAllIngredients
+        nameWithType: FakeRestaurantService.GetAllIngredients
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllIngredients
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllIngredients*
+        name: GetAllIngredients
+        nameWithType: FakeRestaurantService.GetAllIngredients
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllIngredients
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetAllIngredients
+  BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+        name: GetAllIngredients
+        nameWithType: IRestaurantService.GetAllIngredients
+        qualifiedName: BLL.Services.IRestaurantService.GetAllIngredients
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+        name: GetAllIngredients
+        nameWithType: IRestaurantService.GetAllIngredients
+        qualifiedName: BLL.Services.IRestaurantService.GetAllIngredients
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)
+  UnitTest.Services.FakeRestaurantService.GetAllMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllMenu*
+        name: GetAllMenu
+        nameWithType: FakeRestaurantService.GetAllMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllMenu
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllMenu*
+        name: GetAllMenu
+        nameWithType: FakeRestaurantService.GetAllMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetAllMenu
+  BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+        name: GetAllMenu
+        nameWithType: IRestaurantService.GetAllMenu
+        qualifiedName: BLL.Services.IRestaurantService.GetAllMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+        name: GetAllMenu
+        nameWithType: IRestaurantService.GetAllMenu
+        qualifiedName: BLL.Services.IRestaurantService.GetAllMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)
+  System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Repas}}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.Repas}}
+  BO.DTO.Requests.Filter:
+    name:
+      CSharp:
+      - id: BO.DTO.Requests.Filter
+        name: Filter
+        nameWithType: Filter
+        qualifiedName: BO.DTO.Requests.Filter
+      VB:
+      - id: BO.DTO.Requests.Filter
+        name: Filter
+        nameWithType: Filter
+        qualifiedName: BO.DTO.Requests.Filter
+    isDefinition: true
+    parent: BO.DTO.Requests
+    commentId: T:BO.DTO.Requests.Filter
+  UnitTest.Services.FakeRestaurantService.GetAllRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllRepas*
+        name: GetAllRepas
+        nameWithType: FakeRestaurantService.GetAllRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllRepas*
+        name: GetAllRepas
+        nameWithType: FakeRestaurantService.GetAllRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetAllRepas
+  BLL.Services.IRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+        name: GetAllRepas
+        nameWithType: IRestaurantService.GetAllRepas
+        qualifiedName: BLL.Services.IRestaurantService.GetAllRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: BO.DTO.Requests.Filter
+        name: Filter
+        nameWithType: Filter
+        qualifiedName: BO.DTO.Requests.Filter
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+        name: GetAllRepas
+        nameWithType: IRestaurantService.GetAllRepas
+        qualifiedName: BLL.Services.IRestaurantService.GetAllRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: BO.DTO.Requests.Filter
+        name: Filter
+        nameWithType: Filter
+        qualifiedName: BO.DTO.Requests.Filter
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetAllRepas(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)
+  System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.TypeRepas}}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.DTO.Responses.PageResponse`1
+        name: PageResponse
+        nameWithType: PageResponse
+        qualifiedName: BO.DTO.Responses.PageResponse
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{BO.DTO.Responses.PageResponse{BO.Entity.TypeRepas}}
+  UnitTest.Services.FakeRestaurantService.GetAllTypeRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas*
+        name: GetAllTypeRepas
+        nameWithType: FakeRestaurantService.GetAllTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas*
+        name: GetAllTypeRepas
+        nameWithType: FakeRestaurantService.GetAllTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetAllTypeRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetAllTypeRepas
+  BLL.Services.IRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+        name: GetAllTypeRepas
+        nameWithType: IRestaurantService.GetAllTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.GetAllTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+        name: GetAllTypeRepas
+        nameWithType: IRestaurantService.GetAllTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.GetAllTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.DTO.Requests.PageRequest
+        name: PageRequest
+        nameWithType: PageRequest
+        qualifiedName: BO.DTO.Requests.PageRequest
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetAllTypeRepas(BO.DTO.Requests.PageRequest)
+  UnitTest.Services.FakeRestaurantService.GetIngredientById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetIngredientById*
+        name: GetIngredientById
+        nameWithType: FakeRestaurantService.GetIngredientById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetIngredientById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetIngredientById*
+        name: GetIngredientById
+        nameWithType: FakeRestaurantService.GetIngredientById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetIngredientById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetIngredientById
+  BLL.Services.IRestaurantService.GetIngredientById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetIngredientById(System.Int32)
+        name: GetIngredientById
+        nameWithType: IRestaurantService.GetIngredientById
+        qualifiedName: BLL.Services.IRestaurantService.GetIngredientById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetIngredientById(System.Int32)
+        name: GetIngredientById
+        nameWithType: IRestaurantService.GetIngredientById
+        qualifiedName: BLL.Services.IRestaurantService.GetIngredientById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetIngredientById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.GetMenuById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetMenuById*
+        name: GetMenuById
+        nameWithType: FakeRestaurantService.GetMenuById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetMenuById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetMenuById*
+        name: GetMenuById
+        nameWithType: FakeRestaurantService.GetMenuById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetMenuById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetMenuById
+  BLL.Services.IRestaurantService.GetMenuById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetMenuById(System.Int32)
+        name: GetMenuById
+        nameWithType: IRestaurantService.GetMenuById
+        qualifiedName: BLL.Services.IRestaurantService.GetMenuById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetMenuById(System.Int32)
+        name: GetMenuById
+        nameWithType: IRestaurantService.GetMenuById
+        qualifiedName: BLL.Services.IRestaurantService.GetMenuById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetMenuById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.GetRepasById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetRepasById*
+        name: GetRepasById
+        nameWithType: FakeRestaurantService.GetRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetRepasById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetRepasById*
+        name: GetRepasById
+        nameWithType: FakeRestaurantService.GetRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetRepasById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetRepasById
+  BLL.Services.IRestaurantService.GetRepasById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetRepasById(System.Int32)
+        name: GetRepasById
+        nameWithType: IRestaurantService.GetRepasById
+        qualifiedName: BLL.Services.IRestaurantService.GetRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetRepasById(System.Int32)
+        name: GetRepasById
+        nameWithType: IRestaurantService.GetRepasById
+        qualifiedName: BLL.Services.IRestaurantService.GetRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetRepasById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.GetTypeRepasById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.GetTypeRepasById*
+        name: GetTypeRepasById
+        nameWithType: FakeRestaurantService.GetTypeRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetTypeRepasById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.GetTypeRepasById*
+        name: GetTypeRepasById
+        nameWithType: FakeRestaurantService.GetTypeRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.GetTypeRepasById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.GetTypeRepasById
+  BLL.Services.IRestaurantService.GetTypeRepasById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.GetTypeRepasById(System.Int32)
+        name: GetTypeRepasById
+        nameWithType: IRestaurantService.GetTypeRepasById
+        qualifiedName: BLL.Services.IRestaurantService.GetTypeRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.GetTypeRepasById(System.Int32)
+        name: GetTypeRepasById
+        nameWithType: IRestaurantService.GetTypeRepasById
+        qualifiedName: BLL.Services.IRestaurantService.GetTypeRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.GetTypeRepasById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.ModifyIngredient*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyIngredient*
+        name: ModifyIngredient
+        nameWithType: FakeRestaurantService.ModifyIngredient
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyIngredient
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyIngredient*
+        name: ModifyIngredient
+        nameWithType: FakeRestaurantService.ModifyIngredient
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyIngredient
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.ModifyIngredient
+  BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+        name: ModifyIngredient
+        nameWithType: IRestaurantService.ModifyIngredient
+        qualifiedName: BLL.Services.IRestaurantService.ModifyIngredient
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+        name: ModifyIngredient
+        nameWithType: IRestaurantService.ModifyIngredient
+        qualifiedName: BLL.Services.IRestaurantService.ModifyIngredient
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Ingredient
+        name: Ingredient
+        nameWithType: Ingredient
+        qualifiedName: BO.Entity.Ingredient
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient)
+  UnitTest.Services.FakeRestaurantService.ModifyMenu*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyMenu*
+        name: ModifyMenu
+        nameWithType: FakeRestaurantService.ModifyMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyMenu
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyMenu*
+        name: ModifyMenu
+        nameWithType: FakeRestaurantService.ModifyMenu
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyMenu
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.ModifyMenu
+  BLL.Services.IRestaurantService.ModifyMenu(BO.Entity.Menu):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.ModifyMenu(BO.Entity.Menu)
+        name: ModifyMenu
+        nameWithType: IRestaurantService.ModifyMenu
+        qualifiedName: BLL.Services.IRestaurantService.ModifyMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.ModifyMenu(BO.Entity.Menu)
+        name: ModifyMenu
+        nameWithType: IRestaurantService.ModifyMenu
+        qualifiedName: BLL.Services.IRestaurantService.ModifyMenu
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Menu
+        name: Menu
+        nameWithType: Menu
+        qualifiedName: BO.Entity.Menu
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.ModifyMenu(BO.Entity.Menu)
+  UnitTest.Services.FakeRestaurantService.ModifyRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyRepas*
+        name: ModifyRepas
+        nameWithType: FakeRestaurantService.ModifyRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyRepas*
+        name: ModifyRepas
+        nameWithType: FakeRestaurantService.ModifyRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.ModifyRepas
+  BLL.Services.IRestaurantService.ModifyRepas(BO.Entity.Repas):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.ModifyRepas(BO.Entity.Repas)
+        name: ModifyRepas
+        nameWithType: IRestaurantService.ModifyRepas
+        qualifiedName: BLL.Services.IRestaurantService.ModifyRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.ModifyRepas(BO.Entity.Repas)
+        name: ModifyRepas
+        nameWithType: IRestaurantService.ModifyRepas
+        qualifiedName: BLL.Services.IRestaurantService.ModifyRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.Repas
+        name: Repas
+        nameWithType: Repas
+        qualifiedName: BO.Entity.Repas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.ModifyRepas(BO.Entity.Repas)
+  UnitTest.Services.FakeRestaurantService.ModifyTypeRepas*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas*
+        name: ModifyTypeRepas
+        nameWithType: FakeRestaurantService.ModifyTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas*
+        name: ModifyTypeRepas
+        nameWithType: FakeRestaurantService.ModifyTypeRepas
+        qualifiedName: UnitTest.Services.FakeRestaurantService.ModifyTypeRepas
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.ModifyTypeRepas
+  BLL.Services.IRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+        name: ModifyTypeRepas
+        nameWithType: IRestaurantService.ModifyTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.ModifyTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+        name: ModifyTypeRepas
+        nameWithType: IRestaurantService.ModifyTypeRepas
+        qualifiedName: BLL.Services.IRestaurantService.ModifyTypeRepas
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: BO.Entity.TypeRepas
+        name: TypeRepas
+        nameWithType: TypeRepas
+        qualifiedName: BO.Entity.TypeRepas
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.ModifyTypeRepas(BO.Entity.TypeRepas)
+  System.Threading.Tasks.Task{System.Boolean}:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Threading.Tasks.Task`1
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Threading.Tasks.Task`1
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  UnitTest.Services.FakeRestaurantService.RemoveIngredientById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveIngredientById*
+        name: RemoveIngredientById
+        nameWithType: FakeRestaurantService.RemoveIngredientById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveIngredientById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveIngredientById*
+        name: RemoveIngredientById
+        nameWithType: FakeRestaurantService.RemoveIngredientById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveIngredientById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.RemoveIngredientById
+  BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32)
+        name: RemoveIngredientById
+        nameWithType: IRestaurantService.RemoveIngredientById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveIngredientById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32)
+        name: RemoveIngredientById
+        nameWithType: IRestaurantService.RemoveIngredientById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveIngredientById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.RemoveMenuById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveMenuById*
+        name: RemoveMenuById
+        nameWithType: FakeRestaurantService.RemoveMenuById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveMenuById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveMenuById*
+        name: RemoveMenuById
+        nameWithType: FakeRestaurantService.RemoveMenuById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveMenuById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.RemoveMenuById
+  BLL.Services.IRestaurantService.RemoveMenuById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.RemoveMenuById(System.Int32)
+        name: RemoveMenuById
+        nameWithType: IRestaurantService.RemoveMenuById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveMenuById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.RemoveMenuById(System.Int32)
+        name: RemoveMenuById
+        nameWithType: IRestaurantService.RemoveMenuById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveMenuById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.RemoveMenuById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.RemoveRepasById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveRepasById*
+        name: RemoveRepasById
+        nameWithType: FakeRestaurantService.RemoveRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveRepasById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveRepasById*
+        name: RemoveRepasById
+        nameWithType: FakeRestaurantService.RemoveRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveRepasById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.RemoveRepasById
+  BLL.Services.IRestaurantService.RemoveRepasById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.RemoveRepasById(System.Int32)
+        name: RemoveRepasById
+        nameWithType: IRestaurantService.RemoveRepasById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.RemoveRepasById(System.Int32)
+        name: RemoveRepasById
+        nameWithType: IRestaurantService.RemoveRepasById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.RemoveRepasById(System.Int32)
+  UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById*
+        name: RemoveTypeRepasById
+        nameWithType: FakeRestaurantService.RemoveTypeRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById*
+        name: RemoveTypeRepasById
+        nameWithType: FakeRestaurantService.RemoveTypeRepasById
+        qualifiedName: UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeRestaurantService.RemoveTypeRepasById
+  BLL.Services.IRestaurantService.RemoveTypeRepasById(System.Int32):
+    name:
+      CSharp:
+      - id: BLL.Services.IRestaurantService.RemoveTypeRepasById(System.Int32)
+        name: RemoveTypeRepasById
+        nameWithType: IRestaurantService.RemoveTypeRepasById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveTypeRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: BLL.Services.IRestaurantService.RemoveTypeRepasById(System.Int32)
+        name: RemoveTypeRepasById
+        nameWithType: IRestaurantService.RemoveTypeRepasById
+        qualifiedName: BLL.Services.IRestaurantService.RemoveTypeRepasById
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: BLL.Services.IRestaurantService
+    commentId: M:BLL.Services.IRestaurantService.RemoveTypeRepasById(System.Int32)
+  UnitTest.Services.FakeRestaurantService:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeRestaurantService
+        name: FakeRestaurantService
+        nameWithType: FakeRestaurantService
+        qualifiedName: UnitTest.Services.FakeRestaurantService
+      VB:
+      - id: UnitTest.Services.FakeRestaurantService
+        name: FakeRestaurantService
+        nameWithType: FakeRestaurantService
+        qualifiedName: UnitTest.Services.FakeRestaurantService
+    isDefinition: true
+    commentId: T:UnitTest.Services.FakeRestaurantService
+  DAL.UOW:
+    name:
+      CSharp:
+      - name: DAL.UOW
+        nameWithType: DAL.UOW
+        qualifiedName: DAL.UOW
+      VB:
+      - name: DAL.UOW
+        nameWithType: DAL.UOW
+        qualifiedName: DAL.UOW
+    isDefinition: true
+    commentId: N:DAL.UOW
+  DAL.UOW.IUnitOfWork:
+    name:
+      CSharp:
+      - id: DAL.UOW.IUnitOfWork
+        name: IUnitOfWork
+        nameWithType: IUnitOfWork
+        qualifiedName: DAL.UOW.IUnitOfWork
+      VB:
+      - id: DAL.UOW.IUnitOfWork
+        name: IUnitOfWork
+        nameWithType: IUnitOfWork
+        qualifiedName: DAL.UOW.IUnitOfWork
+    isDefinition: true
+    parent: DAL.UOW
+    commentId: T:DAL.UOW.IUnitOfWork
+  System.IDisposable:
+    name:
+      CSharp:
+      - id: System.IDisposable
+        name: IDisposable
+        nameWithType: IDisposable
+        qualifiedName: System.IDisposable
+        isExternal: true
+      VB:
+      - id: System.IDisposable
+        name: IDisposable
+        nameWithType: IDisposable
+        qualifiedName: System.IDisposable
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.IDisposable
+  UnitTest.Services.FakeUnitOfWork.BeginTransaction*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork.BeginTransaction*
+        name: BeginTransaction
+        nameWithType: FakeUnitOfWork.BeginTransaction
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.BeginTransaction
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork.BeginTransaction*
+        name: BeginTransaction
+        nameWithType: FakeUnitOfWork.BeginTransaction
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.BeginTransaction
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeUnitOfWork.BeginTransaction
+  DAL.UOW.IUnitOfWork.BeginTransaction:
+    name:
+      CSharp:
+      - id: DAL.UOW.IUnitOfWork.BeginTransaction
+        name: BeginTransaction
+        nameWithType: IUnitOfWork.BeginTransaction
+        qualifiedName: DAL.UOW.IUnitOfWork.BeginTransaction
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.UOW.IUnitOfWork.BeginTransaction
+        name: BeginTransaction
+        nameWithType: IUnitOfWork.BeginTransaction
+        qualifiedName: DAL.UOW.IUnitOfWork.BeginTransaction
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: DAL.UOW.IUnitOfWork
+    commentId: M:DAL.UOW.IUnitOfWork.BeginTransaction
+  UnitTest.Services.FakeUnitOfWork.Commit*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork.Commit*
+        name: Commit
+        nameWithType: FakeUnitOfWork.Commit
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Commit
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork.Commit*
+        name: Commit
+        nameWithType: FakeUnitOfWork.Commit
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Commit
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeUnitOfWork.Commit
+  DAL.UOW.IUnitOfWork.Commit:
+    name:
+      CSharp:
+      - id: DAL.UOW.IUnitOfWork.Commit
+        name: Commit
+        nameWithType: IUnitOfWork.Commit
+        qualifiedName: DAL.UOW.IUnitOfWork.Commit
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.UOW.IUnitOfWork.Commit
+        name: Commit
+        nameWithType: IUnitOfWork.Commit
+        qualifiedName: DAL.UOW.IUnitOfWork.Commit
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: DAL.UOW.IUnitOfWork
+    commentId: M:DAL.UOW.IUnitOfWork.Commit
+  UnitTest.Services.FakeUnitOfWork.Dispose*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork.Dispose*
+        name: Dispose
+        nameWithType: FakeUnitOfWork.Dispose
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Dispose
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork.Dispose*
+        name: Dispose
+        nameWithType: FakeUnitOfWork.Dispose
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Dispose
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeUnitOfWork.Dispose
+  System.IDisposable.Dispose:
+    name:
+      CSharp:
+      - id: System.IDisposable.Dispose
+        name: Dispose
+        nameWithType: IDisposable.Dispose
+        qualifiedName: System.IDisposable.Dispose
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.IDisposable.Dispose
+        name: Dispose
+        nameWithType: IDisposable.Dispose
+        qualifiedName: System.IDisposable.Dispose
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.IDisposable
+    commentId: M:System.IDisposable.Dispose
+  T:
+    name:
+      CSharp:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      VB:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+    isDefinition: true
+    commentId: '!:T'
+  '{T}':
+    name:
+      CSharp:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      VB:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+    isDefinition: false
+    definition: T
+    commentId: '!:T'
+  UnitTest.Services.FakeUnitOfWork.GetRepository*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork.GetRepository*
+        name: GetRepository
+        nameWithType: FakeUnitOfWork.GetRepository
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.GetRepository
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork.GetRepository*
+        name: GetRepository
+        nameWithType: FakeUnitOfWork.GetRepository
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.GetRepository
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeUnitOfWork.GetRepository
+  DAL.UOW.IUnitOfWork.GetRepository``1:
+    name:
+      CSharp:
+      - id: DAL.UOW.IUnitOfWork.GetRepository``1
+        name: GetRepository<T>
+        nameWithType: IUnitOfWork.GetRepository<T>
+        qualifiedName: DAL.UOW.IUnitOfWork.GetRepository<T>
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.UOW.IUnitOfWork.GetRepository``1
+        name: GetRepository(Of T)
+        nameWithType: IUnitOfWork.GetRepository(Of T)
+        qualifiedName: DAL.UOW.IUnitOfWork.GetRepository(Of T)
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: DAL.UOW.IUnitOfWork
+    commentId: M:DAL.UOW.IUnitOfWork.GetRepository``1
+  UnitTest.Services.FakeUnitOfWork.Rollback*:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork.Rollback*
+        name: Rollback
+        nameWithType: FakeUnitOfWork.Rollback
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Rollback
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork.Rollback*
+        name: Rollback
+        nameWithType: FakeUnitOfWork.Rollback
+        qualifiedName: UnitTest.Services.FakeUnitOfWork.Rollback
+    isDefinition: true
+    commentId: Overload:UnitTest.Services.FakeUnitOfWork.Rollback
+  DAL.UOW.IUnitOfWork.Rollback:
+    name:
+      CSharp:
+      - id: DAL.UOW.IUnitOfWork.Rollback
+        name: Rollback
+        nameWithType: IUnitOfWork.Rollback
+        qualifiedName: DAL.UOW.IUnitOfWork.Rollback
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: DAL.UOW.IUnitOfWork.Rollback
+        name: Rollback
+        nameWithType: IUnitOfWork.Rollback
+        qualifiedName: DAL.UOW.IUnitOfWork.Rollback
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: DAL.UOW.IUnitOfWork
+    commentId: M:DAL.UOW.IUnitOfWork.Rollback
+  UnitTest.Services.FakeUnitOfWork:
+    name:
+      CSharp:
+      - id: UnitTest.Services.FakeUnitOfWork
+        name: FakeUnitOfWork
+        nameWithType: FakeUnitOfWork
+        qualifiedName: UnitTest.Services.FakeUnitOfWork
+      VB:
+      - id: UnitTest.Services.FakeUnitOfWork
+        name: FakeUnitOfWork
+        nameWithType: FakeUnitOfWork
+        qualifiedName: UnitTest.Services.FakeUnitOfWork
+    isDefinition: true
+    commentId: T:UnitTest.Services.FakeUnitOfWork
+  UnitTest.Services:
+    name:
+      CSharp:
+      - name: UnitTest.Services
+        nameWithType: UnitTest.Services
+        qualifiedName: UnitTest.Services
+      VB:
+      - name: UnitTest.Services
+        nameWithType: UnitTest.Services
+        qualifiedName: UnitTest.Services
+    isDefinition: true
+    commentId: N:UnitTest.Services

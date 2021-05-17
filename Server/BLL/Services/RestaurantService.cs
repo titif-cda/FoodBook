@@ -13,14 +13,14 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    internal class RestaurantService : IRestaurantService
+    public class RestaurantService : IRestaurantService
     {
         private readonly IUnitOfWork _db;
         private readonly ILogger<RestaurantService> _logger;
 
         public RestaurantService(IUnitOfWork unitOfWork, ILogger<RestaurantService> logger)
         {
-           // _logger = logger;
+            _logger = logger;
             _db = unitOfWork;
         }
 

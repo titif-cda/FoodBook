@@ -28,16 +28,19 @@ namespace UnitTest.Services
 
         public T GetRepository<T>() where T : class
         {
-            var type = typeof(T);
-
-            switch(type)
+            Type type = typeof(T);
+           
+            if(type == typeof(IMenuRepository))
             {
-                case IMenuRepository: 
-                    return new FakeMenuRepository() as T;
-
-                default:
-                    return default(T);
+                return new FakeMenuRepository() as T;
             }
+            else if( type == typeof(IClientRepository))
+            {
+            
+                //TODO: Create Fake client repository
+                return null;
+            }
+            return null;
         }
 
         public void Rollback()

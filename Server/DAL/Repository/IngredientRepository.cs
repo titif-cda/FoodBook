@@ -62,10 +62,11 @@ namespace DAL.Repository
 
        
 
-        public async Task UpdateAsync(Ingredient entity)
+        public async Task<bool> UpdateAsync(Ingredient entity)
         {
             var stmt = @"UPDATE  INGREDIENTS SET NomIngr = @NomIngr, PrixIngr= @PrixIngr WHERE IdIngr = @IdIngr";
             await _session.Connection.QueryAsync<Ingredient>(stmt, entity, _session.Transaction);
+            return true;
         }
    }
 }

@@ -59,10 +59,11 @@ namespace DAL.Repository
             return await GetAsync(i);
         }
 
-        public async Task UpdateAsync(TypeRepas entity)
+        public async Task<bool> UpdateAsync(TypeRepas entity)
         {
             var stmt = @"UPDATE  TYPE_REPAS LibelleTypeRepas = @LibelleTypeRepas WHERE IdTypeRepas = @idTypeRepas";
-            await _session.Connection.QueryAsync<TypeRepas>(stmt, entity, _session.Transaction);
+            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
+            return nbModifiedLines > 0;
         }
     }
 }

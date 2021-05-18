@@ -229,11 +229,11 @@ namespace BLL.Services
 
         public async Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest)
         {
-            IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
+            IMenuRepository _menuRepo = _db.GetRepository<IMenuRepository>();
 
-            var Type = (await _menu.GetAllAsync(pageRequest));
+            var menu = (await _menuRepo.GetAllAsync(pageRequest));
 
-            return Type;
+            return menu;
         }
 
         public async Task<Menu> GetMenuById(int id)
@@ -249,9 +249,11 @@ namespace BLL.Services
             IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
             try
             {
-                await _menu.UpdateAsync(Menus);
+                var ok = await _menu.UpdateAsync(Menus);
                 _db.Commit();
-                return Menus;
+                if (ok)
+                    return Menus;
+                else return null;
             }
             catch (Exception e)
             {

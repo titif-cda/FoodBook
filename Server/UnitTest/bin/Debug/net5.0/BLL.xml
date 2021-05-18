@@ -4,5 +4,54 @@
         <name>BLL</name>
     </assembly>
     <members>
+        <member name="M:BLL.Services.IRestaurantService.CreateIngredient(BO.Entity.Ingredient)">
+            <summary>
+            Crée un ingredient dans la base de données
+            </summary>
+            <param name="ingredient"></param>
+            <returns>Retourne un ingredient sinon une erreur</returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.GetAllIngredients(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Affiche l'ensemble des Ingredients avec une pagination
+            </summary>
+            <param name="pageRequest"></param>
+            <returns>Retourne une liste d'ingredients</returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.GetIngredientById(System.Int32)">
+            <summary>
+            affiche un Ingredient selon son identifiant
+            </summary>
+            <param name="id">identifiant</param>
+            <returns>Retourne un identifiant ou null</returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.ModifyIngredient(BO.Entity.Ingredient)">
+            <summary>
+            Met à jour un ingredient dans la base de donnée
+            </summary>
+            <param name="ingredient"></param>
+            <returns>Retourne un ingredient modifié </returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.RemoveIngredientById(System.Int32)">
+            <summary>
+            Supprime un Ingredient selon son identifiant
+            </summary>
+            <param name="id">identifiant</param>
+            <returns>Retourne succes ou erreur</returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)">
+            <summary>
+            Crée un nouveau menu dans la bas de données
+            </summary>
+            <param name="Menus"></param>
+            <returns>Retourne un menu sinon une erreur</returns>
+        </member>
+        <member name="M:BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Affiche l'ensemble des Ingredients avec une pagination
+            </summary>
+            <param name="pageRequest"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

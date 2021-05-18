@@ -30,7 +30,7 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Permet de récupérer la liste des livres
+        /// Permet de récupérer la liste des menus
         /// </summary>
         /// <returns>La liste des livres</returns>
         [HttpGet]
@@ -42,10 +42,10 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Permert de récupérer un livre avec son identifiant unique
+        /// Permert de récupérer un menus avec son identifiant unique
         /// </summary>
-        /// <param name="id">Identifiant unique du livre</param>
-        /// <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        /// <param name="id">Identifiant unique du menus</param>
+        /// <returns>Renvoi le menus définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -64,16 +64,16 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Créer un livre et l'ajoute en BDD
+        /// Créer un menus et l'ajoute en BDD
         /// </summary>
-        /// <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
-        /// <returns>Renvoi le livre avec l'identifiant généré</returns>
+        /// <param name="menus">menus à ajouter sans l'identifiant unique</param>
+        /// <returns>Renvoi le menus avec l'identifiant généré</returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateMenu([FromBody] Menu menus)
         {
-            // Ajout du client avec la bll server
+            // Ajout du menus avec la bll server
             Menu newmenus = await _restaurantService.CreateMenu(menus);
             if (newmenus != null)
             {
@@ -87,7 +87,11 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Supprime un menus de la bdd
+        /// </summary>
+        /// <param name="id">identifiant</param>
+        /// <returns>succes ou echec</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -106,7 +110,12 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// modifie un menus dans la bdd
+        /// </summary>
+        /// <param name="id">identifiant</param>
+        /// <param name="menus">Menu concerné</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

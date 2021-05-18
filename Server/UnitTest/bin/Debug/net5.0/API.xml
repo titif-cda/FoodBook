@@ -59,6 +59,21 @@
             <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
             <returns>Renvoi le livre avec l'identifiant généré</returns>
         </member>
+        <member name="M:API.Controllers.IngredientsController.DeleteIngredient(System.Int32)">
+            <summary>
+            Supprimer in ingredient de la base de données
+            </summary>
+            <param name="id">Identifiant</param>
+            <returns>Retourne succes ou echec</returns>
+        </member>
+        <member name="M:API.Controllers.IngredientsController.ModifyIngredient(System.Int32,BO.Entity.Ingredient)">
+            <summary>
+            Modifie un ingredient dans la base de données
+            </summary>
+            <param name="id">Identifiant</param>
+            <param name="ingredient">Ingredient</param>
+            <returns>Retourne un ingredient modifié</returns>
+        </member>
         <member name="M:API.Controllers.MenusController.GetAll(BO.DTO.Requests.PageRequest)">
             <summary>
             Permet de récupérer la liste des livres

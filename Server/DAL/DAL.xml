@@ -4,5 +4,39 @@
         <name>DAL</name>
     </assembly>
     <members>
+        <member name="M:DAL.Repository.IGenericRepository`1.GetAllAsync">
+            <summary>
+            Permet d'afficher l'ensemble de l'entité
+            </summary>
+            <returns>retourne une liste ou null si echec</returns>
+        </member>
+        <member name="M:DAL.Repository.IGenericRepository`1.GetAsync(System.Int32)">
+            <summary>
+            Permet d'afficher une entité selon son identifient
+            </summary>
+            <param name="id"></param>
+            <returns>Retourne une entité selon son identifient ou null si echec</returns>
+        </member>
+        <member name="M:DAL.Repository.IGenericRepository`1.DeleteAsync(System.Int64)">
+            <summary>
+            Permet de supprimer une entité dans la bse de données
+            </summary>
+            <param name="id">Identifiant</param>
+            <returns> retourne le nombre de ligne suprimé ou null si echec</returns>
+        </member>
+        <member name="M:DAL.Repository.IGenericRepository`1.UpdateAsync(`0)">
+            <summary>
+            Permet de mettre à jour l'entité dans la base de données
+            </summary>
+            <param name="entity">Entité à mettre à jour</param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.Repository.IGenericRepository`1.InsertAsync(`0)">
+            <summary>
+            Persiste l'entité en base de données
+            </summary>
+            <param name="entity">Entité à persiter</param>
+            <returns>Renvoi l'entité persisté ou null si echec</returns>
+        </member>
     </members>
 </doc>

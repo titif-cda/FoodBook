@@ -61,11 +61,12 @@ namespace DAL.Repository
             return await GetAsync(i);
         }
 
-        public async Task UpdateAsync(Reservation entity)
+        public async Task<bool> UpdateAsync(Reservation entity)
         {
             var stmt = @"UPDATE  RESERVATION SET IdClient = @IdClient, IdMenu=@IdMenu, DateResa= @DateResa, NbResa = @NbResa,
                 FormMatin = @FormMatin, FormMidi = @FormMidi, FormSoir = @FormSoir WHERE IdResa = @IdResa";
-            await _session.Connection.QueryAsync<Reservation>(stmt, entity, _session.Transaction);
+            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
+            return nbModifiedLines > 0;
         }
 
     }

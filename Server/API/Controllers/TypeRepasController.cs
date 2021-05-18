@@ -30,9 +30,9 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Permet de récupérer la liste des livres
+        /// Permet de récupérer la liste des Type Repas
         /// </summary>
-        /// <returns>La liste des livres</returns>
+        /// <returns>La liste des Type de Repas</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<TypeRepas>>> GetAllTypeRepas([FromQuery] PageRequest pageRequest)
@@ -42,10 +42,10 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Permert de récupérer un livre avec son identifiant unique
+        /// Permert de récupérer un Type de Repas avec son identifiant unique
         /// </summary>
-        /// <param name="id">Identifiant unique du livre</param>
-        /// <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        /// <param name="id">Identifiant unique du Type de Repas</param>
+        /// <returns>Renvoi le Type de Repas définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -64,10 +64,10 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Créer un livre et l'ajoute en BDD
+        /// Créer un Type de Repas et l'ajoute en BDD
         /// </summary>
-        /// <param name="tRepas">Livre à ajouter sans l'identifiant unique</param>
-        /// <returns>Renvoi le livre avec l'identifiant généré</returns>
+        /// <param name="tRepas">Type de Repas à ajouter sans l'identifiant unique</param>
+        /// <returns>Renvoi le Type de Repas avec l'identifiant généré</returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -87,7 +87,11 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Suppression du Type de Repas de la bdd selon l'identifiant
+        /// </summary>
+        /// <param name="id">Identifiant</param>
+        /// <returns>Retourne succes ou echec</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -105,7 +109,12 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Modifie un type repas dans la bdd
+        /// </summary>
+        /// <param name="id">Identifiant du type repas</param>
+        /// <param name="tRepas">Type repas concerné</param>
+        /// <returns>Modifi un type repas ou retourne une erreur</returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

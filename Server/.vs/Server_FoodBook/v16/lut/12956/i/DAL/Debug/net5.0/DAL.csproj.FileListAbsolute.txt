@@ -1,0 +1,10 @@
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\DAL\Debug\net5.0\DAL.deps.json
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\DAL\Debug\net5.0\DAL.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\DAL\Debug\net5.0\ref\DAL.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.csprojAssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.AssemblyInfo.cs
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.csproj.CopyComplete
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\DAL.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\DAL\Debug\net5.0\ref\DAL.dll

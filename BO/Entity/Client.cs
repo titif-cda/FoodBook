@@ -21,18 +21,30 @@ namespace BO.Entity
         /// Titre du livre
         /// </summary>
         public string PrenomClient { get; set; }
-
+        /// <summary>
+        /// Telephone du client
+        /// </summary>
         public string TelClient { get; set; }
-
+        /// <summary>
+        /// email du client
+        /// </summary>
         public string EmailClient { get; set; }
 
-      
+        /// <summary>
+        /// Constructeur par defaut
+        /// </summary>
         public Client()
         {
 
         }
 
-
+        /// <summary>
+        /// Constructeur avec les arguments
+        /// </summary>
+        /// <param name="nom">Nom</param>
+        /// <param name="prenom">Prenom</param>
+        /// <param name="telephone">Telephone</param>
+        /// <param name="email">Email</param>
         public Client(string nom, string prenom, string telephone, string email)
         {
 

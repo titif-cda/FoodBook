@@ -12,18 +12,22 @@ using BO.DTO.Responses;
 
 namespace API.Controllers
 {
+    /// <summary>
+    /// Decorateurs et declaration du controlleur pour l'entité client
+    /// </summary>
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion=}/clients")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
+    
     public class ClientsController : ControllerBase
         
         {
 
-        //Service qui gère la librairi
+        //Service qui gère le controlleur 
         private readonly IClientService _clientService = null;
-
+        /// Instanciation du service ClientController
         public ClientsController(IClientService clientService)
         {
             _clientService = clientService;

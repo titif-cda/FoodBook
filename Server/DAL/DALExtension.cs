@@ -20,7 +20,7 @@ namespace DAL
           
             services.AddTransient<IClientRepository, ClientRepository>();
             services.AddTransient<IIngredientRepository, IngredientRepository>();
-            services.AddTransient<IConstituRepository, ConstituRepository>();
+           
             services.AddTransient<IReservationRepository, ReservationRepository>();
             services.AddTransient<ITypeRepasRepository, TypeRepasRepository>();
             services.AddTransient<IRepasRepository, RepasRepository>();

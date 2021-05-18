@@ -42,10 +42,10 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Permert de récupérer un livre avec son identifiant unique
+        /// Permert de récupérer un repas avec son identifiant unique
         /// </summary>
-        /// <param name="id">Identifiant unique du livre</param>
-        /// <returns>Renvoi le livre définit par l'identifiant unique</returns>
+        /// <param name="id">Identifiant unique du repas</param>
+        /// <returns>Renvoi le repas définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -64,10 +64,10 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Créer un livre et l'ajoute en BDD
+        /// Créer un repas et l'ajoute en BDD
         /// </summary>
-        /// <param name="ingredient">Livre à ajouter sans l'identifiant unique</param>
-        /// <returns>Renvoi le livre avec l'identifiant généré</returns>
+        /// <param name="repas">repas à ajouter sans l'identifiant unique</param>
+        /// <returns>Renvoi un repas avec l'identifiant généré</returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -87,7 +87,11 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Supprime un repas de la BDD
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>>Retourne succes ou echec</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -106,7 +110,12 @@ namespace API.Controllers
             }
         }
 
-
+        /// <summary>
+        /// modifie le repas dans la base de données
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="repas"></param>
+        /// <returns>Un repas modifié ou echec</returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

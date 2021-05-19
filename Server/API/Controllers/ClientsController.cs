@@ -13,8 +13,10 @@ using BO.DTO.Responses;
 namespace API.Controllers
 {
     /// <summary>
-    /// Decorateurs et declaration du controlleur pour l'entité client
+    /// Description de la class
     /// </summary>
+
+    //Annotations ou Decorateurs et declaration du controlleur pour l'entité client
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion=}/clients")]
@@ -27,7 +29,11 @@ namespace API.Controllers
 
         //Service qui gère le controlleur 
         private readonly IClientService _clientService = null;
-        /// Instanciation du service ClientController
+
+        /// <summary>
+        /// Constructeur du service ClientController
+        /// </summary>
+        /// <param name="clientService"></param>
         public ClientsController(IClientService clientService)
         {
             _clientService = clientService;

@@ -138,6 +138,7 @@ namespace Desktop
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "ClientsControl";
             this.Size = new System.Drawing.Size(179, 181);
             this.ResumeLayout(false);

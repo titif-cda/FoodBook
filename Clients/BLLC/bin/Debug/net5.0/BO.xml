@@ -59,5 +59,205 @@
             Titre du livre
             </summary>
         </member>
+        <member name="P:BO.Entity.Client.TelClient">
+            <summary>
+            Telephone du client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.EmailClient">
+            <summary>
+            email du client
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Client.#ctor">
+            <summary>
+            Constructeur par defaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Client.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructeur avec les arguments
+            </summary>
+            <param name="nom">Nom</param>
+            <param name="prenom">Prenom</param>
+            <param name="telephone">Telephone</param>
+            <param name="email">Email</param>
+        </member>
+        <member name="P:BO.Entity.Ingredient.IdIngr">
+            <summary>
+            Identifiant
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Ingredient.NomIngr">
+            <summary>
+            Nom ingredient
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Ingredient.PrixIngr">
+            <summary>
+            Prix Ingredient
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Ingredient.#ctor(System.Int32,System.String,System.Single)">
+            <summary>
+            Constructeur avec tous les arguments
+            </summary>
+            <param name="idIngr"> Identifiant</param>
+            <param name="nomIngr">Nom ingredient </param>
+            <param name="prixIngr"> Prix Ingredient</param>
+        </member>
+        <member name="M:BO.Entity.Ingredient.#ctor">
+            <summary>
+            Constructeur par defaut
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Menu.IdMenu">
+            <summary>
+            Identifiant
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Menu.DateMenu">
+            <summary>
+            Date du menu
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Menu.NomMenu">
+            <summary>
+            Nom menu
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Menu.ListPlats">
+            <summary>
+            Liste des plats
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Menu.#ctor">
+            <summary>
+            Constructeur par défaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Menu.#ctor(System.Int32,System.DateTime,System.String,System.Collections.Generic.List{BO.Entity.Repas})">
+            <summary>
+            Constructeur avec tous les arguments
+            </summary>
+            <param name="idMenu"> Identifiant</param>
+            <param name="dateMenu"> Date du menu</param>
+            <param name="nomMenu"> Nom menu</param>
+            <param name="listPlats"> Constructeur par défaut</param>
+        </member>
+        <member name="P:BO.Entity.Repas.IdRepas">
+            <summary>
+            Identifiant Repas
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Repas.IdTypeRepas">
+            <summary>
+            Identifiant Type repas
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Repas.LibelleRepas">
+            <summary>
+            Libelle Repas
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Repas.DescRepas">
+            <summary>
+            Description Repas
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Repas.#ctor">
+            <summary>
+            Constructeur par default
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Repas.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Constructeur avec arguments
+            </summary>
+            <param name="idRepas">Identifiant Repas</param>
+            <param name="idTypeRepas">Identifiant Type repas</param>
+            <param name="libelleRepas">Libelle Repas</param>
+            <param name="descRepas">Description Repas</param>
+        </member>
+        <member name="P:BO.Entity.Reservation.IdResa">
+            <summary>
+            Identifiant reservation
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.IdClient">
+            <summary>
+            Identifiant client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.IdMenu">
+            <summary>
+            Identifiant Menu
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.DateResa">
+            <summary>
+            Date de reservation
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.NbResa">
+            <summary>
+            nombre de reservations
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.FormMatin">
+            <summary>
+            Formule matin
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.FormMidi">
+            <summary>
+            Formule de midi
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Reservation.FormSoir">
+            <summary>
+            Formule du soir
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Reservation.#ctor">
+            <summary>
+            Constructeur par defaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.DateTime,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            constructeur avec tous les arguments
+            </summary>
+            <param name="idResa">Identifiant reservation</param>
+            <param name="idClient">Identifiant client</param>
+            <param name="idMenu">Identifiant Menu</param>
+            <param name="dateResa">Date de reservation</param>
+            <param name="nbResa">Nombre de reservations</param>
+            <param name="formMatin">Formule matin</param>
+            <param name="formMidi">Formule de midi</param>
+            <param name="formSoir">Formule du soir</param>
+        </member>
+        <member name="P:BO.Entity.TypeRepas.IdTypeRepas">
+            <summary>
+            Identifiant du type repas
+            </summary>
+        </member>
+        <member name="P:BO.Entity.TypeRepas.LibelleTypeRepas">
+            <summary>
+            Libelle du type repas
+            </summary>
+        </member>
+        <member name="M:BO.Entity.TypeRepas.#ctor">
+            <summary>
+            Constructeur par defaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.TypeRepas.#ctor(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Constructeur avec arguments
+            </summary>
+            <param name="idTypeRepas">Identifiant du type repas</param>
+            <param name="libelleTypeRepas">Libelle du type repas</param>
+        </member>
     </members>
 </doc>

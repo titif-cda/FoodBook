@@ -23,7 +23,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\BLLC.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.AccueilForm.resources
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ClientForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.JsonPatch.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.Mvc.Versioning.dll
@@ -43,3 +42,4 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.listClients.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ClientsControl.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\BO.xml
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.crudClient.resources

@@ -170,7 +170,7 @@ namespace Desktop
             this.MainFormPBox.Location = new System.Drawing.Point(0, 0);
             this.MainFormPBox.Margin = new System.Windows.Forms.Padding(0);
             this.MainFormPBox.Name = "MainFormPBox";
-            this.MainFormPBox.Size = new System.Drawing.Size(193, 99);
+            this.MainFormPBox.Size = new System.Drawing.Size(215, 110);
             this.MainFormPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MainFormPBox.TabIndex = 1;
             this.MainFormPBox.TabStop = false;

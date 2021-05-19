@@ -70,7 +70,7 @@ namespace Desktop
 
         private void ClientBtn_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new ClientForm());
+            NavFormPanel(new listClients());
         }
 
        
@@ -91,5 +91,7 @@ namespace Desktop
         {
             NavFormPanel(new listClients());
         }
+
+       
     }
 }

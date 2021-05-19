@@ -4,6 +4,17 @@
         <name>API</name>
     </assembly>
     <members>
+        <member name="T:API.Controllers.ClientsController">
+            <summary>
+            Description de la class
+            </summary>
+        </member>
+        <member name="M:API.Controllers.ClientsController.#ctor(BLL.Services.IClientService)">
+            <summary>
+            Constructeur du service ClientController
+            </summary>
+            <param name="clientService"></param>
+        </member>
         <member name="M:API.Controllers.ClientsController.GetAll(BO.DTO.Requests.PageRequest)">
             <summary>
             Permet de récupérer la liste des clients
@@ -39,18 +50,29 @@
             <param name="client"></param>
             <returns></returns>
         </member>
+        <member name="T:API.Controllers.IngredientsController">
+            <summary>
+            Decorateurs et declaration du controlleur pour l'entité Ingrédients
+            </summary>
+        </member>
+        <member name="M:API.Controllers.IngredientsController.#ctor(BLL.Services.IRestaurantService)">
+            <summary>
+            Instanciation du controleur
+            </summary>
+            <param name="restaurantService">Service en parametre</param>
+        </member>
         <member name="M:API.Controllers.IngredientsController.GetAll(BO.DTO.Requests.PageRequest)">
             <summary>
-            Permet de récupérer la liste des livres
+            Permet de récupérer la liste des ingredients
             </summary>
-            <returns>La liste des livres</returns>
+            <returns>La liste des ingredients</returns>
         </member>
         <member name="M:API.Controllers.IngredientsController.GetIngredientById(System.Int32)">
             <summary>
             Permert de récupérer un ingredient avec son identifiant unique
             </summary>
-            <param name="id">Identifiant unique de l'</param>
-            <returns>Renvoi le livre définit par l'identifiant unique</returns>
+            <param name="id">Identifiant unique de l'ingredient</param>
+            <returns>Renvoi l'ingredient définit par l'identifiant unique</returns>
         </member>
         <member name="M:API.Controllers.IngredientsController.CreateIngredient(BO.Entity.Ingredient)">
             <summary>

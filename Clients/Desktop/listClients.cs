@@ -36,17 +36,48 @@ namespace Desktop
             bindingSource.DataSource = clientPage.Data;
             foreach (var client in clientPage.Data )
             {
-                clientFlp.Controls.Add(new ClientsControl(client));  
+                var widgetClient = new ClientsControl(client);
+                widgetClient.DoubleClick += WidgetClient_DoubleClick;
+                clientTlp.Controls.Add(widgetClient);  
                     
             }
-            //Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
-            //PageResponse<Client> clientPage = await clientPageTask;
-            //maxPage = clientPage.TotalPages.GetValueOrDefault();
-            //bindingSource.DataSource = clientPage.Data;
-
-            //ClientdataGridView.DataSource = bindingSource;
+            
             //Grisage();
 
+        }
+
+        private void WidgetClient_DoubleClick(object sender, EventArgs e)
+        {
+            ClientsControl widgetClient = sender as ClientsControl;
+
+            DialogResult r = new crudClient(widgetClient.CurrentClient).ShowDialog();
+
+        }
+
+        private void Grisage()
+        {
+            if (currentPage == 1)
+            {
+                PreviousBtn.Enabled = false;
+            }
+            else
+            {
+                PreviousBtn.Enabled = true;
+            }
+
+            if (currentPage == maxPage)
+            {
+               NextBtn.Enabled = false;
+            }
+            else
+            {
+                NextBtn.Enabled = true;
+            }
+        }
+
+        private void clientTlp_DoubleClick(object sender, EventArgs e)
+        {
+           
         }
     }
 }

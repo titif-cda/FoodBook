@@ -11,14 +11,14 @@ using BO.DTO.Requests;
 using BO.DTO.Responses;
 
 namespace API.Controllers
-    //Todo Demander a Fabien commentaires  l 34
+   
 
 {   /// <summary>
     /// Decorateurs et declaration du controlleur pour l'entité Ingrédients
     /// </summary>
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion=}ingredients")]
+    [Route("api/v{version:apiVersion=}/ingredients")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
     public class IngredientsController : ControllerBase

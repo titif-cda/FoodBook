@@ -38,7 +38,7 @@ namespace API.Controllers
         public async Task<ActionResult<PageResponse<Menu>>> GetAll([FromQuery] PageRequest pageRequest)
         {
 
-            return Ok(await _restaurantService.GetAllMenu(pageRequest));
+            return Ok(await _restaurantService.GetAllService(pageRequest));
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetMenuById([FromRoute] int id)
         {
-            Menu menus = await _restaurantService.GetMenuById(id);
+            Menu menus = await _restaurantService.GetServiceById(id);
             if (menus == null)
             {
                 return NotFound(); // StatusCode = 404
@@ -97,7 +97,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteMenu([FromRoute] int id)
         {
-            if (await _restaurantService.RemoveMenuById(id))
+            if (await _restaurantService.RemoveServiceById(id))
             {
 
                 // Renvoie un code 204 aucun contenu

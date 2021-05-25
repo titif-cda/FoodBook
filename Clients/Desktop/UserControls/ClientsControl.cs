@@ -18,10 +18,10 @@ namespace Desktop
         {
             InitializeComponent();
             CurrentClient = client;
-            NomClientTbx.Text = client.NomClient;
-            PrenomTbx.Text = client.PrenomClient;
-            EmailTbx.Text = client.EmailClient;
-            TelTbx.Text = client.TelClient;
+            NomClientTbx.Text = client.Nom;
+            PrenomTbx.Text = client.Prenom;
+            EmailTbx.Text = client.Email;
+            TelTbx.Text = client.Tel;
         }
 
        

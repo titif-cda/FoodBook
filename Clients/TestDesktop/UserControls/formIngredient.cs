@@ -21,9 +21,9 @@ namespace TestDesktop.UserControls
         {
             if (ingredient != null)
             {
-                IdIngredientBox.Text = ingredient.IdIngr.ToString();
-                NameIngredientBox.Text = ingredient.NomIngr.ToString();
-                PriceBox.Text = ingredient.PrixIngr.ToString();
+                IdIngredientBox.Text = ingredient.Id.ToString();
+                NameIngredientBox.Text = ingredient.Nom.ToString();
+                PriceBox.Text = ingredient.Prix.ToString();
 
             }
         }
@@ -38,10 +38,10 @@ namespace TestDesktop.UserControls
             }
             return new Ingredient()
             {
-                IdIngr = (id == -1) ? null : id,
-                NomIngr = NameIngredientBox.Text,
-                //PrixIngr = float.TryParse(PriceBox.Text.ToString())
-                PrixIngr = Single.Parse(PriceBox.Text) 
+                Id = (id == -1) ? null : id,
+                Nom = NameIngredientBox.Text,
+                //Prix = float.TryParse(PriceBox.Text.ToString())
+                Prix = Single.Parse(PriceBox.Text) 
 
             };
         }

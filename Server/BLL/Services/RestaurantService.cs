@@ -154,41 +154,41 @@ namespace BLL.Services
         #endregion
         #region Repas
 
-        public async Task<Repas> CreateRepas(Repas Repas)
+        public async Task<Met> CreateRepas(Met met)
         {
             _db.BeginTransaction();
-            IRepasRepository _repas = _db.GetRepository<IRepasRepository>();
-            Repas newRepas = await _repas.InsertAsync(Repas);
+            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            Met newRepas = await _met.InsertAsync(met);
             _db.Commit();
 
             return newRepas;
         }
 
-        public async Task<PageResponse<Repas>> GetAllRepas(PageRequest pageRequest, Filter filter)
+        public async Task<PageResponse<Met>> GetAllRepas(PageRequest pageRequest, Filter filter)
         {
-            IRepasRepository _repas = _db.GetRepository<IRepasRepository>();
+            IMetRepository _met = _db.GetRepository<IMetRepository>();
 
-            var Type = (await _repas.GetAllAsync(pageRequest, filter));
+            var Type = (await _met.GetAllAsync(pageRequest, filter));
 
             return Type;
         }
 
-        public async Task<Repas> GetRepasById(int id)
+        public async Task<Met> GetMetById(int id)
         {
-            IRepasRepository _repas = _db.GetRepository<IRepasRepository>();
+            IMetRepository _met = _db.GetRepository<IMetRepository>();
 
-            return await _repas.GetAsync(id);
+            return await _met.GetAsync(id);
         }
 
-        public async Task<Repas> ModifyRepas(Repas Repas)
+        public async Task<Met> ModifyMet(Met met)
         {
             _db.BeginTransaction();
-            IRepasRepository _repas = _db.GetRepository<IRepasRepository>();
+            IMetRepository _met = _db.GetRepository<IMetRepository>();
             try
             {
-                await _repas.UpdateAsync(Repas);
+                await _met.UpdateAsync(met);
                 _db.Commit();
-                return Repas;
+                return met;
             }
             catch (Exception e)
             {
@@ -197,13 +197,13 @@ namespace BLL.Services
             }
         }
 
-        public async Task<bool> RemoveRepasById(int id)
+        public async Task<bool> RemoveMetsById(int id)
         {
             _db.BeginTransaction();
-            IRepasRepository _repas = _db.GetRepository<IRepasRepository>();
+            IMetRepository _met = _db.GetRepository<IMetRepository>();
             try
             {
-                var count = await _repas.DeleteAsync(id);
+                var count = await _met.DeleteAsync(id);
                 _db.Commit();
                 return count > 0;
             }
@@ -216,43 +216,43 @@ namespace BLL.Services
 
         #endregion
         #region Repas
-        public async Task<Menu> CreateMenu(Menu Menus)
+        public async Task<Service> CreateMet(Service service)
         {
 
             _db.BeginTransaction();
-            IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
-            Menu newMenus = await _menu.InsertAsync(Menus);
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
+            Service newService = await _service.InsertAsync(service);
             _db.Commit();
 
-            return newMenus;
+            return newService;
         }
 
-        public async Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest)
+        public async Task<PageResponse<Service>> GetAllMet(PageRequest pageRequest)
         {
-            IMenuRepository _menuRepo = _db.GetRepository<IMenuRepository>();
+            IServiceRepository _serviceRepo = _db.GetRepository<IServiceRepository>();
 
-            var menu = (await _menuRepo.GetAllAsync(pageRequest));
+            var service = (await _serviceRepo.GetAllAsync(pageRequest));
 
-            return menu;
+            return service;
         }
 
-        public async Task<Menu> GetMenuById(int id)
+        public async Task<Service> GetServiceById(int id)
         {
-            IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
 
-            return await _menu.GetAsync(id);
+            return await _service.GetAsync(id);
         }
 
-        public async Task<Menu> ModifyMenu(Menu Menus)
+        public async Task<Service> ModifyService(Service service)
         {
             _db.BeginTransaction();
-            IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
             try
             {
-                var ok = await _menu.UpdateAsync(Menus);
+                var ok = await _service.UpdateAsync(service);
                 _db.Commit();
                 if (ok)
-                    return Menus;
+                    return service;
                 else return null;
             }
             catch (Exception e)
@@ -262,10 +262,10 @@ namespace BLL.Services
             }
         }
 
-        public async Task<bool> RemoveMenuById(int id)
+        public async Task<bool> RemoveServiceById(int id)
         {
             _db.BeginTransaction();
-            IMenuRepository _menu = _db.GetRepository<IMenuRepository>();
+            IServiceRepository _menu = _db.GetRepository<IServiceRepository>();
             try
             {
                 var count = await _menu.DeleteAsync(id);

@@ -306,7 +306,7 @@ namespace UnitTest.Services
             return Task.FromResult( i > 0);
         }
 
-        public Task<bool> RemoveMenuById(int id)
+        public Task<bool> RemoveServiceById(int id)
         {
             int i = MenuDb.RemoveAll(b => b.IdMenu == id);
             return Task.FromResult(i > 0);

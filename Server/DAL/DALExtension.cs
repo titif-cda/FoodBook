@@ -23,8 +23,8 @@ namespace DAL
            
             services.AddTransient<IReservationRepository, ReservationRepository>();
             services.AddTransient<ITypeRepasRepository, TypeRepasRepository>();
-            services.AddTransient<IRepasRepository, RepasRepository>();
-            services.AddTransient<IMenuRepository, MenuRepository>();
+            services.AddTransient<IMetRepository, MetRepository>();
+            services.AddTransient<IServiceRepository, ServiceRepository>();
 
 
 

@@ -11,29 +11,29 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant
         /// </summary>
-        public int? IdIngr { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
-        /// Nom ingredient
+        /// Midi ingredient
         /// </summary>
-        public string NomIngr { get; set; }
+        public string Nom { get; set; }
 
         /// <summary>
         /// Prix Ingredient
         /// </summary>
-        public float PrixIngr { get; set; }
+        public float Prix { get; set; }
 
         /// <summary>
         /// Constructeur avec tous les arguments
         /// </summary>
         /// <param name="idIngr"> Identifiant</param>
-        /// <param name="nomIngr">Nom ingredient </param>
+        /// <param name="nomIngr">Midi ingredient </param>
         /// <param name="prixIngr"> Prix Ingredient</param>
         public Ingredient(int idIngr,string nomIngr, float prixIngr)
         {
-            IdIngr = idIngr;
-            NomIngr = nomIngr;
-            PrixIngr = prixIngr;
+            Id = idIngr;
+            Nom = nomIngr;
+            Prix = prixIngr;
         }
 
         /// <summary>
@@ -48,16 +48,16 @@ namespace BO.Entity
         public override bool Equals(object obj)
         {
             return obj is Ingredient ingredient &&
-                   IdIngr == ingredient.IdIngr &&
-                   NomIngr == ingredient.NomIngr &&
-                   PrixIngr == ingredient.PrixIngr;
+                   Id == ingredient.Id &&
+                   Nom == ingredient.Nom &&
+                   Prix == ingredient.Prix;
 
 
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdIngr, NomIngr, PrixIngr);
+            return HashCode.Combine(Id, Nom, Prix);
         }
     }
 }

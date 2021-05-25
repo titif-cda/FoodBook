@@ -41,7 +41,7 @@ namespace Desktop
             {
                 //modif
                 ActionCrudClientBtn.Text = "Modifier";
-                NomCrudClientLabel.Text = client.NomClient;
+                NomCrudClientLabel.Text = client.Nom;
             }
         }
 

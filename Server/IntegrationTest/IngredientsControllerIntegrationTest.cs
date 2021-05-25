@@ -30,10 +30,11 @@ namespace IntegrationTest
             var response = await _clientHttp.PostAsJsonAsync<Ingredient>("api/v1/ingredients", newIngredient);
             using (var stream = await response.Content.ReadAsStreamAsync())
             {
-                var actualAddedIngredient = await JsonSerializer.DeserializeAsync<Ingredient>(stream);
+                var actualAddedIngredient = await JsonSerializer.DeserializeAsync<Ingredient>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
                 Assert.NotNull(actualAddedIngredient);
-
+                Assert.NotNull(actualAddedIngredient.IdIngr);
                 Assert.Equal(newIngredient.NomIngr, actualAddedIngredient.NomIngr);
+                Assert.Equal(newIngredient.PrixIngr, actualAddedIngredient.PrixIngr);
             }
 
         }

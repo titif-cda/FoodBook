@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace UnitTest.Services
 {
-    internal class FakeMenuRepository : IMenuRepository
+    internal class FakeMenuRepository : IServiceRepository
     {
         public FakeMenuRepository() 
         {

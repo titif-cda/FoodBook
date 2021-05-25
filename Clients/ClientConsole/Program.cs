@@ -18,7 +18,7 @@ namespace ClientConsole
 
             //booksPage.Data.ForEach((Ingredients) =>
             //{
-            //    Console.WriteLine(Ingredients.NomIngr + " au prix de :" + Ingredients.PrixIngr + "euros \u20ac ");
+            //    Console.WriteLine(Ingredients.Nom + " au prix de :" + Ingredients.Prix + "euros \u20ac ");
             //});
 
             //Console.ReadLine();

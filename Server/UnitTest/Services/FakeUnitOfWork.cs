@@ -30,7 +30,7 @@ namespace UnitTest.Services
         {
             Type type = typeof(T);
            
-            if(type == typeof(IMenuRepository))
+            if(type == typeof(IServiceRepository))
             {
                 return new FakeMenuRepository() as T;
             }

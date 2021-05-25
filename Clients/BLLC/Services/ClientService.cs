@@ -70,7 +70,7 @@ namespace BLLC.Services
 
 
         {
-            var reponse = await _httpClient.PutAsync($"clients/" + client.IdClient
+            var reponse = await _httpClient.PutAsync($"clients/" + client.Id
                 ,
                 new StringContent(
                     JsonSerializer.Serialize(client), Encoding.UTF8, "application/json"
@@ -93,11 +93,11 @@ namespace BLLC.Services
 
         public async Task<bool> DeleteClient(Client client)
         {
-            if (client?.IdClient != null)
+            if (client?.Id != null)
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"clients/{ client.IdClient}");
+                    await _httpClient.DeleteAsync($"clients/{ client.Id}");
                     return true;
                 }
                 catch (HttpRequestException e)
@@ -156,7 +156,7 @@ namespace BLLC.Services
 
         public async Task<Reservation> PutReservations(Reservation reservation)
         {
-            var reponse = await _httpClient.PutAsync($"reservations/" + reservation.IdResa
+            var reponse = await _httpClient.PutAsync($"reservations/" + reservation.Id
                 ,
                 new StringContent(
                     JsonSerializer.Serialize(reservation), Encoding.UTF8, "application/json"
@@ -179,11 +179,11 @@ namespace BLLC.Services
 
         public async Task<bool> DeleteReservations(Reservation reservation)
         {
-            if (reservation?.IdResa != null)
+            if (reservation?.Id != null)
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"reservations/{reservation.IdResa}");
+                    await _httpClient.DeleteAsync($"reservations/{reservation.Id}");
                     return true;
                 }
                 catch (HttpRequestException e)

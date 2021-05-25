@@ -10,25 +10,25 @@ namespace BO.Entity
     public class Client
     {
        
-        public int? IdClient { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// ISBN unique du livre
         /// </summary>
-        public string NomClient { get; set; }
+        public string Nom { get; set; }
 
         /// <summary>
         /// Titre du livre
         /// </summary>
-        public string PrenomClient { get; set; }
+        public string Prenom { get; set; }
         /// <summary>
         /// Telephone du client
         /// </summary>
-        public string TelClient { get; set; }
+        public string Tel { get; set; }
         /// <summary>
         /// email du client
         /// </summary>
-        public string EmailClient { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         /// Constructeur par defaut
@@ -41,33 +41,33 @@ namespace BO.Entity
         /// <summary>
         /// Constructeur avec les arguments
         /// </summary>
-        /// <param name="nom">Nom</param>
+        /// <param name="nom">Midi</param>
         /// <param name="prenom">Prenom</param>
         /// <param name="telephone">Telephone</param>
         /// <param name="email">Email</param>
         public Client(string nom, string prenom, string telephone, string email)
         {
 
-            NomClient = nom;
-            PrenomClient = prenom;
-            TelClient = telephone;
-            EmailClient = email;
+            Nom = nom;
+            Prenom = prenom;
+            Tel = telephone;
+            Email = email;
 
         }
 
         public override bool Equals(object obj)
         {
             return obj is Client client &&
-                   IdClient == client.IdClient &&
-                   NomClient == client.NomClient &&
-                   PrenomClient == client.PrenomClient &&
-                   TelClient == client.TelClient &&
-                   EmailClient == client.EmailClient;
+                   Id == client.Id &&
+                   Nom == client.Nom &&
+                   Prenom == client.Prenom &&
+                   Tel == client.Tel &&
+                   Email == client.Email;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdClient, NomClient, PrenomClient, TelClient, EmailClient);
+            return HashCode.Combine(Id, Nom, Prenom, Tel, Email);
         }
     }
 }

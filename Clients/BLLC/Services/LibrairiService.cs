@@ -27,11 +27,11 @@ namespace BLLC.Services
 
         public async Task<bool> DeleteIngredient(Ingredient ingredient)
         {
-            if (ingredient?.IdIngr != null)
+            if (ingredient?.Id != null)
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"ingredients/{ ingredient.IdIngr}");
+                    await _httpClient.DeleteAsync($"ingredients/{ ingredient.Id}");
                     return true;
                 }
                 catch (HttpRequestException e)
@@ -91,7 +91,7 @@ namespace BLLC.Services
 
 
         {
-            var reponse = await _httpClient.PutAsync($"ingredients/" + ingredient.IdIngr
+            var reponse = await _httpClient.PutAsync($"ingredients/" + ingredient.Id
                 ,
                 new StringContent(
                     JsonSerializer.Serialize(ingredient), Encoding.UTF8, "application/json"
@@ -110,11 +110,11 @@ namespace BLLC.Services
             {
                 return null;
             }
-            //if (ingredient != null && ingredient.IdIngr != null)
+            //if (ingredient != null && ingredient.Id != null)
             //{
             //    try
             //    {
-            //        var reponse = await _httpClient.PutAsJsonAsync($"ingredients/" + ingredient.IdIngr, ingredient);
+            //        var reponse = await _httpClient.PutAsJsonAsync($"ingredients/" + ingredient.Id, ingredient);
             //        using (var stream = await reponse.Content.ReadAsStreamAsync())
             //        {
             //            Ingredient ingredientModified = await JsonSerializer.DeserializeAsync<Ingredient>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
@@ -191,7 +191,7 @@ namespace BLLC.Services
 
 
         {
-            var reponse = await _httpClient.PutAsync($"clients/" + client.IdClient
+            var reponse = await _httpClient.PutAsync($"clients/" + client.Id
                 ,
                 new StringContent(
                     JsonSerializer.Serialize(client), Encoding.UTF8, "application/json"
@@ -217,11 +217,11 @@ namespace BLLC.Services
         //// async Task<Ingredient> ILibrairiService.PutIngredient(Ingredient ingredient)
         //{
 
-        //    if (ingredient != null && ingredient.IdIngr != null)
+        //    if (ingredient != null && ingredient.Id != null)
         //    {
         //        try
         //        {
-        //            var reponse = await _httpClient.PutAsJsonAsync($"ingredients/" + ingredient.IdIngr, ingredient);
+        //            var reponse = await _httpClient.PutAsJsonAsync($"ingredients/" + ingredient.Id, ingredient);
         //            using (var stream = await reponse.Content.ReadAsStreamAsync())
         //            {
         //                Ingredient ingredientModified = await JsonSerializer.DeserializeAsync<Ingredient>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });

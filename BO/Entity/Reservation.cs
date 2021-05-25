@@ -11,7 +11,7 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant reservation
         /// </summary>
-        public int? IdResa { get; set; }
+        public int? Id { get; set; }
         /// <summary>
         /// Identifiant client
         /// </summary>
@@ -19,29 +19,19 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant Menu
         /// </summary>
-        public int? IdMenu { get; set; }
+        public int? IdService { get; set; }
         /// <summary>
         /// Date de reservation
         /// </summary>
-        public DateTime DateResa { get; set; }
+        public DateTime Date { get; set; }
         /// <summary>
         /// nombre de reservations
         /// </summary>
-        public int? NbResa { get; set; }
+        public int? Nb { get; set; }
         /// <summary>
         /// Formule matin
         /// </summary>
-        public bool FormMatin { get; set; }
-        /// <summary>
-        /// Formule de midi
-        /// </summary>
-        public bool FormMidi { get; set; }
-        /// <summary>
-        /// Formule du soir
-        /// </summary>
-        public bool FormSoir { get; set; }
-        /// <summary>
-        /// Constructeur par defaut
+       
         /// </summary>
         public Reservation()
         {
@@ -54,38 +44,32 @@ namespace BO.Entity
         /// <param name="idMenu">Identifiant Menu</param>
         /// <param name="dateResa">Date de reservation</param>
         /// <param name="nbResa">Nombre de reservations</param>
-        /// <param name="formMatin">Formule matin</param>
-        /// <param name="formMidi">Formule de midi</param>
-        /// <param name="formSoir">Formule du soir</param>
-        public Reservation(int? idResa, int? idClient, int? idMenu, DateTime dateResa, int? nbResa, bool formMatin, bool formMidi, bool formSoir)
+       
+        public Reservation(int? idResa, int? idClient, int? idMenu, DateTime dateResa, int? nbResa)
         {
-            IdResa = idResa;
+            Id = idResa;
             IdClient = idClient;
-            IdMenu = idMenu;
-            DateResa = dateResa;
-            NbResa = nbResa;
-            FormMatin = formMatin;
-            FormMidi = formMidi;
-            FormSoir = formSoir;
+            IdService = idMenu;
+            Date = dateResa;
+            Nb = nbResa;
+            
         }
 
         public override bool Equals(object obj)
         {
             return obj is Reservation resa &&
-                IdResa == resa.IdResa &&
+                Id == resa.Id &&
                 IdClient == resa.IdClient &&
-                IdMenu == resa.IdMenu &&
-                DateResa == resa.DateResa &&
-                NbResa == resa.NbResa &&
-                FormMatin == resa.FormMatin &&
-                FormMidi == resa.FormMidi &&
-                FormSoir == resa.FormSoir;
+                IdService == resa.IdService &&
+                Date == resa.Date &&
+                Nb == resa.Nb 
+              
             
         }
 
         public override int GetHashCode()
         {
-                return HashCode.Combine(IdResa,IdClient,IdMenu,DateResa,NbResa,FormMatin,FormMidi,FormSoir);
+                return HashCode.Combine(Id,IdClient,IdService,Date,Nb);
         }
     }
 }

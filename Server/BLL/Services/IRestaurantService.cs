@@ -77,22 +77,22 @@ namespace BLL.Services
         /// <summary>
         /// Crée un nouveau menu dans la bas de données
         /// </summary>
-        /// <param name="Menus"></param>
+        /// <param name="service"></param>
         /// <returns>Retourne un menu sinon une erreur</returns>
-        Task<Menu> CreateMenu(Menu Menus);
+        Task<Service> CreateService(Service service);
 
         /// <summary>
         /// Affiche l'ensemble des Ingredients avec une pagination
         /// </summary>
         /// <param name="pageRequest"></param>
         /// <returns></returns>
-        Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest);
+        Task<PageResponse<Service>> GetAllService(PageRequest pageRequest);
 
-        Task<Menu> GetMenuById(int id);
+        Task<Service> GetServiceById(int id);
 
-        Task<Menu> ModifyMenu(Menu Menus);
+        Task<Service> ModifyService(Service service);
 
-        Task<bool> RemoveMenuById(int id);
+        Task<bool> RemoveServiceById(int id);
         #endregion
     }
 }

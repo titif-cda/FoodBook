@@ -11,12 +11,12 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant du type repas
         /// </summary>
-        public int? IdTypeRepas { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Libelle du type repas
         /// </summary>
-        public string LibelleTypeRepas { get; set; }
+        public string Libelle { get; set; }
 
         /// <summary>
         /// Constructeur par defaut
@@ -31,8 +31,8 @@ namespace BO.Entity
         /// <param name="libelleTypeRepas">Libelle du type repas</param>
         public TypeRepas(int? idTypeRepas, string libelleTypeRepas)
         {
-            IdTypeRepas = idTypeRepas;
-            LibelleTypeRepas = libelleTypeRepas;
+            Id = idTypeRepas;
+            Libelle = libelleTypeRepas;
         }
     }
 }

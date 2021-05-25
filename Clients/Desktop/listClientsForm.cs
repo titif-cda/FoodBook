@@ -14,14 +14,14 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class listClients : Form
+    public partial class listClientsForm : Form
     {
         private readonly IClientService _clientService = new ClientService();
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize = 10;
         private int maxPage;
-        public listClients()
+        public listClientsForm()
         {
             InitializeComponent();
             LoadClients();
@@ -50,7 +50,7 @@ namespace Desktop
         {
             ClientsControl widgetClient = sender as ClientsControl;
 
-            DialogResult r = new crudClient(widgetClient.CurrentClient).ShowDialog();
+            DialogResult r = new crudClientForm(widgetClient.CurrentClient).ShowDialog();
 
         }
 

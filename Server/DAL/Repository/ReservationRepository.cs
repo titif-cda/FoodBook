@@ -21,23 +21,23 @@ namespace DAL.Repository
 
         public async Task<int> DeleteAsync(long id)
         {
-            var stmt = @"delete from RESERVATION where IdResa = @IdResa";
+            var stmt = @"delete from Reservation where Id= @Id";
             return await _session.Connection.ExecuteAsync(stmt, new { Id = id }, _session.Transaction);
         }
 
         public async Task<IEnumerable<Reservation>> GetAllAsync()
         {
-            var stmt = @"select * from RESERVATION";
+            var stmt = @"select * from Reservation";
             return await _session.Connection.QueryAsync<Reservation>(stmt, null, _session.Transaction);
         }
 
         public async Task<PageResponse<Reservation>> GetAllAsync(PageRequest pageRequest)
         {
-            var stmt = @"select * from RESERVATION 
-                        ORDER BY IdResa
+            var stmt = @"select * from Reservation 
+                        ORDER BY Id
                         OFFSET @PageSize * (@Page - 1) rows
                         FETCH NEXT @PageSize rows only";
-            string queryCount = " SELECT COUNT(*) FROM RESERVATION";
+            string queryCount = " SELECT COUNT(*) FROM Reservation";
 
             IEnumerable<Reservation> clientTask = await _session.Connection.QueryAsync<Reservation>(stmt, pageRequest, _session.Transaction);
             int countTask = await _session.Connection.ExecuteScalarAsync<int>(queryCount, null, _session.Transaction);
@@ -49,22 +49,21 @@ namespace DAL.Repository
         public async Task<Reservation> GetAsync(int id)
         {
             //Evité l'injection sql avec des reqêtes paramétrées
-            var stmt = @"select * from RESERVATION where IdResa = @IdResa";
+            var stmt = @"select * from Reservation where Id = @Id";
             return await _session.Connection.QueryFirstOrDefaultAsync<Reservation>(stmt, new { Id = id }, _session.Transaction);
         }
 
         public async Task<Reservation> InsertAsync(Reservation entity)
         {
-            var stmt = @"insert into RESERVATION(IdClient, IdMenu, DateResa, NbResa, FormMatin, FormMidi, FormSoir)  output INSERTED.IdResa
-            values ( @IdClient, @IdMenu, @DateResa, @NbResa, @FormMatin, @FormMidi, @FormSoir)";
+            var stmt = @"insert into RESERVATION(IdClient, IdService, Date, Nb)  output INSERTED.Id
+            values ( @IdClient, @IdService, @Date, @Nb)";
             int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
             return await GetAsync(i);
         }
 
         public async Task<bool> UpdateAsync(Reservation entity)
         {
-            var stmt = @"UPDATE  RESERVATION SET IdClient = @IdClient, IdMenu=@IdMenu, DateResa= @DateResa, NbResa = @NbResa,
-                FormMatin = @FormMatin, FormMidi = @FormMidi, FormSoir = @FormSoir WHERE IdResa = @IdResa";
+            var stmt = @"UPDATE  Reservation SET IdClient = @IdClient, IdService=@IdService, Date = @Date, Nb = @Nb WHERE Id = @Id";
             var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
             return nbModifiedLines > 0;
         }

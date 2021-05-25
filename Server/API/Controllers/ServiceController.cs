@@ -14,71 +14,71 @@ namespace API.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("apiv{version:apiVersion=}/repas")]
+    [Route("api/v{version:apiVersion=}/services")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
-    public class RepasController : ControllerBase
+    public class ServiceController : ControllerBase
     {
 
         //Service qui gère la librairi
         private readonly IRestaurantService _restaurantService = null;
 
-        public RepasController(IRestaurantService restaurantService)
+        public ServiceController(IRestaurantService restaurantService)
         {
             _restaurantService = restaurantService;
         }
 
 
         /// <summary>
-        /// Permet de récupérer la liste des repas
+        /// Permet de récupérer la liste des menus
         /// </summary>
-        /// <returns>La liste des repas</returns>
+        /// <returns>La liste des livres</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<PageResponse<Repas>>> GetAll([FromQuery] PageRequest pageRequest,Filter filter)
+        public async Task<ActionResult<PageResponse<Service>>> GetAll([FromQuery] PageRequest pageRequest)
         {
 
-            return Ok(await _restaurantService.GetAllRepas(pageRequest, filter));
+            return Ok(await _restaurantService.GetAllService(pageRequest));
         }
 
         /// <summary>
-        /// Permert de récupérer un repas avec son identifiant unique
+        /// Permert de récupérer un service avec son identifiant unique
         /// </summary>
-        /// <param name="id">Identifiant unique du repas</param>
-        /// <returns>Renvoi le repas définit par l'identifiant unique</returns>
+        /// <param name="id">Identifiant unique du service</param>
+        /// <returns>Renvoi le service définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetRepasById([FromRoute] int id)
+        public async Task<IActionResult> GetServiceById([FromRoute] int id)
         {
-            Repas repas = await _restaurantService.GetRepasById(id);
-            if (repas == null)
+            Service service = await _restaurantService.GetServiceById(id);
+            if (service == null)
             {
                 return NotFound(); // StatusCode = 404
             }
             else
             {
-                return Ok(repas); // StatusCode = 200
+                return Ok(service); // StatusCode = 200
             }
         }
 
 
         /// <summary>
-        /// Créer un repas et l'ajoute en BDD
+        /// Créer un service et l'ajoute en BDD
         /// </summary>
-        /// <param name="repas">repas à ajouter sans l'identifiant unique</param>
-        /// <returns>Renvoi un repas avec l'identifiant généré</returns>
+        /// <param name="service">service à ajouter sans l'identifiant unique</param>
+        /// <returns>Renvoi le service avec l'identifiant généré</returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateRepas([FromBody] Repas repas)
+        public async Task<IActionResult> CreateService([FromBody] Service service)
         {
-            // Ajout du client avec la bll server
-            Repas newrepas = await _restaurantService.CreateRepas(repas);
-            if (newrepas != null)
+            // Ajout du menus avec la bll server
+            Service newService = await _restaurantService.CreateService(service);
+            if (newService != null)
             {
                 // Créer une redirection vers GetBookById(newBook.BookId);
-                return CreatedAtAction(nameof(GetRepasById), new { id = newrepas.IdRepas }, newrepas);
+                return CreatedAtAction(nameof(GetServiceById), new { id = newService.Id}, service);
             }
             else
             {
@@ -88,16 +88,16 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Supprime un repas de la BDD
+        /// Supprime un service de la bdd
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns>>Retourne succes ou echec</returns>
+        /// <param name="id">identifiant</param>
+        /// <returns>succes ou echec</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteRepas([FromRoute] int id)
+        public async Task<IActionResult> DeleteService([FromRoute] int id)
         {
-            if (await _restaurantService.RemoveRepasById(id))
+            if (await _restaurantService.RemoveServiceById(id))
             {
 
                 // Renvoie un code 204 aucun contenu
@@ -111,29 +111,29 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// modifie le repas dans la base de données
+        /// modifie un service dans la bdd
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="repas"></param>
-        /// <returns>Un repas modifié ou echec</returns>
+        /// <param name="id">identifiant</param>
+        /// <param name="service">service concerné</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> ModifyRepas([FromRoute] int id, [FromBody] Repas repas)
+        public async Task<IActionResult> ModifyMenu([FromRoute] int id, [FromBody] Service service)
         {
-            if (repas == null || id != repas.IdRepas)
+            if (service == null || id != service.Id)
             {
                 // Retourne un code 400  Bad Request
                 return BadRequest();
             }
             else
             {
-                Repas repasModified = await _restaurantService.ModifyRepas(repas);
-                if (repasModified != null)
+                Service serviceModified = await _restaurantService.ModifyService(service);
+                if (serviceModified != null)
                 {
                     // Renvoie la ressource modifiée
-                    return Ok(repasModified);
+                    return Ok(serviceModified);
                 }
                 else
                 {

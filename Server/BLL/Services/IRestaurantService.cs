@@ -59,21 +59,21 @@ namespace BLL.Services
         Task<bool> RemoveTypeRepasById(int id);
         #endregion
 
-        #region Repas
-        Task<Repas> CreateRepas(Repas Repas);
+        #region Met
+        Task<Met> CreateMet(Met Repas);
 
-        Task<PageResponse<Repas>> GetAllRepas(PageRequest pageRequest, Filter filter);
+        Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter);
 
       
 
-        Task<Repas> GetRepasById(int id);
+        Task<Met> GetMetById(int id);
 
-        Task<Repas> ModifyRepas(Repas Repas);
+        Task<Met> ModifyMet(Met Repas);
 
-        Task<bool> RemoveRepasById(int id);
+        Task<bool> RemoveMetById(int id);
         #endregion
 
-        #region Menu
+        #region Service
         /// <summary>
         /// Crée un nouveau menu dans la bas de données
         /// </summary>

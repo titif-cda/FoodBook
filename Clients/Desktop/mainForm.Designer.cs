@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop
 {
-    partial class FormMain
+    partial class mainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.formMainTbl = new System.Windows.Forms.TableLayoutPanel();
             this.MenuLateralTlp = new System.Windows.Forms.TableLayoutPanel();
             this.clientBtn = new System.Windows.Forms.Button();

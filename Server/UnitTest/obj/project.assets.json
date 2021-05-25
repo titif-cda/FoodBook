@@ -7590,24 +7590,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cda3elji\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Titif\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\cda3elji\\.nuget\\packages\\",
-      "outputPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\UnitTest\\obj\\",
+      "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\UnitTest\\UnitTest.csproj",
+      "packagesPath": "C:\\Users\\Titif\\.nuget\\packages\\",
+      "outputPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\cda3elji\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Titif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7620,11 +7621,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\API\\API.csproj": {
-              "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\API\\API.csproj"
+            "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\API\\API.csproj": {
+              "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\API\\API.csproj"
             },
-            "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\BLL\\BLL.csproj": {
-              "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\BLL\\BLL.csproj"
+            "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\BLL\\BLL.csproj"
             }
           }
         }

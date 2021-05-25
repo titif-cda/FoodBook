@@ -1803,24 +1803,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cda3elji\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Titif\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\cda3elji\\.nuget\\packages\\",
-      "outputPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\DAL\\obj\\",
+      "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\Titif\\.nuget\\packages\\",
+      "outputPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Server\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\cda3elji\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Titif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1833,8 +1834,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj": {
-              "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj"
+            "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj": {
+              "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj"
             }
           }
         }

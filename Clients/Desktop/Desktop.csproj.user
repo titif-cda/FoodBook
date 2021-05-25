@@ -4,16 +4,16 @@
     <Compile Update="AccueilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="crudClient.cs">
+    <Compile Update="crudClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="listClients.cs">
+    <Compile Update="listClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControls\ClientsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="FormMain.cs">
+    <Compile Update="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -26,18 +26,18 @@ namespace BLLC.Services
         #endregion
 
         #region Repas
-        Task<Met> CreateRepas(Met repa);
-        Task<PageResponse<Met>> GetAllRepas(PageRequest pageRequest);
-        Task<Met> PutRepas(Met repa);
-        Task<bool> DeleteRepas(Met repa);
+        Task<Met> CreateMet(Met met);
+        Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
+        Task<Met> PutMet(Met met);
+        Task<bool> DeleteMet(Met met);
         #endregion
 
 
         #region Menu
-        Task<Service> CreateMenu(Service menus);
-        Task<PageResponse<Service>> GetAllMenu(PageRequest pageRequest);
-        Task<Service> PutMenu(Service menus);
-        Task<bool> DeleteMenu(Service menus);
+        Task<Service> CreateService(Service service);
+        Task<PageResponse<Service>> GetAllService(PageRequest pageRequest);
+        Task<Service> PutService(Service service);
+        Task<bool> DeleteService(Service service);
         #endregion
     }
 }

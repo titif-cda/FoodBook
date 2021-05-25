@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop
 {
-    partial class listClients
+    partial class listClientsForm
     {
         /// <summary>
         /// Required designer variable.

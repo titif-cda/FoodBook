@@ -89,7 +89,7 @@ namespace API.Controllers
             if (newClient != null)
             {
                 // Créer une redirection vers GetClientById(newBook.BookId);
-                return CreatedAtAction(nameof(GetClientById), new { id = newClient.IdClient }, newClient);
+                return CreatedAtAction(nameof(GetClientById), new { id = newClient.Id }, newClient);
             }
             else
             {
@@ -133,7 +133,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ModifyClient([FromRoute] int id, [FromBody] Client client)
         {
-            if (client == null || id != client.IdClient)
+            if (client == null || id != client.Id)
             {
                 // Retourne un code 400  Bad Request
                 return BadRequest();

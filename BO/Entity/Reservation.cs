@@ -62,7 +62,7 @@ namespace BO.Entity
                 IdClient == resa.IdClient &&
                 IdService == resa.IdService &&
                 Date == resa.Date &&
-                Nb == resa.Nb 
+                Nb == resa.Nb; 
               
             
         }

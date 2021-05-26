@@ -6,62 +6,59 @@ using System.Threading.Tasks;
 
 namespace BO.Entity
 {
+    /// <summary>
+    /// Entité Met
+    /// </summary>
     public class Met
     {
-    
         /// <summary>
-        /// Identifiant Repas
+        /// Identifiant du Met (plat)
         /// </summary>
-        public int? Id { get; set; }
-
+        public int Id { get; set; }
         /// <summary>
-        /// Identifiant Type repas
-        /// </summary>
-        public int? IdType { get; set; }
-        /// <summary>
-        /// Libelle Repas
+        /// Libelle du Met (plat)
         /// </summary>
         public string Libelle { get; set; }
-
         /// <summary>
-        /// Description Repas
+        ///Description du Met (plat)
         /// </summary>
         public string Description { get; set; }
+
+        public int? IdType { get; set; }
+
         /// <summary>
-        /// Constructeur par default
+        /// Constructeur par defaut
         /// </summary>
         public Met()
         {
-
         }
+
         /// <summary>
-        /// Constructeur avec arguments
+        /// Constructeur avec les arguments
         /// </summary>
-        /// <param name="idRepas">Identifiant Repas</param>
-        /// <param name="idTypeRepas">Identifiant Type repas</param>
-        /// <param name="libelleRepas">Libelle Repas</param>
-        /// <param name="descRepas">Description Repas</param>
-        public Met(int? idRepas, int? idTypeRepas, string libelleRepas, string descRepas)
+        /// <param name="id"></param>
+        /// <param name="libelle"></param>
+        /// <param name="description"></param>
+        public Met(int id, string libelle, string description, int idType)
         {
-            Id = idRepas;
-            IdType = idTypeRepas;
-            Libelle = libelleRepas;
-            Description = descRepas;
+            Id = id;
+            Libelle = libelle;
+            Description = description;
+            IdType = idType;
         }
 
         public override bool Equals(object obj)
         {
-            return obj is Met repas &&
-                   Id == repas.Id &&
-                   IdType == repas.IdType &&
-                   Libelle == repas.Libelle &&
-                   Description == repas.Description;
+            return obj is Met met &&
+                   Id == met.Id &&
+                   Libelle == met.Libelle &&
+                   Description == met.Description &&
+                   IdType == met.IdType;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, IdType, Libelle, Description);
+            return HashCode.Combine(Id, Libelle, Description, IdType);
         }
-
     }
 }

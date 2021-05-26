@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class FormMain : Form
+    public partial class mainForm : Form
     {
-        public FormMain()
+        public mainForm()
         {
             InitializeComponent();
             this.Text = string.Empty;
@@ -70,7 +70,7 @@ namespace Desktop
 
         private void ClientBtn_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new listClients());
+            NavFormPanel(new listClientsForm());
         }
 
        
@@ -89,7 +89,7 @@ namespace Desktop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new listClients());
+            NavFormPanel(new listClientsForm());
         }
 
        

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
-    public interface IServiceRepository  : IGenericRepository<Service> 
+    public interface IServiceRepository : IGenericRepository<Service>
     {
         Task<PageResponse<Service>> GetAllAsync(PageRequest pageRequest);
     }

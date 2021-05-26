@@ -29,10 +29,9 @@ namespace BO.Entity
         /// </summary>
         public int? Nb { get; set; }
         /// <summary>
-        /// Formule matin
+        ///constructeur par defaut
         /// </summary>
        
-        /// </summary>
         public Reservation()
         {
         }
@@ -62,7 +61,7 @@ namespace BO.Entity
                 IdClient == resa.IdClient &&
                 IdService == resa.IdService &&
                 Date == resa.Date &&
-                Nb == resa.Nb; 
+                Nb == resa.Nb;
               
             
         }

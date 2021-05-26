@@ -26,51 +26,51 @@ namespace UnitTest.Services
                 return Task.FromResult(1);
         }
 
-        public Task<PageResponse<Menu>> GetAllAsync(PageRequest pageRequest)
+        public Task<PageResponse<Service>> GetAllAsync(PageRequest pageRequest)
         {
-            return Task.FromResult(new PageResponse<Menu>()
+            return Task.FromResult(new PageResponse<Service>()
             {
                Page = pageRequest.Page,
                PageSize = pageRequest.PageSize,
-               Data = new List<Menu>(),
+               Data = new List<Service>(),
                TotalRecords = 100
             });
         }
 
-        public Task<IEnumerable<Menu>> GetAllAsync()
+        public Task<IEnumerable<Service>> GetAllAsync()
         {
-           return Task.FromResult<IEnumerable<Menu>>(new List<Menu>());
+           return Task.FromResult<IEnumerable<Service>>(new List<Service>());
         }
 
-        public Task<Menu> GetAsync(int id)
+        public Task<Service> GetAsync(int id)
         {
-            Menu Test = new Menu();
+            Service Test = new Service();
             if (id != 0)
                 return Task.FromResult(Test);
             else
-                return Task.FromResult<Menu>(null);
+                return Task.FromResult<Service>(null);
         }
 
-        public Task<Menu> InsertAsync(Menu entity)
+        public Task<Service> InsertAsync(Service entity)
         {
             if(entity == null)
             {
-                return Task.FromResult<Menu>(null);
+                return Task.FromResult<Service>(null);
             }
             else
             {
-                entity.IdMenu = 1;
+                entity.Id = 1;
                 return Task.FromResult(entity);
             }
         }
 
-        public Task<bool> UpdateAsync(Menu entity)
+        public Task<bool> UpdateAsync(Service entity)
         {
             if (entity == null)
             {
                 throw new Exception();
             }
-            else if (entity.IdMenu == null)
+            else if (entity.Id == 0)
             {
                 return Task.FromResult(false);
             }

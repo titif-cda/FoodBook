@@ -18,63 +18,63 @@ namespace UnitTest.Services
             new Ingredient(3,"gingembre",3)
         };
 
-        public List<Menu> MenuDb = new List<Menu>()
+        public List<Service> MenuDb = new List<Service>()
                 {
-                    new Menu()
+                    new Service()
                     {
-                        DateMenu = DateTime.Now,
-                        IdMenu = 1,
-                        ListPlats = new List<Repas>()
+                        Date = DateTime.Now,
+                        Id = 1,
+                        ListPlats = new List<Met>()
                         {
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 1,
-                                DescRepas = "DescRepas1",
-                                IdTypeRepas = 1,
-                                LibelleRepas = "LibelleRepas1"
+                                Id = 1,
+                                Description = "DescRepas1",
+                                IdType = 1,
+                                Libelle = "LibelleRepas1"
                             },
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 2,
-                                DescRepas = "DescRepas2",
-                                IdTypeRepas = 2,
-                                LibelleRepas = "LibelleRepas2"
+                                Id = 2,
+                                Description = "DescRepas2",
+                                IdType = 2,
+                                Libelle = "LibelleRepas2"
                             },
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 3,
-                                DescRepas = "DescRepas3",
-                                IdTypeRepas = 3,
-                                LibelleRepas = "LibelleRepas3"
+                                Id = 3,
+                                Description = "DescRepas3",
+                                IdType = 3,
+                                Libelle = "LibelleRepas3"
                             }
                         }
                     },
-                    new Menu()
+                    new Service()
                     {
-                        DateMenu = DateTime.Now.AddDays(1),
-                        IdMenu = 5,
-                        ListPlats = new List<Repas>()
+                        Date = DateTime.Now.AddDays(1),
+                        Id = 5,
+                        ListPlats = new List<Met>()
                         {
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 4,
-                                DescRepas = "DescRepas4",
-                                IdTypeRepas = 1,
-                                LibelleRepas = "LibelleRepas4"
+                                Id = 4,
+                                Description = "DescRepas4",
+                                IdType = 1,
+                                Libelle = "LibelleRepas4"
                             },
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 5,
-                                DescRepas = "DescRepas5",
-                                IdTypeRepas = 2,
-                                LibelleRepas = "LibelleRepas5"
+                                Id = 5,
+                                Description = "DescRepas5",
+                                IdType = 2,
+                                Libelle = "LibelleRepas5"
                             },
-                            new Repas
+                            new Met
                             {
-                                IdRepas = 6,
-                                DescRepas = "DescRepas6",
-                                IdTypeRepas = 3,
-                                LibelleRepas = "LibelleRepas6"
+                                Id = 6,
+                                Description = "DescRepas6",
+                                IdType = 3,
+                                Libelle = "LibelleRepas6"
                             }
                         }
                     }
@@ -85,34 +85,34 @@ namespace UnitTest.Services
 
         public Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
-            if (ingredient.NomIngr == null)
+            if (ingredient.Nom == null)
             {
                 return Task.FromResult<Ingredient>(null);
             }
             return Task.FromResult(ingredient);
         }
 
-        public Task<Menu> CreateMenu(Menu Menus)
+        public Task<Service> CreateService(Service service)
         {
-            if (Menus.NomMenu== null)
+            if (service.Id == 0)
             {
-                return Task.FromResult<Menu>(null);
+                return Task.FromResult<Service>(null);
             }
-            return Task.FromResult(Menus);
+            return Task.FromResult(service);
         }
 
-        public Task<Repas> CreateRepas(Repas Repas)
+        public Task<Met> CreateMet(Met met)
         {
-            if (Repas.LibelleRepas == null)
+            if (met.Libelle == null)
             {
-                return Task.FromResult<Repas>(null);
+                return Task.FromResult<Met>(null);
             }
-            return Task.FromResult(Repas);
+            return Task.FromResult(met);
         }
 
         public Task<TypeRepas> CreateTypeRepas(TypeRepas tRepas)
         {
-            if (tRepas.LibelleTypeRepas == null)
+            if (tRepas.Libelle == null)
             {
                 return Task.FromResult<TypeRepas>(null);
             }
@@ -140,9 +140,9 @@ namespace UnitTest.Services
            });
         }
 
-        public Task<PageResponse<Menu>> GetAllMenu(PageRequest pageRequest)
+        public Task<PageResponse<Service>> GetAllService(PageRequest pageRequest)
         {
-            List<Menu> data = null;
+            List<Service> data = null;
             if (pageRequest.Page * pageRequest.PageSize < MenuDb.Count)
             {
                 int firstIndex = (pageRequest.Page * pageRequest.PageSize);
@@ -152,7 +152,7 @@ namespace UnitTest.Services
                 data = MenuDb.GetRange(firstIndex, lastIndex - firstIndex);
 
             }
-            return Task.FromResult(new PageResponse<Menu>()
+            return Task.FromResult(new PageResponse<Service>()
             {
                 Page = pageRequest.Page,
                 PageSize = pageRequest.PageSize,
@@ -229,7 +229,7 @@ namespace UnitTest.Services
             //});
         }
 
-        public Task<PageResponse<Repas>> GetAllRepas(PageRequest pageRequest, Filter filter)
+        public Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter)
         {
             throw new NotImplementedException();
         }
@@ -241,15 +241,15 @@ namespace UnitTest.Services
 
         public Task<Ingredient> GetIngredientById(int id)
         {
-            return Task.FromResult(IngredientsDB.Find(b => b.IdIngr == id));
+            return Task.FromResult(IngredientsDB.Find(b => b.Id == id));
         }
 
-        public Task<Menu> GetMenuById(int id)
+        public Task<Service> GetServiceById(int id)
         {
-            return Task.FromResult(MenuDb.Find(b => b.IdMenu == id));
+            return Task.FromResult(MenuDb.Find(b => b.Id == id));
         }
 
-        public Task<Repas> GetRepasById(int id)
+        public Task<Met> GetMetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -261,36 +261,36 @@ namespace UnitTest.Services
 
         public Task<Ingredient> ModifyIngredient(Ingredient ingredient)
         {
-            if (ingredient.IdIngr == null)
+            if (ingredient.Id == null)
                 return null;
-            var _Ingredient = IngredientsDB.Find(b => b.IdIngr == ingredient.IdIngr);
+            var _Ingredient = IngredientsDB.Find(b => b.Id == ingredient.Id);
             if (_Ingredient == null)
             {
                 return Task.FromResult<Ingredient>(null);
             }
-            _Ingredient.NomIngr = ingredient.NomIngr;
-            _Ingredient.PrixIngr = ingredient.PrixIngr;
+            _Ingredient.Nom = ingredient.Nom;
+            _Ingredient.Prix = ingredient.Prix;
 
             return Task.FromResult(_Ingredient);
         }
 
-        public Task<Menu> ModifyMenu(Menu menus)
+        public Task<Service> ModifyService(Service menus)
         {
 
-            if (menus.IdMenu == null)
+            if (menus.Id == 0)
                 return null;
-            var _Menu = MenuDb.Find(b => b.IdMenu == menus.IdMenu);
+            var _Menu = MenuDb.Find(b => b.Id == menus.Id);
             if (_Menu == null)
             {
-                return Task.FromResult<Menu>(null);
+                return Task.FromResult<Service>(null);
             }
-            _Menu.NomMenu = menus.NomMenu;
-            _Menu.DateMenu = menus.DateMenu;
+            _Menu.Id = menus.Id;
+            _Menu.Date = menus.Date;
 
             return Task.FromResult(_Menu);
         }
 
-        public Task<Repas> ModifyRepas(Repas Repas)
+        public Task<Met> ModifyMet(Met Repas)
         {
             throw new NotImplementedException();
         }
@@ -302,17 +302,17 @@ namespace UnitTest.Services
 
         public Task<bool> RemoveIngredientById(int id)
         {
-            int i = IngredientsDB.RemoveAll(b => b.IdIngr == id);
+            int i = IngredientsDB.RemoveAll(b => b.Id == id);
             return Task.FromResult( i > 0);
         }
 
         public Task<bool> RemoveServiceById(int id)
         {
-            int i = MenuDb.RemoveAll(b => b.IdMenu == id);
+            int i = MenuDb.RemoveAll(b => b.Id == id);
             return Task.FromResult(i > 0);
         }
 
-        public Task<bool> RemoveRepasById(int id)
+        public Task<bool> RemoveMetById(int id)
         {
             throw new NotImplementedException();
         }

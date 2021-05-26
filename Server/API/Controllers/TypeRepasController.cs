@@ -78,7 +78,7 @@ namespace API.Controllers
             if (newtRepas != null)
             {
                 // Créer une redirection vers GetBookById(newBook.BookId);
-                return CreatedAtAction(nameof(GetTypeRepasById), new { id = newtRepas.IdTypeRepas}, newtRepas);
+                return CreatedAtAction(nameof(GetTypeRepasById), new { id = newtRepas.Id}, newtRepas);
             }
             else
             {
@@ -121,7 +121,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ModifyTypeRepas([FromRoute] int id, [FromBody] TypeRepas tRepas)
         {
-            if (tRepas == null || id != tRepas.IdTypeRepas)
+            if (tRepas == null || id != tRepas.Id)
             {
                 // Retourne un code 400  Bad Request
                 return BadRequest();

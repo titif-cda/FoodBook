@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop
 {
-    partial class crudClient
+    partial class crudClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crudClient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crudClientForm));
             this.CrudClientPnl = new System.Windows.Forms.Panel();
             this.phoneCrudClientlbl = new System.Windows.Forms.Label();
             this.EmailCrudClientLbl = new System.Windows.Forms.Label();

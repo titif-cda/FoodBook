@@ -23,11 +23,11 @@ namespace IntegrationTest
             Client expected = new Client()
             {
 
-               IdClient = 1,
-               NomClient = "Allo",
-               PrenomClient = "Bundyde",
-               TelClient = "06050360650",
-               EmailClient = "adedel@ebay.com",
+               Id = 1,
+               Nom = "Allo",
+               Prenom = "Bundyde",
+               Tel = "06050360650",
+               Email = "adedel@ebay.com",
             };
             //Act
             try

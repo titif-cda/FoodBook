@@ -79,7 +79,7 @@ namespace API.Controllers
             if (newResa != null)
             {
                 // Créer une redirection vers GetBookById(newBook.BookId);
-                return CreatedAtAction(nameof(GetResaById), new { id = newResa.IdResa}, newResa);
+                return CreatedAtAction(nameof(GetResaById), new { id = newResa.Id}, newResa);
             }
             else
             {
@@ -122,7 +122,7 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ModifyResa([FromRoute] int id, [FromBody] Reservation resa)
         {
-            if (resa == null || id != resa.IdResa)
+            if (resa == null || id != resa.Id)
             {
                 // Retourne un code 400  Bad Request
                 return BadRequest();

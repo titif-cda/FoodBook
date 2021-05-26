@@ -5,63 +5,58 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BO.Entity
-{
-    public class Service
+{/// <summary>
+/// Entité service
+/// </summary>
+   public class Service
     {
         /// <summary>
-        /// Identifiant
+        /// Identifiant du service
         /// </summary>
-        public int? Id { get; set; }
-
+        public int Id { get; set; }
         /// <summary>
-        /// Date du menu
-        /// </summary>
-        public DateTime Date { get; set; }
-        /// <summary>
-        /// Midi menu
+        /// Midi ou soir 1 pour midi 0 pour soir
         /// </summary>
         public bool Midi { get; set; }
-
         /// <summary>
-        /// Liste des plats
+        /// Date du service
         /// </summary>
-       
+        public DateTime Date { get; set; }
 
+        public List<Met> ListPlats { get; set; }
         /// <summary>
-        /// Constructeur par défaut
+        /// Constructeur par dfaut
         /// </summary>
         public Service()
         {
         }
-
         /// <summary>
-        /// Constructeur avec tous les arguments
+        /// Constructeur aves parametres
         /// </summary>
-        /// <param name="idMenu"> Identifiant</param>
-        /// <param name="dateMenu"> Date du menu</param>
-        /// <param name="midi"> Midi menu</param>
-        public Service(int idMenu, bool midi, DateTime dateMenu)
+        /// <param name="id"></param>
+        /// <param name="midi"></param>
+        /// <param name="date"></param>
+        public Service(int id, bool midi, DateTime date, List<Met> listPlats)
         {
-            Id = idMenu;
+            Id = id;
             Midi = midi;
-            Date = dateMenu;
-           
-           
+            Date = date;
+            ListPlats = listPlats;
         }
 
         public override bool Equals(object obj)
         {
-            return obj is Service menu &&
-                   Id == menu.Id &&
-                   Midi == menu.Midi &&
-                   Date == menu.Date;
+            return obj is Service service &&
+                   Id == service.Id &&
+                   Midi == service.Midi &&
                    
-                 
+                   Date == service.Date&&
+                   ListPlats == service.ListPlats; 
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Midi, Date);
+            return HashCode.Combine(Id, Midi, Date, ListPlats);
         }
     }
 }

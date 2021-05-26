@@ -24,7 +24,7 @@ namespace BLLC.Services
         #region Ingredient
         public async Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
-            var reponse = await _httpClient.PostAsync("clients",
+            var reponse = await _httpClient.PostAsync("ingredients",
                 new StringContent(
                     JsonSerializer.Serialize(ingredient), Encoding.UTF8, "application/json"
                     )
@@ -52,7 +52,7 @@ namespace BLLC.Services
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"clients/{ ingredient.Id}");
+                    await _httpClient.DeleteAsync($"ingredients/{ ingredient.Id}");
                     return true;
                 }
                 catch (HttpRequestException e)
@@ -193,13 +193,13 @@ namespace BLLC.Services
 
         #endregion
 
-        #region Repas
+        #region Mets
      
-        public async Task<Met> CreateRepas(Met repa)
+        public async Task<Met> CreateMet(Met met)
         {
             var reponse = await _httpClient.PostAsync("repas",
                    new StringContent(
-                       JsonSerializer.Serialize(repa), Encoding.UTF8, "application/json"
+                       JsonSerializer.Serialize(met), Encoding.UTF8, "application/json"
                        )
                    );
 
@@ -217,16 +217,16 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<PageResponse<Met>> GetAllRepas(PageRequest pageRequest)
+        public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest)
         {
-            var reponse = await _httpClient.GetAsync($"repas{pageRequest.ToUriQuery()}");
+            var reponse = await _httpClient.GetAsync($"mets{pageRequest.ToUriQuery()}");
 
             if (reponse.IsSuccessStatusCode)
             {
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
-                    PageResponse<Met> repasPage = await JsonSerializer.DeserializeAsync<PageResponse<Met>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return repasPage;
+                    PageResponse<Met> metPage = await JsonSerializer.DeserializeAsync<PageResponse<Met>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return metPage;
                 }
             }
             else
@@ -235,12 +235,12 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<Met> PutRepas(Met repa)
+        public async Task<Met> PutMet(Met met)
         {
-            var reponse = await _httpClient.PutAsync($"repas/" + repa.Id
+            var reponse = await _httpClient.PutAsync($"mets/" + met.Id
                  ,
                  new StringContent(
-                     JsonSerializer.Serialize(repa), Encoding.UTF8, "application/json"
+                     JsonSerializer.Serialize(met), Encoding.UTF8, "application/json"
                      )
                  );
 
@@ -248,8 +248,8 @@ namespace BLLC.Services
             {
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
-                    Met repasModified = await JsonSerializer.DeserializeAsync<Met>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return repasModified;
+                    Met metModified = await JsonSerializer.DeserializeAsync<Met>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return metModified;
                 }
             }
             else
@@ -258,13 +258,13 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<bool> DeleteRepas(Met repa)
+        public async Task<bool> DeleteMet(Met repa)
         {
             if (repa?.Id!= null)
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"typeRepas/{ repa.Id}");
+                    await _httpClient.DeleteAsync($"mets/{ repa.Id}");
                     return true;
                 }
                 catch (HttpRequestException e)
@@ -279,14 +279,14 @@ namespace BLLC.Services
 
         #endregion
 
-        #region Menu
+        #region Service
         
 
-        public async Task<Service> CreateMenu(Service menus)
+        public async Task<Service> CreateService(Service service)
         {
-            var reponse = await _httpClient.PostAsync("menus",
+            var reponse = await _httpClient.PostAsync("services",
                    new StringContent(
-                       JsonSerializer.Serialize(menus), Encoding.UTF8, "application/json"
+                       JsonSerializer.Serialize(service), Encoding.UTF8, "application/json"
                        )
                    );
 
@@ -294,8 +294,8 @@ namespace BLLC.Services
             {
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
-                    Service menusNew = await JsonSerializer.DeserializeAsync<Service>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return menusNew;
+                    Service servicesNew = await JsonSerializer.DeserializeAsync<Service>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return servicesNew;
                 }
             }
             else
@@ -304,16 +304,16 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<PageResponse<Service>> GetAllMenu(PageRequest pageRequest)
+        public async Task<PageResponse<Service>> GetAllService(PageRequest pageRequest)
         {
-            var reponse = await _httpClient.GetAsync($"menus{pageRequest.ToUriQuery()}");
+            var reponse = await _httpClient.GetAsync($"services{pageRequest.ToUriQuery()}");
 
             if (reponse.IsSuccessStatusCode)
             {
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
-                    PageResponse<Service> menusPage = await JsonSerializer.DeserializeAsync<PageResponse<Service>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return menusPage;
+                    PageResponse<Service> servicesPage = await JsonSerializer.DeserializeAsync<PageResponse<Service>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return servicesPage;
                 }
             }
             else
@@ -322,12 +322,12 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<Service> PutMenu(Service menus)
+        public async Task<Service> PutService(Service service)
         {
-            var reponse = await _httpClient.PutAsync($"menus/" + menus.Id
+            var reponse = await _httpClient.PutAsync($"services/" + service.Id
                 ,
                 new StringContent(
-                    JsonSerializer.Serialize(menus), Encoding.UTF8, "application/json"
+                    JsonSerializer.Serialize(service), Encoding.UTF8, "application/json"
                     )
                 );
 
@@ -345,13 +345,13 @@ namespace BLLC.Services
             }
         }
 
-        public async Task<bool> DeleteMenu(Service menus)
+        public async Task<bool> DeleteService(Service service)
         {
-            if(menus?.Id != null)
+            if(service?.Id != null)
             {
                 try
                 {
-                    await _httpClient.DeleteAsync($"menus/{ menus.Id }");
+                    await _httpClient.DeleteAsync($"services/{ service.Id }");
                     return true;
                 }
                 catch (HttpRequestException e)

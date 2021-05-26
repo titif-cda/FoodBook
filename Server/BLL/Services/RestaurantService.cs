@@ -152,9 +152,9 @@ namespace BLL.Services
         }
 
         #endregion
-        #region Repas
+        #region Met
 
-        public async Task<Met> CreateRepas(Met met)
+        public async Task<Met> CreateMet(Met met)
         {
             _db.BeginTransaction();
             IMetRepository _met = _db.GetRepository<IMetRepository>();
@@ -164,11 +164,11 @@ namespace BLL.Services
             return newRepas;
         }
 
-        public async Task<PageResponse<Met>> GetAllRepas(PageRequest pageRequest, Filter filter)
+        public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter)
         {
             IMetRepository _met = _db.GetRepository<IMetRepository>();
 
-            var Type = (await _met.GetAllAsync(pageRequest, filter));
+            var Type = (await _met.GetAllAsync(pageRequest));
 
             return Type;
         }
@@ -197,7 +197,7 @@ namespace BLL.Services
             }
         }
 
-        public async Task<bool> RemoveMetsById(int id)
+        public async Task<bool> RemoveMetById(int id)
         {
             _db.BeginTransaction();
             IMetRepository _met = _db.GetRepository<IMetRepository>();
@@ -215,8 +215,8 @@ namespace BLL.Services
         }
 
         #endregion
-        #region Repas
-        public async Task<Service> CreateMet(Service service)
+        #region Service
+        public async Task<Service> CreateService(Service service)
         {
 
             _db.BeginTransaction();
@@ -227,7 +227,7 @@ namespace BLL.Services
             return newService;
         }
 
-        public async Task<PageResponse<Service>> GetAllMet(PageRequest pageRequest)
+        public async Task<PageResponse<Service>> GetAllService(PageRequest pageRequest)
         {
             IServiceRepository _serviceRepo = _db.GetRepository<IServiceRepository>();
 

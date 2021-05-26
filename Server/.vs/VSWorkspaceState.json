@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\API\\Controllers",
+    "\\BLL",
     "\\DAL"
   ],
+  "SelectedNode": "\\Server_FoodBook.sln",
   "PreviewInSolutionExplorer": false
 }

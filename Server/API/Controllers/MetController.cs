@@ -14,71 +14,71 @@ namespace API.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion=}/menus")]
+    [Route("apiv{version:apiVersion=}/mets")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
-    public class MenusController : ControllerBase
+    public class MetController : ControllerBase
     {
 
         //Service qui gère la librairi
         private readonly IRestaurantService _restaurantService = null;
 
-        public MenusController(IRestaurantService restaurantService)
+        public MetController(IRestaurantService restaurantService)
         {
             _restaurantService = restaurantService;
         }
 
 
         /// <summary>
-        /// Permet de récupérer la liste des menus
+        /// Permet de récupérer la liste des Mets
         /// </summary>
-        /// <returns>La liste des livres</returns>
+        /// <returns>La liste des met</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<PageResponse<Menu>>> GetAll([FromQuery] PageRequest pageRequest)
+        public async Task<ActionResult<PageResponse<Met>>> GetAll([FromQuery] PageRequest pageRequest,Filter filter)
         {
 
-            return Ok(await _restaurantService.GetAllService(pageRequest));
+            return Ok(await _restaurantService.GetAllMet(pageRequest, filter));
         }
 
         /// <summary>
-        /// Permert de récupérer un menus avec son identifiant unique
+        /// Permert de récupérer un met avec son identifiant unique
         /// </summary>
-        /// <param name="id">Identifiant unique du menus</param>
-        /// <returns>Renvoi le menus définit par l'identifiant unique</returns>
+        /// <param name="id">Identifiant unique du met</param>
+        /// <returns>Renvoi le met définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetMenuById([FromRoute] int id)
+        public async Task<IActionResult> GetMetById([FromRoute] int id)
         {
-            Menu menus = await _restaurantService.GetServiceById(id);
-            if (menus == null)
+            Met met = await _restaurantService.GetMetById(id);
+            if (met == null)
             {
                 return NotFound(); // StatusCode = 404
             }
             else
             {
-                return Ok(menus); // StatusCode = 200
+                return Ok(met); // StatusCode = 200
             }
         }
 
 
         /// <summary>
-        /// Créer un menus et l'ajoute en BDD
+        /// Créer un Met et l'ajoute en BDD
         /// </summary>
-        /// <param name="menus">menus à ajouter sans l'identifiant unique</param>
-        /// <returns>Renvoi le menus avec l'identifiant généré</returns>
+        /// <param name="Met">Met à ajouter sans l'identifiant unique</param>
+        /// <returns>Renvoi un Met avec l'identifiant généré</returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateMenu([FromBody] Menu menus)
+        public async Task<IActionResult> CreateRepas([FromBody] Met met)
         {
-            // Ajout du menus avec la bll server
-            Menu newmenus = await _restaurantService.CreateMenu(menus);
-            if (newmenus != null)
+            // Ajout du client avec la bll server
+            Met newMet = await _restaurantService.CreateMet(met);
+            if (newMet != null)
             {
                 // Créer une redirection vers GetBookById(newBook.BookId);
-                return CreatedAtAction(nameof(GetMenuById), new { id = newmenus.IdMenu}, menus);
+                return CreatedAtAction(nameof(GetMetById), new { id = newMet.Id }, newMet);
             }
             else
             {
@@ -88,16 +88,16 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// Supprime un menus de la bdd
+        /// Supprime un met de la BDD
         /// </summary>
-        /// <param name="id">identifiant</param>
-        /// <returns>succes ou echec</returns>
+        /// <param name="id"></param>
+        /// <returns>>Retourne succes ou echec</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteMenu([FromRoute] int id)
+        public async Task<IActionResult> DeleteMet([FromRoute] int id)
         {
-            if (await _restaurantService.RemoveServiceById(id))
+            if (await _restaurantService.RemoveMetById(id))
             {
 
                 // Renvoie un code 204 aucun contenu
@@ -111,29 +111,29 @@ namespace API.Controllers
         }
 
         /// <summary>
-        /// modifie un menus dans la bdd
+        /// modifie le met dans la base de données
         /// </summary>
-        /// <param name="id">identifiant</param>
-        /// <param name="menus">Menu concerné</param>
-        /// <returns></returns>
+        /// <param name="id"></param>
+        /// <param name="met"></param>
+        /// <returns>Un met modifié ou echec</returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> ModifyMenu([FromRoute] int id, [FromBody] Menu menus)
+        public async Task<IActionResult> ModifyRepas([FromRoute] int id, [FromBody] Met met)
         {
-            if (menus == null || id != menus.IdMenu)
+            if (met == null || id != met.Id)
             {
                 // Retourne un code 400  Bad Request
                 return BadRequest();
             }
             else
             {
-                Menu menusModified = await _restaurantService.ModifyMenu(menus);
-                if (menusModified != null)
+                Met repasModified = await _restaurantService.ModifyMet(met);
+                if (repasModified != null)
                 {
                     // Renvoie la ressource modifiée
-                    return Ok(menusModified);
+                    return Ok(repasModified);
                 }
                 else
                 {

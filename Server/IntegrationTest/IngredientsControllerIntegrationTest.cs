@@ -24,17 +24,17 @@ namespace IntegrationTest
             Ingredient newIngredient = new Ingredient()
             {
                
-                NomIngr = "oeufs",
-                PrixIngr = 1.3f
+                Nom = "oeufs",
+                Prix = 1.3f
             };
             var response = await _clientHttp.PostAsJsonAsync<Ingredient>("api/v1/ingredients", newIngredient);
             using (var stream = await response.Content.ReadAsStreamAsync())
             {
                 var actualAddedIngredient = await JsonSerializer.DeserializeAsync<Ingredient>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
                 Assert.NotNull(actualAddedIngredient);
-                Assert.NotNull(actualAddedIngredient.IdIngr);
-                Assert.Equal(newIngredient.NomIngr, actualAddedIngredient.NomIngr);
-                Assert.Equal(newIngredient.PrixIngr, actualAddedIngredient.PrixIngr);
+                Assert.NotNull(actualAddedIngredient.Id);
+                Assert.Equal(newIngredient.Nom, actualAddedIngredient.Nom);
+                Assert.Equal(newIngredient.Prix, actualAddedIngredient.Prix);
             }
 
         }

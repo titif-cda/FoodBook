@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class crudClient : Form
+    public partial class crudClientForm : Form
     {
         public bool isCreation = false;
         private readonly IClientService _clientSercice;
-        public crudClient(Client client)
+        public crudClientForm(Client client)
         {
             _clientSercice = new ClientService();
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace Desktop
             {
                 //modif
                 ActionCrudClientBtn.Text = "Modifier";
-                NomCrudClientLabel.Text = client.Nom;
+                //NomCrudClientLabel.Text = client.Nom;
             }
         }
 

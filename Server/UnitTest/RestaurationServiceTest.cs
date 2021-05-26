@@ -90,7 +90,7 @@ namespace UnitTest
             IRestaurantService _restaurantService = new RestaurantService(new FakeUnitOfWork(), logger);
 
             //Act
-            var modifyMenu = await _restaurantService.ModifyMenu(new Menu() { IdMenu = 1 });
+            var modifyMenu = await _restaurantService.ModifyService(new Service() { Id = 1 });
             var badRequestModifyMenu = await _restaurantService.ModifyService(null);
            
             //Asserts

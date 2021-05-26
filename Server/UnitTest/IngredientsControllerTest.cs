@@ -64,13 +64,13 @@ namespace UnitTest
 
             Ingredient sel = new Ingredient()
             {
-                NomIngr = "sel",
-                PrixIngr = 1
+                Nom = "sel",
+                Prix = 1
             };
             Ingredient poivre = new Ingredient()
             {
-              
-                PrixIngr = 1
+
+                Prix = 1
             };
             //Act
             CreatedAtActionResult IngredientActionResult = await ingredientController.CreateIngredient(sel) as CreatedAtActionResult;
@@ -88,15 +88,15 @@ namespace UnitTest
         {
             Ingredient sel = new Ingredient()
             {
-                IdIngr = 1,
-                NomIngr = "sel",
-                PrixIngr = 1
+                Id = 1,
+                Nom = "sel",
+                Prix = 1
             };
             Ingredient poivre = new Ingredient()
             {
-                IdIngr = 198,
-                NomIngr = "poivre",
-                PrixIngr = 1
+                Id = 198,
+                Nom = "poivre",
+                Prix = 1
             };
 
             //Arrange

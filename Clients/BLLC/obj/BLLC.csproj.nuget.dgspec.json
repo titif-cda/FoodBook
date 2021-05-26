@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj": {}
+    "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Clients\\BLLC\\BLLC.csproj": {}
   },
   "projects": {
-    "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj": {
+    "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj",
+        "projectUniqueName": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj",
         "projectName": "BO",
-        "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj",
-        "packagesPath": "C:\\Users\\cda3elji\\.nuget\\packages\\",
-        "outputPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\obj\\",
+        "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj",
+        "packagesPath": "C:\\Users\\Titif\\.nuget\\packages\\",
+        "outputPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\cda3elji\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Titif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -79,21 +80,22 @@
         }
       }
     },
-    "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj": {
+    "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Clients\\BLLC\\BLLC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj",
+        "projectUniqueName": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Clients\\BLLC\\BLLC.csproj",
         "projectName": "BLLC",
-        "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj",
-        "packagesPath": "C:\\Users\\cda3elji\\.nuget\\packages\\",
-        "outputPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\obj\\",
+        "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Clients\\BLLC\\BLLC.csproj",
+        "packagesPath": "C:\\Users\\Titif\\.nuget\\packages\\",
+        "outputPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\Clients\\BLLC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\cda3elji\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Titif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -106,8 +108,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj": {
-                "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\BO\\BO.csproj"
+              "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj": {
+                "projectPath": "D:\\FilRougeFoodBook\\FoodBook\\FoodBook\\BO\\BO.csproj"
               }
             }
           }

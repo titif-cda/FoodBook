@@ -31,6 +31,10 @@ namespace Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crudClientForm));
             this.CrudClientPnl = new System.Windows.Forms.Panel();
+            this.TelCrudClientTbox = new System.Windows.Forms.TextBox();
+            this.EmailCrudClientTbox = new System.Windows.Forms.TextBox();
+            this.PrenomCrudClientTbox = new System.Windows.Forms.TextBox();
+            this.NomCrudClientTbox = new System.Windows.Forms.TextBox();
             this.phoneCrudClientlbl = new System.Windows.Forms.Label();
             this.EmailCrudClientLbl = new System.Windows.Forms.Label();
             this.PrenomCrudClientLbl = new System.Windows.Forms.Label();
@@ -38,17 +42,15 @@ namespace Desktop
             this.ficheclientlbl = new System.Windows.Forms.Label();
             this.ActionCrudClientBtn = new System.Windows.Forms.Button();
             this.DeleteCrudClientBtn = new System.Windows.Forms.Button();
-            this.NomCrudClientTbox = new System.Windows.Forms.TextBox();
-            this.PrenomCrudClientTbox = new System.Windows.Forms.TextBox();
-            this.EmailCrudClientTbox = new System.Windows.Forms.TextBox();
-            this.PhoneCrudClientTbox = new System.Windows.Forms.TextBox();
+            this.IdClientlbl = new System.Windows.Forms.Label();
             this.CrudClientPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CrudClientPnl
             // 
             this.CrudClientPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CrudClientPnl.BackgroundImage")));
-            this.CrudClientPnl.Controls.Add(this.PhoneCrudClientTbox);
+            this.CrudClientPnl.Controls.Add(this.IdClientlbl);
+            this.CrudClientPnl.Controls.Add(this.TelCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.EmailCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.PrenomCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.NomCrudClientTbox);
@@ -65,9 +67,38 @@ namespace Desktop
             this.CrudClientPnl.Size = new System.Drawing.Size(438, 481);
             this.CrudClientPnl.TabIndex = 0;
             // 
+            // TelCrudClientTbox
+            // 
+            this.TelCrudClientTbox.Location = new System.Drawing.Point(199, 336);
+            this.TelCrudClientTbox.Name = "TelCrudClientTbox";
+            this.TelCrudClientTbox.Size = new System.Drawing.Size(227, 23);
+            this.TelCrudClientTbox.TabIndex = 19;
+            // 
+            // EmailCrudClientTbox
+            // 
+            this.EmailCrudClientTbox.Location = new System.Drawing.Point(199, 264);
+            this.EmailCrudClientTbox.Name = "EmailCrudClientTbox";
+            this.EmailCrudClientTbox.Size = new System.Drawing.Size(227, 23);
+            this.EmailCrudClientTbox.TabIndex = 18;
+            // 
+            // PrenomCrudClientTbox
+            // 
+            this.PrenomCrudClientTbox.Location = new System.Drawing.Point(199, 196);
+            this.PrenomCrudClientTbox.Name = "PrenomCrudClientTbox";
+            this.PrenomCrudClientTbox.Size = new System.Drawing.Size(227, 23);
+            this.PrenomCrudClientTbox.TabIndex = 17;
+            // 
+            // NomCrudClientTbox
+            // 
+            this.NomCrudClientTbox.Location = new System.Drawing.Point(199, 128);
+            this.NomCrudClientTbox.Name = "NomCrudClientTbox";
+            this.NomCrudClientTbox.Size = new System.Drawing.Size(227, 23);
+            this.NomCrudClientTbox.TabIndex = 16;
+            // 
             // phoneCrudClientlbl
             // 
             this.phoneCrudClientlbl.AutoSize = true;
+            this.phoneCrudClientlbl.BackColor = System.Drawing.Color.Transparent;
             this.phoneCrudClientlbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.phoneCrudClientlbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.phoneCrudClientlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -80,6 +111,7 @@ namespace Desktop
             // EmailCrudClientLbl
             // 
             this.EmailCrudClientLbl.AutoSize = true;
+            this.EmailCrudClientLbl.BackColor = System.Drawing.Color.Transparent;
             this.EmailCrudClientLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EmailCrudClientLbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmailCrudClientLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -92,6 +124,7 @@ namespace Desktop
             // PrenomCrudClientLbl
             // 
             this.PrenomCrudClientLbl.AutoSize = true;
+            this.PrenomCrudClientLbl.BackColor = System.Drawing.Color.Transparent;
             this.PrenomCrudClientLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrenomCrudClientLbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PrenomCrudClientLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -104,6 +137,7 @@ namespace Desktop
             // NomCrudClientlbl
             // 
             this.NomCrudClientlbl.AutoSize = true;
+            this.NomCrudClientlbl.BackColor = System.Drawing.Color.Transparent;
             this.NomCrudClientlbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NomCrudClientlbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NomCrudClientlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -116,9 +150,12 @@ namespace Desktop
             // ficheclientlbl
             // 
             this.ficheclientlbl.AutoSize = true;
-            this.ficheclientlbl.Location = new System.Drawing.Point(276, 40);
+            this.ficheclientlbl.BackColor = System.Drawing.Color.Transparent;
+            this.ficheclientlbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ficheclientlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.ficheclientlbl.Location = new System.Drawing.Point(245, 36);
             this.ficheclientlbl.Name = "ficheclientlbl";
-            this.ficheclientlbl.Size = new System.Drawing.Size(69, 15);
+            this.ficheclientlbl.Size = new System.Drawing.Size(145, 32);
             this.ficheclientlbl.TabIndex = 2;
             this.ficheclientlbl.Text = "Fiche Client";
             // 
@@ -146,42 +183,25 @@ namespace Desktop
             this.DeleteCrudClientBtn.TabIndex = 0;
             this.DeleteCrudClientBtn.Text = "Supprimer";
             this.DeleteCrudClientBtn.UseVisualStyleBackColor = false;
+            this.DeleteCrudClientBtn.Click += new System.EventHandler(this.DeleteCrudClientBtn_Click);
             // 
-            // NomCrudClientTbox
+            // IdClientlbl
             // 
-            this.NomCrudClientTbox.Location = new System.Drawing.Point(199, 128);
-            this.NomCrudClientTbox.Name = "NomCrudClientTbox";
-            this.NomCrudClientTbox.Size = new System.Drawing.Size(227, 23);
-            this.NomCrudClientTbox.TabIndex = 16;
+            this.IdClientlbl.AutoSize = true;
+            this.IdClientlbl.BackColor = System.Drawing.Color.Transparent;
+            this.IdClientlbl.Location = new System.Drawing.Point(13, 13);
+            this.IdClientlbl.Name = "IdClientlbl";
+            this.IdClientlbl.Size = new System.Drawing.Size(17, 15);
+            this.IdClientlbl.TabIndex = 20;
+            this.IdClientlbl.Text = "id";
             // 
-            // PrenomCrudClientTbox
-            // 
-            this.PrenomCrudClientTbox.Location = new System.Drawing.Point(199, 196);
-            this.PrenomCrudClientTbox.Name = "PrenomCrudClientTbox";
-            this.PrenomCrudClientTbox.Size = new System.Drawing.Size(227, 23);
-            this.PrenomCrudClientTbox.TabIndex = 17;
-            // 
-            // EmailCrudClientTbox
-            // 
-            this.EmailCrudClientTbox.Location = new System.Drawing.Point(199, 264);
-            this.EmailCrudClientTbox.Name = "EmailCrudClientTbox";
-            this.EmailCrudClientTbox.Size = new System.Drawing.Size(227, 23);
-            this.EmailCrudClientTbox.TabIndex = 18;
-            // 
-            // PhoneCrudClientTbox
-            // 
-            this.PhoneCrudClientTbox.Location = new System.Drawing.Point(199, 336);
-            this.PhoneCrudClientTbox.Name = "PhoneCrudClientTbox";
-            this.PhoneCrudClientTbox.Size = new System.Drawing.Size(227, 23);
-            this.PhoneCrudClientTbox.TabIndex = 19;
-            // 
-            // crudClient
+            // crudClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 481);
             this.Controls.Add(this.CrudClientPnl);
-            this.Name = "crudClient";
+            this.Name = "crudClientForm";
             this.Text = "crudClient";
             this.CrudClientPnl.ResumeLayout(false);
             this.CrudClientPnl.PerformLayout();
@@ -202,9 +222,10 @@ namespace Desktop
         private System.Windows.Forms.Button AddCrudClientBtn;
         private System.Windows.Forms.Button ActionCrudClientBtn;
         private System.Windows.Forms.Panel CrudClientPnl;
-        private System.Windows.Forms.TextBox PhoneCrudClientTbox;
+        private System.Windows.Forms.TextBox TelCrudClientTbox;
         private System.Windows.Forms.TextBox EmailCrudClientTbox;
         private System.Windows.Forms.TextBox PrenomCrudClientTbox;
         private System.Windows.Forms.TextBox NomCrudClientTbox;
+        private System.Windows.Forms.Label IdClientlbl;
     }
 }

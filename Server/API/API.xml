@@ -96,75 +96,40 @@
             <param name="ingredient">Ingredient</param>
             <returns>Retourne un ingredient modifié</returns>
         </member>
-        <member name="M:API.Controllers.MenusController.GetAll(BO.DTO.Requests.PageRequest)">
+        <member name="M:API.Controllers.MetController.GetAll(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)">
             <summary>
-            Permet de récupérer la liste des menus
+            Permet de récupérer la liste des Mets
             </summary>
-            <returns>La liste des livres</returns>
+            <returns>La liste des met</returns>
         </member>
-        <member name="M:API.Controllers.MenusController.GetMenuById(System.Int32)">
+        <member name="M:API.Controllers.MetController.GetMetById(System.Int32)">
             <summary>
-            Permert de récupérer un menus avec son identifiant unique
+            Permert de récupérer un met avec son identifiant unique
             </summary>
-            <param name="id">Identifiant unique du menus</param>
-            <returns>Renvoi le menus définit par l'identifiant unique</returns>
+            <param name="id">Identifiant unique du met</param>
+            <returns>Renvoi le met définit par l'identifiant unique</returns>
         </member>
-        <member name="M:API.Controllers.MenusController.CreateMenu(BO.Entity.Menu)">
+        <member name="M:API.Controllers.MetController.CreateRepas(BO.Entity.Met)">
             <summary>
-            Créer un menus et l'ajoute en BDD
+            Créer un Met et l'ajoute en BDD
             </summary>
-            <param name="menus">menus à ajouter sans l'identifiant unique</param>
-            <returns>Renvoi le menus avec l'identifiant généré</returns>
+            <param name="Met">Met à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi un Met avec l'identifiant généré</returns>
         </member>
-        <member name="M:API.Controllers.MenusController.DeleteMenu(System.Int32)">
+        <member name="M:API.Controllers.MetController.DeleteMet(System.Int32)">
             <summary>
-            Supprime un menus de la bdd
-            </summary>
-            <param name="id">identifiant</param>
-            <returns>succes ou echec</returns>
-        </member>
-        <member name="M:API.Controllers.MenusController.ModifyMenu(System.Int32,BO.Entity.Menu)">
-            <summary>
-            modifie un menus dans la bdd
-            </summary>
-            <param name="id">identifiant</param>
-            <param name="menus">Menu concerné</param>
-            <returns></returns>
-        </member>
-        <member name="M:API.Controllers.RepasController.GetAll(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)">
-            <summary>
-            Permet de récupérer la liste des repas
-            </summary>
-            <returns>La liste des repas</returns>
-        </member>
-        <member name="M:API.Controllers.RepasController.GetRepasById(System.Int32)">
-            <summary>
-            Permert de récupérer un repas avec son identifiant unique
-            </summary>
-            <param name="id">Identifiant unique du repas</param>
-            <returns>Renvoi le repas définit par l'identifiant unique</returns>
-        </member>
-        <member name="M:API.Controllers.RepasController.CreateRepas(BO.Entity.Repas)">
-            <summary>
-            Créer un repas et l'ajoute en BDD
-            </summary>
-            <param name="repas">repas à ajouter sans l'identifiant unique</param>
-            <returns>Renvoi un repas avec l'identifiant généré</returns>
-        </member>
-        <member name="M:API.Controllers.RepasController.DeleteRepas(System.Int32)">
-            <summary>
-            Supprime un repas de la BDD
+            Supprime un met de la BDD
             </summary>
             <param name="id"></param>
             <returns>>Retourne succes ou echec</returns>
         </member>
-        <member name="M:API.Controllers.RepasController.ModifyRepas(System.Int32,BO.Entity.Repas)">
+        <member name="M:API.Controllers.MetController.ModifyRepas(System.Int32,BO.Entity.Met)">
             <summary>
-            modifie le repas dans la base de données
+            modifie le met dans la base de données
             </summary>
             <param name="id"></param>
-            <param name="repas"></param>
-            <returns>Un repas modifié ou echec</returns>
+            <param name="met"></param>
+            <returns>Un met modifié ou echec</returns>
         </member>
         <member name="M:API.Controllers.ReservationsController.GetAllResa(BO.DTO.Requests.PageRequest)">
             <summary>
@@ -200,6 +165,41 @@
             <param name="id">Identifiant de la reservation</param>
             <param name="resa">reservation concernée</param>
             <returns>Retourne une reservation modifiée</returns>
+        </member>
+        <member name="M:API.Controllers.ServiceController.GetAll(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des menus
+            </summary>
+            <returns>La liste des livres</returns>
+        </member>
+        <member name="M:API.Controllers.ServiceController.GetServiceById(System.Int32)">
+            <summary>
+            Permert de récupérer un service avec son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique du service</param>
+            <returns>Renvoi le service définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.ServiceController.CreateService(BO.Entity.Service)">
+            <summary>
+            Créer un service et l'ajoute en BDD
+            </summary>
+            <param name="service">service à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi le service avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.ServiceController.DeleteService(System.Int32)">
+            <summary>
+            Supprime un service de la bdd
+            </summary>
+            <param name="id">identifiant</param>
+            <returns>succes ou echec</returns>
+        </member>
+        <member name="M:API.Controllers.ServiceController.ModifyMenu(System.Int32,BO.Entity.Service)">
+            <summary>
+            modifie un service dans la bdd
+            </summary>
+            <param name="id">identifiant</param>
+            <param name="service">service concerné</param>
+            <returns></returns>
         </member>
         <member name="M:API.Controllers.TypeRepasController.GetAllTypeRepas(BO.DTO.Requests.PageRequest)">
             <summary>

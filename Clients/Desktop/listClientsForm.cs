@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Desktop.Extensions;
 namespace Desktop
 {
     public partial class listClientsForm : Form
@@ -19,16 +19,23 @@ namespace Desktop
         private readonly IClientService _clientService = new ClientService();
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
-        private int defaultPageSize = 10;
+   
+	
+        private int defaultPageSize;
         private int maxPage;
         public listClientsForm()
         {
+            DoubleBuffered = true;
             InitializeComponent();
+            clientTlp.DoubleBuffer(true);
+            Responsive();
             LoadClients();
+
         }
 
         private async void LoadClients()
         {
+            clientTlp.Controls.Clear();
 
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
             PageResponse<Client> clientPage = await clientPageTask;
@@ -42,7 +49,7 @@ namespace Desktop
                     
             }
             
-            //Grisage();
+            Grisage();
 
         }
 
@@ -51,7 +58,47 @@ namespace Desktop
             ClientsControl widgetClient = sender as ClientsControl;
 
             DialogResult r = new crudClientForm(widgetClient.CurrentClient).ShowDialog();
+            if(r == DialogResult.OK)
+            {
+                RefreshPage();
+            }
+        }
 
+        
+        private void PreviousBtn_Click(object sender, EventArgs e)
+        {
+            PreviousPage();
+        }
+
+       
+
+        private void RefreshPage()
+        {
+            CurentPageLbl.Text = currentPage.ToString();
+            this.LoadClients();
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            if (currentPage < maxPage)
+            {
+                currentPage++;
+                RefreshPage();
+            }
+        }
+
+        private void PreviousPage()
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                RefreshPage();
+            }
+        }
+
+        private void RefreshClientBtn_Click(object sender, EventArgs e)
+        {
+            RefreshPage();
         }
 
         private void Grisage()
@@ -67,7 +114,7 @@ namespace Desktop
 
             if (currentPage == maxPage)
             {
-               NextBtn.Enabled = false;
+                NextBtn.Enabled = false;
             }
             else
             {
@@ -75,9 +122,31 @@ namespace Desktop
             }
         }
 
-        private void clientTlp_DoubleClick(object sender, EventArgs e)
+        private void AddClientBtn_Click(object sender, EventArgs e)
         {
-           
+
+            DialogResult r = new crudClientForm(null).ShowDialog();
+            if (r == DialogResult.OK)
+            {
+                RefreshPage();
+            }
+        }
+
+        private void Responsive()
+        {
+            if (this.Height >= 500 && this.Width >=900)
+            {
+                defaultPageSize = 24;
+            }
+            else
+            {
+                defaultPageSize = 6;
+            }
+        }
+
+        private void listClientsForm_SizeChanged(object sender, EventArgs e)
+        {
+            Responsive();
         }
     }
 }

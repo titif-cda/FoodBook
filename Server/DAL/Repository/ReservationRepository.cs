@@ -55,15 +55,15 @@ namespace DAL.Repository
 
         public async Task<Reservation> InsertAsync(Reservation entity)
         {
-            var stmt = @"insert into RESERVATION(IdClient, IdService, Date, Nb)  output INSERTED.Id
-            values ( @IdClient, @IdService, @Date, @Nb)";
+            var stmt = @"insert into RESERVATION(IdClient, IdService, Date, Nb, Entree, Plat, Dessert)  output INSERTED.Id
+            values ( @IdClient, @IdService, @Date, @Nb, @Entree, @Plat, @Dessert)";
             int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
             return await GetAsync(i);
         }
 
         public async Task<bool> UpdateAsync(Reservation entity)
         {
-            var stmt = @"UPDATE  Reservation SET IdClient = @IdClient, IdService=@IdService, Date = @Date, Nb = @Nb WHERE Id = @Id";
+            var stmt = @"UPDATE  Reservation SET IdClient = @IdClient, IdService=@IdService, Date = @Date, Nb = @Nb, Entree = @Entree ,Plat=@Plat ,Dessert= @Dessert WHERE Id = @Id";
             var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
             return nbModifiedLines > 0;
         }

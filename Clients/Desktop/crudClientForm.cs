@@ -14,6 +14,7 @@ namespace Desktop
 {
     public partial class crudClientForm : Form
     {
+        Client CurrentClient;
         public bool isCreation = false;
         private readonly IClientService _clientSercice;
         public crudClientForm(Client client)
@@ -23,14 +24,12 @@ namespace Desktop
             Initialize(client);
         }
 
-        private async void ActionCrudClientBtn_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
         private void Initialize(Client client)
         {
             if (client == null)
             {
+                CurrentClient = new Client();
                 //creation
                 isCreation = true;
 
@@ -39,10 +38,68 @@ namespace Desktop
             }
             else
             {
+                CurrentClient = client;
                 //modif
                 ActionCrudClientBtn.Text = "Modifier";
-                //NomCrudClientLabel.Text = client.Nom;
+                IdClientlbl.Text = client.Id.ToString();
+                NomCrudClientTbox.Text = client.Nom;
+                PrenomCrudClientTbox.Text = client.Prenom;
+                EmailCrudClientTbox.Text = client.Email;
+                TelCrudClientTbox.Text = client.Tel;
             }
+        }
+        private async void ActionCrudClientBtn_Click(object sender, EventArgs e)
+        {
+            CurrentClient = Compute();
+
+            if (isCreation)
+            {
+                var client = await _clientSercice.CreateClient(CurrentClient);
+                if(client == null)
+                {
+                    MessageBox.Show("Service Indisponible");
+                }
+                else
+                {
+                    DialogResult = DialogResult.OK;
+                }
+            }
+            else
+            {
+
+                CurrentClient = await _clientSercice.PutClient(CurrentClient);
+                DialogResult = DialogResult.OK;
+            }
+            if ( CurrentClient == null)
+            {
+                MessageBox.Show("Service Indisponible");
+            }
+        }
+        private async void DeleteCrudClientBtn_Click(object sender, EventArgs e)
+        {
+            if(!isCreation)
+            {
+                CurrentClient = Compute();
+                await _clientSercice.DeleteClient(CurrentClient);
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        public Client Compute()
+        {
+            int? id = null;
+            if (!isCreation)
+            {
+                id = CurrentClient.Id;
+            }
+            return new Client()
+            {
+                Id = id,
+                Nom = NomCrudClientTbox.Text,
+                Prenom = PrenomCrudClientTbox.Text,
+                Email = EmailCrudClientTbox.Text,
+                Tel = TelCrudClientTbox.Text,
+            };
         }
 
     }

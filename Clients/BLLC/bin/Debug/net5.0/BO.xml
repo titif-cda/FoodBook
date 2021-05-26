@@ -126,13 +126,29 @@
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String)">
+        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String,System.Int32)">
             <summary>
             Constructeur avec les arguments
             </summary>
             <param name="id"></param>
             <param name="libelle"></param>
             <param name="description"></param>
+        </member>
+        <member name="P:BO.Entity.MetsIngredients.Quantite">
+            <summary>
+            Quantité necessaire d'ingredients
+            </summary>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.#ctor">
+            <summary>
+            Constructeur par défaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single)">
+            <summary>
+            Constructeur avec arguments
+            </summary>
+            <param name="quantite"></param>
         </member>
         <member name="P:BO.Entity.Reservation.Id">
             <summary>
@@ -159,12 +175,12 @@
             nombre de reservations
             </summary>
         </member>
-        <member name="M:BO.Entity.Reservation.#ctor">
+        <member name="P:BO.Entity.Reservation.Entree">
              <summary>
             constructeur par defaut
              </summary>
         </member>
-        <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.DateTime,System.Nullable{System.Int32})">
+        <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.DateTime,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             constructeur avec tous les arguments
             </summary>
@@ -173,6 +189,9 @@
             <param name="idMenu">Identifiant Menu</param>
             <param name="dateResa">Date de reservation</param>
             <param name="nbResa">Nombre de reservations</param>
+            <param name="entree">choisir entrée</param>
+            <param name="plat">choisir plat</param>
+            <param name="dessert">choisir dessert</param>
         </member>
         <member name="T:BO.Entity.Service">
             <summary>
@@ -199,7 +218,7 @@
             Constructeur par dfaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.DateTime)">
+        <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.DateTime,System.Collections.Generic.List{BO.Entity.Met})">
             <summary>
             Constructeur aves parametres
             </summary>

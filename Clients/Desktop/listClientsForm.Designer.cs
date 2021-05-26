@@ -36,7 +36,7 @@ namespace Desktop
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviousBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
-            this.CurentLbl = new System.Windows.Forms.Label();
+            this.CurentPageLbl = new System.Windows.Forms.Label();
             this.NbPagesCombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,7 +70,6 @@ namespace Desktop
             this.clientTlp.Name = "clientTlp";
             this.clientTlp.Size = new System.Drawing.Size(852, 380);
             this.clientTlp.TabIndex = 0;
-            this.clientTlp.DoubleClick += new System.EventHandler(this.clientTlp_DoubleClick);
             // 
             // AddClientBtn
             // 
@@ -85,6 +84,7 @@ namespace Desktop
             this.AddClientBtn.TabIndex = 1;
             this.AddClientBtn.Text = "Ajouter";
             this.AddClientBtn.UseVisualStyleBackColor = false;
+            this.AddClientBtn.Click += new System.EventHandler(this.AddClientBtn_Click);
             // 
             // RefreshClientBtn
             // 
@@ -99,6 +99,7 @@ namespace Desktop
             this.RefreshClientBtn.TabIndex = 2;
             this.RefreshClientBtn.Text = "Rafraichir";
             this.RefreshClientBtn.UseVisualStyleBackColor = false;
+            this.RefreshClientBtn.Click += new System.EventHandler(this.RefreshClientBtn_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -110,7 +111,7 @@ namespace Desktop
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.PreviousBtn, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.NextBtn, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.CurentLbl, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CurentPageLbl, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.NbPagesCombo, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 389);
@@ -132,6 +133,7 @@ namespace Desktop
             this.PreviousBtn.TabIndex = 0;
             this.PreviousBtn.Text = "<";
             this.PreviousBtn.UseVisualStyleBackColor = true;
+            this.PreviousBtn.Click += new System.EventHandler(this.PreviousBtn_Click);
             // 
             // NextBtn
             // 
@@ -144,20 +146,21 @@ namespace Desktop
             this.NextBtn.TabIndex = 1;
             this.NextBtn.Text = ">";
             this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
-            // CurentLbl
+            // CurentPageLbl
             // 
-            this.CurentLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CurentLbl.AutoSize = true;
-            this.CurentLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.CurentLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CurentLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.CurentLbl.Location = new System.Drawing.Point(189, 8);
-            this.CurentLbl.Margin = new System.Windows.Forms.Padding(0);
-            this.CurentLbl.Name = "CurentLbl";
-            this.CurentLbl.Size = new System.Drawing.Size(14, 15);
-            this.CurentLbl.TabIndex = 2;
-            this.CurentLbl.Text = "1";
+            this.CurentPageLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CurentPageLbl.AutoSize = true;
+            this.CurentPageLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.CurentPageLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CurentPageLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurentPageLbl.Location = new System.Drawing.Point(189, 8);
+            this.CurentPageLbl.Margin = new System.Windows.Forms.Padding(0);
+            this.CurentPageLbl.Name = "CurentPageLbl";
+            this.CurentPageLbl.Size = new System.Drawing.Size(14, 15);
+            this.CurentPageLbl.TabIndex = 2;
+            this.CurentPageLbl.Text = "1";
             // 
             // NbPagesCombo
             // 
@@ -168,14 +171,15 @@ namespace Desktop
             this.NbPagesCombo.Size = new System.Drawing.Size(106, 23);
             this.NbPagesCombo.TabIndex = 3;
             // 
-            // listClients
+            // listClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 423);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "listClients";
+            this.Name = "listClientsForm";
             this.Text = "listClients";
+            this.SizeChanged += new System.EventHandler(this.listClientsForm_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -193,7 +197,7 @@ namespace Desktop
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button PreviousBtn;
         private System.Windows.Forms.Button NextBtn;
-        private System.Windows.Forms.Label CurentLbl;
+        private System.Windows.Forms.Label CurentPageLbl;
         public System.Windows.Forms.ComboBox NbPagesCombo;
     }
 }

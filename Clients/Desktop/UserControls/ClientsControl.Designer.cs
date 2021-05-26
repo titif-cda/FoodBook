@@ -34,10 +34,10 @@ namespace Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.NomClientTbx = new System.Windows.Forms.TextBox();
-            this.PrenomTbx = new System.Windows.Forms.TextBox();
-            this.EmailTbx = new System.Windows.Forms.TextBox();
-            this.TelTbx = new System.Windows.Forms.TextBox();
+            this.NomClientLbl = new System.Windows.Forms.Label();
+            this.PrenomLbl = new System.Windows.Forms.Label();
+            this.EmailLbl = new System.Windows.Forms.Label();
+            this.TelLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -46,11 +46,12 @@ namespace Desktop
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(67, 9);
+            this.label1.Location = new System.Drawing.Point(83, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
+
             // 
             // label3
             // 
@@ -58,7 +59,7 @@ namespace Desktop
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(67, 49);
+            this.label3.Location = new System.Drawing.Point(83, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 21);
             this.label3.TabIndex = 2;
@@ -70,7 +71,7 @@ namespace Desktop
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(67, 89);
+            this.label4.Location = new System.Drawing.Point(83, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 3;
@@ -82,47 +83,59 @@ namespace Desktop
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(67, 129);
+            this.label5.Location = new System.Drawing.Point(83, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Telephone";
             // 
-            // NomClientTbx
+            // NomClientLbl
             // 
-            this.NomClientTbx.BackColor = System.Drawing.Color.White;
-            this.NomClientTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NomClientTbx.Location = new System.Drawing.Point(67, 30);
-            this.NomClientTbx.Name = "NomClientTbx";
-            this.NomClientTbx.Size = new System.Drawing.Size(100, 16);
-            this.NomClientTbx.TabIndex = 5;
+            this.NomClientLbl.AutoSize = true;
+            this.NomClientLbl.BackColor = System.Drawing.Color.Transparent;
+            this.NomClientLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NomClientLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NomClientLbl.Location = new System.Drawing.Point(83, 31);
+            this.NomClientLbl.Name = "NomClientLbl";
+            this.NomClientLbl.Size = new System.Drawing.Size(82, 15);
+            this.NomClientLbl.TabIndex = 9;
+            this.NomClientLbl.Text = "NomClientLbl";
             // 
-            // PrenomTbx
+            // PrenomLbl
             // 
-            this.PrenomTbx.BackColor = System.Drawing.Color.White;
-            this.PrenomTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PrenomTbx.Location = new System.Drawing.Point(67, 70);
-            this.PrenomTbx.Name = "PrenomTbx";
-            this.PrenomTbx.Size = new System.Drawing.Size(100, 16);
-            this.PrenomTbx.TabIndex = 6;
+            this.PrenomLbl.AutoSize = true;
+            this.PrenomLbl.BackColor = System.Drawing.Color.Transparent;
+            this.PrenomLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrenomLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PrenomLbl.Location = new System.Drawing.Point(83, 71);
+            this.PrenomLbl.Name = "PrenomLbl";
+            this.PrenomLbl.Size = new System.Drawing.Size(67, 15);
+            this.PrenomLbl.TabIndex = 10;
+            this.PrenomLbl.Text = "PrenomLbl";
             // 
-            // EmailTbx
+            // EmailLbl
             // 
-            this.EmailTbx.BackColor = System.Drawing.Color.White;
-            this.EmailTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmailTbx.Location = new System.Drawing.Point(67, 110);
-            this.EmailTbx.Name = "EmailTbx";
-            this.EmailTbx.Size = new System.Drawing.Size(100, 16);
-            this.EmailTbx.TabIndex = 7;
+            this.EmailLbl.AutoSize = true;
+            this.EmailLbl.BackColor = System.Drawing.Color.Transparent;
+            this.EmailLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmailLbl.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EmailLbl.Location = new System.Drawing.Point(83, 111);
+            this.EmailLbl.Name = "EmailLbl";
+            this.EmailLbl.Size = new System.Drawing.Size(51, 13);
+            this.EmailLbl.TabIndex = 11;
+            this.EmailLbl.Text = "EmailLbl";
             // 
-            // TelTbx
+            // TelLbl
             // 
-            this.TelTbx.BackColor = System.Drawing.Color.White;
-            this.TelTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TelTbx.Location = new System.Drawing.Point(67, 150);
-            this.TelTbx.Name = "TelTbx";
-            this.TelTbx.Size = new System.Drawing.Size(100, 16);
-            this.TelTbx.TabIndex = 8;
+            this.TelLbl.AutoSize = true;
+            this.TelLbl.BackColor = System.Drawing.Color.Transparent;
+            this.TelLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TelLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TelLbl.Location = new System.Drawing.Point(83, 151);
+            this.TelLbl.Name = "TelLbl";
+            this.TelLbl.Size = new System.Drawing.Size(39, 15);
+            this.TelLbl.TabIndex = 12;
+            this.TelLbl.Text = "TelLbl";
             // 
             // ClientsControl
             // 
@@ -130,17 +143,17 @@ namespace Desktop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.TelTbx);
-            this.Controls.Add(this.EmailTbx);
-            this.Controls.Add(this.PrenomTbx);
-            this.Controls.Add(this.NomClientTbx);
+            this.Controls.Add(this.TelLbl);
+            this.Controls.Add(this.EmailLbl);
+            this.Controls.Add(this.PrenomLbl);
+            this.Controls.Add(this.NomClientLbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "ClientsControl";
-            this.Size = new System.Drawing.Size(179, 181);
+            this.Size = new System.Drawing.Size(226, 181);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,11 +165,11 @@ namespace Desktop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox NomClientTbx;
         private System.Windows.Forms.TextBox Prenomtbox;
-        private System.Windows.Forms.TextBox EmailTbx;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox TelTbx;
-        private System.Windows.Forms.TextBox PrenomTbx;
+        private System.Windows.Forms.Label NomClientLbl;
+        private System.Windows.Forms.Label PrenomLbl;
+        private System.Windows.Forms.Label EmailLbl;
+        private System.Windows.Forms.Label TelLbl;
     }
 }

@@ -52,6 +52,7 @@ namespace Desktop
         private void MaximizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            
             RestoreBtn.Visible = true;
             MaximizeBtn.Visible = false;
         }
@@ -70,7 +71,13 @@ namespace Desktop
 
         private void ClientBtn_Click(object sender, EventArgs e)
         {
+           
+            
             NavFormPanel(new listClientsForm());
+            //if (this.WindowState == FormWindowState.Maximized)
+            //{
+               
+            //}
         }
 
        

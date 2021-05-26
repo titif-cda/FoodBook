@@ -31,8 +31,11 @@ namespace BO.Entity
         /// <summary>
         ///constructeur par defaut
         /// </summary>
-       
-        public Reservation()
+        public bool Entree{ get; set; }
+        public bool Plat{ get; set; }
+        public bool Dessert{ get; set; }
+
+public Reservation()
         {
         }
         /// <summary>
@@ -43,15 +46,22 @@ namespace BO.Entity
         /// <param name="idMenu">Identifiant Menu</param>
         /// <param name="dateResa">Date de reservation</param>
         /// <param name="nbResa">Nombre de reservations</param>
-       
-        public Reservation(int? idResa, int? idClient, int? idMenu, DateTime dateResa, int? nbResa)
+        /// <param name="entree">choisir entrée</param>
+        /// <param name="plat">choisir plat</param>
+        /// <param name="dessert">choisir dessert</param>
+
+        public Reservation(int? idResa, int? idClient, int? idMenu, DateTime dateResa, int? nbResa,bool entree,bool plat,bool dessert)
         {
             Id = idResa;
             IdClient = idClient;
             IdService = idMenu;
             Date = dateResa;
             Nb = nbResa;
-            
+            Entree = entree;
+            Plat = plat;
+            Dessert = dessert;
+
+
         }
 
         public override bool Equals(object obj)
@@ -61,14 +71,19 @@ namespace BO.Entity
                 IdClient == resa.IdClient &&
                 IdService == resa.IdService &&
                 Date == resa.Date &&
-                Nb == resa.Nb;
+                Nb == resa.Nb&&
+                Entree == resa.Entree &&
+                Plat == resa.Plat &&
+                Dessert == resa.Dessert;
+
+            ;
               
             
         }
 
         public override int GetHashCode()
         {
-                return HashCode.Combine(Id,IdClient,IdService,Date,Nb);
+                return HashCode.Combine(Id,IdClient,IdService,Date,Nb,Entree,Plat,Dessert);
         }
     }
 }

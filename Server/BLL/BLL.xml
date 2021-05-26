@@ -39,14 +39,14 @@
             <param name="id">identifiant</param>
             <returns>Retourne succes ou erreur</returns>
         </member>
-        <member name="M:BLL.Services.IRestaurantService.CreateMenu(BO.Entity.Menu)">
+        <member name="M:BLL.Services.IRestaurantService.CreateService(BO.Entity.Service)">
             <summary>
             Crée un nouveau menu dans la bas de données
             </summary>
-            <param name="Menus"></param>
+            <param name="service"></param>
             <returns>Retourne un menu sinon une erreur</returns>
         </member>
-        <member name="M:BLL.Services.IRestaurantService.GetAllMenu(BO.DTO.Requests.PageRequest)">
+        <member name="M:BLL.Services.IRestaurantService.GetAllService(BO.DTO.Requests.PageRequest)">
             <summary>
             Affiche l'ensemble des Ingredients avec une pagination
             </summary>

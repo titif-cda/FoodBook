@@ -134,6 +134,22 @@
             <param name="libelle"></param>
             <param name="description"></param>
         </member>
+        <member name="P:BO.Entity.MetsIngredients.Quantite">
+            <summary>
+            Quantité necessaire d'ingredients
+            </summary>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.#ctor">
+            <summary>
+            Constructeur par défaut
+            </summary>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single)">
+            <summary>
+            Constructeur avec arguments
+            </summary>
+            <param name="quantite"></param>
+        </member>
         <member name="P:BO.Entity.Reservation.Id">
             <summary>
             Identifiant reservation

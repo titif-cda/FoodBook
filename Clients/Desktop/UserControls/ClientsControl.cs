@@ -16,14 +16,16 @@ namespace Desktop
         public Client CurrentClient { get; private set; }
         public ClientsControl(Client client)
         {
+            DoubleBuffered = true;
+   
             InitializeComponent();
             CurrentClient = client;
-            NomClientTbx.Text = client.Nom;
-            PrenomTbx.Text = client.Prenom;
-            EmailTbx.Text = client.Email;
-            TelTbx.Text = client.Tel;
+            NomClientLbl.Text = client.Nom;
+            PrenomLbl.Text = client.Prenom;
+            EmailLbl.Text = client.Email;
+            TelLbl.Text = client.Tel;
+
         }
 
-       
     }
 }

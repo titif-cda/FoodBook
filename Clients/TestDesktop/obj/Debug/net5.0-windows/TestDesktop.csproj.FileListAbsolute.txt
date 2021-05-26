@@ -85,3 +85,4 @@ D:\FilRougeFoodBook\FoodBook\FoodBook\Clients\TestDesktop\obj\Debug\net5.0-windo
 D:\FilRougeFoodBook\FoodBook\FoodBook\Clients\TestDesktop\obj\Debug\net5.0-windows\ref\TestDesktop.dll
 D:\FilRougeFoodBook\FoodBook\FoodBook\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.pdb
 D:\FilRougeFoodBook\FoodBook\FoodBook\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.genruntimeconfig.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BO.xml

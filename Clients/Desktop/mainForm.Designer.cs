@@ -33,7 +33,7 @@ namespace Desktop
             this.formMainTbl = new System.Windows.Forms.TableLayoutPanel();
             this.MenuLateralTlp = new System.Windows.Forms.TableLayoutPanel();
             this.clientBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.IngredientBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.MainFormPBox = new System.Windows.Forms.PictureBox();
@@ -78,7 +78,7 @@ namespace Desktop
             this.MenuLateralTlp.ColumnCount = 1;
             this.MenuLateralTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MenuLateralTlp.Controls.Add(this.clientBtn, 0, 1);
-            this.MenuLateralTlp.Controls.Add(this.button2, 0, 2);
+            this.MenuLateralTlp.Controls.Add(this.IngredientBtn, 0, 2);
             this.MenuLateralTlp.Controls.Add(this.button3, 0, 3);
             this.MenuLateralTlp.Controls.Add(this.button4, 0, 4);
             this.MenuLateralTlp.Controls.Add(this.MainFormPBox, 0, 0);
@@ -114,22 +114,22 @@ namespace Desktop
             this.clientBtn.UseVisualStyleBackColor = false;
             this.clientBtn.Click += new System.EventHandler(this.ClientBtn_Click);
             // 
-            // button2
+            // IngredientBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(0, 209);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.IngredientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.IngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IngredientBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.IngredientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IngredientBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.IngredientBtn.Location = new System.Drawing.Point(0, 209);
+            this.IngredientBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.IngredientBtn.Name = "IngredientBtn";
+            this.IngredientBtn.Size = new System.Drawing.Size(215, 41);
+            this.IngredientBtn.TabIndex = 1;
+            this.IngredientBtn.Text = "Ingredients";
+            this.IngredientBtn.UseVisualStyleBackColor = false;
+            this.IngredientBtn.Click += new System.EventHandler(this.IngredientBtn_Click);
             // 
             // button3
             // 
@@ -318,14 +318,14 @@ namespace Desktop
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.RestoreBtn_Click);
             // 
-            // FormMain
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 513);
             this.Controls.Add(this.formMainTbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMain";
+            this.Name = "mainForm";
             this.Text = "Form1";
             this.formMainTbl.ResumeLayout(false);
             this.MenuLateralTlp.ResumeLayout(false);
@@ -342,7 +342,7 @@ namespace Desktop
         private System.Windows.Forms.TableLayoutPanel formMainTbl;
         private System.Windows.Forms.TableLayoutPanel MenuLateralTlp;
         private System.Windows.Forms.Button clientBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button IngredientBtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox MainFormPBox;

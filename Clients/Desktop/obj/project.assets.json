@@ -489,6 +489,23 @@
         "runtime": {
           "bin/placeholder/BO.dll": {}
         }
+      },
+      "TestDesktop/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BLLC": "1.0.0",
+          "BO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestDesktop.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestDesktop.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -1211,12 +1228,18 @@
       "type": "project",
       "path": "../../BO/BO.csproj",
       "msbuildProject": "../../BO/BO.csproj"
+    },
+    "TestDesktop/1.0.0": {
+      "type": "project",
+      "path": "../TestDesktop/TestDesktop.csproj",
+      "msbuildProject": "../TestDesktop/TestDesktop.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "BLLC >= 1.0.0",
-      "BO >= 1.0.0"
+      "BO >= 1.0.0",
+      "TestDesktop >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1255,6 +1278,9 @@
             },
             "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj": {
               "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\BLLC\\BLLC.csproj"
+            },
+            "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\TestDesktop\\TestDesktop.csproj": {
+              "projectPath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Clients\\TestDesktop\\TestDesktop.csproj"
             }
           }
         }

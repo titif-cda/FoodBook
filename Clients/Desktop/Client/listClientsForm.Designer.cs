@@ -137,12 +137,13 @@ namespace Desktop
             // 
             // NextBtn
             // 
+            this.NextBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NextBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.NextBtn.Location = new System.Drawing.Point(227, 3);
             this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(50, 23);
+            this.NextBtn.Size = new System.Drawing.Size(50, 25);
             this.NextBtn.TabIndex = 1;
             this.NextBtn.Text = ">";
             this.NextBtn.UseVisualStyleBackColor = true;
@@ -164,9 +165,10 @@ namespace Desktop
             // 
             // NbPagesCombo
             // 
+            this.NbPagesCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NbPagesCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.NbPagesCombo.FormattingEnabled = true;
-            this.NbPagesCombo.Location = new System.Drawing.Point(3, 3);
+            this.NbPagesCombo.Location = new System.Drawing.Point(3, 4);
             this.NbPagesCombo.Name = "NbPagesCombo";
             this.NbPagesCombo.Size = new System.Drawing.Size(106, 23);
             this.NbPagesCombo.TabIndex = 3;

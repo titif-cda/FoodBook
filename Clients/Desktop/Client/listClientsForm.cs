@@ -19,8 +19,6 @@ namespace Desktop
         private readonly IClientService _clientService = new ClientService();
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
-   
-	
         private int defaultPageSize;
         private int maxPage;
         public listClientsForm()
@@ -29,6 +27,7 @@ namespace Desktop
             InitializeComponent();
             clientTlp.DoubleBuffer(true);
             Responsive();
+            Refresh();
             LoadClients();
 
         }
@@ -37,20 +36,29 @@ namespace Desktop
         {
             clientTlp.Controls.Clear();
 
+            //Debut Chargement
+         
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
             PageResponse<Client> clientPage = await clientPageTask;
-            maxPage = clientPage.TotalPages.GetValueOrDefault();
-            bindingSource.DataSource = clientPage.Data;
-            foreach (var client in clientPage.Data )
+            try
             {
-                var widgetClient = new ClientsControl(client);
-                widgetClient.DoubleClick += WidgetClient_DoubleClick;
-                clientTlp.Controls.Add(widgetClient);  
-                    
-            }
-            
-            Grisage();
 
+                //FinChargement
+                maxPage = clientPage.TotalPages.GetValueOrDefault();
+                bindingSource.DataSource = clientPage.Data;
+                foreach (var client in clientPage.Data )
+                {
+                    var widgetClient = new ClientsControl(client);
+                    widgetClient.DoubleClick += WidgetClient_DoubleClick;
+                    clientTlp.Controls.Add(widgetClient);  
+                }
+            
+                Grisage();
+            }
+            catch
+            {
+                ErrorMessage();
+            }
         }
 
         private void WidgetClient_DoubleClick(object sender, EventArgs e)
@@ -134,19 +142,53 @@ namespace Desktop
 
         private void Responsive()
         {
-            if (this.Height >= 500 && this.Width >=900)
+            if (this.Height >= 500 && this.Width >= 900)
             {
                 defaultPageSize = 24;
+                Refresh();
             }
             else
             {
                 defaultPageSize = 6;
+                Refresh();
             }
+
+
+            //if (this.WindowState == FormWindowState.Maximized)
+            //{
+            //    defaultPageSize = 24;
+            //}
+            //else
+            //{
+            //    defaultPageSize = 6;
+            //}
         }
 
         private void listClientsForm_SizeChanged(object sender, EventArgs e)
         {
             Responsive();
+            Refresh();
         }
+        private void ShowMyNonModalForm()
+        {
+            Form myForm = new Form();
+            myForm.Text = "My Form";
+            myForm.SetBounds(10, 10, 200, 200);
+
+            myForm.Show();
+            // Determine if the form is modal.
+            if (myForm.Modal == false)
+            {
+                // Change borderstyle and make it not a top level window.
+                myForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                myForm.TopLevel = false;
+            }
+        }
+        private void ErrorMessage()
+        {
+            MessageBox.Show("Erreur: Comunication impossible avec le service distant.");
+            return;
+        }
+
     }
 }

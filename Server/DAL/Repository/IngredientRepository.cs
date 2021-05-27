@@ -21,7 +21,7 @@ namespace DAL.Repository
 
         public async Task<int> DeleteAsync(long id)
         {
-            var stmt = @"delete from Ingredient where IdIngr = @id";
+            var stmt = @"delete from Ingredient where Id = @id";
             return await _session.Connection.ExecuteAsync(stmt, new { Id = id }, _session.Transaction);
         }
 

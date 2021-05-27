@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.Ingredients;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Desktop
         public mainForm()
         {
             InitializeComponent();
+            int pageMax;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -94,11 +96,9 @@ namespace Desktop
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void IngredientBtn_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new listClientsForm());
+            NavFormPanel(new listIngredientsForm());
         }
-
-       
     }
 }

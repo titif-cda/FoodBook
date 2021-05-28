@@ -17,7 +17,7 @@ namespace Desktop
         public mainForm()
         {
             InitializeComponent();
-            int pageMax;
+           
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;

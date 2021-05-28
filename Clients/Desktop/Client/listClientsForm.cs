@@ -12,15 +12,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Desktop.Extensions;
+using Desktop.UserControls;
+using System.Threading;
+
 namespace Desktop
 {
     public partial class listClientsForm : Form
     {
+        
         private readonly IClientService _clientService = new ClientService();
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize;
         private int maxPage;
+
+        public SemaphoreSlim verrou = new SemaphoreSlim(1);
+
         public listClientsForm()
         {
             DoubleBuffered = true;
@@ -37,13 +44,28 @@ namespace Desktop
             clientTlp.Controls.Clear();
 
             //Debut Chargement
-         
+            loadForm loader = new loadForm();
+           
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
+
+            await Task.Run(() =>
+            {
+                Task.Delay(500);
+                if (!clientPageTask.IsCompleted)
+                {
+                    loader.Show();
+                }
+
+            });
             PageResponse<Client> clientPage = await clientPageTask;
+            verrou.Wait();
+            loader.Close();
+            loader.Dispose();
+            verrou.Release();
             try
             {
-
                 //FinChargement
+            
                 maxPage = clientPage.TotalPages.GetValueOrDefault();
                 bindingSource.DataSource = clientPage.Data;
                 foreach (var client in clientPage.Data )
@@ -59,6 +81,8 @@ namespace Desktop
             {
                 ErrorMessage();
             }
+            
+
         }
 
         private void WidgetClient_DoubleClick(object sender, EventArgs e)
@@ -169,24 +193,10 @@ namespace Desktop
             Responsive();
             Refresh();
         }
-        private void ShowMyNonModalForm()
-        {
-            Form myForm = new Form();
-            myForm.Text = "My Form";
-            myForm.SetBounds(10, 10, 200, 200);
-
-            myForm.Show();
-            // Determine if the form is modal.
-            if (myForm.Modal == false)
-            {
-                // Change borderstyle and make it not a top level window.
-                myForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-                myForm.TopLevel = false;
-            }
-        }
+       
         private void ErrorMessage()
         {
-            MessageBox.Show("Erreur: Comunication impossible avec le service distant.");
+            MessageBox.Show("Erreur: Communication impossible avec le service distant.");
             return;
         }
 

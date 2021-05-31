@@ -14,6 +14,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using BLL;
 using DocFx.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace API
 {
@@ -82,7 +85,23 @@ namespace API
                 config.ApiGroupNames = new[] { "1.0" };
 
             });
-
+            services
+                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                 .AddJwtBearer(options =>
+                 {
+                     options.TokenValidationParameters = new TokenValidationParameters()
+                     {
+                         ValidateIssuer = false,
+                         ValidateAudience = false,
+                         ValidAudience = Configuration["JwtIssuer"],
+                         ValidIssuer = Configuration["JwtIssuer"],
+                         ValidateIssuerSigningKey = true,
+                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtKey"])),
+                         //Retourne la difference de tps max autorisée entre le client et les parametres de l'horloge du serveur
+                         ClockSkew = TimeSpan.Zero // remove delay of token whe expire
+                     };
+                 
+                 });
          
 
 
@@ -99,7 +118,12 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+ 
+            //Add Authentification => code Erreur 401
+            app.UseAuthentication()
+;
 
+            //Add Authorization => code Erreur 403
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

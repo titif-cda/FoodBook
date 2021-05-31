@@ -144,6 +144,10 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[13.11.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [

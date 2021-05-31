@@ -9,6 +9,7 @@ using BLL.Services;
 using Microsoft.AspNetCore.Http;
 using BO.DTO.Requests;
 using BO.DTO.Responses;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -45,6 +46,7 @@ namespace API.Controllers
         /// </summary>
         /// <returns>La liste des clients</returns>
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<Client>>> GetAll([FromQuery] PageRequest pageRequest)
         {
@@ -58,6 +60,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant unique du clients</param>
         /// <returns>Renvoi le client définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetClientById([FromRoute] int id)

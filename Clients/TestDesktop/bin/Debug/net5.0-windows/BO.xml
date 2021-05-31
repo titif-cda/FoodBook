@@ -59,12 +59,27 @@
             email du client
             </summary>
         </member>
+        <member name="P:BO.Entity.Client.Login">
+            <summary>
+            Login du client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.Password">
+            <summary>
+            Password du client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.Role">
+            <summary>
+            Role du client
+            </summary>
+        </member>
         <member name="M:BO.Entity.Client.#ctor">
             <summary>
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Client.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:BO.Entity.Client.#ctor(System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Constructeur avec les arguments
             </summary>

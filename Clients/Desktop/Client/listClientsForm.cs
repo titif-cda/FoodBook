@@ -48,20 +48,20 @@ namespace Desktop
            
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
 
-            await Task.Run(() =>
-            {
-                Task.Delay(500);
-                if (!clientPageTask.IsCompleted)
-                {
-                    loader.Show();
-                }
+            //await Task.Run(() =>
+            //{
+            //    Task.Delay(500);
+            //    if (!clientPageTask.IsCompleted)
+            //    {
+            //        loader.Show();
+            //    }
 
-            });
+            //});
             PageResponse<Client> clientPage = await clientPageTask;
-            verrou.Wait();
-            loader.Close();
-            loader.Dispose();
-            verrou.Release();
+            //verrou.Wait();
+            //loader.Close();
+            //loader.Dispose();
+            //verrou.Release();
             try
             {
                 //FinChargement

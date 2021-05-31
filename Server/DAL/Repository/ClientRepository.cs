@@ -55,17 +55,29 @@ namespace DAL.Repository
 
         public async Task<Client> InsertAsync(Client entity)
         {
-            var stmt = @"insert into Client( Nom , Prenom, Tel, Email)  output INSERTED.Id
-            values (@Nom, @Prenom, @Tel, @Email)";
+            var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password, Role)  output INSERTED.Id
+            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password, @Role)";
             int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
             return await GetAsync(i);
         }
 
         public async Task<bool> UpdateAsync(Client entity)
         {
-            var stmt = @"UPDATE Client SET Nom = @Nom, Prenom=@Prenom, Tel= @Tel,Email = @Email WHERE Id = @Id";
+            var stmt = @"UPDATE Client SET Nom = @Nom, Prenom = @Prenom, Tel = @Tel, Email = @Email, @Login = Login, @Password = Password, @Role = Role WHERE Id = @Id";
             var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
             return nbModifiedLines > 0;
+        }
+
+        public Task<Client> GetClientByUsernameAndPassword(string login, string password)
+        {
+            //TODO réécrire la requete avec un nom au lieu du Username
+            var stmt = @"select * from Client
+                         Where Login = @Login AND Password = @Password";
+
+            return _session.Connection.QueryFirstOrDefaultAsync<Client>(stmt, new { Login = login, Password = password }, _session.Transaction);
+
+
+
         }
 
     }

@@ -38,6 +38,10 @@ namespace Desktop
             this.PrenomLbl = new System.Windows.Forms.Label();
             this.EmailLbl = new System.Windows.Forms.Label();
             this.TelLbl = new System.Windows.Forms.Label();
+            this.roleLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.loginlabel = new System.Windows.Forms.Label();
+            this.login = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +55,6 @@ namespace Desktop
             this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
-
             // 
             // label3
             // 
@@ -137,12 +140,64 @@ namespace Desktop
             this.TelLbl.TabIndex = 12;
             this.TelLbl.Text = "TelLbl";
             // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roleLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.roleLabel.Location = new System.Drawing.Point(84, 197);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(58, 15);
+            this.roleLabel.TabIndex = 14;
+            this.roleLabel.Text = "roleLabel";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(84, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Rôle";
+            // 
+            // loginlabel
+            // 
+            this.loginlabel.AutoSize = true;
+            this.loginlabel.BackColor = System.Drawing.Color.Transparent;
+            this.loginlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loginlabel.Location = new System.Drawing.Point(85, 233);
+            this.loginlabel.Name = "loginlabel";
+            this.loginlabel.Size = new System.Drawing.Size(60, 15);
+            this.loginlabel.TabIndex = 16;
+            this.loginlabel.Text = "loginlabel";
+            // 
+            // login
+            // 
+            this.login.AutoSize = true;
+            this.login.BackColor = System.Drawing.Color.Transparent;
+            this.login.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.login.Location = new System.Drawing.Point(85, 212);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(61, 21);
+            this.login.TabIndex = 15;
+            this.login.Text = "Login";
+            // 
             // ClientsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.loginlabel);
+            this.Controls.Add(this.login);
+            this.Controls.Add(this.roleLabel);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.TelLbl);
             this.Controls.Add(this.EmailLbl);
             this.Controls.Add(this.PrenomLbl);
@@ -153,7 +208,7 @@ namespace Desktop
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "ClientsControl";
-            this.Size = new System.Drawing.Size(226, 181);
+            this.Size = new System.Drawing.Size(241, 282);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +226,9 @@ namespace Desktop
         private System.Windows.Forms.Label PrenomLbl;
         private System.Windows.Forms.Label EmailLbl;
         private System.Windows.Forms.Label TelLbl;
+        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label loginlabel;
+        private System.Windows.Forms.Label login;
     }
 }

@@ -12,5 +12,9 @@ namespace DAL.Repository
     public interface IClientRepository : IGenericRepository<Client>
     {
         Task<PageResponse<Client>> GetAllAsync(PageRequest pageRequest);
+      
+        Task<Client> GetClientByUsernameAndPassword(string Nom, string password);
+
+
     }
 }

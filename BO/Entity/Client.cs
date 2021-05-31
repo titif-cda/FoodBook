@@ -29,7 +29,18 @@ namespace BO.Entity
         /// email du client
         /// </summary>
         public string Email { get; set; }
-
+        /// <summary>
+        /// Login du client
+        /// </summary>
+        public string Login { get; set; }
+        /// <summary>
+        /// Password du client
+        /// </summary>
+        public string Password { get; set; }
+        /// <summary>
+        /// Role du client
+        /// </summary>
+        public string Role { get; set; }
         /// <summary>
         /// Constructeur par defaut
         /// </summary>
@@ -38,6 +49,7 @@ namespace BO.Entity
 
         }
 
+
         /// <summary>
         /// Constructeur avec les arguments
         /// </summary>
@@ -45,15 +57,19 @@ namespace BO.Entity
         /// <param name="prenom">Prenom</param>
         /// <param name="telephone">Telephone</param>
         /// <param name="email">Email</param>
-        public Client(string nom, string prenom, string telephone, string email)
+        public Client(int? id, string nom, string prenom, string tel, string email, string login, string password, string role)
         {
-
+            Id = id;
             Nom = nom;
             Prenom = prenom;
-            Tel = telephone;
+            Tel = tel;
             Email = email;
-
+            Login = login;
+            Password = password;
+            Role = role;
         }
+
+       
 
         public override bool Equals(object obj)
         {
@@ -62,12 +78,16 @@ namespace BO.Entity
                    Nom == client.Nom &&
                    Prenom == client.Prenom &&
                    Tel == client.Tel &&
-                   Email == client.Email;
+                   Email == client.Email &&
+                   Login == client.Login &&
+                   Password == client.Password &&
+                   Role == client.Role
+                   ;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Nom, Prenom, Tel, Email);
+            return HashCode.Combine(Id, Nom, Prenom, Tel, Email, Login, Password, Role);
         }
     }
 }

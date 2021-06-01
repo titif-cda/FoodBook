@@ -9,6 +9,7 @@ using BLL.Services;
 using Microsoft.AspNetCore.Http;
 using BO.DTO.Requests;
 using BO.DTO.Responses;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -34,6 +35,7 @@ namespace API.Controllers
         /// </summary>
         /// <returns>La liste des livres</returns>
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<Service>>> GetAll([FromQuery] PageRequest pageRequest)
         {
@@ -47,6 +49,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant unique du service</param>
         /// <returns>Renvoi le service définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetServiceById([FromRoute] int id)
@@ -69,6 +72,7 @@ namespace API.Controllers
         /// <param name="service">service à ajouter sans l'identifiant unique</param>
         /// <returns>Renvoi le service avec l'identifiant généré</returns>
         [HttpPost()]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateService([FromBody] Service service)
@@ -93,6 +97,7 @@ namespace API.Controllers
         /// <param name="id">identifiant</param>
         /// <returns>succes ou echec</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteService([FromRoute] int id)
@@ -117,6 +122,7 @@ namespace API.Controllers
         /// <param name="service">service concerné</param>
         /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

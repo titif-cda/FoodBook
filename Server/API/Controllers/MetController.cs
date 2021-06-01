@@ -9,14 +9,16 @@ using BLL.Services;
 using Microsoft.AspNetCore.Http;
 using BO.DTO.Requests;
 using BO.DTO.Responses;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("apiv{version:apiVersion=}/mets")]
+    [Route("api/v{version:apiVersion}/mets")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
+    [Authorize(Roles = "Administrateur")]
     public class MetController : ControllerBase
     {
 

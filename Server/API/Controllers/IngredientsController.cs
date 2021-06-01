@@ -44,6 +44,7 @@ namespace API.Controllers
         /// </summary>
         /// <returns>La liste des ingredients</returns>
         [HttpGet]
+       
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<Ingredient>>> GetAll([FromQuery] PageRequest pageRequest)
@@ -81,7 +82,7 @@ namespace API.Controllers
         /// <param name="ingredient">ingredient à ajouter sans l'identifiant unique</param>
         /// <returns>Renvoi l'ingredient avec l'identifiant généré</returns>
         [HttpPost()]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateIngredient([FromBody] Ingredient ingredient)
@@ -107,7 +108,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant</param>
         /// <returns>Retourne succes ou echec</returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteIngredient([FromRoute] int id)
@@ -132,7 +133,7 @@ namespace API.Controllers
         /// <param name="ingredient">Ingredient</param>
         /// <returns>Retourne un ingredient modifié</returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Restaurateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

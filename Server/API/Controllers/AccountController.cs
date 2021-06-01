@@ -1,5 +1,6 @@
 ﻿using BLL.Services;
 using BO.DTO.Requests;
+using BO.DTO.Responses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -40,6 +41,19 @@ namespace API.Controllers
             }
         }
 
-
+        [HttpPost("register")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
+        {
+            RegisterResponse registerResponse = await _accountService.Register(registerRequest);
+            if (registerResponse != null)
+            {
+                return Ok(registerResponse);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }

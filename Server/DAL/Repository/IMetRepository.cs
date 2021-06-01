@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services
+namespace DAL.Repository
 {
      
     public interface IMetRepository : IGenericRepository<Met>

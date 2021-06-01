@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace BO.Entity
@@ -36,6 +37,7 @@ namespace BO.Entity
         /// <summary>
         /// Password du client
         /// </summary>
+        [JsonIgnore]
         public string Password { get; set; }
         /// <summary>
         /// Role du client

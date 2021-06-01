@@ -34,5 +34,11 @@ namespace BLL.Services
 
         Task<bool> RemoveClientById(int id);
         #endregion
+
+
+        #region Account
+        Task<LoginResponse> Login(string username, string password);
+        Task<Client> Register(RegisterRequest registerRequest);
+        #endregion.
     }
 }

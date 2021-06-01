@@ -40,13 +40,44 @@ namespace API.Controllers
             _clientService = clientService;
         }
 
+        [HttpPost("login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
+        {
+            LoginResponse loginResponse = await _clientService.Login(loginRequest.Username, loginRequest.Password);
+            if (loginResponse != null)
+            {
+                return Ok(loginResponse);
+            }
+            else
+            {
+                return Unauthorized();
+            }
+        }
+
+        [HttpPost("register")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
+        {
+            Client registerResponse = await _clientService.Register(registerRequest);
+            if (registerResponse != null)
+            {
+                return Ok(registerResponse);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+
 
         /// <summary>
         /// Permet de récupérer la liste des clients
         /// </summary>
         /// <returns>La liste des clients</returns>
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<Client>>> GetAll([FromQuery] PageRequest pageRequest)
         {
@@ -60,7 +91,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant unique du clients</param>
         /// <returns>Renvoi le client définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetClientById([FromRoute] int id)
@@ -83,6 +114,7 @@ namespace API.Controllers
         /// <param name="book">clients à ajouter sans l'identifiant unique</param>
         /// <returns>Renvoi le clients avec l'identifiant généré</returns>
         [HttpPost()]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateClient([FromBody] Client client)
@@ -107,6 +139,7 @@ namespace API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteClient([FromRoute] int id)
@@ -131,6 +164,7 @@ namespace API.Controllers
         /// <param name="client"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Restaurateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

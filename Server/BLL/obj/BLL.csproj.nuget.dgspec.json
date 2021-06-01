@@ -248,6 +248,10 @@
               "target": "Package",
               "version": "[13.11.1, )"
             },
+            "ServiceStack.Client": {
+              "target": "Package",
+              "version": "[5.11.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"

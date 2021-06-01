@@ -18,6 +18,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0-preview.3.21201.4" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0-preview.3.21201.4" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.11.1" />
+    <PackageReference Include="ServiceStack.Client" Version="5.11.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 

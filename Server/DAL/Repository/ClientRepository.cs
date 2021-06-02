@@ -7,6 +7,7 @@ using ServiceStack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,9 +57,11 @@ namespace DAL.Repository
 
         public async Task<Client> InsertAsync(Client entity)
         {
-            var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password, Role)  output INSERTED.Id
-            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password, @Role)";
-            int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
+           
+                var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password,Password2, Role)  output INSERTED.Id
+            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password,@Password2, @Role)";
+            int i = await _session.Connection.QuerySingleAsync<int>(stmt,entity,
+                      _session.Transaction);
             return await GetAsync(i);
         }
 
@@ -80,7 +83,13 @@ namespace DAL.Repository
 
         public async Task<Client> RegisterClient(RegisterRequest registerRequest)
         {
-            
+            string mdpHash;
+            string pwd = registerRequest.Password;
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                mdpHash = GetHash(sha256Hash, pwd);
+            }
+
             var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password, Password2, Role)  output INSERTED.Id
             values (@Nom, @Prenom, @Tel, @Email, @Login, @Password,@Password2, @Role)";
 
@@ -93,8 +102,8 @@ namespace DAL.Repository
                     Tel = registerRequest.Tel,
                     Email = registerRequest.Email,
                     Login = registerRequest.Login,
-                    Password = registerRequest.Password,
-                    Password2 = registerRequest.Password2,
+                    Password = mdpHash,
+                    Password2 = mdpHash,
                     Role = "Client"                
                 }, _session.Transaction);
                 return await GetAsync(id);
@@ -103,6 +112,26 @@ namespace DAL.Repository
             {
                 return null;
             }
+        }
+        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
+        {
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            var sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }

@@ -11,12 +11,12 @@ namespace BO.DTO.Requests
         /// <summary>
         /// Current Page
         /// </summary>
-        public int Page { get; set; }
+        public int? Page { get; set; }
 
         /// <summary>
         /// Limit entities on one page
         /// </summary>
-        public int PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         public PageRequest()
         {
@@ -24,7 +24,7 @@ namespace BO.DTO.Requests
             PageSize = 10;
         }
 
-        public PageRequest(int page, int pageSize)
+        public PageRequest(int? page, int? pageSize)
         {
             Page = page;
             PageSize = pageSize;

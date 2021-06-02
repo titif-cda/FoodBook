@@ -77,7 +77,7 @@ namespace API.Controllers
         /// </summary>
         /// <returns>La liste des clients</returns>
         [HttpGet]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<PageResponse<Client>>> GetAll([FromQuery] PageRequest pageRequest)
         {
@@ -91,7 +91,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant unique du clients</param>
         /// <returns>Renvoi le client définit par l'identifiant unique</returns>
         [HttpGet("{id}")]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetClientById([FromRoute] int id)
@@ -114,7 +114,7 @@ namespace API.Controllers
         /// <param name="book">clients à ajouter sans l'identifiant unique</param>
         /// <returns>Renvoi le clients avec l'identifiant généré</returns>
         [HttpPost()]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateClient([FromBody] Client client)
@@ -139,7 +139,7 @@ namespace API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteClient([FromRoute] int id)
@@ -164,7 +164,7 @@ namespace API.Controllers
         /// <param name="client"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Restaurateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

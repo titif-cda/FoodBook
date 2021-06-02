@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace BLLC.Services
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
+           // _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             
         }
         #region Client

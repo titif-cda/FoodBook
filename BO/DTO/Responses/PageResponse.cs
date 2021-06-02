@@ -11,7 +11,7 @@ namespace BO.DTO.Responses
         /// <summary>
         /// Current Page
         /// </summary>
-        public int Page
+        public int? Page
         {
             get; set;
         }
@@ -19,7 +19,7 @@ namespace BO.DTO.Responses
         /// <summary>
         /// Limit entities on one page
         /// </summary>
-        public int PageSize
+        public int? PageSize
         {
             get; set;
         }
@@ -46,7 +46,7 @@ namespace BO.DTO.Responses
         {
         }
 
-        public PageResponse(int page, int pageSize, int? totalRecords, List<T> data)
+        public PageResponse(int? page, int? pageSize, int? totalRecords, List<T> data)
         {
             Page = page;
             PageSize = pageSize;

@@ -32,14 +32,11 @@ namespace Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crudClientForm));
             this.CrudClientPnl = new System.Windows.Forms.Panel();
             this.ConfirmPasswordCrudClientlbl = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.roleClientCombo = new System.Windows.Forms.ComboBox();
-            this.roleCrudClientlbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pasword2TBox = new System.Windows.Forms.TextBox();
+            this.Password1TBox = new System.Windows.Forms.TextBox();
             this.passwordCrudClientlbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LoginCrudClientTbox = new System.Windows.Forms.TextBox();
             this.loginCrudClientlbl = new System.Windows.Forms.Label();
-            this.IdClientlbl = new System.Windows.Forms.Label();
             this.TelCrudClientTbox = new System.Windows.Forms.TextBox();
             this.EmailCrudClientTbox = new System.Windows.Forms.TextBox();
             this.PrenomCrudClientTbox = new System.Windows.Forms.TextBox();
@@ -58,14 +55,11 @@ namespace Desktop
             // 
             this.CrudClientPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CrudClientPnl.BackgroundImage")));
             this.CrudClientPnl.Controls.Add(this.ConfirmPasswordCrudClientlbl);
-            this.CrudClientPnl.Controls.Add(this.textBox3);
-            this.CrudClientPnl.Controls.Add(this.roleClientCombo);
-            this.CrudClientPnl.Controls.Add(this.roleCrudClientlbl);
-            this.CrudClientPnl.Controls.Add(this.textBox2);
+            this.CrudClientPnl.Controls.Add(this.pasword2TBox);
+            this.CrudClientPnl.Controls.Add(this.Password1TBox);
             this.CrudClientPnl.Controls.Add(this.passwordCrudClientlbl);
-            this.CrudClientPnl.Controls.Add(this.textBox1);
+            this.CrudClientPnl.Controls.Add(this.LoginCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.loginCrudClientlbl);
-            this.CrudClientPnl.Controls.Add(this.IdClientlbl);
             this.CrudClientPnl.Controls.Add(this.TelCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.EmailCrudClientTbox);
             this.CrudClientPnl.Controls.Add(this.PrenomCrudClientTbox);
@@ -96,47 +90,21 @@ namespace Desktop
             this.ConfirmPasswordCrudClientlbl.TabIndex = 29;
             this.ConfirmPasswordCrudClientlbl.Text = "Confirmer Password";
             // 
-            // textBox3
+            // pasword2TBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(211, 543);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(159, 23);
-            this.textBox3.TabIndex = 28;
+            this.pasword2TBox.Location = new System.Drawing.Point(211, 543);
+            this.pasword2TBox.Name = "pasword2TBox";
+            this.pasword2TBox.PasswordChar = '*';
+            this.pasword2TBox.Size = new System.Drawing.Size(159, 23);
+            this.pasword2TBox.TabIndex = 28;
             // 
-            // roleClientCombo
+            // Password1TBox
             // 
-            this.roleClientCombo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.roleClientCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.roleClientCombo.FormattingEnabled = true;
-            this.roleClientCombo.Items.AddRange(new object[] {
-            "Restaurateur",
-            "Client"});
-            this.roleClientCombo.Location = new System.Drawing.Point(213, 71);
-            this.roleClientCombo.Name = "roleClientCombo";
-            this.roleClientCombo.Size = new System.Drawing.Size(121, 28);
-            this.roleClientCombo.TabIndex = 27;
-            // 
-            // roleCrudClientlbl
-            // 
-            this.roleCrudClientlbl.AutoSize = true;
-            this.roleCrudClientlbl.BackColor = System.Drawing.Color.Transparent;
-            this.roleCrudClientlbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roleCrudClientlbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.roleCrudClientlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.roleCrudClientlbl.Location = new System.Drawing.Point(213, 47);
-            this.roleCrudClientlbl.Name = "roleCrudClientlbl";
-            this.roleCrudClientlbl.Size = new System.Drawing.Size(50, 21);
-            this.roleCrudClientlbl.TabIndex = 25;
-            this.roleCrudClientlbl.Text = "Rôle";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(211, 478);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(159, 23);
-            this.textBox2.TabIndex = 24;
+            this.Password1TBox.Location = new System.Drawing.Point(211, 478);
+            this.Password1TBox.Name = "Password1TBox";
+            this.Password1TBox.PasswordChar = '*';
+            this.Password1TBox.Size = new System.Drawing.Size(159, 23);
+            this.Password1TBox.TabIndex = 24;
             // 
             // passwordCrudClientlbl
             // 
@@ -151,12 +119,12 @@ namespace Desktop
             this.passwordCrudClientlbl.TabIndex = 23;
             this.passwordCrudClientlbl.Text = "Password";
             // 
-            // textBox1
+            // LoginCrudClientTbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 411);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 23);
-            this.textBox1.TabIndex = 22;
+            this.LoginCrudClientTbox.Location = new System.Drawing.Point(213, 411);
+            this.LoginCrudClientTbox.Name = "LoginCrudClientTbox";
+            this.LoginCrudClientTbox.Size = new System.Drawing.Size(157, 23);
+            this.LoginCrudClientTbox.TabIndex = 22;
             // 
             // loginCrudClientlbl
             // 
@@ -170,16 +138,6 @@ namespace Desktop
             this.loginCrudClientlbl.Size = new System.Drawing.Size(61, 21);
             this.loginCrudClientlbl.TabIndex = 21;
             this.loginCrudClientlbl.Text = "Login";
-            // 
-            // IdClientlbl
-            // 
-            this.IdClientlbl.AutoSize = true;
-            this.IdClientlbl.BackColor = System.Drawing.Color.Transparent;
-            this.IdClientlbl.Location = new System.Drawing.Point(13, 13);
-            this.IdClientlbl.Name = "IdClientlbl";
-            this.IdClientlbl.Size = new System.Drawing.Size(17, 15);
-            this.IdClientlbl.TabIndex = 20;
-            this.IdClientlbl.Text = "id";
             // 
             // TelCrudClientTbox
             // 
@@ -208,6 +166,7 @@ namespace Desktop
             this.NomCrudClientTbox.Name = "NomCrudClientTbox";
             this.NomCrudClientTbox.Size = new System.Drawing.Size(227, 23);
             this.NomCrudClientTbox.TabIndex = 16;
+            this.NomCrudClientTbox.TextChanged += new System.EventHandler(this.NomCrudClientTbox_TextChanged);
             // 
             // phoneCrudClientlbl
             // 
@@ -330,14 +289,12 @@ namespace Desktop
         private System.Windows.Forms.TextBox EmailCrudClientTbox;
         private System.Windows.Forms.TextBox PrenomCrudClientTbox;
         private System.Windows.Forms.TextBox NomCrudClientTbox;
-        private System.Windows.Forms.Label IdClientlbl;
-        private System.Windows.Forms.ComboBox roleClientCombo;
-        private System.Windows.Forms.Label roleCrudClientlbl;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Password1TBox;
         private System.Windows.Forms.Label passwordCrudClientlbl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LoginCrudClientTbox;
         private System.Windows.Forms.Label loginCrudClientlbl;
         private System.Windows.Forms.Label ConfirmPasswordCrudClientlbl;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox pasword2TBox;
     }
 }

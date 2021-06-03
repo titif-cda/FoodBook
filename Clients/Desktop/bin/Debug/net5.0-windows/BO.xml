@@ -4,6 +4,41 @@
         <name>BO</name>
     </assembly>
     <members>
+        <member name="T:BO.DTO.Requests.CreateClientRequest">
+            <summary>
+            Objet de rquête pour créer un client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Nom">
+            <summary>
+            ISBN unique du livre
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Prenom">
+            <summary>
+            Titre du livre
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Tel">
+            <summary>
+            Telephone du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Email">
+            <summary>
+            email du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Login">
+            <summary>
+            Login du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Password">
+            <summary>
+            Password du client
+            </summary>
+        </member>
         <member name="P:BO.DTO.Requests.PageRequest.Page">
             <summary>
             Current Page

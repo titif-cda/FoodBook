@@ -57,10 +57,25 @@ namespace DAL.Repository
 
         public async Task<Client> InsertAsync(Client entity)
         {
-           
-                var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password,Password2, Role)  output INSERTED.Id
-            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password,@Password2, @Role)";
-            int i = await _session.Connection.QuerySingleAsync<int>(stmt,entity,
+            string mdpHash;
+            string pwd = entity.Password;
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                mdpHash = GetHash(sha256Hash, pwd);
+            }
+
+            var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password , Role)  output INSERTED.Id
+            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password,@Role)";
+            int i = await _session.Connection.QuerySingleAsync<int>(stmt, new
+            {
+                Nom = entity.Nom,
+                Prenom = entity.Prenom,
+                Tel = entity.Tel,
+                Email = entity.Email,
+                Login = entity.Login,
+                Password = mdpHash,
+                Role = "Client"
+            },
                       _session.Transaction);
             return await GetAsync(i);
         }
@@ -81,38 +96,7 @@ namespace DAL.Repository
             return _session.Connection.QueryFirstOrDefaultAsync<Client>(stmt, new { Login = login, Password = password }, _session.Transaction);
         }
 
-        public async Task<Client> RegisterClient(RegisterRequest registerRequest)
-        {
-            string mdpHash;
-            string pwd = registerRequest.Password;
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                mdpHash = GetHash(sha256Hash, pwd);
-            }
-
-            var stmt = @"insert into Client( Nom , Prenom, Tel, Email, Login, Password, Password2, Role)  output INSERTED.Id
-            values (@Nom, @Prenom, @Tel, @Email, @Login, @Password,@Password2, @Role)";
-
-            try
-            {
-                var id =  await _session.Connection.QuerySingleAsync<int>(stmt, 
-                    new { 
-                    Nom = registerRequest.Nom,
-                    Prenom = registerRequest.Prenom,
-                    Tel = registerRequest.Tel,
-                    Email = registerRequest.Email,
-                    Login = registerRequest.Login,
-                    Password = mdpHash,
-                    Password2 = mdpHash,
-                    Role = "Client"                
-                }, _session.Transaction);
-                return await GetAsync(id);
-            }
-            catch
-            {
-                return null;
-            }
-        }
+       
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
 

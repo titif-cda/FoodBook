@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -14,13 +15,10 @@ namespace BLLC.Services
 {
     public class RestaurantService : IRestaurantService
     {
-        private readonly HttpClient _httpClient;
-        public RestaurantService()
-        {
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
+        private readonly HttpClient _httpClient = AuthentificationService.Instance.httpClient;
 
-        }
+        public RestaurantService(){ }
+
         #region Ingredient
         public async Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
@@ -68,20 +66,24 @@ namespace BLLC.Services
        
         public async Task<PageResponse<Ingredient>> GetAllIngredients(PageRequest pageRequest)
         {
-            var reponse = await _httpClient.GetAsync($"ingredients{pageRequest.ToUriQuery()}");
+            if (AuthentificationService.Instance.isLogged)
+            {                    
+                var reponse = await _httpClient.GetAsync($"ingredients{pageRequest.ToUriQuery()}");
 
-            if (reponse.IsSuccessStatusCode)
-            {
-                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                if (reponse.IsSuccessStatusCode)
                 {
-                    PageResponse<Ingredient> ingredientPage = await JsonSerializer.DeserializeAsync<PageResponse<Ingredient>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return ingredientPage;
+                    using (var stream = await reponse.Content.ReadAsStreamAsync())
+                    {
+                        PageResponse<Ingredient> ingredientPage = await JsonSerializer.DeserializeAsync<PageResponse<Ingredient>>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                        return ingredientPage;
+                    }
+                }
+                else
+                {
+                    return null;
                 }
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
       

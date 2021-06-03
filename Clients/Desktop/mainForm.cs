@@ -14,15 +14,31 @@ namespace Desktop
 {
     public partial class mainForm : Form
     {
+        private loginForm loginFormInst;
         public mainForm()
         {
+            
             InitializeComponent();
            
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Text = string.Empty;
+            ControlBox = false;
+            DoubleBuffered = true;
+            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
             NavFormPanel(new AccueilForm());
+            
+
+            Hide();
+           
+            using (loginFormInst = new loginForm())
+            {
+                DialogResult drlogin = loginFormInst.ShowDialog();
+                while (drlogin != DialogResult.OK)
+                {
+                    loginFormInst.ShowDialog();
+                }
+            }
+            Show();
+
         }
         //permet de manipuler la fenetre 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

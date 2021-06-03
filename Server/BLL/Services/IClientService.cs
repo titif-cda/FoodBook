@@ -38,7 +38,7 @@ namespace BLL.Services
 
         #region Account
         Task<LoginResponse> Login(string username, string password);
-        Task<Client> Register(RegisterRequest registerRequest);
+       
         #endregion.
     }
 }

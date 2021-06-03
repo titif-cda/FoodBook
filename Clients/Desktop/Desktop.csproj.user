@@ -16,6 +16,9 @@
     <Compile Update="Ingredients\listIngredientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControls\ClientsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

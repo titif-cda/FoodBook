@@ -13,8 +13,8 @@ namespace DAL.Repository
     {
         Task<PageResponse<Client>> GetAllAsync(PageRequest pageRequest);
       
-        Task<Client> GetClientByUsernameAndPassword(string login, string password);
-        Task<Client> RegisterClient(RegisterRequest registerRequest);
+        Task<Client> GetClientByUsernameAndPassword(string Login, string password);
+        //Task<Client> RegisterClient(RegisterRequest registerRequest);
 
 
     }

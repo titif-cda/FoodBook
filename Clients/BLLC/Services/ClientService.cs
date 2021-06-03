@@ -10,19 +10,15 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Net.Http.Json;
 
 namespace BLLC.Services
 {
     public class ClientService : IClientService
     {
-        private readonly HttpClient _httpClient;
-        public ClientService()
-        {
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
-           // _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            
-        }
+        private readonly HttpClient _httpClient = AuthentificationService.Instance.httpClient;
+        public ClientService() {}
+
         #region Client
         public async Task<PageResponse<Client>> GetAllClients(PageRequest pageRequest)
         {
@@ -47,22 +43,36 @@ namespace BLLC.Services
 
         public async Task<Client> CreateClient(Client client)
         {
+            CreateClientRequest createClientRequest = new()
+            {
+                Nom = client.Nom,
+                Prenom = client.Prenom,
+                Email = client.Email,
+                Tel = client.Tel,
+                Login = client.Login,
+                Password= client.Password
+            };
+
             var reponse = await _httpClient.PostAsync("clients",
                 new StringContent(
-                    JsonSerializer.Serialize(client), Encoding.UTF8, "application/json"
+                    JsonSerializer.Serialize(createClientRequest), Encoding.UTF8, "application/json"
                     )
                 );
 
             if (reponse.IsSuccessStatusCode)
             {
-                using (var stream = await reponse.Content.ReadAsStreamAsync())
-                {
-                    Client clientNew = await JsonSerializer.DeserializeAsync<Client>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                    return clientNew;
-                }
+                //using (var stream = await reponse.Content.ReadAsStreamAsync())
+                //{
+                //    Client clientNew = await JsonSerializer.DeserializeAsync<Client>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                //    return clientNew;
+                //}
+
+                Client clientNew = await reponse.Content.ReadFromJsonAsync<Client>();
+                return clientNew;
             }
             else
             {
+                var r = await reponse.Content.ReadAsStringAsync();
                 return null;
             }
         }

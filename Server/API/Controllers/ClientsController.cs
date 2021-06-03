@@ -44,7 +44,7 @@ namespace API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            LoginResponse loginResponse = await _clientService.Login(loginRequest.Username, loginRequest.Password);
+            LoginResponse loginResponse = await _clientService.Login(loginRequest.Login, loginRequest.Password);
             if (loginResponse != null)
             {
                 return Ok(loginResponse);
@@ -55,20 +55,7 @@ namespace API.Controllers
             }
         }
 
-        [HttpPost("register")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
-        {
-            Client registerResponse = await _clientService.Register(registerRequest);
-            if (registerResponse != null)
-            {
-                return Ok(registerResponse);
-            }
-            else
-            {
-                return BadRequest();
-            }
-        }
+
 
 
 
@@ -117,8 +104,19 @@ namespace API.Controllers
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> CreateClient([FromBody] Client client)
+        public async Task<IActionResult> CreateClient([FromBody] CreateClientRequest createClientRequest)
         {
+            Client client = new Client()
+            {
+                Nom = createClientRequest.Nom,
+                Prenom = createClientRequest.Prenom,
+                Email = createClientRequest.Email,
+                Login = createClientRequest.Login,
+                Password = createClientRequest.Password,
+                Tel = createClientRequest.Tel
+
+            };
+
             // Ajout du client avec la bll server
             Client newClient = await _clientService.CreateClient(client);
             if (newClient != null)

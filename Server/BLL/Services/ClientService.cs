@@ -215,14 +215,6 @@ namespace BLL.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public async Task<Client> Register(RegisterRequest registerRequest)
-        {
-            _db.BeginTransaction();
-            IClientRepository _registerclients = _db.GetRepository<IClientRepository>();
-            Client newClient = await _registerclients.RegisterClient(registerRequest);
-            _db.Commit();
-
-            return newClient;
-        }
+       
     }
 }

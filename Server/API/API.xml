@@ -28,7 +28,7 @@
             <param name="id">Identifiant unique du clients</param>
             <returns>Renvoi le client définit par l'identifiant unique</returns>
         </member>
-        <member name="M:API.Controllers.ClientsController.CreateClient(BO.Entity.Client)">
+        <member name="M:API.Controllers.ClientsController.CreateClient(BO.DTO.Requests.CreateClientRequest)">
             <summary>
             Créer un clients et l'ajoute en BDD
             </summary>

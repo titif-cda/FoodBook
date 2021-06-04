@@ -36,6 +36,7 @@ namespace Desktop
             this.loginLbl = new System.Windows.Forms.Label();
             this.passwordTBox = new System.Windows.Forms.TextBox();
             this.loginTbox = new System.Windows.Forms.TextBox();
+            this.hideMDP_CBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // registerLbl
@@ -44,7 +45,7 @@ namespace Desktop
             this.registerLbl.BackColor = System.Drawing.Color.Transparent;
             this.registerLbl.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.registerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.registerLbl.Location = new System.Drawing.Point(48, 202);
+            this.registerLbl.Location = new System.Drawing.Point(48, 239);
             this.registerLbl.Name = "registerLbl";
             this.registerLbl.Size = new System.Drawing.Size(112, 18);
             this.registerLbl.TabIndex = 16;
@@ -68,7 +69,7 @@ namespace Desktop
             this.ValidLoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.ValidLoginBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ValidLoginBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.ValidLoginBtn.Location = new System.Drawing.Point(48, 176);
+            this.ValidLoginBtn.Location = new System.Drawing.Point(48, 213);
             this.ValidLoginBtn.Name = "ValidLoginBtn";
             this.ValidLoginBtn.Size = new System.Drawing.Size(112, 23);
             this.ValidLoginBtn.TabIndex = 14;
@@ -118,11 +119,24 @@ namespace Desktop
             this.loginTbox.TabIndex = 10;
             this.loginTbox.TextChanged += new System.EventHandler(this.loginTbox_TextChanged);
             // 
+            // hideMDP_CBox
+            // 
+            this.hideMDP_CBox.AutoSize = true;
+            this.hideMDP_CBox.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hideMDP_CBox.Location = new System.Drawing.Point(48, 168);
+            this.hideMDP_CBox.Name = "hideMDP_CBox";
+            this.hideMDP_CBox.Size = new System.Drawing.Size(143, 16);
+            this.hideMDP_CBox.TabIndex = 17;
+            this.hideMDP_CBox.Text = "Afficher/ cacher les caractères";
+            this.hideMDP_CBox.UseVisualStyleBackColor = true;
+            this.hideMDP_CBox.CheckedChanged += new System.EventHandler(this.hideMDP_CBox_CheckedChanged);
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 276);
+            this.Controls.Add(this.hideMDP_CBox);
             this.Controls.Add(this.registerLbl);
             this.Controls.Add(this.ConnexionLbl);
             this.Controls.Add(this.ValidLoginBtn);
@@ -147,5 +161,6 @@ namespace Desktop
         private System.Windows.Forms.Label loginLbl;
         private System.Windows.Forms.TextBox passwordTBox;
         private System.Windows.Forms.TextBox loginTbox;
+        private System.Windows.Forms.CheckBox hideMDP_CBox;
     }
 }

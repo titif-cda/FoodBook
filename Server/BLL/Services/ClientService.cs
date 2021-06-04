@@ -187,7 +187,8 @@ namespace BLL.Services
             {
                 new Claim(JwtRegisteredClaimNames.Sub, client.Login),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.NameIdentifier, client.Login)
+                new Claim(ClaimTypes.NameIdentifier, client.Login),
+                new Claim("ClientId", client.Id)
             };
 
             //Add roles
@@ -201,7 +202,7 @@ namespace BLL.Services
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             //Expiration time
-            var expires = DateTime.Now.AddSeconds(Convert.ToDouble(_configuration["JwtExpireSec"]));
+            var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["JwtExpireDay"]));
 
             //Create JWT Token Object
             var token = new JwtSecurityToken(

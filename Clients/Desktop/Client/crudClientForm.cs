@@ -47,6 +47,9 @@ namespace Desktop
                 PrenomCrudClientTbox.Text = client.Prenom;
                 EmailCrudClientTbox.Text = client.Email;
                 TelCrudClientTbox.Text = client.Tel;
+                LoginCrudClientTbox.Text = client.Login;
+                client.Role = client.Role;
+                Password1TBox.Text = client.Password;
             }
         }
         private async void ActionCrudClientBtn_Click(object sender, EventArgs e)

@@ -32,6 +32,7 @@ namespace Desktop
         {
             InitializeComponent();
             ControlBox = false;
+            passwordTBox.UseSystemPasswordChar = true;
 
         }
 
@@ -77,10 +78,15 @@ namespace Desktop
             }
 
             var result = await AuthentificationService.Instance.Signin(login, mdpHash);
+            
 
             if (result)
             {
                 DialogResult = DialogResult.OK;
+               // string userID = My.User;
+
+
+
             }
             else
             {
@@ -107,6 +113,18 @@ namespace Desktop
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        private void hideMDP_CBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (hideMDP_CBox.Checked)
+            {
+                passwordTBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordTBox.UseSystemPasswordChar = true;
+            }
         }
     }
 }

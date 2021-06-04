@@ -188,27 +188,5 @@ namespace API.Controllers
                 }
             }
         }
-
-
-        //[HttpPut("{id/infos}")]
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
-        //public async Task<IActionResult> getBookInfo([FromRoute] int id)
-        //{
-        //    Client newClient = await _clientService.GetClientById(id);
-        //    if (newClient == null)
-        //    {
-        //        Retourne un code 400  Bad Request
-        //        return NotFound();
-        //    }
-        //    else
-        //    {
-        //        return Ok(newClient);
-        //        Renvoie la ressource modifiée
-
-        //    }
-        //}
     }
-    
 }

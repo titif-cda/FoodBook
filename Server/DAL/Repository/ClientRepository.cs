@@ -82,8 +82,24 @@ namespace DAL.Repository
 
         public async Task<bool> UpdateAsync(Client entity)
         {
-            var stmt = @"UPDATE Client SET Nom = @Nom, Prenom = @Prenom, Tel = @Tel, Email = @Email, @Login = Login, @Password = Password, @Role = Role WHERE Id = @Id";
-            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
+            string mdpHash;
+            string pwd = entity.Password;
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                mdpHash = GetHash(sha256Hash, pwd);
+            }
+            var stmt = @"UPDATE Client SET Nom = @Nom, Prenom = @Prenom, Tel = @Tel, Email = @Email, Login = @Login, Password = @Password WHERE Id = @Id";
+            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, new
+            {
+                Nom = entity.Nom,
+                Prenom = entity.Prenom,
+                Tel = entity.Tel,
+                Email = entity.Email,
+                Login = entity.Login,
+                Password = mdpHash,
+                Id = entity.Id
+
+            }, _session.Transaction);
             return nbModifiedLines > 0;
         }
 

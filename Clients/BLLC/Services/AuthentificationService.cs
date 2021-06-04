@@ -2,10 +2,12 @@
 using BO.DTO.Requests;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,6 +73,10 @@ namespace BLLC.Services
                     var loginReponse = httpResponse.Content.ReadFromJsonAsync<LoginResponse>();
                     isLogged = true;
                     Token = (await loginReponse).AccessToken;
+                    var readerHandler = new JwtSecurityTokenHandler();
+                    var decodedToken  = readerHandler.ReadJwtToken(Token);
+                    Claim clientId = decodedToken.Claims.ToList().Find(c => c.Type == "clientId");
+                    Claim clientRole = decodedToken.Claims.ToList().Find(c => c.Type == "clientRole");
                     return true;
                 }
                 return false;
@@ -79,6 +85,8 @@ namespace BLLC.Services
             {
                 return false;
             }
+
+           
         }
 
 
@@ -91,6 +99,8 @@ namespace BLLC.Services
                 return _httpClient;
             } 
         }
+
+
     
     }
 }

@@ -168,12 +168,12 @@ namespace Desktop
         {
             if (this.Height >= 500 && this.Width >= 900)
             {
-                defaultPageSize = 24;
+                defaultPageSize = 6;
                 Refresh();
             }
             else
             {
-                defaultPageSize = 6;
+                defaultPageSize = 3;
                 Refresh();
             }
 
@@ -200,5 +200,9 @@ namespace Desktop
             return;
         }
 
+        private void SearchtBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

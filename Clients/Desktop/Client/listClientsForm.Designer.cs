@@ -38,24 +38,30 @@ namespace Desktop
             this.NextBtn = new System.Windows.Forms.Button();
             this.CurentPageLbl = new System.Windows.Forms.Label();
             this.NbPagesCombo = new System.Windows.Forms.ComboBox();
+            this.SearchFlp = new System.Windows.Forms.FlowLayoutPanel();
+            this.SearchLbl = new System.Windows.Forms.Label();
+            this.SearchtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.SearchFlp.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.clientTlp, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.AddClientBtn, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.RefreshClientBtn, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.clientTlp, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AddClientBtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.RefreshClientBtn, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SearchFlp, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.48936F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.510639F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(858, 423);
@@ -66,9 +72,9 @@ namespace Desktop
             this.clientTlp.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.SetColumnSpan(this.clientTlp, 3);
             this.clientTlp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clientTlp.Location = new System.Drawing.Point(3, 3);
+            this.clientTlp.Location = new System.Drawing.Point(3, 35);
             this.clientTlp.Name = "clientTlp";
-            this.clientTlp.Size = new System.Drawing.Size(852, 380);
+            this.clientTlp.Size = new System.Drawing.Size(852, 351);
             this.clientTlp.TabIndex = 0;
             // 
             // AddClientBtn
@@ -77,10 +83,10 @@ namespace Desktop
             this.AddClientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddClientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddClientBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddClientBtn.Location = new System.Drawing.Point(0, 386);
+            this.AddClientBtn.Location = new System.Drawing.Point(0, 389);
             this.AddClientBtn.Margin = new System.Windows.Forms.Padding(0);
             this.AddClientBtn.Name = "AddClientBtn";
-            this.AddClientBtn.Size = new System.Drawing.Size(286, 37);
+            this.AddClientBtn.Size = new System.Drawing.Size(285, 34);
             this.AddClientBtn.TabIndex = 1;
             this.AddClientBtn.Text = "Ajouter";
             this.AddClientBtn.UseVisualStyleBackColor = false;
@@ -92,10 +98,10 @@ namespace Desktop
             this.RefreshClientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RefreshClientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.RefreshClientBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.RefreshClientBtn.Location = new System.Drawing.Point(286, 386);
+            this.RefreshClientBtn.Location = new System.Drawing.Point(285, 389);
             this.RefreshClientBtn.Margin = new System.Windows.Forms.Padding(0);
             this.RefreshClientBtn.Name = "RefreshClientBtn";
-            this.RefreshClientBtn.Size = new System.Drawing.Size(286, 37);
+            this.RefreshClientBtn.Size = new System.Drawing.Size(286, 34);
             this.RefreshClientBtn.TabIndex = 2;
             this.RefreshClientBtn.Text = "Rafraichir";
             this.RefreshClientBtn.UseVisualStyleBackColor = false;
@@ -114,11 +120,11 @@ namespace Desktop
             this.tableLayoutPanel2.Controls.Add(this.CurentPageLbl, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.NbPagesCombo, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 389);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(574, 392);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 31);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(281, 28);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // PreviousBtn
@@ -129,7 +135,7 @@ namespace Desktop
             this.PreviousBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.PreviousBtn.Location = new System.Drawing.Point(115, 3);
             this.PreviousBtn.Name = "PreviousBtn";
-            this.PreviousBtn.Size = new System.Drawing.Size(50, 25);
+            this.PreviousBtn.Size = new System.Drawing.Size(50, 22);
             this.PreviousBtn.TabIndex = 0;
             this.PreviousBtn.Text = "<";
             this.PreviousBtn.UseVisualStyleBackColor = true;
@@ -143,7 +149,7 @@ namespace Desktop
             this.NextBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.NextBtn.Location = new System.Drawing.Point(227, 3);
             this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(50, 25);
+            this.NextBtn.Size = new System.Drawing.Size(51, 22);
             this.NextBtn.TabIndex = 1;
             this.NextBtn.Text = ">";
             this.NextBtn.UseVisualStyleBackColor = true;
@@ -156,7 +162,7 @@ namespace Desktop
             this.CurentPageLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.CurentPageLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CurentPageLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.CurentPageLbl.Location = new System.Drawing.Point(189, 8);
+            this.CurentPageLbl.Location = new System.Drawing.Point(189, 6);
             this.CurentPageLbl.Margin = new System.Windows.Forms.Padding(0);
             this.CurentPageLbl.Name = "CurentPageLbl";
             this.CurentPageLbl.Size = new System.Drawing.Size(14, 15);
@@ -168,10 +174,38 @@ namespace Desktop
             this.NbPagesCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NbPagesCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.NbPagesCombo.FormattingEnabled = true;
-            this.NbPagesCombo.Location = new System.Drawing.Point(3, 4);
+            this.NbPagesCombo.Location = new System.Drawing.Point(3, 3);
             this.NbPagesCombo.Name = "NbPagesCombo";
             this.NbPagesCombo.Size = new System.Drawing.Size(106, 23);
             this.NbPagesCombo.TabIndex = 3;
+            // 
+            // SearchFlp
+            // 
+            this.SearchFlp.Controls.Add(this.SearchLbl);
+            this.SearchFlp.Controls.Add(this.SearchtBox);
+            this.SearchFlp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchFlp.Location = new System.Drawing.Point(3, 3);
+            this.SearchFlp.Name = "SearchFlp";
+            this.SearchFlp.Size = new System.Drawing.Size(279, 26);
+            this.SearchFlp.TabIndex = 4;
+            // 
+            // SearchLbl
+            // 
+            this.SearchLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchLbl.AutoSize = true;
+            this.SearchLbl.Location = new System.Drawing.Point(3, 7);
+            this.SearchLbl.Name = "SearchLbl";
+            this.SearchLbl.Size = new System.Drawing.Size(68, 15);
+            this.SearchLbl.TabIndex = 0;
+            this.SearchLbl.Text = "Recherche :";
+            // 
+            // SearchtBox
+            // 
+            this.SearchtBox.Location = new System.Drawing.Point(77, 3);
+            this.SearchtBox.Name = "SearchtBox";
+            this.SearchtBox.Size = new System.Drawing.Size(130, 23);
+            this.SearchtBox.TabIndex = 1;
+            this.SearchtBox.TextChanged += new System.EventHandler(this.SearchtBox_TextChanged);
             // 
             // listClientsForm
             // 
@@ -185,6 +219,8 @@ namespace Desktop
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.SearchFlp.ResumeLayout(false);
+            this.SearchFlp.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +237,8 @@ namespace Desktop
         private System.Windows.Forms.Button NextBtn;
         private System.Windows.Forms.Label CurentPageLbl;
         public System.Windows.Forms.ComboBox NbPagesCombo;
+        private System.Windows.Forms.FlowLayoutPanel SearchFlp;
+        private System.Windows.Forms.Label SearchLbl;
+        private System.Windows.Forms.TextBox SearchtBox;
     }
 }

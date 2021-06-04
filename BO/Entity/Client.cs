@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -37,7 +37,7 @@ namespace BO.Entity
         /// <summary>
         /// Password du client
         /// </summary>
-        [JsonIgnore]
+     [Required]
         public string Password { get; set; }
         /// <summary>
         /// Role du client

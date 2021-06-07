@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.Ingredients
 {
-    partial class listIngredientsForm
+    partial class ListIngredientsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop.Ingredients
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listIngredientsForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListIngredientsForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.AddIngredientBtn = new System.Windows.Forms.Button();
             this.RefreshIngredientBtn = new System.Windows.Forms.Button();
@@ -184,13 +184,13 @@ namespace Desktop.Ingredients
             this.IngredientPicturePnl.Size = new System.Drawing.Size(492, 405);
             this.IngredientPicturePnl.TabIndex = 5;
             // 
-            // listIngredientsForm
+            // ListIngredientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "listIngredientsForm";
+            this.Name = "ListIngredientsForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

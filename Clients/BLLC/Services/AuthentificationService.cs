@@ -1,4 +1,5 @@
 ﻿using BLL.Services;
+using BLLC.Extensions;
 using BO.DTO.Requests;
 using System;
 using System.Collections.Generic;
@@ -73,10 +74,7 @@ namespace BLLC.Services
                     var loginReponse = httpResponse.Content.ReadFromJsonAsync<LoginResponse>();
                     isLogged = true;
                     Token = (await loginReponse).AccessToken;
-                    var readerHandler = new JwtSecurityTokenHandler();
-                    var decodedToken  = readerHandler.ReadJwtToken(Token);
-                    Claim clientId = decodedToken.Claims.ToList().Find(c => c.Type == "clientId");
-                    Claim clientRole = decodedToken.Claims.ToList().Find(c => c.Type == "clientRole");
+
                     return true;
                 }
                 return false;
@@ -94,13 +92,36 @@ namespace BLLC.Services
             {
                 var _httpClient = new HttpClient();
                 _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
-                _httpClient.DefaultRequestHeaders.Authorization
-                   = new AuthenticationHeaderValue("Bearer", AuthentificationService.Instance.Token);
+                _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {AuthentificationService.Instance.Token}");
+            
                 return _httpClient;
             } 
         }
 
 
-    
+        private string GetValueClaimToken(string type)
+        {
+            var readerHandler = new JwtSecurityTokenHandler();
+            var decodedToken = readerHandler.ReadJwtToken(Token);
+            return decodedToken.Claims.ToList().Find(c => c.Type == type)?.Value;    
+        }
+
+         /// <summary>
+         /// Methode qui recupère le rôle de l'utilisateur
+         /// </summary>
+         /// <returns></returns>
+        public string GetRoleUser()
+        {
+            return GetValueClaimToken(ClaimTypes.Role);
+        }
+
+        /// <summary>
+        /// Methode qui recupere l'ID du Token
+        /// </summary>
+        /// <returns></returns>
+        public int? GetUserId()
+        {
+            return GetValueClaimToken("ClientId").ToNullable<int>();
+        }
     }
 }

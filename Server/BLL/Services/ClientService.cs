@@ -188,7 +188,6 @@ namespace BLL.Services
                 new Claim(JwtRegisteredClaimNames.Sub, client.Login),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, client.Login),
-                new Claim("ClientId", client.Id)
             };
 
             //Add roles
@@ -196,6 +195,7 @@ namespace BLL.Services
 
             claims.Add(new Claim(ClaimTypes.Role, client.Role));
 
+            claims.Add(new Claim("ClientId", client.Id.ToString()));
 
             //Signin Key
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtKey"]));

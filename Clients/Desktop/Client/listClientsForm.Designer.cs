@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop
 {
-    partial class listClientsForm
+    partial class ListClientsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -207,13 +207,13 @@ namespace Desktop
             this.SearchtBox.TabIndex = 1;
             this.SearchtBox.TextChanged += new System.EventHandler(this.SearchtBox_TextChanged);
             // 
-            // listClientsForm
+            // ListClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 423);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "listClientsForm";
+            this.Name = "ListClientsForm";
             this.Text = "listClients";
             this.SizeChanged += new System.EventHandler(this.listClientsForm_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);

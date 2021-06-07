@@ -25,7 +25,7 @@ namespace BLLC.Services
         Task<bool> DeleteTypeRepas(TypeRepas tRepas);
         #endregion
 
-        #region Repas
+        #region Met
         Task<Met> CreateMet(Met met);
         Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
         Task<Met> PutMet(Met met);

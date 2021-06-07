@@ -4,31 +4,37 @@
     <Compile Update="AccueilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Client\crudClientForm.cs">
+    <Compile Update="Client\CrudClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Client\listClientsForm.cs">
+    <Compile Update="Client\ListClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Ingredients\crudIngredientsForm.cs">
+    <Compile Update="Ingredients\CrudIngredientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Ingredients\listIngredientsForm.cs">
+    <Compile Update="Ingredients\ListIngredientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="loginForm.cs">
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Mets\CrudMetForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Mets\ListMetForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControls\ClientsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="mainForm.cs">
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControls\IngredientsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\loadForm.cs">
+    <Compile Update="UserControls\LoadControl.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

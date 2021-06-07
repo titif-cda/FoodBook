@@ -189,12 +189,22 @@
             Quantité necessaire d'ingredients
             </summary>
         </member>
+        <member name="P:BO.Entity.MetsIngredients.IdIngredient">
+            <summary>
+            Identifiant de l'ingredient
+            </summary>
+        </member>
+        <member name="P:BO.Entity.MetsIngredients.IdMet">
+            <summary>
+            Identifiant du Met
+            </summary>
+        </member>
         <member name="M:BO.Entity.MetsIngredients.#ctor">
             <summary>
             Constructeur par défaut
             </summary>
         </member>
-        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single)">
+        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single,System.Int32,System.Int32)">
             <summary>
             Constructeur avec arguments
             </summary>
@@ -263,10 +273,16 @@
             Date du service
             </summary>
         </member>
+        <member name="P:BO.Entity.Service.ListPlats">
+            <summary>
+            Liste des plats
+            </summary>
+        </member>
         <member name="M:BO.Entity.Service.#ctor">
             <summary>
             Constructeur par dfaut
             </summary>
+            
         </member>
         <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.DateTime,System.Collections.Generic.List{BO.Entity.Met})">
             <summary>

@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class crudClientForm : Form
+    public partial class CrudClientForm : Form
     {
         Client CurrentClient;
         public bool isCreation = false;
         private readonly IClientService _clientSercice;
-        public crudClientForm(Client client)
+        public CrudClientForm(Client client)
         {
             _clientSercice = new ClientService();
             InitializeComponent();

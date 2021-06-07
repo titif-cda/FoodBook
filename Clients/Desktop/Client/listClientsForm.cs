@@ -17,7 +17,7 @@ using System.Threading;
 
 namespace Desktop
 {
-    public partial class listClientsForm : Form
+    public partial class ListClientsForm : Form
     {
         
         private readonly IClientService _clientService = new ClientService();
@@ -28,7 +28,7 @@ namespace Desktop
 
         public SemaphoreSlim verrou = new SemaphoreSlim(1);
 
-        public listClientsForm()
+        public ListClientsForm()
         {
             DoubleBuffered = true;
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace Desktop
             clientTlp.Controls.Clear();
 
             //Debut Chargement
-            loadForm loader = new loadForm();
+            LoadControl loader = new LoadControl();
            
             Task<PageResponse<Client>> clientPageTask = _clientService.GetAllClients(new PageRequest(currentPage, defaultPageSize));
 
@@ -89,7 +89,7 @@ namespace Desktop
         {
             ClientsControl widgetClient = sender as ClientsControl;
 
-            DialogResult r = new crudClientForm(widgetClient.CurrentClient).ShowDialog();
+            DialogResult r = new CrudClientForm(widgetClient.CurrentClient).ShowDialog();
             if(r == DialogResult.OK)
             {
                 RefreshPage();
@@ -157,7 +157,7 @@ namespace Desktop
         private void AddClientBtn_Click(object sender, EventArgs e)
         {
 
-            DialogResult r = new crudClientForm(null).ShowDialog();
+            DialogResult r = new CrudClientForm(null).ShowDialog();
             if (r == DialogResult.OK)
             {
                 RefreshPage();

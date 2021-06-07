@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Desktop.UserControls
 {
-    public partial class loadForm : Form
+    public partial class LoadControl : Form
     {
-        public loadForm()
+        public LoadControl()
         {
             InitializeComponent();
             //this.Text = string.Empty;

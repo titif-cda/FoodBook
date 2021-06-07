@@ -22,7 +22,6 @@ namespace API.Controllers
     [Route("api/v{version:apiVersion=}/ingredients")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
-    
     public class IngredientsController : ControllerBase
 
     {

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Desktop.Ingredients
 {
-    public partial class listIngredientsForm : Form
+    public partial class ListIngredientsForm : Form
     {
 
         private readonly IRestaurantService _restaurantService;
@@ -24,7 +24,7 @@ namespace Desktop.Ingredients
         private int maxPage;
       
 
-        public listIngredientsForm()
+        public ListIngredientsForm()
         {
             DoubleBuffered = true;
             _restaurantService = new RestaurantService();
@@ -91,7 +91,7 @@ namespace Desktop.Ingredients
         }
         private void AddIngredientBtn_Click(object sender, EventArgs e)
         {
-            var crudIngredientForm = new crudIngredientsForm();
+            var crudIngredientForm = new CrudIngredientsForm();
             crudIngredientForm.Initialize(null);
             crudIngredientForm.Show();
 
@@ -141,12 +141,15 @@ namespace Desktop.Ingredients
             if (IngredientDtGv.SelectedRows.Count > 0)
             {
                 Ingredient selectedIngredient = (Ingredient)IngredientDtGv.SelectedRows[0].DataBoundItem;
-                var crudIngredientForm = new crudIngredientsForm();
+                var crudIngredientForm = new CrudIngredientsForm();
                 crudIngredientForm.Initialize(selectedIngredient);
                 crudIngredientForm.Show();
 
                 crudIngredientForm.FormClosed += CrudIngredientForm_FormClosed;
             }
         }
+
+       
+
     }
 }

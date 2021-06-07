@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class loginForm : Form
+    public partial class LoginForm : Form
     {
         public string login;
         public string motdepasse;
@@ -28,7 +28,7 @@ namespace Desktop
             }
         }
 
-        public loginForm()
+        public LoginForm()
         {
             InitializeComponent();
             ControlBox = false;
@@ -62,7 +62,7 @@ namespace Desktop
 
         private void registerLbl_Click(object sender, EventArgs e)
         {
-            DialogResult r = new crudClientForm(null).ShowDialog();
+            DialogResult r = new CrudClientForm(null).ShowDialog();
         }
 
         private async void ValidLoginBtn_Click(object sender, EventArgs e)
@@ -77,12 +77,18 @@ namespace Desktop
                 mdpHash = GetHash(sha256Hash, motdepasse);
             }
 
+            
             var result = await AuthentificationService.Instance.Signin(login, mdpHash);
             
 
             if (result)
             {
-                DialogResult = DialogResult.OK;
+                if (AuthentificationService.Instance.GetRoleUser() == "Administrateur")
+                    DialogResult = DialogResult.OK;
+                else
+                {
+                    MessageBox.Show("Vous n'avez pas l'accès autorisé à cette application");
+                }
                // string userID = My.User;
 
 

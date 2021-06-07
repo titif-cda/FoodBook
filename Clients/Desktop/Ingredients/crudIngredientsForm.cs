@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Desktop.Ingredients
 {
-    public partial class crudIngredientsForm : Form
+    public partial class CrudIngredientsForm : Form
     {
         Ingredient CurrentIngredient;
         //test
         public bool isCreation = false;
         private readonly IRestaurantService _restaurantService;
     
-        public crudIngredientsForm()
+        public CrudIngredientsForm()
         {
             _restaurantService = new RestaurantService();
             InitializeComponent();

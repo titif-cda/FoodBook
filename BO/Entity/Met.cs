@@ -57,6 +57,7 @@ namespace BO.Entity
         }
 
         public override int GetHashCode()
+
         {
             return HashCode.Combine(Id, Libelle, Description, IdType);
         }

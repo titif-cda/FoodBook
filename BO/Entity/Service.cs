@@ -14,19 +14,26 @@ namespace BO.Entity
         /// Identifiant du service
         /// </summary>
         public int Id { get; set; }
+
         /// <summary>
         /// Midi ou soir 1 pour midi 0 pour soir
         /// </summary>
         public bool Midi { get; set; }
+
         /// <summary>
         /// Date du service
         /// </summary>
         public DateTime Date { get; set; }
 
+        /// <summary>
+        /// Liste des plats
+        /// </summary>
         public List<Met> ListPlats { get; set; }
+
         /// <summary>
         /// Constructeur par dfaut
         /// </summary>
+        /// 
         public Service()
         {
         }
@@ -36,12 +43,12 @@ namespace BO.Entity
         /// <param name="id"></param>
         /// <param name="midi"></param>
         /// <param name="date"></param>
-        public Service(int id, bool midi, DateTime date, List<Met> listPlats)
+        public Service(int id, bool midi, DateTime date, List<Met> listMets)
         {
             Id = id;
             Midi = midi;
             Date = date;
-            ListPlats = listPlats;
+            ListPlats = listMets;
         }
 
         public override bool Equals(object obj)

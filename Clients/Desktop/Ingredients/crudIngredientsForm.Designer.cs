@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.Ingredients
 {
-    partial class crudIngredientsForm
+    partial class CrudIngredientsForm
     {
         /// <summary>
         /// Required designer variable.

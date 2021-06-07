@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop
 {
-    partial class crudClientForm
+    partial class CrudClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crudClientForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudClientForm));
             this.CrudClientPnl = new System.Windows.Forms.Panel();
             this.ConfirmPasswordCrudClientlbl = new System.Windows.Forms.Label();
             this.pasword2TBox = new System.Windows.Forms.TextBox();
@@ -258,7 +258,7 @@ namespace Desktop
             this.DeleteCrudClientBtn.UseVisualStyleBackColor = false;
             this.DeleteCrudClientBtn.Click += new System.EventHandler(this.DeleteCrudClientBtn_Click);
             // 
-            // crudClientForm
+            // CrudClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

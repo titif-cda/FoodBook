@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.UserControls
 {
-    partial class loadForm
+    partial class LoadControl
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadControl));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();

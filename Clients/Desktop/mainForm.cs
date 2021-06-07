@@ -1,4 +1,6 @@
-﻿using Desktop.Ingredients;
+﻿using BLLC.Services;
+using Desktop.Ingredients;
+using Desktop.Met;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -14,12 +16,14 @@ using System.Windows.Forms;
 
 namespace Desktop
 {
-    public partial class mainForm : Form
+    public partial class MainForm : Form
     {
-        private loginForm loginFormInst;
-        public mainForm()
+       
+        private LoginForm loginFormInst;
+        public MainForm()
         {
-            
+
+
             InitializeComponent();
            
             Text = string.Empty;
@@ -27,11 +31,10 @@ namespace Desktop
             DoubleBuffered = true;
             MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
             NavFormPanel(new AccueilForm());
-            
 
             Hide();
            
-            using (loginFormInst = new loginForm())
+            using (loginFormInst = new LoginForm())
             {
                 DialogResult drlogin = loginFormInst.ShowDialog();
                 while (drlogin != DialogResult.OK)
@@ -93,7 +96,7 @@ namespace Desktop
         {
            
             
-            NavFormPanel(new listClientsForm());
+            NavFormPanel(new ListClientsForm());
             //if (this.WindowState == FormWindowState.Maximized)
             //{
                
@@ -116,7 +119,12 @@ namespace Desktop
 
         private void IngredientBtn_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new listIngredientsForm());
+            NavFormPanel(new ListIngredientsForm());
+        }
+
+        private void Plats_Click(object sender, EventArgs e)
+        {
+            NavFormPanel(new ListMetForm());
         }
     }
 }

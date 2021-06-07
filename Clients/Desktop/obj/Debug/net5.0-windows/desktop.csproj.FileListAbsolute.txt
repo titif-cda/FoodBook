@@ -78,7 +78,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ClientsControl.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.UserControls.IngredientsControl.resources
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.UserControls.loadForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
@@ -99,3 +98,10 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.loginForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Met.ListMetForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.UserControls.LoadControl.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Met.CrudMetForm.resources

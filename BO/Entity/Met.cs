@@ -46,7 +46,11 @@ namespace BO.Entity
             Description = description;
             IdType = idType;
         }
-
+        /// <summary>
+        ///  Override Equals Methode for met
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             return obj is Met met &&
@@ -56,6 +60,10 @@ namespace BO.Entity
                    IdType == met.IdType;
         }
 
+        /// <summary>
+        /// Override GetHashCode for met
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
 
         {

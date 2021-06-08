@@ -53,6 +53,9 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\D
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.Mvc.Versioning.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Namotion.Reflection.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Newtonsoft.Json.Bson.dll
@@ -64,6 +67,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\D
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\NSwag.Core.Yaml.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\NSwag.Generation.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\NSwag.Generation.AspNetCore.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\YamlDotNet.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BLLC.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BO.dll
@@ -86,7 +90,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\D
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\ref\TestDesktop.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.genruntimeconfig.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll

@@ -12,7 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.Services
-{
+{/// <summary>
+/// Service RestaurantService
+/// </summary>
     public class RestaurantService : IRestaurantService
     {
         private readonly IUnitOfWork _db;
@@ -157,16 +159,16 @@ namespace BLL.Services
         public async Task<Met> CreateMet(Met met)
         {
             _db.BeginTransaction();
-            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
             Met newRepas = await _met.InsertAsync(met);
             _db.Commit();
 
             return newRepas;
         }
 
-        public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter)
+        public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest)
         {
-            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
 
             var Type = (await _met.GetAllAsync(pageRequest));
 
@@ -175,7 +177,7 @@ namespace BLL.Services
 
         public async Task<Met> GetMetById(int id)
         {
-            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
 
             return await _met.GetAsync(id);
         }
@@ -183,7 +185,7 @@ namespace BLL.Services
         public async Task<Met> ModifyMet(Met met)
         {
             _db.BeginTransaction();
-            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
             try
             {
                 await _met.UpdateAsync(met);
@@ -200,7 +202,7 @@ namespace BLL.Services
         public async Task<bool> RemoveMetById(int id)
         {
             _db.BeginTransaction();
-            IMetRepository _met = _db.GetRepository<IMetRepository>();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
             try
             {
                 var count = await _met.DeleteAsync(id);
@@ -216,6 +218,11 @@ namespace BLL.Services
 
         #endregion
         #region Service
+        /// <summary>
+        /// Crée un nouveau service
+        /// </summary>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public async Task<Service> CreateService(Service service)
         {
 
@@ -226,7 +233,12 @@ namespace BLL.Services
 
             return newService;
         }
-
+        
+        /// <summary>
+        /// Récupère tous les services
+        /// </summary>
+        /// <param name="pageRequest"></param>
+        /// <returns></returns>
         public async Task<PageResponse<Service>> GetAllService(PageRequest pageRequest)
         {
             IServiceRepository _serviceRepo = _db.GetRepository<IServiceRepository>();
@@ -235,7 +247,12 @@ namespace BLL.Services
 
             return service;
         }
-
+       
+        /// <summary>
+        /// Recupère un service via son ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<Service> GetServiceById(int id)
         {
             IServiceRepository _service = _db.GetRepository<IServiceRepository>();
@@ -261,7 +278,11 @@ namespace BLL.Services
                 return null;
             }
         }
-
+        /// <summary>
+        /// Suppression du service par l'identifiant
+        /// </summary>
+        /// <param name="id">Identifiant</param>
+        /// <returns></returns>
         public async Task<bool> RemoveServiceById(int id)
         {
             _db.BeginTransaction();
@@ -278,8 +299,96 @@ namespace BLL.Services
                 return false;
             }
         }
+
+
         #endregion
+        #region MetsIngredients
+        /// <summary>
+        /// Cree une liste de d'ingredients liés aux plats
+        /// </summary>
+        /// <param name="ListeIngredients"></param>
+        /// <returns></returns>
+        public async Task<MetsIngredients> CreateListeIngredients(MetsIngredients ListeIngredients)
+        {
 
+            _db.BeginTransaction();
+            IMetsIngredientsRepository _metsIngredients = _db.GetRepository<IMetsIngredientsRepository>();
+            MetsIngredients newListMetsIngredients = await _metsIngredients.InsertAsync(ListeIngredients);
+            _db.Commit();
 
+            return newListMetsIngredients;
+        }
+
+        /// <summary>
+        /// Récupère la  liste de tous les ingredients liés aux plats
+        /// </summary>
+        /// <param name="pageRequest"></param>
+        /// <returns></returns>
+        public async Task<PageResponse<MetsIngredients>> GetAllListeIngredients(PageRequest pageRequest)
+        {
+            IMetsIngredientsRepository _metsIngredientsRepo = _db.GetRepository<IMetsIngredientsRepository>();
+
+            var metsIngredientsRepo = (await _metsIngredientsRepo.GetAllAsync(pageRequest));
+
+            return metsIngredientsRepo;
+        }
+
+        /// <summary>
+        /// Récupère la  liste de tous les ingredients liés aux plats
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<MetsIngredients> GetAllListeIngredientsById(int id)
+        {
+            IMetsIngredientsRepository _metsIngredients = _db.GetRepository<IMetsIngredientsRepository>();
+
+            return await _metsIngredients.GetAsync(id);
+        }
+
+        /// <summary>
+        /// modifie la  liste de tous les ingredients liés aux plats
+        /// </summary>
+        /// <param name="ListeIngredients"></param>
+        /// <returns></returns>
+        public async Task<MetsIngredients> ModifyAllListeIngredients(MetsIngredients ListeIngredients)
+        {
+            _db.BeginTransaction();
+            IMetsIngredientsRepository _metsIngredients = _db.GetRepository<IMetsIngredientsRepository>();
+            try
+            {
+                var ok = await _metsIngredients.UpdateAsync(ListeIngredients);
+                _db.Commit();
+                if (ok)
+                    return ListeIngredients;
+                else return null;
+            }
+            catch (Exception e)
+            {
+                _db.Rollback();
+                return null;
+            }
+        }
+        /// <summary>
+        /// supprime un  liste de tous les ingredients liés aux plats via un Id
+        /// </summary>
+        /// <param name="id">Identifiant</param>
+        /// <returns></returns>
+        public async Task<bool> RemovAllListeIngredientsById(int id)
+        {
+            _db.BeginTransaction();
+            IMetsIngredientsRepository _metsIngredients = _db.GetRepository<IMetsIngredientsRepository>();
+            try
+            {
+                var count = await _metsIngredients.DeleteAsync(id);
+                _db.Commit();
+                return count > 0;
+            }
+            catch (Exception e)
+            {
+                _db.Rollback();
+                return false;
+            }
+        }
+        #endregion
     }
 }

@@ -53,5 +53,73 @@
             <param name="pageRequest"></param>
             <returns></returns>
         </member>
+        <member name="T:BLL.Services.RestaurantService">
+            <summary>
+            Service RestaurantService
+            </summary>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.CreateService(BO.Entity.Service)">
+            <summary>
+            Crée un nouveau service
+            </summary>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.GetAllService(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Récupère tous les services
+            </summary>
+            <param name="pageRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.GetServiceById(System.Int32)">
+            <summary>
+            Recupère un service via son ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.RemoveServiceById(System.Int32)">
+            <summary>
+            Suppression du service par l'identifiant
+            </summary>
+            <param name="id">Identifiant</param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.CreateListeIngredients(BO.Entity.MetsIngredients)">
+            <summary>
+            Cree une liste de d'ingredients liés aux plats
+            </summary>
+            <param name="ListeIngredients"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.GetAllListeIngredients(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Récupère la  liste de tous les ingredients liés aux plats
+            </summary>
+            <param name="pageRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.GetAllListeIngredientsById(System.Int32)">
+            <summary>
+            Récupère la  liste de tous les ingredients liés aux plats
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.ModifyAllListeIngredients(BO.Entity.MetsIngredients)">
+            <summary>
+            modifie la  liste de tous les ingredients liés aux plats
+            </summary>
+            <param name="ListeIngredients"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.Services.RestaurantService.RemovAllListeIngredientsById(System.Int32)">
+            <summary>
+            supprime un  liste de tous les ingredients liés aux plats via un Id
+            </summary>
+            <param name="id">Identifiant</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -77,6 +77,7 @@ namespace Desktop.Met
             this.AddMetBtn.TabIndex = 1;
             this.AddMetBtn.Text = "Ajouter";
             this.AddMetBtn.UseVisualStyleBackColor = false;
+            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
             // 
             // RefreshMetBtn
             // 

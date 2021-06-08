@@ -96,7 +96,7 @@
             <param name="ingredient">Ingredient</param>
             <returns>Retourne un ingredient modifié</returns>
         </member>
-        <member name="M:API.Controllers.MetController.GetAll(BO.DTO.Requests.PageRequest,BO.DTO.Requests.Filter)">
+        <member name="M:API.Controllers.MetController.GetAll(BO.DTO.Requests.PageRequest)">
             <summary>
             Permet de récupérer la liste des Mets
             </summary>
@@ -130,6 +130,48 @@
             <param name="id"></param>
             <param name="met"></param>
             <returns>Un met modifié ou echec</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:API.Controllers.MetsIngredientsControlleur" -->
+        <member name="M:API.Controllers.MetsIngredientsControlleur.#ctor(BLL.Services.IRestaurantService)">
+            <summary>
+            Constructeur du service MetsIngredientsControlleur
+            </summary>
+            <param name="restaurantService"></param>
+        </member>
+        <member name="M:API.Controllers.MetsIngredientsControlleur.GetAll(BO.DTO.Requests.PageRequest)">
+            <summary>
+            Permet de récupérer la liste des ingredients liés aux plats
+            </summary>
+            <returns>La liste des ingredients</returns>
+        </member>
+        <member name="M:API.Controllers.MetsIngredientsControlleur.GetListeIngredientById(System.Int32)">
+            <summary>
+            Permert de récupérer une liste des ingredients liés aux plats  son identifiant unique
+            </summary>
+            <param name="id">Identifiant unique de la liste des ingredients</param>
+            <returns>Renvoi l'ingredient définit par l'identifiant unique</returns>
+        </member>
+        <member name="M:API.Controllers.MetsIngredientsControlleur.CreateIngredient(BO.Entity.MetsIngredients)">
+            <summary>
+            Créer une liste des ingredients liés aux plats et l'ajoute en BDD
+            </summary>
+            <param name="listeIngredient">ingredient à ajouter sans l'identifiant unique</param>
+            <returns>Renvoi l'ingredient avec l'identifiant généré</returns>
+        </member>
+        <member name="M:API.Controllers.MetsIngredientsControlleur.DeleteListeIngredients(System.Int32)">
+            <summary>
+            Supprimer une liste des ingredients liés aux plats de la base de données
+            </summary>
+            <param name="id">Identifiant</param>
+            <returns>Retourne succes ou echec</returns>
+        </member>
+        <member name="M:API.Controllers.MetsIngredientsControlleur.ModifyListeIngredients(System.Int32,BO.Entity.MetsIngredients)">
+            <summary>
+            Modifie une liste des ingredients liés aux platst dans la base de données
+            </summary>
+            <param name="id">Identifiant</param>
+            <param name="ingredient">Ingredient</param>
+            <returns>une liste des ingredients modifié</returns>
         </member>
         <member name="M:API.Controllers.ReservationsController.GetAllResa(BO.DTO.Requests.PageRequest)">
             <summary>

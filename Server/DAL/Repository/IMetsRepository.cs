@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace DAL.Repository
 {
      
-    public interface IMetRepository : IGenericRepository<Met>
+    public interface IMetsRepository : IGenericRepository<Met>
     {
         Task<PageResponse<Met>> GetAllAsync(PageRequest pageRequest);
 

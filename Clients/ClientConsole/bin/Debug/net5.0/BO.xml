@@ -4,6 +4,41 @@
         <name>BO</name>
     </assembly>
     <members>
+        <member name="T:BO.DTO.Requests.CreateClientRequest">
+            <summary>
+            Objet de rquête pour créer un client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Nom">
+            <summary>
+            ISBN unique du livre
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Prenom">
+            <summary>
+            Titre du livre
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Tel">
+            <summary>
+            Telephone du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Email">
+            <summary>
+            email du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Login">
+            <summary>
+            Login du client
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Requests.CreateClientRequest.Password">
+            <summary>
+            Password du client
+            </summary>
+        </member>
         <member name="P:BO.DTO.Requests.PageRequest.Page">
             <summary>
             Current Page
@@ -59,12 +94,27 @@
             email du client
             </summary>
         </member>
+        <member name="P:BO.Entity.Client.Login">
+            <summary>
+            Login du client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.Password">
+            <summary>
+            Password du client
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Client.Role">
+            <summary>
+            Role du client
+            </summary>
+        </member>
         <member name="M:BO.Entity.Client.#ctor">
             <summary>
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Client.#ctor(System.String,System.String,System.String,System.String)">
+        <member name="M:BO.Entity.Client.#ctor(System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Constructeur avec les arguments
             </summary>
@@ -134,9 +184,32 @@
             <param name="libelle"></param>
             <param name="description"></param>
         </member>
+        <member name="M:BO.Entity.Met.Equals(System.Object)">
+            <summary>
+             Override Equals Methode for met
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BO.Entity.Met.GetHashCode">
+            <summary>
+            Override GetHashCode for met
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:BO.Entity.MetsIngredients.Quantite">
             <summary>
             Quantité necessaire d'ingredients
+            </summary>
+        </member>
+        <member name="P:BO.Entity.MetsIngredients.IdIngredient">
+            <summary>
+            Identifiant de l'ingredient
+            </summary>
+        </member>
+        <member name="P:BO.Entity.MetsIngredients.IdMet">
+            <summary>
+            Identifiant du Met
             </summary>
         </member>
         <member name="M:BO.Entity.MetsIngredients.#ctor">
@@ -144,11 +217,24 @@
             Constructeur par défaut
             </summary>
         </member>
-        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single)">
+        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single,System.Int32,System.Int32)">
             <summary>
             Constructeur avec arguments
             </summary>
             <param name="quantite"></param>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.Equals(System.Object)">
+            <summary>
+            verride Equals Methode pour metsIngredients (Liste d'ingredients)
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.GetHashCode">
+            <summary>
+            Override GetHashCode our metsIngredients (Liste d'ingredients)
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:BO.Entity.Reservation.Id">
             <summary>
@@ -213,10 +299,16 @@
             Date du service
             </summary>
         </member>
+        <member name="P:BO.Entity.Service.ListPlats">
+            <summary>
+            Liste des plats
+            </summary>
+        </member>
         <member name="M:BO.Entity.Service.#ctor">
             <summary>
             Constructeur par dfaut
             </summary>
+            
         </member>
         <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.DateTime,System.Collections.Generic.List{BO.Entity.Met})">
             <summary>

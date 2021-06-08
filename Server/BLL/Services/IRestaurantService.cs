@@ -62,7 +62,7 @@ namespace BLL.Services
         #region Met
         Task<Met> CreateMet(Met Repas);
 
-        Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter);
+        Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
 
       
 
@@ -93,6 +93,15 @@ namespace BLL.Services
         Task<Service> ModifyService(Service service);
 
         Task<bool> RemoveServiceById(int id);
+        #endregion
+
+        #region MetsIngredients (liste des ingredients)
+        Task<MetsIngredients> CreateListeIngredients(MetsIngredients ListeIngredients);
+        Task<PageResponse<MetsIngredients>> GetAllListeIngredients(PageRequest pageRequest);
+        Task<MetsIngredients> GetAllListeIngredientsById(int id);
+        Task<MetsIngredients> ModifyAllListeIngredients(MetsIngredients ListeIngredients);
+        Task<bool> RemovAllListeIngredientsById(int id);
+
         #endregion
     }
 }

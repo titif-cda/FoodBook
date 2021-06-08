@@ -184,6 +184,19 @@
             <param name="libelle"></param>
             <param name="description"></param>
         </member>
+        <member name="M:BO.Entity.Met.Equals(System.Object)">
+            <summary>
+             Override Equals Methode for met
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BO.Entity.Met.GetHashCode">
+            <summary>
+            Override GetHashCode for met
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:BO.Entity.MetsIngredients.Quantite">
             <summary>
             Quantité necessaire d'ingredients
@@ -209,6 +222,19 @@
             Constructeur avec arguments
             </summary>
             <param name="quantite"></param>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.Equals(System.Object)">
+            <summary>
+            verride Equals Methode pour metsIngredients (Liste d'ingredients)
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BO.Entity.MetsIngredients.GetHashCode">
+            <summary>
+            Override GetHashCode our metsIngredients (Liste d'ingredients)
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:BO.Entity.Reservation.Id">
             <summary>

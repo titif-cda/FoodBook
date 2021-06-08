@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
-    class MetRepository : IMetRepository
+    class MetRepository : IMetsRepository
     {
         private readonly DbSession _session;
         public MetRepository(DbSession dbSession)

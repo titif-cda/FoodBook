@@ -2,6 +2,7 @@
 using BO.DTO.Requests;
 using BO.DTO.Responses;
 using BO.Entity;
+using Desktop.Mets;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,10 +43,22 @@ namespace Desktop.Met
             maxPage = metPage.TotalPages.GetValueOrDefault();
             bindingSource.DataSource = metPage.Data;
             metDtGv.DataSource = bindingSource;
-           
+            metDtGv.Columns["Id"].Visible = false;
+
 
 
 
         }
+
+        private void AddMetBtn_Click(object sender, EventArgs e)
+        {
+            var addMetForm = new AddMetForm();
+            //addMetForm.Initialize(null);
+            addMetForm.Show();
+
+           // addMetForm.FormClosed += AaddMetForm_FormClosed;
+        }
+
+   
     }
 }

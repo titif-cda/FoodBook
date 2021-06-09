@@ -64,6 +64,26 @@ namespace API.Controllers
             }
         }
 
+        /// <summary>
+        /// Permet de recuperer un met avec tous ses ingredients via son identifiant unique
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("all/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetIngredientParMetById([FromRoute] int id)
+        {
+            Met met = await _restaurantService.GetIngredientParMetById(id);
+            if (met == null)
+            {
+                return NotFound(); // StatusCode = 404
+            }
+            else
+            {
+                return Ok(met); // StatusCode = 200
+            }
+        }
 
         /// <summary>
         /// Créer un Met et l'ajoute en BDD

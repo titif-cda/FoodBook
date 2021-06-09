@@ -109,6 +109,13 @@
             <param name="id">Identifiant unique du met</param>
             <returns>Renvoi le met définit par l'identifiant unique</returns>
         </member>
+        <member name="M:API.Controllers.MetController.GetIngredientParMetById(System.Int32)">
+            <summary>
+            Permet de recuperer un met avec tous ses ingredients via son identifiant unique
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:API.Controllers.MetController.CreateRepas(BO.Entity.Met)">
             <summary>
             Créer un Met et l'ajoute en BDD

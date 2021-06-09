@@ -176,13 +176,15 @@
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String,System.Int32)">
+        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String,System.Int32,System.Collections.Generic.List{BO.Entity.MetsIngredients})">
             <summary>
-            Constructeur avec les arguments
+            Constructeur avec arguments
             </summary>
             <param name="id"></param>
             <param name="libelle"></param>
             <param name="description"></param>
+            <param name="idType"></param>
+            <param name="listDesIngredients"></param>
         </member>
         <member name="M:BO.Entity.Met.Equals(System.Object)">
             <summary>
@@ -202,7 +204,7 @@
             Quantité necessaire d'ingredients
             </summary>
         </member>
-        <member name="P:BO.Entity.MetsIngredients.IdIngredient">
+        <member name="P:BO.Entity.MetsIngredients.Ingredient">
             <summary>
             Identifiant de l'ingredient
             </summary>
@@ -217,11 +219,13 @@
             Constructeur par défaut
             </summary>
         </member>
-        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single,System.Int32,System.Int32)">
+        <member name="M:BO.Entity.MetsIngredients.#ctor(System.Single,BO.Entity.Ingredient,System.Int32)">
             <summary>
             Constructeur avec arguments
             </summary>
             <param name="quantite"></param>
+            /// <param name="ingredient"></param>
+            /// <param name="idMet"></param>
         </member>
         <member name="M:BO.Entity.MetsIngredients.Equals(System.Object)">
             <summary>

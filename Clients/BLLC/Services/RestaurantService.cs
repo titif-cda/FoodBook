@@ -199,7 +199,7 @@ namespace BLLC.Services
      
         public async Task<Met> CreateMet(Met met)
         {
-            var reponse = await _httpClient.PostAsync("repas",
+            var reponse = await _httpClient.PostAsync("mets",
                    new StringContent(
                        JsonSerializer.Serialize(met), Encoding.UTF8, "application/json"
                        )

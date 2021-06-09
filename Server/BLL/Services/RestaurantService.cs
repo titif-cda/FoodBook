@@ -158,9 +158,18 @@ namespace BLL.Services
 
         public async Task<Met> CreateMet(Met met)
         {
+            IMetsRepository _metRepo = _db.GetRepository<IMetsRepository>();
+            IMetsIngredientsRepository _metIngredientsRepo = _db.GetRepository<IMetsIngredientsRepository>();
+            
             _db.BeginTransaction();
-            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
-            Met newRepas = await _met.InsertAsync(met);
+            Met newRepas = await _metRepo.InsertAsync(met);
+
+            for(int i = 0; i < met.ListDesIngredients.Count; i++)
+            {
+                var metsIngredient = met.ListDesIngredients[i];
+                metsIngredient.IdMet = newRepas.Id;
+                await _metIngredientsRepo.InsertAsync(metsIngredient);
+            };
             _db.Commit();
 
             return newRepas;
@@ -180,6 +189,13 @@ namespace BLL.Services
             IMetsRepository _met = _db.GetRepository<IMetsRepository>();
 
             return await _met.GetAsync(id);
+        }
+
+        public async Task<Met> GetIngredientParMetById(int id)
+        {
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
+
+            return await _met.GetIngredientForMetAsync(id);
         }
 
         public async Task<Met> ModifyMet(Met met)

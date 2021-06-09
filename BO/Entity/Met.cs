@@ -23,9 +23,10 @@ namespace BO.Entity
         ///Description du Met (plat)
         /// </summary>
         public string Description { get; set; }
-
+   
         public int? IdType { get; set; }
 
+        public List<MetsIngredients> ListDesIngredients { get; set; }
         /// <summary>
         /// Constructeur par defaut
         /// </summary>
@@ -33,18 +34,21 @@ namespace BO.Entity
         {
         }
 
-        /// <summary>
-        /// Constructeur avec les arguments
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="libelle"></param>
-        /// <param name="description"></param>
-        public Met(int id, string libelle, string description, int idType)
+   /// <summary>
+   /// Constructeur avec arguments
+   /// </summary>
+   /// <param name="id"></param>
+   /// <param name="libelle"></param>
+   /// <param name="description"></param>
+   /// <param name="idType"></param>
+   /// <param name="listDesIngredients"></param>
+        public Met(int id, string libelle, string description, int idType, List<MetsIngredients> listDesIngredients)
         {
             Id = id;
             Libelle = libelle;
             Description = description;
             IdType = idType;
+            ListDesIngredients = listDesIngredients;
         }
         /// <summary>
         ///  Override Equals Methode for met
@@ -57,7 +61,8 @@ namespace BO.Entity
                    Id == met.Id &&
                    Libelle == met.Libelle &&
                    Description == met.Description &&
-                   IdType == met.IdType;
+                   IdType == met.IdType&&
+                   ListDesIngredients == met.ListDesIngredients;
         }
 
         /// <summary>
@@ -67,7 +72,7 @@ namespace BO.Entity
         public override int GetHashCode()
 
         {
-            return HashCode.Combine(Id, Libelle, Description, IdType);
+            return HashCode.Combine(Id, Libelle, Description, IdType, ListDesIngredients);
         }
     }
 }

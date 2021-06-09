@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desktop.Met
+namespace Desktop.Mets
 {
     public partial class CrudMetForm : UserControl
     {

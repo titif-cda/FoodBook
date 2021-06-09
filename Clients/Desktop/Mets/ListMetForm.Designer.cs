@@ -1,5 +1,5 @@
 ﻿
-namespace Desktop.Met
+namespace Desktop.Mets
 {
     partial class ListMetForm
     {

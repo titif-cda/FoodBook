@@ -50,6 +50,29 @@ namespace DAL.Repository
             //Evité l'injection sql avec des reqêtes paramétrées
             var stmt = @"select * from Mets where Id = @id";
             return await _session.Connection.QueryFirstOrDefaultAsync<Met>(stmt, new { Id = id }, _session.Transaction);
+
+        }
+        public async Task<Met> GetIngredientForMetAsync(int id)
+        {
+            //Evité l'injection sql avec des reqêtes paramétrées
+            var stmt = @"SELECT * FROM IngredientsParPlats WHERE Id = @id";
+
+            var mets = await _session.Connection.QueryAsync<Met, MetsIngredients, Met >(stmt, (met, ingredient) =>
+            {
+                met.ListDesIngredients = (met.ListDesIngredients == null) ? new List<MetsIngredients>(): met.ListDesIngredients;
+                met.ListDesIngredients.Add(ingredient);
+                return met;
+            }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id");
+
+            if(mets.Count() == 1)
+            {
+                return mets.First();
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         public async Task<Met> InsertAsync(Met entity)

@@ -33,20 +33,21 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv = new System.Windows.Forms.DataGridView();
             this.listTousIngredientsLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AddMetBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.CreerMetlbl = new System.Windows.Forms.Label();
             this.NomMetLbl = new System.Windows.Forms.Label();
+            this.CreerMetlbl = new System.Windows.Forms.Label();
             this.descriptionMetLbl = new System.Windows.Forms.Label();
             this.TypeMetLbl = new System.Windows.Forms.Label();
             this.NomMetTBox = new System.Windows.Forms.TextBox();
             this.DescriptionMetRTBox = new System.Windows.Forms.RichTextBox();
-            this.TypeMetCBox = new System.Windows.Forms.ComboBox();
             this.ListeIngredientparPlatDGV = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TypeRepasCBox = new System.Windows.Forms.ComboBox();
             this.ListAllIngredientsTLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientsDtGv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -87,6 +88,7 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListeIngredientsDtGv.Size = new System.Drawing.Size(262, 375);
             this.ListeIngredientsDtGv.TabIndex = 4;
+            this.ListeIngredientsDtGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListeIngredientsDtGv_CellClick);
             // 
             // listTousIngredientsLbl
             // 
@@ -104,6 +106,7 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.375F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.AddMetBtn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ListAllIngredientsTLP, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
@@ -117,6 +120,21 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // AddMetBtn
+            // 
+            this.AddMetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.AddMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddMetBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddMetBtn.Location = new System.Drawing.Point(0, 411);
+            this.AddMetBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.AddMetBtn.Name = "AddMetBtn";
+            this.AddMetBtn.Size = new System.Drawing.Size(459, 39);
+            this.AddMetBtn.TabIndex = 8;
+            this.AddMetBtn.Text = "Ajouter";
+            this.AddMetBtn.UseVisualStyleBackColor = false;
+            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -128,8 +146,8 @@ namespace Desktop.Mets
             this.tableLayoutPanel2.Controls.Add(this.TypeMetLbl, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.NomMetTBox, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.DescriptionMetRTBox, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.TypeMetCBox, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.ListeIngredientparPlatDGV, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.TypeRepasCBox, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -142,6 +160,16 @@ namespace Desktop.Mets
             this.tableLayoutPanel2.Size = new System.Drawing.Size(453, 405);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
+            // NomMetLbl
+            // 
+            this.NomMetLbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.NomMetLbl.AutoSize = true;
+            this.NomMetLbl.Location = new System.Drawing.Point(26, 52);
+            this.NomMetLbl.Name = "NomMetLbl";
+            this.NomMetLbl.Size = new System.Drawing.Size(80, 15);
+            this.NomMetLbl.TabIndex = 1;
+            this.NomMetLbl.Text = "Nom du plat :";
+            // 
             // CreerMetlbl
             // 
             this.CreerMetlbl.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -152,16 +180,6 @@ namespace Desktop.Mets
             this.CreerMetlbl.Size = new System.Drawing.Size(135, 15);
             this.CreerMetlbl.TabIndex = 0;
             this.CreerMetlbl.Text = "Ajouter un nouveau plat";
-            // 
-            // NomMetLbl
-            // 
-            this.NomMetLbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.NomMetLbl.AutoSize = true;
-            this.NomMetLbl.Location = new System.Drawing.Point(26, 52);
-            this.NomMetLbl.Name = "NomMetLbl";
-            this.NomMetLbl.Size = new System.Drawing.Size(80, 15);
-            this.NomMetLbl.TabIndex = 1;
-            this.NomMetLbl.Text = "Nom du plat :";
             // 
             // descriptionMetLbl
             // 
@@ -200,15 +218,6 @@ namespace Desktop.Mets
             this.DescriptionMetRTBox.TabIndex = 5;
             this.DescriptionMetRTBox.Text = "";
             // 
-            // TypeMetCBox
-            // 
-            this.TypeMetCBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TypeMetCBox.FormattingEnabled = true;
-            this.TypeMetCBox.Location = new System.Drawing.Point(112, 169);
-            this.TypeMetCBox.Name = "TypeMetCBox";
-            this.TypeMetCBox.Size = new System.Drawing.Size(338, 23);
-            this.TypeMetCBox.TabIndex = 6;
-            // 
             // ListeIngredientparPlatDGV
             // 
             this.ListeIngredientparPlatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -231,31 +240,6 @@ namespace Desktop.Mets
             this.panel1.Size = new System.Drawing.Size(67, 405);
             this.panel1.TabIndex = 7;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "<-";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "->";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 276);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 23);
-            this.textBox1.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -267,6 +251,39 @@ namespace Desktop.Mets
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Quantité";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 276);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(67, 23);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "->";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "<-";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // TypeRepasCBox
+            // 
+            this.TypeRepasCBox.FormattingEnabled = true;
+            this.TypeRepasCBox.Location = new System.Drawing.Point(112, 164);
+            this.TypeRepasCBox.Name = "TypeRepasCBox";
+            this.TypeRepasCBox.Size = new System.Drawing.Size(247, 23);
+            this.TypeRepasCBox.TabIndex = 8;
             // 
             // AddMetForm
             // 
@@ -302,12 +319,13 @@ namespace Desktop.Mets
         private System.Windows.Forms.Label TypeMetLbl;
         private System.Windows.Forms.TextBox NomMetTBox;
         private System.Windows.Forms.RichTextBox DescriptionMetRTBox;
-        private System.Windows.Forms.ComboBox TypeMetCBox;
         private System.Windows.Forms.DataGridView ListeIngredientparPlatDGV;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddMetBtn;
+        private System.Windows.Forms.ComboBox TypeRepasCBox;
     }
 }

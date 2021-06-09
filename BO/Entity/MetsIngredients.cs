@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BO.Entity
-{
+{/// <summary>
+/// Classe de la table de liaison MetsIngredients
+/// </summary>
     public class MetsIngredients
     {
         /// <summary>
@@ -16,7 +18,7 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant de l'ingredient
         /// </summary>
-        public int IdIngredient { get; set; }
+        public Ingredient Ingredient { get; set; }
 
         /// <summary>
         /// Identifiant du Met
@@ -36,10 +38,12 @@ namespace BO.Entity
         /// Constructeur avec arguments
         /// </summary>
         /// <param name="quantite"></param>
-        public MetsIngredients(float quantite, int idIngredient, int idMet)
+        /// /// <param name="ingredient"></param>
+        /// /// <param name="idMet"></param>
+        public MetsIngredients(float quantite, Ingredient ingredient, int idMet)
         {
             Quantite = quantite;
-            IdIngredient = idIngredient;
+            Ingredient = ingredient;
             IdMet = idMet;
         }
 
@@ -52,7 +56,7 @@ namespace BO.Entity
         {
             return obj is MetsIngredients metsIngredients &&
                 IdMet == metsIngredients.IdMet &&
-                IdIngredient == metsIngredients.IdIngredient &&
+                Ingredient == metsIngredients.Ingredient &&
                 Quantite == metsIngredients.Quantite;
                    
         }
@@ -63,7 +67,7 @@ namespace BO.Entity
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdMet, IdIngredient, Quantite);
+            return HashCode.Combine(IdMet, Ingredient, Quantite);
         }
     }
 }

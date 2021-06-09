@@ -59,5 +59,10 @@ namespace BO.Entity
         {
             return HashCode.Combine(Id, Nom, Prix);
         }
+
+        public override string ToString()
+        {
+            return Nom;
+        }
     }
 }

@@ -53,8 +53,8 @@ namespace DAL.Repository
         public async Task<MetsIngredients> InsertAsync(MetsIngredients entity)
         {
             var stmt = @"insert into MetsIngredients (Quantite, IdIngredient, IdMet)
-            values (@Quantite, @IdIngredient, @Quantite)";
-            await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
+            values (@Quantite, @IdIngredient, @IdMet)";
+            await _session.Connection.ExecuteAsync(stmt, new { Quantite= entity.Quantite, IdIngredient = entity.Ingredient.Id, IdMet = entity.IdMet }, _session.Transaction);
             return entity;
         }
 

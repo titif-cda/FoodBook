@@ -64,9 +64,9 @@ namespace BLL.Services
 
         Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
 
-      
-
         Task<Met> GetMetById(int id);
+
+        Task<Met> GetIngredientParMetById(int id);
 
         Task<Met> ModifyMet(Met Repas);
 

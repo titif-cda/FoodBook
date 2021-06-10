@@ -199,6 +199,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:BO.Entity.MetsIngredients">
+            <summary>
+            Classe de la table de liaison MetsIngredients
+            </summary>
+        </member>
         <member name="P:BO.Entity.MetsIngredients.Quantite">
             <summary>
             Quantité necessaire d'ingredients

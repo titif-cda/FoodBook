@@ -55,23 +55,29 @@ namespace DAL.Repository
         public async Task<Met> GetIngredientForMetAsync(int id)
         {
             //Evité l'injection sql avec des reqêtes paramétrées
-            var stmt = @"SELECT * FROM IngredientsParPlats WHERE Id = @id";
-
-            var mets = await _session.Connection.QueryAsync<Met, MetsIngredients, Met >(stmt, (met, ingredient) =>
+            var stmt1 = @"select * from IngredientsParPlats WHERE Id = @id;";
+            var stmt = @"select p.Id, p.Libelle, mi.IdMet, mi.Quantite, i.Id, i.Nom, i.Prix from Mets as p 
+					 inner join MetsIngredients as mi on p.Id = mi.IdMet
+					 inner join Ingredient as i on mi.IdIngredient = i.Id WHERE p.Id = @id;";
+            // Renvoie une ligne pour chaque ingredient et pour chaque id met
+            var mets = await _session.Connection.QueryAsync<Met, MetsIngredients, Ingredient, Met >(stmt, (met, metIngredient, ingredient) =>
             {
-                met.ListDesIngredients = (met.ListDesIngredients == null) ? new List<MetsIngredients>(): met.ListDesIngredients;
-                met.ListDesIngredients.Add(ingredient);
+                met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>();
+                metIngredient.Ingredient = ingredient;
+
+                met.ListDesIngredients.Add(metIngredient);
                 return met;
-            }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id");
-
-            if(mets.Count() == 1)
+            }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id, IdMet, Id");
+         //Regroupe les ingredients dans une liste pour un id met
+            var met = mets.GroupBy(m => m.Id).Select(m =>
             {
-                return mets.First();
-            }
-            else
-            {
-                return null;
-            }
+                var met = m.First();
+                met.ListDesIngredients = m.Select(mp => mp.ListDesIngredients.Single()).ToList();
+                return met;
+            }).FirstOrDefault();
+           //Renvoie le met avec la liste de ses ingredients
+            return met;
+            
 
         }
 

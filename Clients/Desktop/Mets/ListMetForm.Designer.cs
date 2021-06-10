@@ -92,6 +92,7 @@ namespace Desktop.Mets
             this.RefreshMetBtn.TabIndex = 2;
             this.RefreshMetBtn.Text = "Rafraichir";
             this.RefreshMetBtn.UseVisualStyleBackColor = false;
+            this.RefreshMetBtn.Click += new System.EventHandler(this.RefreshMetBtn_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -124,6 +125,7 @@ namespace Desktop.Mets
             this.PreviousMetBtn.TabIndex = 0;
             this.PreviousMetBtn.Text = "<";
             this.PreviousMetBtn.UseVisualStyleBackColor = true;
+            this.PreviousMetBtn.Click += new System.EventHandler(this.PreviousMetBtn_Click);
             // 
             // NextMetBtn
             // 
@@ -137,6 +139,7 @@ namespace Desktop.Mets
             this.NextMetBtn.TabIndex = 1;
             this.NextMetBtn.Text = ">";
             this.NextMetBtn.UseVisualStyleBackColor = true;
+            this.NextMetBtn.Click += new System.EventHandler(this.NextMetBtn_Click);
             // 
             // CurentPageMetLbl
             // 
@@ -157,6 +160,7 @@ namespace Desktop.Mets
             this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.metDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.metDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metDtGv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.metDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metDtGv.GridColor = System.Drawing.SystemColors.Control;

@@ -42,12 +42,12 @@ namespace Desktop.Mets
             this.NomMetTBox = new System.Windows.Forms.TextBox();
             this.DescriptionMetRTBox = new System.Windows.Forms.RichTextBox();
             this.ListeIngredientparPlatDGV = new System.Windows.Forms.DataGridView();
+            this.TypeRepasCBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.TypeRepasCBox = new System.Windows.Forms.ComboBox();
             this.ListAllIngredientsTLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientsDtGv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -89,6 +89,7 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv.Size = new System.Drawing.Size(262, 375);
             this.ListeIngredientsDtGv.TabIndex = 4;
             this.ListeIngredientsDtGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListeIngredientsDtGv_CellClick);
+            this.ListeIngredientsDtGv.SelectionChanged += new System.EventHandler(this.ListeIngredientsDtGv_SelectionChanged);
             // 
             // listTousIngredientsLbl
             // 
@@ -220,13 +221,26 @@ namespace Desktop.Mets
             // 
             // ListeIngredientparPlatDGV
             // 
+            this.ListeIngredientparPlatDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListeIngredientparPlatDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListeIngredientparPlatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListeIngredientparPlatDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeIngredientparPlatDGV.Location = new System.Drawing.Point(112, 204);
+            this.ListeIngredientparPlatDGV.MultiSelect = false;
             this.ListeIngredientparPlatDGV.Name = "ListeIngredientparPlatDGV";
             this.ListeIngredientparPlatDGV.RowTemplate.Height = 25;
+            this.ListeIngredientparPlatDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListeIngredientparPlatDGV.Size = new System.Drawing.Size(338, 198);
             this.ListeIngredientparPlatDGV.TabIndex = 7;
+            // 
+            // TypeRepasCBox
+            // 
+            this.TypeRepasCBox.FormattingEnabled = true;
+            this.TypeRepasCBox.Location = new System.Drawing.Point(112, 164);
+            this.TypeRepasCBox.Name = "TypeRepasCBox";
+            this.TypeRepasCBox.Size = new System.Drawing.Size(247, 23);
+            this.TypeRepasCBox.TabIndex = 8;
             // 
             // panel1
             // 
@@ -276,14 +290,6 @@ namespace Desktop.Mets
             this.button1.TabIndex = 0;
             this.button1.Text = "<-";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // TypeRepasCBox
-            // 
-            this.TypeRepasCBox.FormattingEnabled = true;
-            this.TypeRepasCBox.Location = new System.Drawing.Point(112, 164);
-            this.TypeRepasCBox.Name = "TypeRepasCBox";
-            this.TypeRepasCBox.Size = new System.Drawing.Size(247, 23);
-            this.TypeRepasCBox.TabIndex = 8;
             // 
             // AddMetForm
             // 

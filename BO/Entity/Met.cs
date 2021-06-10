@@ -24,7 +24,7 @@ namespace BO.Entity
         /// </summary>
         public string Description { get; set; }
    
-        public int? IdType { get; set; }
+        public TypeRepas TypeRepas { get; set; }
 
         public List<MetsIngredients> ListDesIngredients { get; set; }
         /// <summary>
@@ -42,12 +42,12 @@ namespace BO.Entity
    /// <param name="description"></param>
    /// <param name="idType"></param>
    /// <param name="listDesIngredients"></param>
-        public Met(int id, string libelle, string description, int idType, List<MetsIngredients> listDesIngredients)
+        public Met(int id, string libelle, string description, TypeRepas typeRepas, List<MetsIngredients> listDesIngredients)
         {
             Id = id;
             Libelle = libelle;
             Description = description;
-            IdType = idType;
+            TypeRepas = typeRepas;
             ListDesIngredients = listDesIngredients;
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace BO.Entity
                    Id == met.Id &&
                    Libelle == met.Libelle &&
                    Description == met.Description &&
-                   IdType == met.IdType&&
+                   TypeRepas.Equals(met.TypeRepas) &&
                    ListDesIngredients == met.ListDesIngredients;
         }
 
@@ -72,7 +72,7 @@ namespace BO.Entity
         public override int GetHashCode()
 
         {
-            return HashCode.Combine(Id, Libelle, Description, IdType, ListDesIngredients);
+            return HashCode.Combine(Id, Libelle, Description, TypeRepas, ListDesIngredients);
         }
     }
 }

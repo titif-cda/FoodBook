@@ -34,5 +34,10 @@ namespace BO.Entity
             Id = idTypeRepas;
             Libelle = libelleTypeRepas;
         }
+
+        public override string ToString()
+        {
+            return Libelle;
+        }
     }
 }

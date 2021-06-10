@@ -32,13 +32,19 @@ namespace DAL.Repository
 
         public async Task<PageResponse<Met>> GetAllAsync(PageRequest pageRequest)
         {
-            var stmt = @"select * from Mets 
-                        ORDER BY Id
+            var stmt = @"select m.Id, m.Libelle, m.Description, tp.Id, tp.Libelle  from Mets as m join TypeRepas tp on m.IdType = tp.Id
+                        ORDER BY m.Id
                         OFFSET @PageSize * (@Page - 1) rows
                         FETCH NEXT @PageSize rows only";
-            string queryCount = " SELECT COUNT(*) FROM Mets";
+            string queryCount = " SELECT COUNT(*) FROM Mets m inner join TypeRepas tp on m.Id = tp.Id ";
 
-            IEnumerable<Met> metTask = await _session.Connection.QueryAsync<Met>(stmt, pageRequest, _session.Transaction);
+           IEnumerable<Met> metTask = await _session.Connection.QueryAsync<Met,TypeRepas,Met>(stmt, (met, typeRepas) => 
+                {
+                    met.TypeRepas = typeRepas;
+                    return met;
+                }, pageRequest, _session.Transaction, splitOn: "Id");
+
+
             int countTask = await _session.Connection.ExecuteScalarAsync<int>(queryCount, null, _session.Transaction);
 
 

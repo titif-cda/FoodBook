@@ -90,6 +90,8 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.LoginForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.MainForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Mets.AddMetForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Mets.CrudMetForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Mets.ListMetForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ClientsControl.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.UserControls.IngredientsControl.resources
@@ -104,5 +106,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Mets.CrudMetForm.resources
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Mets.ListMetForm.resources

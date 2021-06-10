@@ -176,7 +176,7 @@
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String,System.Int32,System.Collections.Generic.List{BO.Entity.MetsIngredients})">
+        <member name="M:BO.Entity.Met.#ctor(System.Int32,System.String,System.String,BO.Entity.TypeRepas,System.Collections.Generic.List{BO.Entity.MetsIngredients})">
             <summary>
             Constructeur avec arguments
             </summary>

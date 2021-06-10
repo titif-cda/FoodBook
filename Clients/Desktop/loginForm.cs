@@ -16,7 +16,7 @@ namespace Desktop
     {
         public string login;
         public string motdepasse;
-
+        
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -34,30 +34,35 @@ namespace Desktop
             ControlBox = false;
             passwordTBox.UseSystemPasswordChar = true;
 
+            //TODO - en fin de projet - supprimer lihne suivante pour cacher le bouton valider , dé commenter les methode passwordTBox_TextChanged et loginTbox_TextChanged 
+            ValidLoginBtn.Visible = true;
+
         }
 
         private void passwordTBox_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
-            {
-                ValidLoginBtn.Visible = false;
-            }
-            else
-            {
-                ValidLoginBtn.Visible = true;
-            }
+            //if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
+            //{ 
+            //    //TODO remettre a false
+            //    //ValidLoginBtn.Visible = false;
+            //    ValidLoginBtn.Visible = true;
+            //}
+            //else
+            //{
+            //    ValidLoginBtn.Visible = true;
+            //}
         }
 
         private void loginTbox_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
-            {
-                ValidLoginBtn.Visible = false;
-            }
-            else
-            {
-                ValidLoginBtn.Visible = true;
-            }
+            //if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
+            //{
+            //    ValidLoginBtn.Visible = false;
+            //}
+            //else
+            //{
+            //    ValidLoginBtn.Visible = true;
+            //}
         }
 
         private void registerLbl_Click(object sender, EventArgs e)
@@ -67,9 +72,10 @@ namespace Desktop
 
         private async void ValidLoginBtn_Click(object sender, EventArgs e)
         {
-
+            
             string mdpHash;
             login = loginTbox.Text;
+          
             motdepasse = passwordTBox.Text;
 
             using (SHA256 sha256Hash = SHA256.Create())

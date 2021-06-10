@@ -109,6 +109,7 @@ namespace Desktop
             this.passwordTBox.Name = "passwordTBox";
             this.passwordTBox.Size = new System.Drawing.Size(112, 23);
             this.passwordTBox.TabIndex = 11;
+            this.passwordTBox.Text = "Admin@01";
             this.passwordTBox.TextChanged += new System.EventHandler(this.passwordTBox_TextChanged);
             // 
             // loginTbox
@@ -117,6 +118,7 @@ namespace Desktop
             this.loginTbox.Name = "loginTbox";
             this.loginTbox.Size = new System.Drawing.Size(112, 23);
             this.loginTbox.TabIndex = 10;
+            this.loginTbox.Text = "Admin@01";
             this.loginTbox.TextChanged += new System.EventHandler(this.loginTbox_TextChanged);
             // 
             // hideMDP_CBox
@@ -131,7 +133,7 @@ namespace Desktop
             this.hideMDP_CBox.UseVisualStyleBackColor = true;
             this.hideMDP_CBox.CheckedChanged += new System.EventHandler(this.hideMDP_CBox_CheckedChanged);
             // 
-            // loginForm
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +147,7 @@ namespace Desktop
             this.Controls.Add(this.passwordTBox);
             this.Controls.Add(this.loginTbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "loginForm";
+            this.Name = "LoginForm";
             this.Text = "loginForm";
             this.ResumeLayout(false);
             this.PerformLayout();

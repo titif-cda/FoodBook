@@ -85,10 +85,8 @@ namespace Desktop.Mets
 
         private void ListeIngredientsDtGv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //var idIngr = newIngredient.IdIngredient;
-            MetsIngredients newMetIngredient = new();
-            newMetIngredient.Ingredient =  ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
-            LoadListOfIngredient(newMetIngredient);
+
+           
         }
 
         private async void AddMetBtn_Click(object sender, EventArgs e)
@@ -100,12 +98,14 @@ namespace Desktop.Mets
                 newMet.Description = DescriptionMetRTBox.Text;
                 //Recupere l'id de la valeur selectionnée dans la combobox
                 TypeRepasCBox.ValueMember = "Id";
-                newMet.IdType = Convert.ToInt32(TypeRepasCBox.SelectedValue);
+                newMet.TypeRepas.Id =int.Parse(TypeRepasCBox.SelectedValue.ToString());
+               
                 newMet.ListDesIngredients = IngredientsListe;
                 
             }
             Task<Met> metTask = _restaurantService.CreateMet(newMet);
-        }
+
+                    }
 
         private async void LoadListBox()
         {
@@ -115,6 +115,18 @@ namespace Desktop.Mets
             TypeRepasCBox.DataSource = bindingSourceTypeRepas;
             TypeRepasCBox.DisplayMember = "Libelle";
             
+        }
+
+        private void ListeIngredientsDtGv_SelectionChanged(object sender, EventArgs e)
+        {
+            //var idIngr = newIngredient.IdIngredient;
+            MetsIngredients newMetIngredient = new();
+            newMetIngredient.Ingredient = ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
+            //var selectedRow = ListeIngredientsDtGv.CurrentRow;
+            //selectedRow.DataGridView.CurrentRow.en = true;
+            //ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].Visible = false;
+            //selectedRow.Visible = false;
+            LoadListOfIngredient(newMetIngredient);
         }
     }
 }

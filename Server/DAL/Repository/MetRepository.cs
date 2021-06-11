@@ -36,7 +36,7 @@ namespace DAL.Repository
                         ORDER BY m.Id
                         OFFSET @PageSize * (@Page - 1) rows
                         FETCH NEXT @PageSize rows only";
-            string queryCount = " SELECT COUNT(*) FROM Mets m inner join TypeRepas tp on m.Id = tp.Id ";
+            string queryCount = " SELECT COUNT(*) FROM Mets m inner join TypeRepas tp on m.IdType = tp.Id ";
 
            IEnumerable<Met> metTask = await _session.Connection.QueryAsync<Met,TypeRepas,Met>(stmt, (met, typeRepas) => 
                 {
@@ -91,7 +91,11 @@ namespace DAL.Repository
         {
             var stmt = @"insert into Mets( IdType, Libelle , Description)  output INSERTED.Id
             values (@IdType, @Libelle, @Description)";
-            int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
+            int i = await _session.Connection.QuerySingleAsync<int>(stmt, new { 
+                IDtype = entity.TypeRepas.Id,
+                Libelle = entity.Libelle,
+                Description = entity.Description
+            }, _session.Transaction);
             return await GetAsync(i);
         }
 

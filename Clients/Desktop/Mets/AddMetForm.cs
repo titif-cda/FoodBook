@@ -17,20 +17,30 @@ namespace Desktop.Mets
     public partial class AddMetForm : Form
     {
         private readonly IRestaurantService _restaurantService;
-        private BindingSource bindingSource = new BindingSource();
+
+        //Binding sources
+        private BindingSource bindingSourceDeLaListeDesIngredients = new BindingSource();
         private BindingSource bindingSourceTypeRepas = new BindingSource();
-        private readonly BindingSource bindingSourceListeIngredient = new BindingSource();
+        private BindingSource bindingSourceListeIngredientParPlats = new BindingSource();
+
         //Initialise une liste d'ingrédients côté client.
-        private readonly List<MetsIngredients> IngredientsListe = new();
+        private readonly List<MetsIngredients> AllIngredientsListe = new();
+       
+        //Initialise les parametres du DTO 
         private int currentPage = 1;
         private int defaultPageSize = 15;
         private int maxPage;
+        
+        
         public AddMetForm()
         {
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadIngredient();
             LoadListBox();
+            ListeIngredientsDtGv.ReadOnly = true;
+            ListeIngredientparPlatDGV.ReadOnly = true;
+
         }
 
         private async void LoadIngredient()
@@ -46,8 +56,8 @@ namespace Desktop.Mets
                     return;
                 }
                 maxPage = ingredientPage.TotalPages.GetValueOrDefault();
-                bindingSource.DataSource = ingredientPage.Data;
-                ListeIngredientsDtGv.DataSource = bindingSource;
+                bindingSourceDeLaListeDesIngredients.DataSource = ingredientPage.Data;
+                ListeIngredientsDtGv.DataSource = bindingSourceDeLaListeDesIngredients;
                 ListeIngredientsDtGv.Columns["Id"].Visible = false;
                
             }
@@ -59,19 +69,17 @@ namespace Desktop.Mets
 
         }
 
-        private void LoadListOfIngredient(MetsIngredients listIngredients)
+        private void LoadListOfIngredient(MetsIngredients ingredientsParMets)
         {
-
-            
             ListeIngredientparPlatDGV.DataSource = null;
-            if (listIngredients != null)
+            if (ingredientsParMets != null)
             {
-                IngredientsListe.Add(listIngredients);
+                AllIngredientsListe.Add(ingredientsParMets);
             }
 
-            bindingSourceListeIngredient.DataSource = IngredientsListe;
-            ListeIngredientparPlatDGV.DataSource = bindingSourceListeIngredient;
-
+            bindingSourceListeIngredientParPlats.DataSource = AllIngredientsListe;
+            ListeIngredientparPlatDGV.DataSource = bindingSourceListeIngredientParPlats;
+            //Cache les colonnes non désirées
             ListeIngredientparPlatDGV.Columns["Ingredient"].DisplayIndex = 0;
             ListeIngredientparPlatDGV.Columns["Quantite"].DisplayIndex = 1;
             ListeIngredientparPlatDGV.Columns["IdMet"].Visible = false;
@@ -85,8 +93,8 @@ namespace Desktop.Mets
 
         private void ListeIngredientsDtGv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
 
-           
         }
 
         private async void AddMetBtn_Click(object sender, EventArgs e)
@@ -98,14 +106,15 @@ namespace Desktop.Mets
                 newMet.Description = DescriptionMetRTBox.Text;
                 //Recupere l'id de la valeur selectionnée dans la combobox
                 TypeRepasCBox.ValueMember = "Id";
+                newMet.TypeRepas = new TypeRepas();
                 newMet.TypeRepas.Id =int.Parse(TypeRepasCBox.SelectedValue.ToString());
                
-                newMet.ListDesIngredients = IngredientsListe;
+                newMet.ListDesIngredients = AllIngredientsListe;
                 
             }
             Task<Met> metTask = _restaurantService.CreateMet(newMet);
 
-                    }
+        }
 
         private async void LoadListBox()
         {
@@ -117,7 +126,7 @@ namespace Desktop.Mets
             
         }
 
-        private void ListeIngredientsDtGv_SelectionChanged(object sender, EventArgs e)
+        private void AddToListForMetBtn_Click(object sender, EventArgs e)
         {
             //var idIngr = newIngredient.IdIngredient;
             MetsIngredients newMetIngredient = new();
@@ -126,7 +135,29 @@ namespace Desktop.Mets
             //selectedRow.DataGridView.CurrentRow.en = true;
             //ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].Visible = false;
             //selectedRow.Visible = false;
+            if (this.ListeIngredientsDtGv.SelectedRows.Count > 0)
+            {
+                ListeIngredientsDtGv.Rows.RemoveAt(this.ListeIngredientsDtGv.CurrentRow.Index);
+            }
+
+            newMetIngredient.Quantite = float.Parse(QuantiteIngredientParMetTxBox.Text);
             LoadListOfIngredient(newMetIngredient);
+
+        }
+
+        private void DeleteFromListForMetBtn_Click(object sender, EventArgs e)
+        {
+            //var idIngr = newIngredient.IdIngredient;
+            MetsIngredients newMetParIngredient = new();
+           // newMetParIngredient.Ingredient = ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
+            
+            if (this.ListeIngredientsDtGv.SelectedRows.Count > 0)
+            {
+
+                bindingSourceDeLaListeDesIngredients.Add((ListeIngredientparPlatDGV.CurrentRow.DataBoundItem as MetsIngredients).Ingredient);
+                ListeIngredientparPlatDGV.Rows.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
+            }
+            LoadListOfIngredient(newMetParIngredient);
         }
     }
 }

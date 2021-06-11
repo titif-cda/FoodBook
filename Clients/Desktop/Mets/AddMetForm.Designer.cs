@@ -45,9 +45,9 @@ namespace Desktop.Mets
             this.TypeRepasCBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.QuantiteIngredientParMetTxBox = new System.Windows.Forms.TextBox();
+            this.DeleteFromListForMetBtn = new System.Windows.Forms.Button();
+            this.AddToListForMetBtn = new System.Windows.Forms.Button();
             this.ListAllIngredientsTLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientsDtGv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -89,7 +89,6 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv.Size = new System.Drawing.Size(262, 375);
             this.ListeIngredientsDtGv.TabIndex = 4;
             this.ListeIngredientsDtGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListeIngredientsDtGv_CellClick);
-            this.ListeIngredientsDtGv.SelectionChanged += new System.EventHandler(this.ListeIngredientsDtGv_SelectionChanged);
             // 
             // listTousIngredientsLbl
             // 
@@ -245,9 +244,9 @@ namespace Desktop.Mets
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.QuantiteIngredientParMetTxBox);
+            this.panel1.Controls.Add(this.DeleteFromListForMetBtn);
+            this.panel1.Controls.Add(this.AddToListForMetBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(462, 3);
             this.panel1.Name = "panel1";
@@ -266,30 +265,32 @@ namespace Desktop.Mets
             this.label1.TabIndex = 3;
             this.label1.Text = "Quantité";
             // 
-            // textBox1
+            // QuantiteIngredientParMetTxBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 276);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 23);
-            this.textBox1.TabIndex = 2;
+            this.QuantiteIngredientParMetTxBox.Location = new System.Drawing.Point(0, 276);
+            this.QuantiteIngredientParMetTxBox.Name = "QuantiteIngredientParMetTxBox";
+            this.QuantiteIngredientParMetTxBox.Size = new System.Drawing.Size(67, 23);
+            this.QuantiteIngredientParMetTxBox.TabIndex = 2;
             // 
-            // button2
+            // DeleteFromListForMetBtn
             // 
-            this.button2.Location = new System.Drawing.Point(0, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "->";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DeleteFromListForMetBtn.Location = new System.Drawing.Point(0, 191);
+            this.DeleteFromListForMetBtn.Name = "DeleteFromListForMetBtn";
+            this.DeleteFromListForMetBtn.Size = new System.Drawing.Size(67, 23);
+            this.DeleteFromListForMetBtn.TabIndex = 1;
+            this.DeleteFromListForMetBtn.Text = "->";
+            this.DeleteFromListForMetBtn.UseVisualStyleBackColor = true;
+            this.DeleteFromListForMetBtn.Click += new System.EventHandler(this.DeleteFromListForMetBtn_Click);
             // 
-            // button1
+            // AddToListForMetBtn
             // 
-            this.button1.Location = new System.Drawing.Point(0, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "<-";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddToListForMetBtn.Location = new System.Drawing.Point(0, 150);
+            this.AddToListForMetBtn.Name = "AddToListForMetBtn";
+            this.AddToListForMetBtn.Size = new System.Drawing.Size(67, 23);
+            this.AddToListForMetBtn.TabIndex = 0;
+            this.AddToListForMetBtn.Text = "<-";
+            this.AddToListForMetBtn.UseVisualStyleBackColor = true;
+            this.AddToListForMetBtn.Click += new System.EventHandler(this.AddToListForMetBtn_Click);
             // 
             // AddMetForm
             // 
@@ -329,9 +330,10 @@ namespace Desktop.Mets
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteFromListForMetBtn;
+        private System.Windows.Forms.Button AddToListForMetBtn;
         private System.Windows.Forms.Button AddMetBtn;
         private System.Windows.Forms.ComboBox TypeRepasCBox;
+        private System.Windows.Forms.TextBox QuantiteIngredientParMetTxBox;
     }
 }

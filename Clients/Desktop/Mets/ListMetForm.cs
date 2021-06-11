@@ -20,7 +20,7 @@ namespace Desktop.Mets
         private readonly IRestaurantService _restaurantService;
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
-        private int defaultPageSize = 50;
+        private int defaultPageSize = 4;
         private int maxPage;
 
         public ListMetForm()
@@ -28,6 +28,7 @@ namespace Desktop.Mets
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadMets();
+            metDtGv.ReadOnly = true;
         }
 
         private async void LoadMets()
@@ -45,23 +46,19 @@ namespace Desktop.Mets
             metDtGv.DataSource = bindingSource;
             metDtGv.Columns["Id"].Visible = false;
             metDtGv.Columns["Description"].Visible = false;
+            metDtGv.Columns["TypeRepas"].HeaderText = "Type de Repas";
 
         }
 
         private void AddMetBtn_Click(object sender, EventArgs e)
         {
             var addMetForm = new AddMetForm();
-            //addMetForm.Initialize(null);
             addMetForm.Show();
-
-           // addMetForm.FormClosed += AaddMetForm_FormClosed;
         }
 
         private void NextMetBtn_Click(object sender, EventArgs e)
         {
-           
                 NextPage();
-           
         }
 
         private void PreviousMetBtn_Click(object sender, EventArgs e)
@@ -87,9 +84,7 @@ namespace Desktop.Mets
 
         private void RefreshPage()
         {
-
             CurentPageMetLbl.Text = currentPage.ToString();
-
             //currentPageLabel.Text = currentPageLabel.ToString();
             this.LoadMets();
         }

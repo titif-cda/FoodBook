@@ -30,7 +30,7 @@ namespace Desktop.Mets
         private int currentPage = 1;
         private int defaultPageSize = 15;
         private int maxPage;
-        
+        public int test;
         
         public AddMetForm()
         {
@@ -199,7 +199,6 @@ namespace Desktop.Mets
             }
         }
        
-
         private void Grisage()
         {
             if (currentPage == 1)

@@ -175,9 +175,8 @@ namespace Desktop.Mets
             this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metDtGv.Size = new System.Drawing.Size(296, 405);
             this.metDtGv.TabIndex = 4;
-            this.metDtGv.CurrentCellChanged += new System.EventHandler(this.metDtGv_CurrentCellChanged);
+            this.metDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metDtGv_CellDoubleClick);
             this.metDtGv.SelectionChanged += new System.EventHandler(this.metDtGv_SelectionChanged);
-            this.metDtGv.Click += new System.EventHandler(this.metDtGv_Click);
             // 
             // metPicturePnl
             // 
@@ -310,7 +309,6 @@ namespace Desktop.Mets
             this.RefreshMetBtn.TabIndex = 7;
             this.RefreshMetBtn.Text = "Rafraichir";
             this.RefreshMetBtn.UseVisualStyleBackColor = false;
-            this.RefreshMetBtn.Click += new System.EventHandler(this.RefreshMetBtn_Click_1);
             // 
             // DeleteMetBtn
             // 

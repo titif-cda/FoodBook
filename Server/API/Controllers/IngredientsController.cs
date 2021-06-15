@@ -19,6 +19,7 @@ namespace API.Controllers
     /// </summary>
     [ApiController]
     [ApiVersion("1.0")]
+    [AllowAnonymous]
     [Route("api/v{version:apiVersion=}/ingredients")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
@@ -132,7 +133,7 @@ namespace API.Controllers
         /// <param name="ingredient">Ingredient</param>
         /// <returns>Retourne un ingredient modifié</returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Restaurateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

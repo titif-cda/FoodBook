@@ -275,7 +275,7 @@ namespace BLLC.Services
                 return null;
             }
         }
-
+      
         public async Task<bool> DeleteMet(Met repa)
         {
             if (repa?.Id!= null)
@@ -380,6 +380,8 @@ namespace BLLC.Services
             }
             return false;
         }
+
+       
         #endregion
     }
 }

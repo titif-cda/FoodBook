@@ -103,10 +103,12 @@ namespace Desktop.Ingredients
         }
         private void PreviousIngredientBtn_Click(object sender, EventArgs e)
         {
+
             PreviousPage();
         }
         private void NextIngredientBtn_Click(object sender, EventArgs e)
         {
+            Grisage();
             NextPage();
         }
         private void Grisage()

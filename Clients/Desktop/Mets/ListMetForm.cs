@@ -15,31 +15,41 @@ using System.Windows.Forms;
 
 namespace Desktop.Mets
 {
+    /// <summary>
+    /// Formulaire de la liste des mets (plats)
+    /// </summary>
+    /// 
     public partial class ListMetForm : Form
     {
+        //initialisation des parametres
         private readonly IRestaurantService _restaurantService;
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize = 15;
         private int maxPage;
         private Met selectedMet;
+        
 
         public ListMetForm()
         {
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadMets(false);
-
+           
             metDtGv.ReadOnly = true;
         }
 
+        #region Evenements
 
-
-        private async void LoadMets(bool clearSelection = false)
+        /// <summary>
+        /// Fonction de chargement de la liste des mets dans la datagridView
+        /// </summary>
+        /// <param name="clearSelection">Indique que la ligne selectionnée est à désactivé</param>
+        private async Task LoadMets(bool clearSelection = false)
         {
             var metsPageTask = _restaurantService.GetAllMet(new PageRequest(currentPage, defaultPageSize));
             //var metPage = await metsPageTask;
-
+            Grisage();
             PageResponse<Met> metPage = await metsPageTask;
             if (metPage == null)
             {
@@ -61,71 +71,22 @@ namespace Desktop.Mets
             {
                 metDtGv.ClearSelection();
             }
-        }
 
-        private void AddMetBtn_Click(object sender, EventArgs e)
-        {
-            var addMetForm = new AddMetForm();
-            addMetForm.ShowDialog();
-            if(addMetForm.DialogResult == DialogResult.OK)
-            {
-               // RefreshPage();
-                LastPage();
-
-            }
         }
-
-        private void NextMetBtn_Click(object sender, EventArgs e)
-        {
-            NextPage();
-        }
-
-        private void PreviousMetBtn_Click(object sender, EventArgs e)
-        {
-            PreviousPage();
-        }
-        private void PreviousPage()
-        {
-            if (currentPage > 1)
-            {
-                currentPage--;
-                RefreshPage();
-            }
-        }
-        private void NextPage()
-        {
-            if (currentPage < maxPage)
-            {
-                currentPage++;
-                RefreshPage();
-            }
-        }
-        private void LastPage()
-        {
-           currentPage = maxPage;
-           RefreshPage();
-        }
-        private void RefreshPage()
-        {
-            CurentPageMetLbl.Text = currentPage.ToString();
-            //currentPageLabel.Text = currentPageLabel.ToString();
-            this.LoadMets();
-        }
-
+        /// <summary>
+        /// Boutton pour rafraichir la page 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshMetBtn_Click(object sender, EventArgs e)
         {
             RefreshPage();
         }
-
-        private void metDtGv_CurrentCellChanged(object sender, EventArgs e)
-        {
-            // CurrentMetLbl.Text = metDtGv.DataSource.g
-        }
-
-        private async void metDtGv_Click(object sender, EventArgs e)
-        {
-        }
-
+        /// <summary>
+        /// Boutton pour supprimer un met
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void DeleteMetBtn_Click(object sender, EventArgs e)
         {
             try
@@ -142,7 +103,11 @@ namespace Desktop.Mets
             }
 
         }
-
+        /// <summary>
+        /// Evenement au changement de clic
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void metDtGv_SelectionChanged(object sender, EventArgs e)
         {
             if (metDtGv.CurrentRow != null && selectedMet?.Id != (metDtGv.CurrentRow.DataBoundItem as Met).Id)
@@ -158,6 +123,7 @@ namespace Desktop.Mets
                     CurrentDescLabel.Text = met.Description;
                     typeLbl.Text = met.TypeRepas?.Libelle;
                     if (met.ListDesIngredients?.Count() > 0)
+                        //transforme la liste des ingredients en chaine de string
                         CurrentIngredientsLbl.Text = met.ListDesIngredients.Select(ingredientMet => $"{ingredientMet.Ingredient.Nom}( {ingredientMet.Quantite} )").Aggregate((s1, s2) => $"{s1}, {s2}");
                     else
                     {
@@ -166,10 +132,118 @@ namespace Desktop.Mets
                 }
             }
         }
-
-        private void RefreshMetBtn_Click_1(object sender, EventArgs e)
+        /// <summary>
+        /// Ajout d'un met au click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddMetBtn_Click(object sender, EventArgs e)
         {
-            RefreshPage();
+            var addMetForm = new AddMetForm();
+            addMetForm.ShowDialog();
+            if (addMetForm.DialogResult == DialogResult.OK)
+            {
+                LastPage();
+            }
+        }
+        /// <summary>
+        /// Bouton pour passer à la page suivante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextMetBtn_Click(object sender, EventArgs e)
+        {
+            NextPage();
+        }
+        /// <summary>
+        /// Bouton pour passer à la page précédente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PreviousMetBtn_Click(object sender, EventArgs e)
+        {
+            PreviousPage();
+        }
+        #endregion
+
+       
+        #region Mes Fonctions
+        /// <summary>
+        /// Fonction pour griser les boutton next et previous
+        /// </summary>
+        private void Grisage()
+        {
+            if (currentPage == 1)
+            {
+                PreviousMetBtn.Enabled = false;
+            }
+            else
+            {
+                PreviousMetBtn.Enabled = true;
+            }
+
+            if (currentPage == maxPage)
+            {
+                NextMetBtn.Enabled = false;
+            }
+            else
+            {
+                NextMetBtn.Enabled = true;
+            }
+        }
+        /// <summary>
+        /// Fonction pour passer à la page précédente
+        /// </summary>
+        private void PreviousPage()
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                RefreshPage();
+            }
+        }
+        /// <summary>
+        /// Fonction pour passer à la page suivante
+        /// </summary>
+        private void NextPage()
+        {
+            if (currentPage < maxPage)
+            {
+                currentPage++;
+                RefreshPage();
+            }
+        }
+        /// <summary>
+        /// Fonction pour passer à la dernière page
+        /// </summary>
+        private async Task LastPage()
+        {
+            await RefreshPage();
+            currentPage = maxPage;
+            await RefreshPage();
+        }
+        /// <summary>
+        /// fonction pour rafraichir la page
+        /// </summary>
+        private async Task RefreshPage()
+        {
+            CurentPageMetLbl.Text = currentPage.ToString();
+            //currentPageLabel.Text = currentPageLabel.ToString();
+            await LoadMets();
+        }
+        #endregion
+
+        private void metDtGv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView gridView = (DataGridView)sender;
+            if (metDtGv.SelectedRows.Count > 0)
+            {
+                Met selectedMet = (Met)metDtGv.SelectedRows[0].DataBoundItem;
+                var modifyMetForm = new AddMetForm();
+                modifyMetForm.ShowDialog();
+                selectedMet.Id = modifyMetForm.test;
+            }
+
         }
     }
 }

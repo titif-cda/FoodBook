@@ -39,6 +39,7 @@ namespace Desktop.Mets
             LoadIngredient();
             LoadListBox();
             ListeIngredientsDtGv.ReadOnly = true;
+           
             ListeIngredientparPlatDGV.ReadOnly = true;
 
         }
@@ -59,7 +60,8 @@ namespace Desktop.Mets
                 bindingSourceDeLaListeDesIngredients.DataSource = ingredientPage.Data;
                 ListeIngredientsDtGv.DataSource = bindingSourceDeLaListeDesIngredients;
                 ListeIngredientsDtGv.Columns["Id"].Visible = false;
-               
+                ListeIngredientsDtGv.ClearSelection();
+
             }
             catch
             {
@@ -83,7 +85,8 @@ namespace Desktop.Mets
             ListeIngredientparPlatDGV.Columns["Ingredient"].DisplayIndex = 0;
             ListeIngredientparPlatDGV.Columns["Quantite"].DisplayIndex = 1;
             ListeIngredientparPlatDGV.Columns["IdMet"].Visible = false;
-           
+            ListeIngredientparPlatDGV.ClearSelection();
+       
         }
         private void ErrorMessage()
         {
@@ -91,29 +94,34 @@ namespace Desktop.Mets
             return;
         }
 
-        private void ListeIngredientsDtGv_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-        }
-
+      
         private async void AddMetBtn_Click(object sender, EventArgs e)
         {
-            Met newMet = new Met();
-                newMet = new();
+            if (ListeIngredientparPlatDGV.RowCount>0 )
             {
-                newMet.Libelle = NomMetTBox.Text;
-                newMet.Description = DescriptionMetRTBox.Text;
-                //Recupere l'id de la valeur selectionnée dans la combobox
-                TypeRepasCBox.ValueMember = "Id";
-                newMet.TypeRepas = new TypeRepas();
-                newMet.TypeRepas.Id =int.Parse(TypeRepasCBox.SelectedValue.ToString());
-               
-                newMet.ListDesIngredients = AllIngredientsListe;
                 
-            }
-            Task<Met> metTask = _restaurantService.CreateMet(newMet);
+                Met newMet = new Met();
+                //newMet = new();
+               
+                {
+                    newMet.Libelle = NomMetTBox.Text;
+                    newMet.Description = DescriptionMetRTBox.Text;
+                    //Recupere l'id de la valeur selectionnée dans la combobox
+                    TypeRepasCBox.ValueMember = "Id";
+                    newMet.TypeRepas = new TypeRepas();
+                    newMet.TypeRepas.Id = int.Parse(TypeRepasCBox.SelectedValue.ToString());
+                    newMet.ListDesIngredients = AllIngredientsListe;
 
+                }
+                Task<Met> metTask = _restaurantService.CreateMet(newMet);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Liste d'ingredients vides");
+            }
+
+            
         }
 
         private async void LoadListBox()
@@ -128,36 +136,99 @@ namespace Desktop.Mets
 
         private void AddToListForMetBtn_Click(object sender, EventArgs e)
         {
-            //var idIngr = newIngredient.IdIngredient;
             MetsIngredients newMetIngredient = new();
-            newMetIngredient.Ingredient = ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
-            //var selectedRow = ListeIngredientsDtGv.CurrentRow;
-            //selectedRow.DataGridView.CurrentRow.en = true;
-            //ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].Visible = false;
-            //selectedRow.Visible = false;
             if (this.ListeIngredientsDtGv.SelectedRows.Count > 0)
             {
-                ListeIngredientsDtGv.Rows.RemoveAt(this.ListeIngredientsDtGv.CurrentRow.Index);
+             
+                if (string.IsNullOrEmpty(QuantiteIngredientParMetTxBox.Text))
+                {
+                    MessageBox.Show("Veuillez saisir la quanbtité");
+                }
+                else
+                {
+                    newMetIngredient.Ingredient = ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
+                    try
+                    {
+                        newMetIngredient.Quantite = float.Parse(QuantiteIngredientParMetTxBox.Text);
+                        ListeIngredientsDtGv.Rows.RemoveAt(this.ListeIngredientsDtGv.CurrentRow.Index);
+                        LoadListOfIngredient(newMetIngredient);
+                    }
+                    catch(FormatException formateException)
+                    {
+                        MessageBox.Show("Veuillez saisir une quantité valide !");
+                    }
+                }
+               
+                QuantiteIngredientParMetTxBox.Clear();
             }
-
-            newMetIngredient.Quantite = float.Parse(QuantiteIngredientParMetTxBox.Text);
-            LoadListOfIngredient(newMetIngredient);
-
         }
 
         private void DeleteFromListForMetBtn_Click(object sender, EventArgs e)
         {
-            //var idIngr = newIngredient.IdIngredient;
-            MetsIngredients newMetParIngredient = new();
-           // newMetParIngredient.Ingredient = ListeIngredientsDtGv.Rows[ListeIngredientsDtGv.CurrentRow.Index].DataBoundItem as Ingredient;
-            
+          
             if (this.ListeIngredientsDtGv.SelectedRows.Count > 0)
             {
-
+                
                 bindingSourceDeLaListeDesIngredients.Add((ListeIngredientparPlatDGV.CurrentRow.DataBoundItem as MetsIngredients).Ingredient);
-                ListeIngredientparPlatDGV.Rows.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
+                //ListeIngredientparPlatDGV.Rows.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
+                bindingSourceListeIngredientParPlats.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
+               
             }
-            LoadListOfIngredient(newMetParIngredient);
+          
+        }
+
+        private void RefreshPage()
+        {
+            CurrentMetIngredientLbl.Text = currentPage.ToString();
+            this.LoadIngredient();
+        }
+        private void PreviousPage()
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                RefreshPage();
+            }
+        }
+        private void NextPage()
+        {
+            if (currentPage < maxPage)
+            {
+                currentPage++;
+                RefreshPage();
+            }
+        }
+       
+
+        private void Grisage()
+        {
+            if (currentPage == 1)
+            {
+                PreviousMetIngredientBtn.Enabled = false;
+            }
+            else
+            {
+                PreviousMetIngredientBtn.Enabled = true;
+            }
+
+            if (currentPage == maxPage)
+            {
+                NextMetIngredientBtn.Enabled = false;
+            }
+            else
+            {
+                NextMetIngredientBtn.Enabled = true;
+            }
+        }
+
+        private void PreviousMetIngredientBtn_Click(object sender, EventArgs e)
+        {
+            PreviousPage();
+        }
+
+        private void NextMetIngredientBtn_Click(object sender, EventArgs e)
+        {
+            NextPage();
         }
     }
 }

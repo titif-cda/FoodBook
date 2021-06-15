@@ -30,6 +30,7 @@ namespace BLLC.Services
         Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
         Task<Met> PutMet(Met met);
         Task<bool> DeleteMet(Met met);
+        Task<Met> GetDetailsMet(int idMet);
         #endregion
 
 

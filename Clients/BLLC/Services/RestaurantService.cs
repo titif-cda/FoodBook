@@ -236,7 +236,23 @@ namespace BLLC.Services
                 return null;
             }
         }
+        public async Task<Met> GetDetailsMet(int idMet)
+        {
+            var reponse = await _httpClient.GetAsync($"mets/{idMet}/all");
 
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Met met= await JsonSerializer.DeserializeAsync<Met>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return met;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
         public async Task<Met> PutMet(Met met)
         {
             var reponse = await _httpClient.PutAsync($"mets/" + met.Id

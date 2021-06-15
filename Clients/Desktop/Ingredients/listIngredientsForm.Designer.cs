@@ -30,19 +30,78 @@ namespace Desktop.Ingredients
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListIngredientsForm));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.AddIngredientBtn = new System.Windows.Forms.Button();
+            this.IngredientPicturePnl = new System.Windows.Forms.Panel();
+            this.IngredientDtGv = new System.Windows.Forms.DataGridView();
             this.RefreshIngredientBtn = new System.Windows.Forms.Button();
+            this.AddIngredientBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviousIngredientBtn = new System.Windows.Forms.Button();
             this.NextIngredientBtn = new System.Windows.Forms.Button();
             this.CurentPageIngredientLbl = new System.Windows.Forms.Label();
-            this.IngredientDtGv = new System.Windows.Forms.DataGridView();
-            this.IngredientPicturePnl = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).BeginInit();
             this.SuspendLayout();
+            // 
+            // IngredientPicturePnl
+            // 
+            this.IngredientPicturePnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IngredientPicturePnl.BackgroundImage")));
+            this.IngredientPicturePnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.SetColumnSpan(this.IngredientPicturePnl, 2);
+            this.IngredientPicturePnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IngredientPicturePnl.Location = new System.Drawing.Point(305, 3);
+            this.IngredientPicturePnl.Name = "IngredientPicturePnl";
+            this.IngredientPicturePnl.Size = new System.Drawing.Size(492, 405);
+            this.IngredientPicturePnl.TabIndex = 5;
+            // 
+            // IngredientDtGv
+            // 
+            this.IngredientDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.IngredientDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.IngredientDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IngredientDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IngredientDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IngredientDtGv.GridColor = System.Drawing.SystemColors.Control;
+            this.IngredientDtGv.Location = new System.Drawing.Point(3, 3);
+            this.IngredientDtGv.Name = "IngredientDtGv";
+            this.IngredientDtGv.RowHeadersVisible = false;
+            this.IngredientDtGv.RowTemplate.Height = 25;
+            this.IngredientDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.IngredientDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.IngredientDtGv.Size = new System.Drawing.Size(296, 405);
+            this.IngredientDtGv.TabIndex = 4;
+            this.IngredientDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IngredientDtGv_CellDoubleClick);
+            // 
+            // RefreshIngredientBtn
+            // 
+            this.RefreshIngredientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.RefreshIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RefreshIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RefreshIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.RefreshIngredientBtn.Location = new System.Drawing.Point(302, 411);
+            this.RefreshIngredientBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.RefreshIngredientBtn.Name = "RefreshIngredientBtn";
+            this.RefreshIngredientBtn.Size = new System.Drawing.Size(230, 39);
+            this.RefreshIngredientBtn.TabIndex = 2;
+            this.RefreshIngredientBtn.Text = "Rafraichir";
+            this.RefreshIngredientBtn.UseVisualStyleBackColor = false;
+            this.RefreshIngredientBtn.Click += new System.EventHandler(this.RefreshIngredientBtn_Click);
+            // 
+            // AddIngredientBtn
+            // 
+            this.AddIngredientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.AddIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddIngredientBtn.Location = new System.Drawing.Point(0, 411);
+            this.AddIngredientBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.AddIngredientBtn.Name = "AddIngredientBtn";
+            this.AddIngredientBtn.Size = new System.Drawing.Size(302, 39);
+            this.AddIngredientBtn.TabIndex = 1;
+            this.AddIngredientBtn.Text = "Ajouter";
+            this.AddIngredientBtn.UseVisualStyleBackColor = false;
+            this.AddIngredientBtn.Click += new System.EventHandler(this.AddIngredientBtn_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -63,36 +122,6 @@ namespace Desktop.Ingredients
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.510639F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // AddIngredientBtn
-            // 
-            this.AddIngredientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.AddIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddIngredientBtn.Location = new System.Drawing.Point(0, 411);
-            this.AddIngredientBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.AddIngredientBtn.Name = "AddIngredientBtn";
-            this.AddIngredientBtn.Size = new System.Drawing.Size(302, 39);
-            this.AddIngredientBtn.TabIndex = 1;
-            this.AddIngredientBtn.Text = "Ajouter";
-            this.AddIngredientBtn.UseVisualStyleBackColor = false;
-            this.AddIngredientBtn.Click += new System.EventHandler(this.AddIngredientBtn_Click);
-            // 
-            // RefreshIngredientBtn
-            // 
-            this.RefreshIngredientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.RefreshIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RefreshIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RefreshIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.RefreshIngredientBtn.Location = new System.Drawing.Point(302, 411);
-            this.RefreshIngredientBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.RefreshIngredientBtn.Name = "RefreshIngredientBtn";
-            this.RefreshIngredientBtn.Size = new System.Drawing.Size(230, 39);
-            this.RefreshIngredientBtn.TabIndex = 2;
-            this.RefreshIngredientBtn.Text = "Rafraichir";
-            this.RefreshIngredientBtn.UseVisualStyleBackColor = false;
-            this.RefreshIngredientBtn.Click += new System.EventHandler(this.RefreshIngredientBtn_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -155,35 +184,6 @@ namespace Desktop.Ingredients
             this.CurentPageIngredientLbl.TabIndex = 2;
             this.CurentPageIngredientLbl.Text = "1";
             // 
-            // IngredientDtGv
-            // 
-            this.IngredientDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.IngredientDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.IngredientDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.IngredientDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IngredientDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IngredientDtGv.GridColor = System.Drawing.SystemColors.Control;
-            this.IngredientDtGv.Location = new System.Drawing.Point(3, 3);
-            this.IngredientDtGv.Name = "IngredientDtGv";
-            this.IngredientDtGv.RowHeadersVisible = false;
-            this.IngredientDtGv.RowTemplate.Height = 25;
-            this.IngredientDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.IngredientDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.IngredientDtGv.Size = new System.Drawing.Size(296, 405);
-            this.IngredientDtGv.TabIndex = 4;
-            this.IngredientDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IngredientDtGv_CellDoubleClick);
-            // 
-            // IngredientPicturePnl
-            // 
-            this.IngredientPicturePnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IngredientPicturePnl.BackgroundImage")));
-            this.IngredientPicturePnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tableLayoutPanel1.SetColumnSpan(this.IngredientPicturePnl, 2);
-            this.IngredientPicturePnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IngredientPicturePnl.Location = new System.Drawing.Point(305, 3);
-            this.IngredientPicturePnl.Name = "IngredientPicturePnl";
-            this.IngredientPicturePnl.Size = new System.Drawing.Size(492, 405);
-            this.IngredientPicturePnl.TabIndex = 5;
-            // 
             // ListIngredientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -191,16 +191,17 @@ namespace Desktop.Ingredients
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ListIngredientsForm";
+            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel IngredientPicturePnl;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button AddIngredientBtn;
         private System.Windows.Forms.Button RefreshIngredientBtn;
@@ -209,6 +210,5 @@ namespace Desktop.Ingredients
         private System.Windows.Forms.Button NextIngredientBtn;
         private System.Windows.Forms.Label CurentPageIngredientLbl;
         private System.Windows.Forms.DataGridView IngredientDtGv;
-        private System.Windows.Forms.Panel IngredientPicturePnl;
     }
 }

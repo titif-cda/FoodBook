@@ -20,16 +20,20 @@ namespace Desktop.Mets
         private readonly IRestaurantService _restaurantService;
         private BindingSource bindingSource = new BindingSource();
         private int currentPage = 1;
-        private int defaultPageSize = 4;
+        private int defaultPageSize = 15;
         private int maxPage;
+       
 
         public ListMetForm()
         {
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadMets();
+           
             metDtGv.ReadOnly = true;
         }
+
+
 
         private async void LoadMets()
         {
@@ -47,6 +51,12 @@ namespace Desktop.Mets
             metDtGv.Columns["Id"].Visible = false;
             metDtGv.Columns["Description"].Visible = false;
             metDtGv.Columns["TypeRepas"].HeaderText = "Type de Repas";
+            metDtGv.ClearSelection();
+            //var test = (metDtGv.CurrentRow.Cells[1].Value).ToString();
+            // MessageBox.Show(test);
+            // //CurrentMetLbl.Text = metDtGv.CurrentRow.Cells.IndexOf()
+
+
 
         }
 
@@ -92,6 +102,31 @@ namespace Desktop.Mets
         private void RefreshMetBtn_Click(object sender, EventArgs e)
         {
             RefreshPage();
+        }
+
+        private void metDtGv_CurrentCellChanged(object sender, EventArgs e)
+        {
+           // CurrentMetLbl.Text = metDtGv.DataSource.g
+        }
+
+        private async void metDtGv_Click(object sender, EventArgs e)
+        {
+            int? metId = (metDtGv.CurrentRow.DataBoundItem as Met)?.Id;
+            if(metId != null)
+            {
+                Met met = await _restaurantService.GetDetailsMet(metId.Value);
+
+                CurrentMetLbl.Text = met.Libelle;
+                CurrentDescLabel.Text = met.Description;
+                typeLbl.Text = met.TypeRepas?.Libelle;
+                if(met.ListDesIngredients?.Count() > 0)
+                    CurrentIngredientsLbl.Text = met.ListDesIngredients.Select(ingredientMet => $"{ingredientMet.Ingredient.Nom}( {ingredientMet.Quantite} )").Aggregate((s1, s2) => $"{s1}, {s2}");
+                else
+                {
+                    CurrentIngredientsLbl.Text = "Aucun ingrédient renseigné";
+                }
+                RefreshPage();
+            }
         }
     }
 }

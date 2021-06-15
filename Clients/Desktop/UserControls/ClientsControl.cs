@@ -24,6 +24,7 @@ namespace Desktop
             PrenomLbl.Text = client.Prenom;
             EmailLbl.Text = client.Email;
             TelLbl.Text = client.Tel;
+       
 
         }
 

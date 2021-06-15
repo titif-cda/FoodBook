@@ -39,9 +39,19 @@ namespace Desktop.Mets
             this.CurentPageMetLbl = new System.Windows.Forms.Label();
             this.metDtGv = new System.Windows.Forms.DataGridView();
             this.metPicturePnl = new System.Windows.Forms.Panel();
+            this.DescRepasPnl = new System.Windows.Forms.Panel();
+            this.typeLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CurrentIngredientsLbl = new System.Windows.Forms.Label();
+            this.descLbl = new System.Windows.Forms.Label();
+            this.CurrentDescLabel = new System.Windows.Forms.Label();
+            this.Nomlbl = new System.Windows.Forms.Label();
+            this.CurrentMetLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).BeginInit();
+            this.metPicturePnl.SuspendLayout();
+            this.DescRepasPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -157,6 +167,9 @@ namespace Desktop.Mets
             // 
             // metDtGv
             // 
+            this.metDtGv.AllowUserToAddRows = false;
+            this.metDtGv.AllowUserToDeleteRows = false;
+            this.metDtGv.AllowUserToResizeRows = false;
             this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.metDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.metDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -166,23 +179,115 @@ namespace Desktop.Mets
             this.metDtGv.GridColor = System.Drawing.SystemColors.Control;
             this.metDtGv.Location = new System.Drawing.Point(3, 3);
             this.metDtGv.Name = "metDtGv";
+            this.metDtGv.ReadOnly = true;
             this.metDtGv.RowHeadersVisible = false;
             this.metDtGv.RowTemplate.Height = 25;
             this.metDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metDtGv.Size = new System.Drawing.Size(296, 405);
             this.metDtGv.TabIndex = 4;
+            this.metDtGv.CurrentCellChanged += new System.EventHandler(this.metDtGv_CurrentCellChanged);
+            this.metDtGv.Click += new System.EventHandler(this.metDtGv_Click);
             // 
             // metPicturePnl
             // 
             this.metPicturePnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metPicturePnl.BackgroundImage")));
             this.metPicturePnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.SetColumnSpan(this.metPicturePnl, 2);
+            this.metPicturePnl.Controls.Add(this.DescRepasPnl);
             this.metPicturePnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metPicturePnl.Location = new System.Drawing.Point(305, 3);
             this.metPicturePnl.Name = "metPicturePnl";
             this.metPicturePnl.Size = new System.Drawing.Size(492, 405);
             this.metPicturePnl.TabIndex = 5;
+            // 
+            // DescRepasPnl
+            // 
+            this.DescRepasPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DescRepasPnl.BackColor = System.Drawing.Color.Transparent;
+            this.DescRepasPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DescRepasPnl.BackgroundImage")));
+            this.DescRepasPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DescRepasPnl.Controls.Add(this.typeLbl);
+            this.DescRepasPnl.Controls.Add(this.label1);
+            this.DescRepasPnl.Controls.Add(this.CurrentIngredientsLbl);
+            this.DescRepasPnl.Controls.Add(this.descLbl);
+            this.DescRepasPnl.Controls.Add(this.CurrentDescLabel);
+            this.DescRepasPnl.Controls.Add(this.Nomlbl);
+            this.DescRepasPnl.Controls.Add(this.CurrentMetLbl);
+            this.DescRepasPnl.Location = new System.Drawing.Point(93, 3);
+            this.DescRepasPnl.Name = "DescRepasPnl";
+            this.DescRepasPnl.Size = new System.Drawing.Size(312, 405);
+            this.DescRepasPnl.TabIndex = 1;
+            // 
+            // typeLbl
+            // 
+            this.typeLbl.AutoSize = true;
+            this.typeLbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.typeLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.typeLbl.Location = new System.Drawing.Point(198, 51);
+            this.typeLbl.Name = "typeLbl";
+            this.typeLbl.Size = new System.Drawing.Size(45, 17);
+            this.typeLbl.TabIndex = 6;
+            this.typeLbl.Text = "Type :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(70, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Ingredients :";
+            // 
+            // CurrentIngredientsLbl
+            // 
+            this.CurrentIngredientsLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurrentIngredientsLbl.Location = new System.Drawing.Point(33, 207);
+            this.CurrentIngredientsLbl.Name = "CurrentIngredientsLbl";
+            this.CurrentIngredientsLbl.Size = new System.Drawing.Size(242, 94);
+            this.CurrentIngredientsLbl.TabIndex = 4;
+            // 
+            // descLbl
+            // 
+            this.descLbl.AutoSize = true;
+            this.descLbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.descLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.descLbl.Location = new System.Drawing.Point(70, 129);
+            this.descLbl.Name = "descLbl";
+            this.descLbl.Size = new System.Drawing.Size(87, 17);
+            this.descLbl.TabIndex = 3;
+            this.descLbl.Text = "Description :";
+            // 
+            // CurrentDescLabel
+            // 
+            this.CurrentDescLabel.AutoSize = true;
+            this.CurrentDescLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurrentDescLabel.Location = new System.Drawing.Point(98, 154);
+            this.CurrentDescLabel.Name = "CurrentDescLabel";
+            this.CurrentDescLabel.Size = new System.Drawing.Size(0, 15);
+            this.CurrentDescLabel.TabIndex = 2;
+            // 
+            // Nomlbl
+            // 
+            this.Nomlbl.AutoSize = true;
+            this.Nomlbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Nomlbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Nomlbl.Location = new System.Drawing.Point(70, 74);
+            this.Nomlbl.Name = "Nomlbl";
+            this.Nomlbl.Size = new System.Drawing.Size(40, 17);
+            this.Nomlbl.TabIndex = 1;
+            this.Nomlbl.Text = "Plat :";
+            // 
+            // CurrentMetLbl
+            // 
+            this.CurrentMetLbl.AutoSize = true;
+            this.CurrentMetLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurrentMetLbl.Location = new System.Drawing.Point(98, 99);
+            this.CurrentMetLbl.Name = "CurrentMetLbl";
+            this.CurrentMetLbl.Size = new System.Drawing.Size(0, 15);
+            this.CurrentMetLbl.TabIndex = 0;
             // 
             // ListMetForm
             // 
@@ -196,6 +301,9 @@ namespace Desktop.Mets
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).EndInit();
+            this.metPicturePnl.ResumeLayout(false);
+            this.DescRepasPnl.ResumeLayout(false);
+            this.DescRepasPnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +319,13 @@ namespace Desktop.Mets
         private System.Windows.Forms.Label CurentPageMetLbl;
         private System.Windows.Forms.DataGridView metDtGv;
         private System.Windows.Forms.Panel metPicturePnl;
+        private System.Windows.Forms.Panel DescRepasPnl;
+        private System.Windows.Forms.Label CurrentMetLbl;
+        private System.Windows.Forms.Label descLbl;
+        private System.Windows.Forms.Label CurrentDescLabel;
+        private System.Windows.Forms.Label Nomlbl;
+        private System.Windows.Forms.Label typeLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CurrentIngredientsLbl;
     }
 }

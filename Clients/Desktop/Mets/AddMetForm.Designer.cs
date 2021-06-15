@@ -33,6 +33,10 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv = new System.Windows.Forms.DataGridView();
             this.listTousIngredientsLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.PreviousMetIngredientBtn = new System.Windows.Forms.Button();
+            this.NextMetIngredientBtn = new System.Windows.Forms.Button();
+            this.CurrentMetIngredientLbl = new System.Windows.Forms.Label();
             this.AddMetBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.NomMetLbl = new System.Windows.Forms.Label();
@@ -48,12 +52,21 @@ namespace Desktop.Mets
             this.QuantiteIngredientParMetTxBox = new System.Windows.Forms.TextBox();
             this.DeleteFromListForMetBtn = new System.Windows.Forms.Button();
             this.AddToListForMetBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.PreviousIngredientBtn = new System.Windows.Forms.Button();
+            this.NextIngredientBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.ListAllIngredientsTLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientsDtGv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientparPlatDGV)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListAllIngredientsTLP
@@ -81,6 +94,7 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeIngredientsDtGv.GridColor = System.Drawing.SystemColors.Control;
             this.ListeIngredientsDtGv.Location = new System.Drawing.Point(3, 33);
+            this.ListeIngredientsDtGv.MultiSelect = false;
             this.ListeIngredientsDtGv.Name = "ListeIngredientsDtGv";
             this.ListeIngredientsDtGv.RowHeadersVisible = false;
             this.ListeIngredientsDtGv.RowTemplate.Height = 25;
@@ -88,7 +102,6 @@ namespace Desktop.Mets
             this.ListeIngredientsDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListeIngredientsDtGv.Size = new System.Drawing.Size(262, 375);
             this.ListeIngredientsDtGv.TabIndex = 4;
-            this.ListeIngredientsDtGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListeIngredientsDtGv_CellClick);
             // 
             // listTousIngredientsLbl
             // 
@@ -106,6 +119,7 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.375F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.AddMetBtn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ListAllIngredientsTLP, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
@@ -119,6 +133,67 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.510639F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.PreviousMetIngredientBtn, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.NextMetIngredientBtn, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.CurrentMetIngredientLbl, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(535, 414);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(262, 33);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // PreviousMetIngredientBtn
+            // 
+            this.PreviousMetIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviousMetIngredientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousMetIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PreviousMetIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.PreviousMetIngredientBtn.Location = new System.Drawing.Point(3, 3);
+            this.PreviousMetIngredientBtn.Name = "PreviousMetIngredientBtn";
+            this.PreviousMetIngredientBtn.Size = new System.Drawing.Size(81, 27);
+            this.PreviousMetIngredientBtn.TabIndex = 0;
+            this.PreviousMetIngredientBtn.Text = "<";
+            this.PreviousMetIngredientBtn.UseVisualStyleBackColor = true;
+            this.PreviousMetIngredientBtn.Click += new System.EventHandler(this.PreviousMetIngredientBtn_Click);
+            // 
+            // NextMetIngredientBtn
+            // 
+            this.NextMetIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NextMetIngredientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextMetIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NextMetIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.NextMetIngredientBtn.Location = new System.Drawing.Point(177, 3);
+            this.NextMetIngredientBtn.Name = "NextMetIngredientBtn";
+            this.NextMetIngredientBtn.Size = new System.Drawing.Size(82, 27);
+            this.NextMetIngredientBtn.TabIndex = 1;
+            this.NextMetIngredientBtn.Text = ">";
+            this.NextMetIngredientBtn.UseVisualStyleBackColor = true;
+            this.NextMetIngredientBtn.Click += new System.EventHandler(this.NextMetIngredientBtn_Click);
+            // 
+            // CurrentMetIngredientLbl
+            // 
+            this.CurrentMetIngredientLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CurrentMetIngredientLbl.AutoSize = true;
+            this.CurrentMetIngredientLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.CurrentMetIngredientLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CurrentMetIngredientLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurrentMetIngredientLbl.Location = new System.Drawing.Point(123, 9);
+            this.CurrentMetIngredientLbl.Margin = new System.Windows.Forms.Padding(0);
+            this.CurrentMetIngredientLbl.Name = "CurrentMetIngredientLbl";
+            this.CurrentMetIngredientLbl.Size = new System.Drawing.Size(14, 15);
+            this.CurrentMetIngredientLbl.TabIndex = 2;
+            this.CurrentMetIngredientLbl.Text = "1";
             // 
             // AddMetBtn
             // 
@@ -220,6 +295,9 @@ namespace Desktop.Mets
             // 
             // ListeIngredientparPlatDGV
             // 
+            this.ListeIngredientparPlatDGV.AllowUserToAddRows = false;
+            this.ListeIngredientparPlatDGV.AllowUserToDeleteRows = false;
+            this.ListeIngredientparPlatDGV.AllowUserToResizeRows = false;
             this.ListeIngredientparPlatDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -228,6 +306,7 @@ namespace Desktop.Mets
             this.ListeIngredientparPlatDGV.Location = new System.Drawing.Point(112, 204);
             this.ListeIngredientparPlatDGV.MultiSelect = false;
             this.ListeIngredientparPlatDGV.Name = "ListeIngredientparPlatDGV";
+            this.ListeIngredientparPlatDGV.ReadOnly = true;
             this.ListeIngredientparPlatDGV.RowTemplate.Height = 25;
             this.ListeIngredientparPlatDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListeIngredientparPlatDGV.Size = new System.Drawing.Size(338, 198);
@@ -292,6 +371,89 @@ namespace Desktop.Mets
             this.AddToListForMetBtn.UseVisualStyleBackColor = true;
             this.AddToListForMetBtn.Click += new System.EventHandler(this.AddToListForMetBtn_Click);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.PreviousIngredientBtn, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // PreviousIngredientBtn
+            // 
+            this.PreviousIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviousIngredientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PreviousIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.PreviousIngredientBtn.Location = new System.Drawing.Point(3, 3);
+            this.PreviousIngredientBtn.Name = "PreviousIngredientBtn";
+            this.PreviousIngredientBtn.Size = new System.Drawing.Size(60, 94);
+            this.PreviousIngredientBtn.TabIndex = 0;
+            this.PreviousIngredientBtn.Text = "<";
+            this.PreviousIngredientBtn.UseVisualStyleBackColor = true;
+            // 
+            // NextIngredientBtn
+            // 
+            this.NextIngredientBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NextIngredientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextIngredientBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NextIngredientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.NextIngredientBtn.Location = new System.Drawing.Point(305, 3);
+            this.NextIngredientBtn.Name = "NextIngredientBtn";
+            this.NextIngredientBtn.Size = new System.Drawing.Size(145, 27);
+            this.NextIngredientBtn.TabIndex = 1;
+            this.NextIngredientBtn.Text = ">";
+            this.NextIngredientBtn.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 94);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "<";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(305, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 27);
+            this.button2.TabIndex = 1;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AddMetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -304,11 +466,15 @@ namespace Desktop.Mets
             this.ListAllIngredientsTLP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientsDtGv)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListeIngredientparPlatDGV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -335,5 +501,15 @@ namespace Desktop.Mets
         private System.Windows.Forms.Button AddMetBtn;
         private System.Windows.Forms.ComboBox TypeRepasCBox;
         private System.Windows.Forms.TextBox QuantiteIngredientParMetTxBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button PreviousIngredientBtn;
+        private System.Windows.Forms.Button NextIngredientBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button PreviousMetIngredientBtn;
+        private System.Windows.Forms.Button NextMetIngredientBtn;
+        private System.Windows.Forms.Label CurrentMetIngredientLbl;
     }
 }

@@ -114,7 +114,7 @@ namespace Desktop.Mets
 
                 }
                 Task<Met> metTask = _restaurantService.CreateMet(newMet);
-                Close();
+                DialogResult = DialogResult.OK;
             }
             else
             {

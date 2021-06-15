@@ -63,24 +63,28 @@ namespace DAL.Repository
             //Evité l'injection sql avec des reqêtes paramétrées
             var stmt1 = @"select * from IngredientsParPlats WHERE Id = @id;";
             var stmt = @"select p.Id, p.Libelle, mi.IdMet, mi.Quantite,tp.Id, tp.Libelle, i.Id, i.Nom, i.Prix from Mets as p 
-					 inner join MetsIngredients as mi on p.Id = mi.IdMet
-                     inner join TypeRepas tp on p.IdType = tp.Id
-					 inner join Ingredient as i on mi.IdIngredient = i.Id WHERE p.Id = @id;";
+					 left join MetsIngredients as mi on p.Id = mi.IdMet
+                     left join TypeRepas tp on p.IdType = tp.Id
+					 left join Ingredient as i on mi.IdIngredient = i.Id WHERE p.Id = @id;";
             // Renvoie une ligne pour chaque ingredient et pour chaque id met
             var mets = await _session.Connection.QueryAsync<Met, MetsIngredients, TypeRepas, Ingredient, Met >(stmt, (met, metIngredient, typeRepas, ingredient) =>
             {
                 met.TypeRepas = typeRepas;
                 met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>();
-                metIngredient.Ingredient = ingredient;
+                if(metIngredient != null)
+                {
+                    metIngredient.Ingredient = ingredient;
+                    met.ListDesIngredients.Add(metIngredient);
+                }
 
-                met.ListDesIngredients.Add(metIngredient);
                 return met;
             }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id, IdMet, Id, Id");
          //Regroupe les ingredients dans une liste pour un id met
             var met = mets.GroupBy(m => m.Id).Select(m =>
             {
                 var met = m.First();
-                met.ListDesIngredients = m.Select(mp => mp.ListDesIngredients.Single()).ToList();
+                if(met.ListDesIngredients.Count() > 0)
+                    met.ListDesIngredients = m.Select(mp => mp.ListDesIngredients.Single()).ToList();
                 return met;
             }).FirstOrDefault();
            //Renvoie le met avec la liste de ses ingredients

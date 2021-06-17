@@ -107,6 +107,7 @@ namespace Desktop.Mets
                 {
                    // MessageBox.Show("Service Indisponible");
                     MessageBox.Show("Le plat : " + met.Libelle.ToString() + " a échoué");
+                    
                 }
                 else
                 {

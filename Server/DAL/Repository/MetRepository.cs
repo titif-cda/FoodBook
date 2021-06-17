@@ -62,7 +62,7 @@ namespace DAL.Repository
         {
             //Evité l'injection sql avec des reqêtes paramétrées
             var stmt1 = @"select * from IngredientsParPlats WHERE Id = @id;";
-            var stmt = @"select p.Id, p.Libelle, mi.IdMet, mi.Quantite,tp.Id, tp.Libelle, i.Id, i.Nom, i.Prix from Mets as p 
+            var stmt = @"select p.Id, p.Libelle, p.Description, mi.IdMet, mi.Quantite,tp.Id, tp.Libelle, i.Id, i.Nom, i.Prix from Mets as p 
 					 left join MetsIngredients as mi on p.Id = mi.IdMet
                      left join TypeRepas tp on p.IdType = tp.Id
 					 left join Ingredient as i on mi.IdIngredient = i.Id WHERE p.Id = @id;";
@@ -107,8 +107,14 @@ namespace DAL.Repository
 
         public async Task<bool> UpdateAsync(Met entity)
         {
-            var stmt = @"UPDATE Mets SET IdType = @IdType, Libelle = @Libelle, Description=@Description WHERE Id = @Id";
-            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
+            var stmt = @"UPDATE Mets SET IdType = @IdType, Libelle = @Libelle, Description = @Description WHERE Id = @Id";
+
+            var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, new {
+            IdType = entity.TypeRepas.Id,
+            Libelle = entity.Libelle,
+            Description =entity.Description,
+            Id =entity.Id
+            }, _session.Transaction);
             return nbModifiedLines > 0;
         }
     }

@@ -18,7 +18,7 @@ namespace API.Controllers
     [Route("api/v{version:apiVersion}/mets")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
-    [Authorize(Roles = "Administrateur")]
+    [AllowAnonymous]
     public class MetController : ControllerBase
     {
 

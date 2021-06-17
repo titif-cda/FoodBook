@@ -78,7 +78,7 @@ namespace API.Controllers
         /// <param name="listeIngredient">ingredient à ajouter sans l'identifiant unique</param>
         /// <returns>Renvoi l'ingredient avec l'identifiant généré</returns>
         [HttpPost()]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateIngredient([FromBody] MetsIngredients listeIngredient)
@@ -104,7 +104,7 @@ namespace API.Controllers
         /// <param name="id">Identifiant</param>
         /// <returns>Retourne succes ou echec</returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteListeIngredients([FromRoute] int id)
@@ -129,7 +129,7 @@ namespace API.Controllers
         /// <param name="ingredient">Ingredient</param>
         /// <returns>une liste des ingredients modifié</returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Restaurateur")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

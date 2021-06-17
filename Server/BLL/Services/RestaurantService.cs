@@ -174,7 +174,42 @@ namespace BLL.Services
 
             return newRepas;
         }
-
+        public async Task<Met> ModifyMet(Met met)
+        {
+            _db.BeginTransaction();
+            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
+            IMetsIngredientsRepository _metIngredientsRepo = _db.GetRepository<IMetsIngredientsRepository>();
+            try
+            {
+                await _met.UpdateAsync(met);
+                for (int i = 0; i < met.ListDesIngredients.Count; i++)
+                {
+                    var metsIngredient = met.ListDesIngredients[i];
+                    metsIngredient.IdMet = met.Id;
+                   
+                    if (metsIngredient.IdMet == null  &&  metsIngredient.Ingredient.Id == null)
+                    {
+                        await _metIngredientsRepo.InsertAsync(metsIngredient);
+                    }
+                    else if (metsIngredient.IdMet != null && metsIngredient.Ingredient.Id != null)
+                    {
+                        await _metIngredientsRepo.UpdateAsync(metsIngredient);
+                    }
+                    else if (metsIngredient.IdMet == null || metsIngredient.Ingredient.Id == null)
+                    {
+                        await _metIngredientsRepo.DeleteAsync(met.Id);
+                    }
+                    
+                };
+                _db.Commit();
+                return met;
+            }
+            catch (Exception e)
+            {
+                _db.Rollback();
+                return null;
+            }
+        }
         public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest)
         {
             IMetsRepository _met = _db.GetRepository<IMetsRepository>();
@@ -198,22 +233,7 @@ namespace BLL.Services
             return await _met.GetIngredientForMetAsync(id);
         }
 
-        public async Task<Met> ModifyMet(Met met)
-        {
-            _db.BeginTransaction();
-            IMetsRepository _met = _db.GetRepository<IMetsRepository>();
-            try
-            {
-                await _met.UpdateAsync(met);
-                _db.Commit();
-                return met;
-            }
-            catch (Exception e)
-            {
-                _db.Rollback();
-                return null;
-            }
-        }
+       
 
         public async Task<bool> RemoveMetById(int id)
         {

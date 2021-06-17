@@ -139,11 +139,15 @@ namespace Desktop.Mets
         /// <param name="e"></param>
         private void AddMetBtn_Click(object sender, EventArgs e)
         {
-            var addMetForm = new AddMetForm();
-            addMetForm.ShowDialog();
-            if (addMetForm.DialogResult == DialogResult.OK)
+            using (var addMetForm = new CrudMetForm())
             {
-                LastPage();
+                addMetForm.Initialize();
+                addMetForm.ShowDialog();
+                if (addMetForm.DialogResult == DialogResult.OK)
+                {
+                    LastPage();
+                    
+                }
             }
         }
         /// <summary>
@@ -233,15 +237,18 @@ namespace Desktop.Mets
         }
         #endregion
 
-        private void metDtGv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private async void metDtGv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView gridView = (DataGridView)sender;
             if (metDtGv.SelectedRows.Count > 0)
             {
                 Met selectedMet = (Met)metDtGv.SelectedRows[0].DataBoundItem;
-                var modifyMetForm = new AddMetForm();
-                modifyMetForm.ShowDialog();
-                selectedMet.Id = modifyMetForm.test;
+                Met met = await _restaurantService.GetDetailsMet(selectedMet.Id);
+                using (var modifyMetForm = new CrudMetForm())
+                {
+                    modifyMetForm.Initialize(met);
+                    modifyMetForm.ShowDialog();
+                }
             }
 
         }

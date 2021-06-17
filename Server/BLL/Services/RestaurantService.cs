@@ -179,27 +179,25 @@ namespace BLL.Services
             _db.BeginTransaction();
             IMetsRepository _met = _db.GetRepository<IMetsRepository>();
             IMetsIngredientsRepository _metIngredientsRepo = _db.GetRepository<IMetsIngredientsRepository>();
+
+          
+
+
+
             try
             {
+                //Remove old List Ingredients
+                await _metIngredientsRepo.DeleteMetIngredientFromMetIdAsync(met.Id);
+
+                //Update met
                 await _met.UpdateAsync(met);
+
+                //Add new List Ingredients
                 for (int i = 0; i < met.ListDesIngredients.Count; i++)
                 {
                     var metsIngredient = met.ListDesIngredients[i];
                     metsIngredient.IdMet = met.Id;
-                   
-                    if (metsIngredient.IdMet == null  &&  metsIngredient.Ingredient.Id == null)
-                    {
-                        await _metIngredientsRepo.InsertAsync(metsIngredient);
-                    }
-                    else if (metsIngredient.IdMet != null && metsIngredient.Ingredient.Id != null)
-                    {
-                        await _metIngredientsRepo.UpdateAsync(metsIngredient);
-                    }
-                    else if (metsIngredient.IdMet == null || metsIngredient.Ingredient.Id == null)
-                    {
-                        await _metIngredientsRepo.DeleteAsync(met.Id);
-                    }
-                    
+                    await _metIngredientsRepo.InsertAsync(metsIngredient);
                 };
                 _db.Commit();
                 return met;

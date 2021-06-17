@@ -12,5 +12,7 @@ namespace DAL.Repository
     public interface IMetsIngredientsRepository : IGenericRepository<MetsIngredients>
     {
         Task<PageResponse<MetsIngredients>> GetAllAsync(PageRequest pageRequest);
+
+        Task<int> DeleteMetIngredientFromMetIdAsync(int? idMet);
     }
 }

@@ -14,7 +14,7 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant du Met (plat)
         /// </summary>
-        public int Id { get; set; }
+        public int? Id { get; set; }
         /// <summary>
         /// Libelle du Met (plat)
         /// </summary>

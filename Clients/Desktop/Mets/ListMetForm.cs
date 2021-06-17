@@ -243,11 +243,15 @@ namespace Desktop.Mets
             if (metDtGv.SelectedRows.Count > 0)
             {
                 Met selectedMet = (Met)metDtGv.SelectedRows[0].DataBoundItem;
-                Met met = await _restaurantService.GetDetailsMet(selectedMet.Id);
+                Met met = await _restaurantService.GetDetailsMet(selectedMet.Id.Value);
                 using (var modifyMetForm = new CrudMetForm())
                 {
                     modifyMetForm.Initialize(met);
-                    modifyMetForm.ShowDialog();
+                    var result = modifyMetForm.ShowDialog();
+                    if(result == DialogResult.OK)
+                    {
+                        RefreshPage();
+                    }
                 }
             }
 

@@ -19,10 +19,15 @@ namespace DAL.Repository
             _session = dbSession;
         }
 
-        public async Task<int> DeleteAsync(long id)
+        public Task<int> DeleteAsync(long id)
         {
-            var stmt = @"delete from MetsIngredients where Id = @id";
-            return await _session.Connection.ExecuteAsync(stmt, new { Id = id }, _session.Transaction);
+            throw new NotImplementedException();
+        }
+
+        public async Task<int> DeleteMetIngredientFromMetIdAsync(int? idMet)
+        {
+            var stmt = @"delete from MetsIngredients where IdMet = @IdMet";
+            return await _session.Connection.ExecuteAsync(stmt, new { IdMet = idMet }, _session.Transaction);
         }
 
         public async Task<IEnumerable<MetsIngredients>> GetAllAsync()

@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Desktop.Mets
 {
     public partial class CrudMetForm : Form
@@ -24,7 +23,7 @@ namespace Desktop.Mets
         private BindingSource bindingSourceListeIngredientParPlats = new BindingSource();
 
         //Initialise une liste d'ingrédients côté client.
-        private readonly List<MetsIngredients> AllIngredientsListe = new();
+        private List<MetsIngredients> AllIngredientsListe = new();
        
         //Initialise les parametres du DTO 
         private int currentPage = 1;
@@ -36,7 +35,8 @@ namespace Desktop.Mets
         {
             _restaurantService = new RestaurantService();
             InitializeComponent();
-            LoadIngredient();
+            //lance la fonction dans un autre thread
+            Task.Run(() => LoadIngredient()).Wait();
             LoadListBox();
             ListeIngredientsDtGv.ReadOnly = true;
            
@@ -44,7 +44,7 @@ namespace Desktop.Mets
 
         }
 
-        private async void LoadIngredient()
+        private async Task LoadIngredient()
         {
 
             Task<PageResponse<Ingredient>> ingredientPageTask = _restaurantService.GetAllIngredients(new PageRequest(currentPage, defaultPageSize));
@@ -59,6 +59,7 @@ namespace Desktop.Mets
                 maxPage = ingredientPage.TotalPages.GetValueOrDefault();
                 bindingSourceDeLaListeDesIngredients.DataSource = ingredientPage.Data;
                 ListeIngredientsDtGv.DataSource = bindingSourceDeLaListeDesIngredients;
+                Refresh();
                 ListeIngredientsDtGv.Columns["Id"].Visible = false;
                 ListeIngredientsDtGv.ClearSelection();
 
@@ -85,6 +86,7 @@ namespace Desktop.Mets
             ListeIngredientparPlatDGV.Columns["Ingredient"].DisplayIndex = 0;
             ListeIngredientparPlatDGV.Columns["Quantite"].DisplayIndex = 1;
             ListeIngredientparPlatDGV.Columns["IdMet"].Visible = false;
+
             ListeIngredientparPlatDGV.ClearSelection();
        
         }
@@ -103,23 +105,29 @@ namespace Desktop.Mets
                 var met = await _restaurantService.CreateMet(CurrentMet);
                 if (met == null)
                 {
-                    MessageBox.Show("Service Indisponible");
+                   // MessageBox.Show("Service Indisponible");
+                    MessageBox.Show("Le plat : " + met.Libelle.ToString() + " a échoué");
                 }
                 else
                 {
                     DialogResult = DialogResult.OK;
+                    MessageBox.Show("Le plat : " + met.Libelle.ToString() + " a été modifié");
                 }
                
             }
             else
             {
-
-                CurrentMet = await _restaurantService.PutMet(CurrentMet);
-                DialogResult = DialogResult.OK;
-            }
-            if (CurrentMet == null)
-            {
-                MessageBox.Show("La modification n'a pas eté faite Service Indisponible");
+                if (CurrentMet == null)
+                {
+                    // MessageBox.Show("La modification n'a pas eté faite Service Indisponible");
+                    MessageBox.Show("Le plat : " + CurrentMet.Libelle.ToString() + " a échoué");
+                }
+                else
+                {
+                    CurrentMet = await _restaurantService.PutMet(CurrentMet);
+                    DialogResult = DialogResult.OK;
+                    MessageBox.Show("Le plat : " + CurrentMet.Libelle.ToString() + " a été modifié");
+                }
             }
         }
 
@@ -129,8 +137,7 @@ namespace Desktop.Mets
             if (!isCreation)
             {
                 id = CurrentMet.Id;
-          
-
+               
             }
 
             var ListDesIngredients = bindingSourceListeIngredientParPlats.DataSource as List<MetsIngredients>;
@@ -152,6 +159,8 @@ namespace Desktop.Mets
         
         public void Initialize(Met met = null)
         {
+            
+
             if (met == null)
             {
                 CurrentMet = new Met();
@@ -170,14 +179,20 @@ namespace Desktop.Mets
             }
             else
             {
-               //var ListDesIngredients = bindingSourceListeIngredientParPlats.DataSource as List<MetsIngredients>;
+               
+                //var ListDesIngredients = bindingSourceListeIngredientParPlats.DataSource as List<MetsIngredients>;
                 CurrentMet = met;
                 //modif
+                ListeIngredientparPlatDGV.DataSource = bindingSourceListeIngredientParPlats;
                 CrudMetBtn.Text = "Modifier";
 
                 NomMetTBox.Text = met.Libelle.ToString();
                 DescriptionMetRTBox.Text = met.Description.ToString();
-                ListeIngredientparPlatDGV.DataSource = met.ListDesIngredients; 
+                bindingSourceListeIngredientParPlats.DataSource = AllIngredientsListe = met.ListDesIngredients;
+                //tri des 2 listes: retire les ingredients par plats de la liste de tous les ingredients
+                var  l  = bindingSourceDeLaListeDesIngredients.DataSource as List<Ingredient>;
+                var lTrier = l.Where(i => ! met.ListDesIngredients.Select(mi => mi.Ingredient).Contains(i));
+                bindingSourceDeLaListeDesIngredients.DataSource = lTrier;
                 
             }
            
@@ -200,7 +215,7 @@ namespace Desktop.Mets
              
                 if (string.IsNullOrEmpty(QuantiteIngredientParMetTxBox.Text))
                 {
-                    MessageBox.Show("Veuillez saisir la quanbtité");
+                    MessageBox.Show("Veuillez saisir la quantité");
                     QuantiteIngredientParMetTxBox.Focus();
                 }
                 else
@@ -225,12 +240,12 @@ namespace Desktop.Mets
         private void DeleteFromListForMetBtn_Click(object sender, EventArgs e)
         {
           
-            if (this.ListeIngredientsDtGv.SelectedRows.Count > 0)
+            if (this.ListeIngredientparPlatDGV.SelectedRows.Count > 0)
             {
                 
                 bindingSourceDeLaListeDesIngredients.Add((ListeIngredientparPlatDGV.CurrentRow.DataBoundItem as MetsIngredients).Ingredient);
                 //ListeIngredientparPlatDGV.Rows.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
-                bindingSourceListeIngredientParPlats.RemoveAt(this.ListeIngredientparPlatDGV.CurrentRow.Index);
+                bindingSourceListeIngredientParPlats.RemoveAt(ListeIngredientparPlatDGV.CurrentRow.Index);
                
             }
           

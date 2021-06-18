@@ -250,12 +250,12 @@
             Identifiant reservation
             </summary>
         </member>
-        <member name="P:BO.Entity.Reservation.IdClient">
+        <member name="P:BO.Entity.Reservation.Client">
             <summary>
             Identifiant client
             </summary>
         </member>
-        <member name="P:BO.Entity.Reservation.IdService">
+        <member name="P:BO.Entity.Reservation.Service">
             <summary>
             Identifiant Menu
             </summary>
@@ -275,13 +275,13 @@
             constructeur par defaut
              </summary>
         </member>
-        <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.DateTime,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},BO.Entity.Client,BO.Entity.Service,System.DateTime,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             constructeur avec tous les arguments
             </summary>
             <param name="idResa">Identifiant reservation</param>
-            <param name="idClient">Identifiant client</param>
-            <param name="idMenu">Identifiant Menu</param>
+            <param name="client">Objet Client</param>
+            <param name="service">Objet Service</param>
             <param name="dateResa">Date de reservation</param>
             <param name="nbResa">Nombre de reservations</param>
             <param name="entree">choisir entrée</param>
@@ -323,9 +323,10 @@
             <summary>
             Constructeur aves parametres
             </summary>
-            <param name="id"></param>
-            <param name="midi"></param>
-            <param name="date"></param>
+            <param name="id">Identifiant du service</param>
+            <param name="midi">Service du midi ou non, 1 si oui</param>
+            <param name="date">Date du service</param>
+            /// <param name="listMets">recupere la liste des plats</param>
         </member>
         <member name="P:BO.Entity.TypeRepas.Id">
             <summary>

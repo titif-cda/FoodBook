@@ -15,11 +15,11 @@ namespace BO.Entity
         /// <summary>
         /// Identifiant client
         /// </summary>
-        public int? IdClient { get; set; }
+        public Client Client { get; set; }
         /// <summary>
         /// Identifiant Menu
         /// </summary>
-        public int? IdService { get; set; }
+        public Service Service { get; set; }
         /// <summary>
         /// Date de reservation
         /// </summary>
@@ -42,19 +42,19 @@ public Reservation()
         /// constructeur avec tous les arguments
         /// </summary>
         /// <param name="idResa">Identifiant reservation</param>
-        /// <param name="idClient">Identifiant client</param>
-        /// <param name="idMenu">Identifiant Menu</param>
+        /// <param name="client">Objet Client</param>
+        /// <param name="service">Objet Service</param>
         /// <param name="dateResa">Date de reservation</param>
         /// <param name="nbResa">Nombre de reservations</param>
         /// <param name="entree">choisir entrée</param>
         /// <param name="plat">choisir plat</param>
         /// <param name="dessert">choisir dessert</param>
 
-        public Reservation(int? idResa, int? idClient, int? idMenu, DateTime dateResa, int? nbResa,bool entree,bool plat,bool dessert)
+        public Reservation(int? idResa, Client client, Service service , DateTime dateResa, int? nbResa,bool entree,bool plat,bool dessert)
         {
             Id = idResa;
-            IdClient = idClient;
-            IdService = idMenu;
+            Client = client;
+            Service = service;
             Date = dateResa;
             Nb = nbResa;
             Entree = entree;
@@ -68,8 +68,8 @@ public Reservation()
         {
             return obj is Reservation resa &&
                 Id == resa.Id &&
-                IdClient == resa.IdClient &&
-                IdService == resa.IdService &&
+                Client.Equals(resa.Client) &&
+                Service.Equals(resa.Service) &&
                 Date == resa.Date &&
                 Nb == resa.Nb&&
                 Entree == resa.Entree &&
@@ -83,7 +83,7 @@ public Reservation()
 
         public override int GetHashCode()
         {
-                return HashCode.Combine(Id,IdClient,IdService,Date,Nb,Entree,Plat,Dessert);
+                return HashCode.Combine(Id,Client,Service,Date,Nb,Entree,Plat,Dessert);
         }
     }
 }

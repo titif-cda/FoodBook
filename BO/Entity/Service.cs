@@ -40,9 +40,10 @@ namespace BO.Entity
         /// <summary>
         /// Constructeur aves parametres
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="midi"></param>
-        /// <param name="date"></param>
+        /// <param name="id">Identifiant du service</param>
+        /// <param name="midi">Service du midi ou non, 1 si oui</param>
+        /// <param name="date">Date du service</param>
+        /// /// <param name="listMets">recupere la liste des plats</param>
         public Service(int id, bool midi, DateTime date, List<Met> listMets)
         {
             Id = id;
@@ -56,7 +57,6 @@ namespace BO.Entity
             return obj is Service service &&
                    Id == service.Id &&
                    Midi == service.Midi &&
-                   
                    Date == service.Date&&
                    ListPlats == service.ListPlats; 
         }

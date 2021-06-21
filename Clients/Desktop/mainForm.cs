@@ -1,4 +1,5 @@
 ﻿using BLLC.Services;
+using Desktop.Gestion;
 using Desktop.Ingredients;
 using Desktop.Mets;
 using Microsoft.AspNetCore.Http;
@@ -116,15 +117,32 @@ namespace Desktop
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        /// <summary>
+        /// Click sur bouton ingredients
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void IngredientBtn_Click(object sender, EventArgs e)
         {
             NavFormPanel(new ListIngredientsForm());
         }
-
+        /// <summary>
+        /// Click sur bouton plats
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Plats_Click(object sender, EventArgs e)
         {
             NavFormPanel(new ListMetForm());
+        }
+        /// <summary>
+        /// Click sur bouton gestion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gestionBtn_Click(object sender, EventArgs e)
+        {
+            NavFormPanel(new GestionForm());
         }
     }
 }

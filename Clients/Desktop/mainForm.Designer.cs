@@ -35,7 +35,7 @@ namespace Desktop
             this.clientBtn = new System.Windows.Forms.Button();
             this.IngredientBtn = new System.Windows.Forms.Button();
             this.Plats = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.gestionBtn = new System.Windows.Forms.Button();
             this.MainFormPBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ContenuPnl = new System.Windows.Forms.Panel();
@@ -80,7 +80,7 @@ namespace Desktop
             this.MenuLateralTlp.Controls.Add(this.clientBtn, 0, 1);
             this.MenuLateralTlp.Controls.Add(this.IngredientBtn, 0, 2);
             this.MenuLateralTlp.Controls.Add(this.Plats, 0, 3);
-            this.MenuLateralTlp.Controls.Add(this.button4, 0, 4);
+            this.MenuLateralTlp.Controls.Add(this.gestionBtn, 0, 4);
             this.MenuLateralTlp.Controls.Add(this.MainFormPBox, 0, 0);
             this.MenuLateralTlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MenuLateralTlp.Location = new System.Drawing.Point(0, 0);
@@ -149,21 +149,22 @@ namespace Desktop
             this.Plats.UseVisualStyleBackColor = false;
             this.Plats.Click += new System.EventHandler(this.Plats_Click);
             // 
-            // button4
+            // gestionBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(0, 291);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(215, 41);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.gestionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.gestionBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gestionBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.gestionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gestionBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gestionBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.gestionBtn.Location = new System.Drawing.Point(0, 291);
+            this.gestionBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.gestionBtn.Name = "gestionBtn";
+            this.gestionBtn.Size = new System.Drawing.Size(215, 41);
+            this.gestionBtn.TabIndex = 3;
+            this.gestionBtn.Text = "Gestion";
+            this.gestionBtn.UseVisualStyleBackColor = false;
+            this.gestionBtn.Click += new System.EventHandler(this.gestionBtn_Click);
             // 
             // MainFormPBox
             // 
@@ -345,7 +346,7 @@ namespace Desktop
         private System.Windows.Forms.Button clientBtn;
         private System.Windows.Forms.Button IngredientBtn;
         private System.Windows.Forms.Button Plats;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button gestionBtn;
         private System.Windows.Forms.PictureBox MainFormPBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel ContenuPnl;

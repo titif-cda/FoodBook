@@ -10,6 +10,15 @@
     <Compile Update="Client\ListClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Gestion\GestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\ReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Ingredients\CrudIngredientsForm.cs">
       <SubType>Form</SubType>
     </Compile>

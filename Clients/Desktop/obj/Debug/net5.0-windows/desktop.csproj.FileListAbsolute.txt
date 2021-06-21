@@ -81,7 +81,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\BO.xml
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\BLLC.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\bin\Debug\net5.0-windows\TestDesktop.pdb
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.AccueilForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.CrudClientForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ListClientsForm.resources
@@ -105,3 +104,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.AssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.GestionForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.ReservationForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.ServiceForm.resources

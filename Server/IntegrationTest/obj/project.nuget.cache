@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s2ycvu0rVlQLvgi7TtkRpCDlQjg+iJSwGrp8v2yZM0mPTP46hjuEWmIxH8LtVGbYrXECAY888p5zTglirRyhpg==",
+  "dgSpecHash": "jSt0FVXVa52e9osx5Jo3f6BY99xhuIZMuNZVZ0uiMBpiJgRO5bWQQwTDlyMw9HEYfgJ3qBZ8mAG2s2buWXuXjg==",
   "success": true,
   "projectFilePath": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server\\IntegrationTest\\IntegrationTest.csproj",
   "expectedPackageFiles": [

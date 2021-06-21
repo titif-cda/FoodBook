@@ -89,8 +89,6 @@ namespace DAL.Repository
             }).FirstOrDefault();
            //Renvoie le met avec la liste de ses ingredients
             return met;
-            
-
         }
 
         public async Task<Met> InsertAsync(Met entity)

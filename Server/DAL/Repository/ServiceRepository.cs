@@ -53,6 +53,81 @@ namespace DAL.Repository
             return await _session.Connection.QueryFirstOrDefaultAsync<Service>(stmt, new { Id = id }, _session.Transaction);
         }
 
+        public async Task<Service> GetMetForServiceAsync(int id)
+        {
+            //Evité l'injection sql avec des reqêtes paramétrées
+            
+            var req = @" select s.Midi, s.Date, s.Id, m.Id, m.Libelle, tp.Id, tp.Libelle from Service as s 
+                left join ServiceMets as sm on sm.IdService = s.Id 
+                left join Mets as m on sm.IdMet = m.Id 
+                left join TypeRepas as tp on m.IdType = tp.Id where s.Id = @id;";
+
+            // Renvoie une ligne pour chaque ingredient et pour chaque id met
+            var services = await _session.Connection.QueryAsync<Service, Met, TypeRepas, Service>(req, (service, met, typeRepas) =>
+             {
+                 met.TypeRepas = typeRepas;
+                 service.ListPlats = service.ListPlats ?? new List<Met>();
+                 service.ListPlats.Add(met);
+                // met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>();
+                //if (serviceMet != null)
+                // {
+                //     serviceMet.Met = met;
+                //     service.ListPlats.Add(met);
+                // }
+
+                 return service;
+             }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id");
+            
+            //Regroupe les plats dans une liste pour un id service
+            var service = services.GroupBy(s => s.Id).Select(s =>
+            {
+                var service = s.First();
+                if (service.ListPlats.Count() > 0)
+                    service.ListPlats = s.Select(mp => mp.ListPlats.Single()).ToList();
+                return service;
+            }).FirstOrDefault();
+            //Renvoie le service avec la liste de ses plats
+            return service;
+        }
+
+        public async Task<IEnumerable<Service>> GetServiceByDate(DateTime date )
+        {
+            //Evité l'injection sql avec des reqêtes paramétrées
+
+            var req = @" select s.Midi, s.Date, s.Id, m.Id, m.Libelle, tp.Id, tp.Libelle from Service as s 
+                left join ServiceMets as sm on sm.IdService = s.Id 
+                left join Mets as m on sm.IdMet = m.Id 
+                left join TypeRepas as tp on m.IdType = tp.Id where s.Date = @date;";
+
+            // Renvoie une ligne pour chaque ingredient et pour chaque id met
+            var services = await _session.Connection.QueryAsync<Service, Met, TypeRepas, Service>(req, (service, met, typeRepas) =>
+            {
+                met.TypeRepas = typeRepas;
+                service.ListPlats = service.ListPlats ?? new List<Met>();
+                service.ListPlats.Add(met);
+                // met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>();
+                //if (serviceMet != null)
+                // {
+                //     serviceMet.Met = met;
+                //     service.ListPlats.Add(met);
+                // }
+
+                return service;
+            }, new { Date = date }, transaction: _session.Transaction, splitOn: "Id");
+
+            //Regroupe les plats dans une liste pour un id service
+            var service = services.GroupBy(s => s.Id).Select(s =>
+            {
+                var service = s.First();
+                if (service.ListPlats.Count() > 0)
+                    service.ListPlats = s.Select(mp => mp.ListPlats.Single()).ToList();
+                return service;
+            });
+            //Renvoie le service avec la liste de ses plats
+            return service;
+        }
+
+
         public async Task<Service> InsertAsync(Service entity)
         {
             var stmt = @"insert into Service( Midi , Date)  output INSERTED.Id

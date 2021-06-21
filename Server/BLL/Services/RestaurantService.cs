@@ -294,6 +294,22 @@ namespace BLL.Services
             return await _service.GetAsync(id);
         }
 
+        public async Task<Service> GetMetForServiceAsync(int id)
+        {
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
+
+            return await _service.GetMetForServiceAsync(id);
+        }
+
+
+        public async Task<IEnumerable<Service>> GetServiceByDate(DateTime date)
+        {
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
+
+            return await _service.GetServiceByDate(date);
+        }
+       
+        
         public async Task<Service> ModifyService(Service service)
         {
             _db.BeginTransaction();
@@ -423,6 +439,8 @@ namespace BLL.Services
                 return false;
             }
         }
+
+       
         #endregion
     }
 }

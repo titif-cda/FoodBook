@@ -90,6 +90,10 @@ namespace BLL.Services
 
         Task<Service> GetServiceById(int id);
 
+        Task<Service> GetMetForServiceAsync(int id);
+
+        Task<IEnumerable<Service>> GetServiceByDate(DateTime date);
+
         Task<Service> ModifyService(Service service);
 
         Task<bool> RemoveServiceById(int id);

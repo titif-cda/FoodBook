@@ -29,6 +29,9 @@ namespace Desktop.Gestion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serviceTlp = new System.Windows.Forms.TableLayoutPanel();
             this.addDeleteServiceTlp = new System.Windows.Forms.TableLayoutPanel();
             this.DeleteServiceBtn = new System.Windows.Forms.Button();
@@ -38,12 +41,19 @@ namespace Desktop.Gestion
             this.RefreshServiceBtn = new System.Windows.Forms.Button();
             this.nextServiceBtn = new System.Windows.Forms.Button();
             this.CurrentPageServiceLbl = new System.Windows.Forms.Label();
-            this.PreviousMetBtn = new System.Windows.Forms.Button();
             this.serviceDtGv = new System.Windows.Forms.DataGridView();
+            this.detailServicePnl = new System.Windows.Forms.Panel();
+            this.serviceDTPicker = new System.Windows.Forms.DateTimePicker();
+            this.isMidiCkBox = new System.Windows.Forms.CheckBox();
+            this.metsListBox = new System.Windows.Forms.ComboBox();
+            this.isMidiLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.serviceTlp.SuspendLayout();
             this.addDeleteServiceTlp.SuspendLayout();
             this.btnTlp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviceDtGv)).BeginInit();
+            this.detailServicePnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // serviceTlp
@@ -53,8 +63,8 @@ namespace Desktop.Gestion
             this.serviceTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.serviceTlp.Controls.Add(this.addDeleteServiceTlp, 0, 1);
             this.serviceTlp.Controls.Add(this.btnTlp, 1, 1);
-            this.serviceTlp.Controls.Add(this.PreviousMetBtn, 1, 0);
             this.serviceTlp.Controls.Add(this.serviceDtGv, 0, 0);
+            this.serviceTlp.Controls.Add(this.detailServicePnl, 1, 0);
             this.serviceTlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.serviceTlp.Location = new System.Drawing.Point(0, 0);
             this.serviceTlp.Margin = new System.Windows.Forms.Padding(0);
@@ -186,31 +196,109 @@ namespace Desktop.Gestion
             this.CurrentPageServiceLbl.TabIndex = 9;
             this.CurrentPageServiceLbl.Text = "1";
             // 
-            // PreviousMetBtn
-            // 
-            this.PreviousMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviousMetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PreviousMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PreviousMetBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.PreviousMetBtn.Location = new System.Drawing.Point(395, 3);
-            this.PreviousMetBtn.Name = "PreviousMetBtn";
-            this.PreviousMetBtn.Size = new System.Drawing.Size(386, 303);
-            this.PreviousMetBtn.TabIndex = 2;
-            this.PreviousMetBtn.Text = "<";
-            this.PreviousMetBtn.UseVisualStyleBackColor = true;
-            // 
             // serviceDtGv
             // 
             this.serviceDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceDtGv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.serviceDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.serviceDtGv.DefaultCellStyle = dataGridViewCellStyle2;
             this.serviceDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.serviceDtGv.Location = new System.Drawing.Point(0, 0);
             this.serviceDtGv.Margin = new System.Windows.Forms.Padding(0);
             this.serviceDtGv.Name = "serviceDtGv";
             this.serviceDtGv.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceDtGv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.serviceDtGv.RowHeadersVisible = false;
+            this.serviceDtGv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.serviceDtGv.RowTemplate.Height = 25;
+            this.serviceDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.serviceDtGv.Size = new System.Drawing.Size(392, 309);
             this.serviceDtGv.TabIndex = 1;
+            // 
+            // detailServicePnl
+            // 
+            this.detailServicePnl.Controls.Add(this.label2);
+            this.detailServicePnl.Controls.Add(this.label1);
+            this.detailServicePnl.Controls.Add(this.isMidiLbl);
+            this.detailServicePnl.Controls.Add(this.metsListBox);
+            this.detailServicePnl.Controls.Add(this.isMidiCkBox);
+            this.detailServicePnl.Controls.Add(this.serviceDTPicker);
+            this.detailServicePnl.Location = new System.Drawing.Point(395, 3);
+            this.detailServicePnl.Name = "detailServicePnl";
+            this.detailServicePnl.Size = new System.Drawing.Size(386, 303);
+            this.detailServicePnl.TabIndex = 2;
+            // 
+            // serviceDTPicker
+            // 
+            this.serviceDTPicker.Location = new System.Drawing.Point(136, 89);
+            this.serviceDTPicker.Name = "serviceDTPicker";
+            this.serviceDTPicker.Size = new System.Drawing.Size(200, 23);
+            this.serviceDTPicker.TabIndex = 0;
+            // 
+            // isMidiCkBox
+            // 
+            this.isMidiCkBox.AutoSize = true;
+            this.isMidiCkBox.Location = new System.Drawing.Point(136, 50);
+            this.isMidiCkBox.Name = "isMidiCkBox";
+            this.isMidiCkBox.Size = new System.Drawing.Size(15, 14);
+            this.isMidiCkBox.TabIndex = 1;
+            this.isMidiCkBox.UseVisualStyleBackColor = true;
+            // 
+            // metsListBox
+            // 
+            this.metsListBox.FormattingEnabled = true;
+            this.metsListBox.Location = new System.Drawing.Point(136, 147);
+            this.metsListBox.Name = "metsListBox";
+            this.metsListBox.Size = new System.Drawing.Size(121, 23);
+            this.metsListBox.TabIndex = 2;
+            // 
+            // isMidiLbl
+            // 
+            this.isMidiLbl.AutoSize = true;
+            this.isMidiLbl.Location = new System.Drawing.Point(18, 49);
+            this.isMidiLbl.Name = "isMidiLbl";
+            this.isMidiLbl.Size = new System.Drawing.Size(94, 15);
+            this.isMidiLbl.TabIndex = 3;
+            this.isMidiLbl.Text = "Service du midi :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(75, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Date :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(73, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Plats :";
             // 
             // ServiceForm
             // 
@@ -225,6 +313,8 @@ namespace Desktop.Gestion
             this.btnTlp.ResumeLayout(false);
             this.btnTlp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviceDtGv)).EndInit();
+            this.detailServicePnl.ResumeLayout(false);
+            this.detailServicePnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -238,9 +328,15 @@ namespace Desktop.Gestion
         private System.Windows.Forms.TableLayoutPanel btnTlp;
         private System.Windows.Forms.Button RefreshServiceBtn;
         private System.Windows.Forms.Label CurrentPageServiceLbl;
-        private System.Windows.Forms.Button PreviousMetBtn;
         private System.Windows.Forms.DataGridView serviceDtGv;
         private System.Windows.Forms.Button previousServiceBtn;
         private System.Windows.Forms.Button nextServiceBtn;
+        private System.Windows.Forms.Panel detailServicePnl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label isMidiLbl;
+        private System.Windows.Forms.ComboBox metsListBox;
+        private System.Windows.Forms.CheckBox isMidiCkBox;
+        private System.Windows.Forms.DateTimePicker serviceDTPicker;
     }
 }

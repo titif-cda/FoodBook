@@ -65,6 +65,39 @@ namespace API.Controllers
             }
         }
 
+        [HttpGet("all/{id}")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetMetForServiceAsync([FromRoute] int id)
+        {
+            Service service = await _restaurantService.GetMetForServiceAsync(id);
+            if (service == null)
+            {
+                return NotFound(); // StatusCode = 404
+            }
+            else
+            {
+                return Ok(service); // StatusCode = 200
+            }
+        }
+
+        [HttpGet("filter")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetServiceByDate([FromQuery] DateTime date)
+        {
+            var service = await _restaurantService.GetServiceByDate(date);
+            if (service == null)
+            {
+                return NotFound(); // StatusCode = 404
+            }
+            else
+            {
+                return Ok(service); // StatusCode = 200
+            }
+        }
 
         /// <summary>
         /// Créer un service et l'ajoute en BDD

@@ -12,5 +12,7 @@ namespace DAL.Repository
     public interface IServiceRepository : IGenericRepository<Service>
     {
         Task<PageResponse<Service>> GetAllAsync(PageRequest pageRequest);
+        Task<Service> GetMetForServiceAsync(int id);
+        Task<IEnumerable<Service>> GetServiceByDate(DateTime date);
     }
 }

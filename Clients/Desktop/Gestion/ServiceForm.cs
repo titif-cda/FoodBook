@@ -17,7 +17,8 @@ namespace Desktop.Gestion
     public partial class ServiceForm : Form
     {
         private readonly IRestaurantService _restaurantService;
-        private BindingSource bindingSource = new BindingSource();
+        private BindingSource bindingSourceService = new BindingSource();
+        private BindingSource bindingSourceMet = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize = 15;
         private int maxPage;
@@ -28,6 +29,7 @@ namespace Desktop.Gestion
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadServices();
+            LoadListPlatsBox();
         }
 
         private async Task LoadServices(bool clearSelection = false)
@@ -46,8 +48,8 @@ namespace Desktop.Gestion
                 PreviousPage();
             }
             maxPage = servicePage.TotalPages.GetValueOrDefault();
-            bindingSource.DataSource = servicePage.Data;
-            serviceDtGv.DataSource = bindingSource;
+            bindingSourceService.DataSource = servicePage.Data;
+            serviceDtGv.DataSource = bindingSourceService;
             serviceDtGv.Columns["Id"].Visible = false;
             
 
@@ -153,5 +155,14 @@ namespace Desktop.Gestion
             await LoadServices();
         }
 
+        private async void LoadListPlatsBox()
+        {
+            Task<PageResponse<Met>> listePlatsPageTask = _restaurantService.GetAllMet(new PageRequest(currentPage, defaultPageSize));
+            PageResponse<Met> mets = await listePlatsPageTask;
+            bindingSourceMet.DataSource = mets.Data;
+            metsListBox.DataSource = bindingSourceMet;
+            metsListBox.DisplayMember = "Libelle";
+
+        }
     }
 }

@@ -74,5 +74,10 @@ namespace BO.Entity
         {
             return HashCode.Combine(Id, Libelle, Description, TypeRepas, ListDesIngredients);
         }
+
+        public override string ToString()
+        {
+            return Libelle;
+        }
     }
 }

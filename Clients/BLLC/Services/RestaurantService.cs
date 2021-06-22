@@ -340,6 +340,24 @@ namespace BLLC.Services
             }
         }
 
+        public async Task<Service> GetDetailsService(int id)
+        {
+            var reponse = await _httpClient.GetAsync($"services/all/{id}");
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Service service = await JsonSerializer.DeserializeAsync<Service>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return service;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public async Task<Service> PutService(Service service)
         {
             var reponse = await _httpClient.PutAsync($"services/" + service.Id

@@ -11,15 +11,15 @@ namespace BO.DTO.Responses
         /// <summary>
         /// Date debut de semaine
         /// </summary>
-        public DateTime DateDebutSemaine { get; set; }
-        /// <summary>
-        /// Date Fin de semaine
-        /// </summary>
-        public DateTime DateFinSemaine { get; set; }
+        //public DateTime DateDebutSemaine { get; set; }
+        ///// <summary>
+        ///// Date Fin de semaine
+        ///// </summary>
+        //public DateTime DateFinSemaine { get; set; }
         /// <summary>
         /// Montant de la reservation
         /// </summary>
-        public float Prix { get; set; }
+        public float TotalPrix { get; set; }
         /// <summary>
         /// Liste des ingredients avec leur quantité
         /// </summary>
@@ -37,11 +37,11 @@ namespace BO.DTO.Responses
         /// <param name="dateFinSemaine"></param>
         /// <param name="prix"></param>
         /// <param name="listIngredientQteDTOs"></param>
-        public CommandeResponse(DateTime dateDebutSemaine, DateTime dateFinSemaine, float prix, List<IngredientQteDTO> listIngredientQteDTOs)
+        public CommandeResponse( float prix, List<IngredientQteDTO> listIngredientQteDTOs)
         {
-            DateDebutSemaine = dateDebutSemaine;
-            DateFinSemaine = dateFinSemaine;
-            Prix = prix;
+        //    DateDebutSemaine = dateDebutSemaine;
+        //    DateFinSemaine = dateFinSemaine;
+            TotalPrix = prix;
             ListIngredientQteDTOs = listIngredientQteDTOs;
         }
     }

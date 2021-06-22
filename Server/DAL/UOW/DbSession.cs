@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace DAL.UOW
 {
-    sealed class DbSession : IDisposable
+    public class DbSession : IDisposable
     {
         public IDbConnection Connection { get; }
         public IDbTransaction Transaction { get; set; }

@@ -179,11 +179,6 @@ namespace BLL.Services
             _db.BeginTransaction();
             IMetsRepository _met = _db.GetRepository<IMetsRepository>();
             IMetsIngredientsRepository _metIngredientsRepo = _db.GetRepository<IMetsIngredientsRepository>();
-
-          
-
-
-
             try
             {
                 //Remove old List Ingredients
@@ -223,6 +218,8 @@ namespace BLL.Services
 
             return await _met.GetAsync(id);
         }
+
+        
 
         public async Task<Met> GetIngredientParMetById(int id)
         {
@@ -293,6 +290,8 @@ namespace BLL.Services
 
             return await _service.GetAsync(id);
         }
+
+
 
         public async Task<Service> GetMetForServiceAsync(int id)
         {

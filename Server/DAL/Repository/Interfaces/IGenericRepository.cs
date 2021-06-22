@@ -21,6 +21,8 @@ namespace DAL.Repository
         /// <returns>Retourne une entité selon son identifient ou null si echec</returns>
         Task<TEntity> GetAsync(int id);
 
+       
+
         /// <summary>
         /// Permet de supprimer une entité dans la bse de données
         /// </summary>

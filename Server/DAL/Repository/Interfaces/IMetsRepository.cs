@@ -15,5 +15,6 @@ namespace DAL.Repository
     {
         Task<PageResponse<Met>> GetAllAsync(PageRequest pageRequest);
         Task<Met> GetIngredientForMetAsync(int id);
+        
     }
 }

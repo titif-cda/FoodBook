@@ -10,6 +10,12 @@
     <Compile Update="Client\ListClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CommandeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\CrudServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Gestion\GestionForm.cs">
       <SubType>Form</SubType>
     </Compile>

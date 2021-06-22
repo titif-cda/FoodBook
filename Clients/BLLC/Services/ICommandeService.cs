@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO.DTO.Responses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace BLLC.Services
 {
     public interface ICommandeService
     {
+        Task<CommandeResponse> GetCommande();
     }
 }

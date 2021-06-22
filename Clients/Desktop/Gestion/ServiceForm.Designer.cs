@@ -32,6 +32,7 @@ namespace Desktop.Gestion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceForm));
             this.serviceTlp = new System.Windows.Forms.TableLayoutPanel();
             this.addDeleteServiceTlp = new System.Windows.Forms.TableLayoutPanel();
             this.DeleteServiceBtn = new System.Windows.Forms.Button();
@@ -43,12 +44,17 @@ namespace Desktop.Gestion
             this.CurrentPageServiceLbl = new System.Windows.Forms.Label();
             this.serviceDtGv = new System.Windows.Forms.DataGridView();
             this.detailServicePnl = new System.Windows.Forms.Panel();
-            this.serviceDTPicker = new System.Windows.Forms.DateTimePicker();
-            this.isMidiCkBox = new System.Windows.Forms.CheckBox();
-            this.metsListBox = new System.Windows.Forms.ComboBox();
-            this.isMidiLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titreServiceLbl = new System.Windows.Forms.Label();
+            this.platServiceLbl = new System.Windows.Forms.Label();
+            this.entreeServiceLbl = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dessertServiceLbl = new System.Windows.Forms.Label();
+            this.dateServiceLbl = new System.Windows.Forms.Label();
+            this.serviceLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.isMidiLbl = new System.Windows.Forms.Label();
             this.serviceTlp.SuspendLayout();
             this.addDeleteServiceTlp.SuspendLayout();
             this.btnTlp.SuspendLayout();
@@ -118,6 +124,7 @@ namespace Desktop.Gestion
             this.AddServiceBtn.TabIndex = 2;
             this.AddServiceBtn.Text = "Ajouter";
             this.AddServiceBtn.UseVisualStyleBackColor = false;
+            this.AddServiceBtn.Click += new System.EventHandler(this.AddServiceBtn_Click);
             // 
             // btnTlp
             // 
@@ -235,70 +242,165 @@ namespace Desktop.Gestion
             this.serviceDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.serviceDtGv.Size = new System.Drawing.Size(392, 309);
             this.serviceDtGv.TabIndex = 1;
+            this.serviceDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.serviceDtGv_CellDoubleClick);
+            this.serviceDtGv.SelectionChanged += new System.EventHandler(this.serviceDtGv_SelectionChanged);
             // 
             // detailServicePnl
             // 
+            this.detailServicePnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("detailServicePnl.BackgroundImage")));
+            this.detailServicePnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.detailServicePnl.Controls.Add(this.titreServiceLbl);
+            this.detailServicePnl.Controls.Add(this.platServiceLbl);
+            this.detailServicePnl.Controls.Add(this.entreeServiceLbl);
+            this.detailServicePnl.Controls.Add(this.label5);
+            this.detailServicePnl.Controls.Add(this.label4);
+            this.detailServicePnl.Controls.Add(this.dessertServiceLbl);
+            this.detailServicePnl.Controls.Add(this.dateServiceLbl);
+            this.detailServicePnl.Controls.Add(this.serviceLbl);
             this.detailServicePnl.Controls.Add(this.label2);
             this.detailServicePnl.Controls.Add(this.label1);
             this.detailServicePnl.Controls.Add(this.isMidiLbl);
-            this.detailServicePnl.Controls.Add(this.metsListBox);
-            this.detailServicePnl.Controls.Add(this.isMidiCkBox);
-            this.detailServicePnl.Controls.Add(this.serviceDTPicker);
+            this.detailServicePnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.detailServicePnl.Location = new System.Drawing.Point(395, 3);
             this.detailServicePnl.Name = "detailServicePnl";
             this.detailServicePnl.Size = new System.Drawing.Size(386, 303);
             this.detailServicePnl.TabIndex = 2;
             // 
-            // serviceDTPicker
+            // titreServiceLbl
             // 
-            this.serviceDTPicker.Location = new System.Drawing.Point(136, 89);
-            this.serviceDTPicker.Name = "serviceDTPicker";
-            this.serviceDTPicker.Size = new System.Drawing.Size(200, 23);
-            this.serviceDTPicker.TabIndex = 0;
+            this.titreServiceLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.titreServiceLbl.AutoSize = true;
+            this.titreServiceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.titreServiceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titreServiceLbl.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titreServiceLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.titreServiceLbl.Location = new System.Drawing.Point(12, 20);
+            this.titreServiceLbl.Name = "titreServiceLbl";
+            this.titreServiceLbl.Size = new System.Drawing.Size(72, 21);
+            this.titreServiceLbl.TabIndex = 14;
+            this.titreServiceLbl.Text = "Service";
+            this.titreServiceLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // isMidiCkBox
+            // platServiceLbl
             // 
-            this.isMidiCkBox.AutoSize = true;
-            this.isMidiCkBox.Location = new System.Drawing.Point(136, 50);
-            this.isMidiCkBox.Name = "isMidiCkBox";
-            this.isMidiCkBox.Size = new System.Drawing.Size(15, 14);
-            this.isMidiCkBox.TabIndex = 1;
-            this.isMidiCkBox.UseVisualStyleBackColor = true;
+            this.platServiceLbl.AutoSize = true;
+            this.platServiceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.platServiceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.platServiceLbl.Location = new System.Drawing.Point(186, 229);
+            this.platServiceLbl.Name = "platServiceLbl";
+            this.platServiceLbl.Size = new System.Drawing.Size(27, 15);
+            this.platServiceLbl.TabIndex = 13;
+            this.platServiceLbl.Text = "Plat";
             // 
-            // metsListBox
+            // entreeServiceLbl
             // 
-            this.metsListBox.FormattingEnabled = true;
-            this.metsListBox.Location = new System.Drawing.Point(136, 147);
-            this.metsListBox.Name = "metsListBox";
-            this.metsListBox.Size = new System.Drawing.Size(121, 23);
-            this.metsListBox.TabIndex = 2;
+            this.entreeServiceLbl.AutoSize = true;
+            this.entreeServiceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.entreeServiceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.entreeServiceLbl.Location = new System.Drawing.Point(186, 191);
+            this.entreeServiceLbl.Name = "entreeServiceLbl";
+            this.entreeServiceLbl.Size = new System.Drawing.Size(40, 15);
+            this.entreeServiceLbl.TabIndex = 12;
+            this.entreeServiceLbl.Text = "Entree";
             // 
-            // isMidiLbl
+            // label5
             // 
-            this.isMidiLbl.AutoSize = true;
-            this.isMidiLbl.Location = new System.Drawing.Point(18, 49);
-            this.isMidiLbl.Name = "isMidiLbl";
-            this.isMidiLbl.Size = new System.Drawing.Size(94, 15);
-            this.isMidiLbl.TabIndex = 3;
-            this.isMidiLbl.Text = "Service du midi :";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(125, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Plat :";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Date :";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(107, 261);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Dessert :";
+            // 
+            // dessertServiceLbl
+            // 
+            this.dessertServiceLbl.AutoSize = true;
+            this.dessertServiceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.dessertServiceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dessertServiceLbl.Location = new System.Drawing.Point(186, 266);
+            this.dessertServiceLbl.Name = "dessertServiceLbl";
+            this.dessertServiceLbl.Size = new System.Drawing.Size(45, 15);
+            this.dessertServiceLbl.TabIndex = 9;
+            this.dessertServiceLbl.Text = "Dessert";
+            // 
+            // dateServiceLbl
+            // 
+            this.dateServiceLbl.AutoSize = true;
+            this.dateServiceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.dateServiceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateServiceLbl.Location = new System.Drawing.Point(186, 140);
+            this.dateServiceLbl.Name = "dateServiceLbl";
+            this.dateServiceLbl.Size = new System.Drawing.Size(30, 15);
+            this.dateServiceLbl.TabIndex = 7;
+            this.dateServiceLbl.Text = "date";
+            // 
+            // serviceLbl
+            // 
+            this.serviceLbl.AutoSize = true;
+            this.serviceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.serviceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.serviceLbl.Location = new System.Drawing.Point(186, 93);
+            this.serviceLbl.Name = "serviceLbl";
+            this.serviceLbl.Size = new System.Drawing.Size(48, 15);
+            this.serviceLbl.TabIndex = 6;
+            this.serviceLbl.Text = "service?";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 154);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(115, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Plats :";
+            this.label2.Text = "Entrée :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(125, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Date :";
+            // 
+            // isMidiLbl
+            // 
+            this.isMidiLbl.AutoSize = true;
+            this.isMidiLbl.BackColor = System.Drawing.Color.Transparent;
+            this.isMidiLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.isMidiLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.isMidiLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.isMidiLbl.Location = new System.Drawing.Point(111, 88);
+            this.isMidiLbl.Name = "isMidiLbl";
+            this.isMidiLbl.Size = new System.Drawing.Size(67, 20);
+            this.isMidiLbl.TabIndex = 3;
+            this.isMidiLbl.Text = "Service :";
             // 
             // ServiceForm
             // 
@@ -335,8 +437,13 @@ namespace Desktop.Gestion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label isMidiLbl;
-        private System.Windows.Forms.ComboBox metsListBox;
-        private System.Windows.Forms.CheckBox isMidiCkBox;
-        private System.Windows.Forms.DateTimePicker serviceDTPicker;
+        private System.Windows.Forms.Label serviceLbl;
+        private System.Windows.Forms.Label dateServiceLbl;
+        private System.Windows.Forms.Label dessertServiceLbl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label entreeServiceLbl;
+        private System.Windows.Forms.Label platServiceLbl;
+        private System.Windows.Forms.Label titreServiceLbl;
     }
 }

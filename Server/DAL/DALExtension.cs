@@ -29,6 +29,7 @@ namespace DAL
 
             services.AddTransient<IMetsRepository, MetRepository>();
             services.AddTransient<IMetsIngredientsRepository, MetsIngredientsRepository>();
+            services.AddTransient<ICommandeRepository, CommandeRepository>();
 
             return services;
         }

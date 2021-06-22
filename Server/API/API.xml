@@ -50,6 +50,13 @@
             <param name="client"></param>
             <returns></returns>
         </member>
+        <member name="M:API.Controllers.V1.CommandeController.GetCommande(BO.DTO.Responses.CommandeResponse)">
+            <summary>
+            Permet de récupérer une commande en fonction de son Identifiant
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:API.Controllers.IngredientsController">
             <summary>
             Decorateurs et declaration du controlleur pour l'entité Ingrédients

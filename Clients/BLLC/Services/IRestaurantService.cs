@@ -34,9 +34,10 @@ namespace BLLC.Services
         #endregion
 
 
-        #region Menu
+        #region Service
         Task<Service> CreateService(Service service);
         Task<PageResponse<Service>> GetAllService(PageRequest pageRequest);
+        Task<Service> GetDetailsService(int id);
         Task<Service> PutService(Service service);
         Task<bool> DeleteService(Service service);
         #endregion

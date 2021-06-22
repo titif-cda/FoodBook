@@ -49,17 +49,7 @@
             Limit entities on one page
             </summary>
         </member>
-        <member name="P:BO.DTO.Responses.CommandeResponse.DateDebutSemaine">
-            <summary>
-            Date debut de semaine
-            </summary>
-        </member>
-        <member name="P:BO.DTO.Responses.CommandeResponse.DateFinSemaine">
-            <summary>
-            Date Fin de semaine
-            </summary>
-        </member>
-        <member name="P:BO.DTO.Responses.CommandeResponse.Prix">
+        <member name="P:BO.DTO.Responses.CommandeResponse.TotalPrix">
             <summary>
             Montant de la reservation
             </summary>
@@ -74,7 +64,7 @@
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.DTO.Responses.CommandeResponse.#ctor(System.DateTime,System.DateTime,System.Single,System.Collections.Generic.List{BO.DTO.Responses.IngredientQteDTO})">
+        <member name="M:BO.DTO.Responses.CommandeResponse.#ctor(System.Single,System.Collections.Generic.List{BO.DTO.Responses.IngredientQteDTO})">
             <summary>
             Construceur avec arguments
             </summary>

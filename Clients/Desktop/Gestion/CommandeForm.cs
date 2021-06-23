@@ -10,33 +10,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desktop
+namespace Desktop.Gestion
 {
     public partial class CommandeForm : Form
     {
 		private readonly ICommandeService _commandeService;
-
-
-
-
 		private BindingSource bindingSourceCommande = new BindingSource();
 		private BindingSource bindingSourceCommandePrice = new BindingSource();
 
-
 		public CommandeForm()
-		{
+        {
 			_commandeService = new CommandeService();
 			InitializeComponent();
 			LoadCommande();
 		}
-
-
 		public async void LoadCommande()
 		{
-			Task<CommandeResponse> commandeTask = _commandeService.GetCommande();
-			CommandeResponse commande = await commandeTask;
+			Task<CommandeDto> commandeTask = _commandeService.GetCommande();
+			CommandeDto commande = await commandeTask;
 			bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
-			label1.Text = commande.TotalPrix.ToString();
+			montantTotalLbl.Text = commande.TotalPrix.ToString();
 
 
 			dataGridView1.DataSource = bindingSourceCommande;
@@ -60,6 +53,5 @@ namespace Desktop
 				MessageBox.Show("Votre commande ne peut etre visualisée");
 			}
 		}
-
 	}
 }

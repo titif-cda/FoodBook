@@ -50,7 +50,7 @@
             <param name="client"></param>
             <returns></returns>
         </member>
-        <member name="M:API.Controllers.V1.CommandeController.GetCommande(BO.DTO.Responses.CommandeResponse)">
+        <member name="M:API.Controllers.V1.CommandeController.GetCommande(BO.DTO.Responses.CommandeDto)">
             <summary>
             Permet de récupérer une commande en fonction de son Identifiant
             </summary>

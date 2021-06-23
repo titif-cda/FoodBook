@@ -28,13 +28,13 @@ namespace BLL.Services
         //    _clientService = clientService;
         //}
 
-        public async Task<CommandeResponse> GetCommande()
+        public async Task<CommandeDto> GetCommande()
         {
             _db.BeginTransaction();
             //Récupération de l'Interface du repository Commande (ICommandeRepository)
             ICommandeRepository _commandes = _db.GetRepository<ICommandeRepository>();
             //Utilisation de sa méthode Insert
-            CommandeResponse Commande = await _commandes.GetAsync();
+            CommandeDto Commande = await _commandes.GetAsync();
             //Fin transaction
             _db.Commit();
             //retour de la nouvelle commande 

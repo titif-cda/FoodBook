@@ -9,6 +9,6 @@ namespace BLL.Services
 {
     public interface ICommandeService
     {
-        Task<CommandeResponse> GetCommande();
+        Task<CommandeDto> GetCommande();
     }
 }

@@ -74,6 +74,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\D
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BO.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BO.xml
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\bin\Debug\net5.0-windows\BLLC.pdb
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.csproj.AssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop..resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.CrudIngredients.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\DesktopClient.MainForm.resources
@@ -89,4 +90,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\D
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\ref\TestDesktop.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.genruntimeconfig.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\TestDesktop\obj\Debug\net5.0-windows\TestDesktop.csproj.AssemblyReference.cache

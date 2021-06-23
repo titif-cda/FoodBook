@@ -49,22 +49,22 @@
             Limit entities on one page
             </summary>
         </member>
-        <member name="P:BO.DTO.Responses.CommandeResponse.TotalPrix">
+        <member name="P:BO.DTO.Responses.CommandeDto.TotalPrix">
             <summary>
             Montant de la reservation
             </summary>
         </member>
-        <member name="P:BO.DTO.Responses.CommandeResponse.ListIngredientQteDTOs">
+        <member name="P:BO.DTO.Responses.CommandeDto.ListIngredientQteDTOs">
             <summary>
             Liste des ingredients avec leur quantité
             </summary>
         </member>
-        <member name="M:BO.DTO.Responses.CommandeResponse.#ctor">
+        <member name="M:BO.DTO.Responses.CommandeDto.#ctor">
             <summary>
             Constructeur par defaut
             </summary>
         </member>
-        <member name="M:BO.DTO.Responses.CommandeResponse.#ctor(System.Single,System.Collections.Generic.List{BO.DTO.Responses.IngredientQteDTO})">
+        <member name="M:BO.DTO.Responses.CommandeDto.#ctor(System.Single,System.Collections.Generic.List{BO.DTO.Responses.LigneCommandeDto})">
             <summary>
             Construceur avec arguments
             </summary>
@@ -73,26 +73,14 @@
             <param name="prix"></param>
             <param name="listIngredientQteDTOs"></param>
         </member>
-        <member name="P:BO.DTO.Responses.IngredientQteDTO.Quantite">
+        <member name="P:BO.DTO.Responses.LigneCommandeDto.Nom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BO.DTO.Responses.LigneCommandeDto.Quantite">
             <summary>
             Quantité d d'ingredients
-            </summary>
-        </member>
-        <member name="P:BO.DTO.Responses.IngredientQteDTO.ingredient">
-            <summary>
-            Objet Ingredient
-            </summary>
-        </member>
-        <member name="M:BO.DTO.Responses.IngredientQteDTO.#ctor(System.Single,BO.Entity.Ingredient)">
-            <summary>
-            constructeur avec parametres 
-            </summary>
-            <param name="quantite"></param>
-            <param name="ingredient"></param>
-        </member>
-        <member name="M:BO.DTO.Responses.IngredientQteDTO.#ctor">
-            <summary>
-            Constructeur par défaut
             </summary>
         </member>
         <member name="P:BO.DTO.Responses.PageResponse`1.Page">

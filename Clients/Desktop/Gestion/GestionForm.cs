@@ -49,7 +49,7 @@ namespace Desktop.Gestion
 
         private void ReservationBtn_Click(object sender, EventArgs e)
         {
-            NavFormPanel(new ReservationForm());
+            NavFormPanel(new CommandeForm());
             string hoverColor = "#CA5100";
             string originColor = "#8C52FF";
 

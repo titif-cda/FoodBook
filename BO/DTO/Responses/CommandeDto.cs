@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BO.DTO.Responses
 {
-    public class CommandeResponse
+    public class CommandeDto
     {
         /// <summary>
         /// Date debut de semaine
@@ -23,11 +23,11 @@ namespace BO.DTO.Responses
         /// <summary>
         /// Liste des ingredients avec leur quantité
         /// </summary>
-        public List<IngredientQteDTO> ListIngredientQteDTOs { get; set; }
+        public List<LigneCommandeDto> ListIngredientQteDTOs { get; set; }
         /// <summary>
         /// Constructeur par defaut
         /// </summary>
-        public CommandeResponse()
+        public CommandeDto()
         {
         }
         /// <summary>
@@ -37,7 +37,7 @@ namespace BO.DTO.Responses
         /// <param name="dateFinSemaine"></param>
         /// <param name="prix"></param>
         /// <param name="listIngredientQteDTOs"></param>
-        public CommandeResponse( float prix, List<IngredientQteDTO> listIngredientQteDTOs)
+        public CommandeDto( float prix, List<LigneCommandeDto> listIngredientQteDTOs)
         {
         //    DateDebutSemaine = dateDebutSemaine;
         //    DateFinSemaine = dateFinSemaine;

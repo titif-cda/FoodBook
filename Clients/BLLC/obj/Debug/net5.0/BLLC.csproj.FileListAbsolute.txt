@@ -21,6 +21,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\bin\Debug\ne
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\bin\Debug\net5.0\BO.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\bin\Debug\net5.0\BO.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\bin\Debug\net5.0\BO.xml
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.csproj.AssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.AssemblyInfoInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.AssemblyInfo.cs
@@ -29,4 +30,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\ne
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\ref\BLLC.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.pdb
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\BLLC\obj\Debug\net5.0\BLLC.csproj.AssemblyReference.cache

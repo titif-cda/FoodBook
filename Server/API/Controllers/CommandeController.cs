@@ -42,9 +42,9 @@ namespace API.Controllers.V1
 		[HttpGet("afficher")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public async Task<IActionResult> GetCommande([FromQuery] CommandeResponse commandeRequest)
+		public async Task<IActionResult> GetCommande([FromQuery] CommandeDto commandeRequest)
 		{
-			CommandeResponse commande = await _commandeService.GetCommande();
+			CommandeDto commande = await _commandeService.GetCommande();
 			if (commande == null)
 			{
 				return NotFound(); // StatusCode = 404

@@ -20,7 +20,7 @@ namespace BLLC.Services
 			_httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
 		}
 
-		public async Task<CommandeResponse> GetCommande()
+		public async Task<CommandeDto> GetCommande()
 		{
 
 			if (AuthentificationService.Instance.isLogged)
@@ -36,7 +36,7 @@ namespace BLLC.Services
 				{
 					using (var stream = await reponse.Content.ReadAsStreamAsync())
 					{
-						CommandeResponse commande = await JsonSerializer.DeserializeAsync<CommandeResponse>(stream,
+						CommandeDto commande = await JsonSerializer.DeserializeAsync<CommandeDto>(stream,
 							new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
 						return commande;
 					}

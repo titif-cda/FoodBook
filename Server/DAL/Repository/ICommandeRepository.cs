@@ -5,6 +5,6 @@ namespace DAL.Repository
 {
     public interface ICommandeRepository
     {
-        Task<CommandeResponse> GetAsync();
+        Task<CommandeDto> GetAsync();
     }
 }

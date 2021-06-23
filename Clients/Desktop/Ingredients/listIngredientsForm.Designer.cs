@@ -31,7 +31,6 @@ namespace Desktop.Ingredients
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListIngredientsForm));
             this.IngredientPicturePnl = new System.Windows.Forms.Panel();
-            this.IngredientDtGv = new System.Windows.Forms.DataGridView();
             this.RefreshIngredientBtn = new System.Windows.Forms.Button();
             this.AddIngredientBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -39,9 +38,14 @@ namespace Desktop.Ingredients
             this.PreviousIngredientBtn = new System.Windows.Forms.Button();
             this.NextIngredientBtn = new System.Windows.Forms.Button();
             this.CurentPageIngredientLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).BeginInit();
+            this.listIngredientPnl = new System.Windows.Forms.Panel();
+            this.searchTbox = new System.Windows.Forms.TextBox();
+            this.searchLbl = new System.Windows.Forms.Label();
+            this.IngredientDtGv = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.listIngredientPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).BeginInit();
             this.SuspendLayout();
             // 
             // IngredientPicturePnl
@@ -54,24 +58,6 @@ namespace Desktop.Ingredients
             this.IngredientPicturePnl.Name = "IngredientPicturePnl";
             this.IngredientPicturePnl.Size = new System.Drawing.Size(492, 405);
             this.IngredientPicturePnl.TabIndex = 5;
-            // 
-            // IngredientDtGv
-            // 
-            this.IngredientDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.IngredientDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.IngredientDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.IngredientDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IngredientDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IngredientDtGv.GridColor = System.Drawing.SystemColors.Control;
-            this.IngredientDtGv.Location = new System.Drawing.Point(3, 3);
-            this.IngredientDtGv.Name = "IngredientDtGv";
-            this.IngredientDtGv.RowHeadersVisible = false;
-            this.IngredientDtGv.RowTemplate.Height = 25;
-            this.IngredientDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.IngredientDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.IngredientDtGv.Size = new System.Drawing.Size(296, 405);
-            this.IngredientDtGv.TabIndex = 4;
-            this.IngredientDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IngredientDtGv_CellDoubleClick);
             // 
             // RefreshIngredientBtn
             // 
@@ -112,8 +98,8 @@ namespace Desktop.Ingredients
             this.tableLayoutPanel1.Controls.Add(this.AddIngredientBtn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.RefreshIngredientBtn, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.IngredientDtGv, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.IngredientPicturePnl, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listIngredientPnl, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -184,6 +170,52 @@ namespace Desktop.Ingredients
             this.CurentPageIngredientLbl.TabIndex = 2;
             this.CurentPageIngredientLbl.Text = "1";
             // 
+            // listIngredientPnl
+            // 
+            this.listIngredientPnl.Controls.Add(this.searchTbox);
+            this.listIngredientPnl.Controls.Add(this.searchLbl);
+            this.listIngredientPnl.Controls.Add(this.IngredientDtGv);
+            this.listIngredientPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listIngredientPnl.Location = new System.Drawing.Point(3, 3);
+            this.listIngredientPnl.Name = "listIngredientPnl";
+            this.listIngredientPnl.Size = new System.Drawing.Size(296, 405);
+            this.listIngredientPnl.TabIndex = 6;
+            // 
+            // searchTbox
+            // 
+            this.searchTbox.Location = new System.Drawing.Point(85, 11);
+            this.searchTbox.Name = "searchTbox";
+            this.searchTbox.Size = new System.Drawing.Size(194, 23);
+            this.searchTbox.TabIndex = 7;
+            this.searchTbox.TextChanged += new System.EventHandler(this.searchTbox_TextChanged);
+            // 
+            // searchLbl
+            // 
+            this.searchLbl.AutoSize = true;
+            this.searchLbl.Location = new System.Drawing.Point(19, 20);
+            this.searchLbl.Name = "searchLbl";
+            this.searchLbl.Size = new System.Drawing.Size(38, 15);
+            this.searchLbl.TabIndex = 6;
+            this.searchLbl.Text = "label1";
+            // 
+            // IngredientDtGv
+            // 
+            this.IngredientDtGv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IngredientDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.IngredientDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.IngredientDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IngredientDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IngredientDtGv.GridColor = System.Drawing.SystemColors.Control;
+            this.IngredientDtGv.Location = new System.Drawing.Point(0, 51);
+            this.IngredientDtGv.Name = "IngredientDtGv";
+            this.IngredientDtGv.RowHeadersVisible = false;
+            this.IngredientDtGv.RowTemplate.Height = 25;
+            this.IngredientDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.IngredientDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.IngredientDtGv.Size = new System.Drawing.Size(293, 354);
+            this.IngredientDtGv.TabIndex = 5;
+            // 
             // ListIngredientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -191,10 +223,12 @@ namespace Desktop.Ingredients
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ListIngredientsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.listIngredientPnl.ResumeLayout(false);
+            this.listIngredientPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IngredientDtGv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,6 +243,9 @@ namespace Desktop.Ingredients
         private System.Windows.Forms.Button PreviousIngredientBtn;
         private System.Windows.Forms.Button NextIngredientBtn;
         private System.Windows.Forms.Label CurentPageIngredientLbl;
+        private System.Windows.Forms.Panel listIngredientPnl;
+        private System.Windows.Forms.TextBox searchTbox;
+        private System.Windows.Forms.Label searchLbl;
         private System.Windows.Forms.DataGridView IngredientDtGv;
     }
 }

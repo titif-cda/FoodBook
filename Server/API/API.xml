@@ -103,7 +103,7 @@
             <param name="ingredient">Ingredient</param>
             <returns>Retourne un ingredient modifié</returns>
         </member>
-        <member name="M:API.Controllers.MetController.GetAll(BO.DTO.Requests.PageRequest)">
+        <member name="M:API.Controllers.MetController.GetAll(BO.DTO.Requests.FilterMetPaged)">
             <summary>
             Permet de récupérer la liste des Mets
             </summary>

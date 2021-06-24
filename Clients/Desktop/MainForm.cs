@@ -143,6 +143,7 @@ namespace Desktop
         private void gestionBtn_Click(object sender, EventArgs e)
         {
             NavFormPanel(new GestionForm());
+            //NavFormPanel(new CommandeForm());
         }
     }
 }

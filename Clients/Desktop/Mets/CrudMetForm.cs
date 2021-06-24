@@ -206,6 +206,7 @@ namespace Desktop.Mets
             TypeRepasCBox.DataSource = bindingSourceTypeRepas;
             TypeRepasCBox.DisplayMember = "Libelle";
             
+            
         }
 
         private void AddToListForMetBtn_Click(object sender, EventArgs e)

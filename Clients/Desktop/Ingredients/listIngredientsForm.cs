@@ -150,10 +150,7 @@ namespace Desktop.Ingredients
     
         private void searchTbox_TextChanged(object sender, EventArgs e)
         {
-            //BindingSource bs = new BindingSource();
-            //bs.DataSource = IngredientDtGv.DataSource;
-            //bs.Filter = "[HeaderText] Like '%" + searchTbox.Text + "%'";
-            //IngredientDtGv.DataSource = bs;
+        
         
         }
     }

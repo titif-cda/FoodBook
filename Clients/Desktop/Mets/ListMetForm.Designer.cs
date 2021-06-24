@@ -31,8 +31,10 @@ namespace Desktop.Mets
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListMetForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.AddMetBtn = new System.Windows.Forms.Button();
-            this.metDtGv = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.PreviousMetBtn = new System.Windows.Forms.Button();
+            this.NextMetBtn = new System.Windows.Forms.Button();
+            this.CurentPageMetLbl = new System.Windows.Forms.Label();
             this.metPicturePnl = new System.Windows.Forms.Panel();
             this.DescRepasPnl = new System.Windows.Forms.Panel();
             this.typeLbl = new System.Windows.Forms.Label();
@@ -45,16 +47,17 @@ namespace Desktop.Mets
             this.refreshDeleteTLP = new System.Windows.Forms.TableLayoutPanel();
             this.RefreshMetBtn = new System.Windows.Forms.Button();
             this.DeleteMetBtn = new System.Windows.Forms.Button();
-            this.CurentPageMetLbl = new System.Windows.Forms.Label();
-            this.NextMetBtn = new System.Windows.Forms.Button();
-            this.PreviousMetBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.AddMetBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.metDtGv = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.metPicturePnl.SuspendLayout();
             this.DescRepasPnl.SuspendLayout();
             this.refreshDeleteTLP.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,9 +68,9 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
             this.tableLayoutPanel1.Controls.Add(this.AddMetBtn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metDtGv, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.metPicturePnl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.refreshDeleteTLP, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -77,45 +80,66 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // AddMetBtn
+            // tableLayoutPanel2
             // 
-            this.AddMetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.AddMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddMetBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddMetBtn.Location = new System.Drawing.Point(0, 405);
-            this.AddMetBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.AddMetBtn.Name = "AddMetBtn";
-            this.AddMetBtn.Size = new System.Drawing.Size(304, 45);
-            this.AddMetBtn.TabIndex = 1;
-            this.AddMetBtn.Text = "Ajouter";
-            this.AddMetBtn.UseVisualStyleBackColor = false;
-            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.PreviousMetBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.NextMetBtn, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CurentPageMetLbl, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(547, 408);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 39);
+            this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // metDtGv
+            // PreviousMetBtn
             // 
-            this.metDtGv.AllowUserToAddRows = false;
-            this.metDtGv.AllowUserToDeleteRows = false;
-            this.metDtGv.AllowUserToResizeRows = false;
-            this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.metDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.metDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metDtGv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.metDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metDtGv.GridColor = System.Drawing.SystemColors.Control;
-            this.metDtGv.Location = new System.Drawing.Point(3, 3);
-            this.metDtGv.MultiSelect = false;
-            this.metDtGv.Name = "metDtGv";
-            this.metDtGv.ReadOnly = true;
-            this.metDtGv.RowHeadersVisible = false;
-            this.metDtGv.RowTemplate.Height = 25;
-            this.metDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metDtGv.Size = new System.Drawing.Size(298, 399);
-            this.metDtGv.TabIndex = 4;
-            this.metDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metDtGv_CellDoubleClick);
-            this.metDtGv.SelectionChanged += new System.EventHandler(this.metDtGv_SelectionChanged);
+            this.PreviousMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviousMetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PreviousMetBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.PreviousMetBtn.Location = new System.Drawing.Point(3, 3);
+            this.PreviousMetBtn.Name = "PreviousMetBtn";
+            this.PreviousMetBtn.Size = new System.Drawing.Size(77, 33);
+            this.PreviousMetBtn.TabIndex = 0;
+            this.PreviousMetBtn.Text = "<";
+            this.PreviousMetBtn.UseVisualStyleBackColor = true;
+            this.PreviousMetBtn.Click += new System.EventHandler(this.PreviousMetBtn_Click);
+            // 
+            // NextMetBtn
+            // 
+            this.NextMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NextMetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NextMetBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.NextMetBtn.Location = new System.Drawing.Point(169, 3);
+            this.NextMetBtn.Name = "NextMetBtn";
+            this.NextMetBtn.Size = new System.Drawing.Size(78, 33);
+            this.NextMetBtn.TabIndex = 1;
+            this.NextMetBtn.Text = ">";
+            this.NextMetBtn.UseVisualStyleBackColor = true;
+            this.NextMetBtn.Click += new System.EventHandler(this.NextMetBtn_Click);
+            // 
+            // CurentPageMetLbl
+            // 
+            this.CurentPageMetLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CurentPageMetLbl.AutoSize = true;
+            this.CurentPageMetLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.CurentPageMetLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CurentPageMetLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurentPageMetLbl.Location = new System.Drawing.Point(117, 12);
+            this.CurentPageMetLbl.Margin = new System.Windows.Forms.Padding(0);
+            this.CurentPageMetLbl.Name = "CurentPageMetLbl";
+            this.CurentPageMetLbl.Size = new System.Drawing.Size(14, 15);
+            this.CurentPageMetLbl.TabIndex = 2;
+            this.CurentPageMetLbl.Text = "1";
             // 
             // metPicturePnl
             // 
@@ -264,66 +288,66 @@ namespace Desktop.Mets
             this.DeleteMetBtn.UseVisualStyleBackColor = false;
             this.DeleteMetBtn.Click += new System.EventHandler(this.DeleteMetBtn_Click);
             // 
-            // CurentPageMetLbl
+            // AddMetBtn
             // 
-            this.CurentPageMetLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CurentPageMetLbl.AutoSize = true;
-            this.CurentPageMetLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.CurentPageMetLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CurentPageMetLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.CurentPageMetLbl.Location = new System.Drawing.Point(117, 12);
-            this.CurentPageMetLbl.Margin = new System.Windows.Forms.Padding(0);
-            this.CurentPageMetLbl.Name = "CurentPageMetLbl";
-            this.CurentPageMetLbl.Size = new System.Drawing.Size(14, 15);
-            this.CurentPageMetLbl.TabIndex = 2;
-            this.CurentPageMetLbl.Text = "1";
+            this.AddMetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.AddMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddMetBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddMetBtn.Location = new System.Drawing.Point(0, 405);
+            this.AddMetBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.AddMetBtn.Name = "AddMetBtn";
+            this.AddMetBtn.Size = new System.Drawing.Size(304, 45);
+            this.AddMetBtn.TabIndex = 1;
+            this.AddMetBtn.Text = "Ajouter";
+            this.AddMetBtn.UseVisualStyleBackColor = false;
+            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
             // 
-            // NextMetBtn
+            // tableLayoutPanel3
             // 
-            this.NextMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NextMetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NextMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NextMetBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.NextMetBtn.Location = new System.Drawing.Point(169, 3);
-            this.NextMetBtn.Name = "NextMetBtn";
-            this.NextMetBtn.Size = new System.Drawing.Size(78, 33);
-            this.NextMetBtn.TabIndex = 1;
-            this.NextMetBtn.Text = ">";
-            this.NextMetBtn.UseVisualStyleBackColor = true;
-            this.NextMetBtn.Click += new System.EventHandler(this.NextMetBtn_Click);
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.metDtGv, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.listBox1, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 370);
+            this.tableLayoutPanel3.TabIndex = 9;
             // 
-            // PreviousMetBtn
+            // metDtGv
             // 
-            this.PreviousMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviousMetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PreviousMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PreviousMetBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.PreviousMetBtn.Location = new System.Drawing.Point(3, 3);
-            this.PreviousMetBtn.Name = "PreviousMetBtn";
-            this.PreviousMetBtn.Size = new System.Drawing.Size(77, 33);
-            this.PreviousMetBtn.TabIndex = 0;
-            this.PreviousMetBtn.Text = "<";
-            this.PreviousMetBtn.UseVisualStyleBackColor = true;
-            this.PreviousMetBtn.Click += new System.EventHandler(this.PreviousMetBtn_Click);
+            this.metDtGv.AllowUserToAddRows = false;
+            this.metDtGv.AllowUserToDeleteRows = false;
+            this.metDtGv.AllowUserToResizeRows = false;
+            this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.metDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.metDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metDtGv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.metDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metDtGv.GridColor = System.Drawing.SystemColors.Control;
+            this.metDtGv.Location = new System.Drawing.Point(3, 3);
+            this.metDtGv.MultiSelect = false;
+            this.metDtGv.Name = "metDtGv";
+            this.metDtGv.ReadOnly = true;
+            this.metDtGv.RowHeadersVisible = false;
+            this.metDtGv.RowTemplate.Height = 25;
+            this.metDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metDtGv.Size = new System.Drawing.Size(194, 179);
+            this.metDtGv.TabIndex = 5;
             // 
-            // tableLayoutPanel2
+            // listBox1
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.PreviousMetBtn, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.NextMetBtn, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.CurentPageMetLbl, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(547, 408);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 39);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(3, 188);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 94);
+            this.listBox1.TabIndex = 6;
             // 
             // ListMetForm
             // 
@@ -334,13 +358,14 @@ namespace Desktop.Mets
             this.Name = "ListMetForm";
             this.Text = "ListMetForm";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.metPicturePnl.ResumeLayout(false);
             this.DescRepasPnl.ResumeLayout(false);
             this.DescRepasPnl.PerformLayout();
             this.refreshDeleteTLP.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,8 +373,6 @@ namespace Desktop.Mets
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button AddMetBtn;
-        private System.Windows.Forms.DataGridView metDtGv;
         private System.Windows.Forms.Panel metPicturePnl;
         private System.Windows.Forms.Panel DescRepasPnl;
         private System.Windows.Forms.Label CurrentMetLbl;
@@ -366,5 +389,9 @@ namespace Desktop.Mets
         private System.Windows.Forms.Button PreviousMetBtn;
         private System.Windows.Forms.Button NextMetBtn;
         private System.Windows.Forms.Label CurentPageMetLbl;
+        private System.Windows.Forms.Button AddMetBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.DataGridView metDtGv;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

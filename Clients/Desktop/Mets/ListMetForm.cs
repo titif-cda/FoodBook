@@ -66,8 +66,14 @@ namespace Desktop.Mets
             metDtGv.Columns["Id"].Visible = false;
             metDtGv.Columns["Description"].Visible = false;
             metDtGv.Columns["TypeRepas"].HeaderText = "Type de Repas";
-
-            if(clearSelection)
+            List<Met> met = (List<Met>)bindingSource.DataSource;
+            var test = met.Select(m => new { m.Libelle, TypeRepasLibelle = m.TypeRepas.Libelle }).ToList();
+            var test2 = met.Where(m => m.TypeRepas.Libelle == "Dessert").ToList();
+            listBox1.DataSource = test2;
+   
+       
+  
+            if (clearSelection)
             {
                 metDtGv.ClearSelection();
             }
@@ -158,6 +164,7 @@ namespace Desktop.Mets
         private void NextMetBtn_Click(object sender, EventArgs e)
         {
             NextPage();
+
         }
         /// <summary>
         /// Bouton pour passer à la page précédente

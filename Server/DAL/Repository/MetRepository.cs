@@ -32,23 +32,72 @@ namespace DAL.Repository
 
         public async Task<PageResponse<Met>> GetAllAsync(PageRequest pageRequest)
         {
-            var stmt = @"select m.Id, m.Libelle, m.Description, tp.Id, tp.Libelle  from Mets as m join TypeRepas tp on m.IdType = tp.Id
-                        ORDER BY m.Id
-                        OFFSET @PageSize * (@Page - 1) rows
-                        FETCH NEXT @PageSize rows only";
+            var fm = new FilterMetPaged();
+            var whereClause = "";
+            var orderBy = "";
+            if (fm.typeRepas != null)
+            {
+                whereClause = "Where tp.Id = @typeRepasID";
+            }
+
+            if(fm.Recherche != null)
+            {
+                if(whereClause != "")
+                {
+                    whereClause += " And";
+                }else
+                {
+                    whereClause += " Where";
+                }
+
+                whereClause += "i.Nom LIKE(@Recherche)"; 
+            }
+
+            if(fm.Popularite != 0)
+            {
+                orderBy += "order by NombreResa " + ((fm.Popularite > 0) ? "ASC" : "DESC");
+            }
+
+            var stmt = @$"select m.Id, m.Libelle,(select COALESCE(sum(Nb), 0) from Reservation r 
+                                                    join ServiceMets sm on r.IdService= sm.IdService
+	                                                join Mets mInter on sm.IdMet = mInter.Id where mInter.Id = m.Id) as NombreResa 
+                            from Mets as m 
+                            join MetsIngredients as mi on m.Id  = mi.IdMet
+	                        join Ingredient as i on mi.IdIngredient = i.Id 
+	                        join TypeRepas tp on m.IdType=tp.Id 
+	                        {whereClause} group by m.Id, m.Libelle {orderBy}
+                            OFFSET @PageSize * (@Page - 1) rows
+                            FETCH NEXT @PageSize rows only";
+            
+            //ORDER BY m.Id
+            //            OFFSET @PageSize * (@Page - 1) rows
+            //            FETCH NEXT @PageSize rows only";
+
+
             string queryCount = " SELECT COUNT(*) FROM Mets m inner join TypeRepas tp on m.IdType = tp.Id ";
 
-           IEnumerable<Met> metTask = await _session.Connection.QueryAsync<Met,TypeRepas,Met>(stmt, (met, typeRepas) => 
+           IEnumerable<Met> mets = await _session.Connection.QueryAsync<Met, MetsIngredients, Ingredient, TypeRepas,Met>(stmt, (met, metIngredient, ingredient,  typeRepas) => 
                 {
+                    met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>(); 
                     met.TypeRepas = typeRepas;
+                    if (metIngredient != null)
+                    {
+                        metIngredient.Ingredient = ingredient;
+                        met.ListDesIngredients.Add(metIngredient);
+                    }
                     return met;
                 }, pageRequest, _session.Transaction, splitOn: "Id");
-
-
+            
             int countTask = await _session.Connection.ExecuteScalarAsync<int>(queryCount, null, _session.Transaction);
+            var metsGrouped = mets.GroupBy(m => m.Id).Select(m =>
+            {
+                var met = m.First();
+                if (met.ListDesIngredients.Count() > 0)
+                    met.ListDesIngredients = m.Select(mp => mp.ListDesIngredients.Single()).ToList();
+                return met;
+            });
 
-
-            return new PageResponse<Met>(pageRequest.Page, pageRequest.PageSize, countTask, metTask.ToList());
+            return new PageResponse<Met>(pageRequest.Page, pageRequest.PageSize, countTask, metsGrouped.ToList());
         }
 
         public async Task<Met> GetAsync(int id)

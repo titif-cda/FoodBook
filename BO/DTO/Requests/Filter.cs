@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace BO.DTO.Requests
 {
-    public class Filter
+    public class FilterMetPaged: PageRequest
     {
         public int Popularite { get; set; }
 
         public TypeRepas typeRepas { get; set; }
 
-        public Ingredient typeIngredient { get; set; }
+        public string Recherche { get; set; }
 
-        public Filter()
+        public FilterMetPaged()
         {
         }
     }

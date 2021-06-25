@@ -37,11 +37,11 @@ namespace API.Controllers
         /// <returns>La liste des met</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<PageResponse<Met>>> GetAll([FromQuery] FilterMetPaged pageRequest)
+        public async Task<ActionResult<PageResponse<Met>>> GetAll([FromQuery] FilterMetPaged filterMetPaged)
         {
 
             
-            return Ok(await _restaurantService.GetAllMet(pageRequest));
+            return Ok(await _restaurantService.GetAllMet(filterMetPaged));
         }
 
         /// <summary>

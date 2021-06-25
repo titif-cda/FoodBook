@@ -31,6 +31,7 @@ namespace Desktop.Mets
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListMetForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AddMetBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviousMetBtn = new System.Windows.Forms.Button();
             this.NextMetBtn = new System.Windows.Forms.Button();
@@ -47,17 +48,24 @@ namespace Desktop.Mets
             this.refreshDeleteTLP = new System.Windows.Forms.TableLayoutPanel();
             this.RefreshMetBtn = new System.Windows.Forms.Button();
             this.DeleteMetBtn = new System.Windows.Forms.Button();
-            this.AddMetBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.listMetDtgvTlp = new System.Windows.Forms.TableLayoutPanel();
             this.metDtGv = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.triPnl = new System.Windows.Forms.Panel();
+            this.lessPopularityCheckBox = new System.Windows.Forms.CheckBox();
+            this.IngredientTBox = new System.Windows.Forms.TextBox();
+            this.typeMetCBox = new System.Windows.Forms.ComboBox();
+            this.ingredientCheckBox = new System.Windows.Forms.CheckBox();
+            this.typePlatCheckBox = new System.Windows.Forms.CheckBox();
+            this.mostPopularityCheckBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.metPicturePnl.SuspendLayout();
             this.DescRepasPnl.SuspendLayout();
             this.refreshDeleteTLP.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.listMetDtgvTlp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).BeginInit();
+            this.triPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,7 +78,7 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.metPicturePnl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.refreshDeleteTLP, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listMetDtgvTlp, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -79,6 +87,21 @@ namespace Desktop.Mets
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // AddMetBtn
+            // 
+            this.AddMetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.AddMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddMetBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddMetBtn.Location = new System.Drawing.Point(0, 405);
+            this.AddMetBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.AddMetBtn.Name = "AddMetBtn";
+            this.AddMetBtn.Size = new System.Drawing.Size(304, 45);
+            this.AddMetBtn.TabIndex = 1;
+            this.AddMetBtn.Text = "Ajouter";
+            this.AddMetBtn.UseVisualStyleBackColor = false;
+            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -288,48 +311,34 @@ namespace Desktop.Mets
             this.DeleteMetBtn.UseVisualStyleBackColor = false;
             this.DeleteMetBtn.Click += new System.EventHandler(this.DeleteMetBtn_Click);
             // 
-            // AddMetBtn
+            // listMetDtgvTlp
             // 
-            this.AddMetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.AddMetBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddMetBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddMetBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddMetBtn.Location = new System.Drawing.Point(0, 405);
-            this.AddMetBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.AddMetBtn.Name = "AddMetBtn";
-            this.AddMetBtn.Size = new System.Drawing.Size(304, 45);
-            this.AddMetBtn.TabIndex = 1;
-            this.AddMetBtn.Text = "Ajouter";
-            this.AddMetBtn.UseVisualStyleBackColor = false;
-            this.AddMetBtn.Click += new System.EventHandler(this.AddMetBtn_Click);
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.metDtGv, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.listBox1, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 370);
-            this.tableLayoutPanel3.TabIndex = 9;
+            this.listMetDtgvTlp.ColumnCount = 1;
+            this.listMetDtgvTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.listMetDtgvTlp.Controls.Add(this.metDtGv, 0, 1);
+            this.listMetDtgvTlp.Controls.Add(this.triPnl, 0, 0);
+            this.listMetDtgvTlp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listMetDtgvTlp.Location = new System.Drawing.Point(3, 3);
+            this.listMetDtgvTlp.Name = "listMetDtgvTlp";
+            this.listMetDtgvTlp.RowCount = 2;
+            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.56642F));
+            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.43359F));
+            this.listMetDtgvTlp.Size = new System.Drawing.Size(298, 399);
+            this.listMetDtgvTlp.TabIndex = 9;
             // 
             // metDtGv
             // 
             this.metDtGv.AllowUserToAddRows = false;
             this.metDtGv.AllowUserToDeleteRows = false;
             this.metDtGv.AllowUserToResizeRows = false;
-            this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.metDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.metDtGv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.metDtGv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metDtGv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.metDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metDtGv.GridColor = System.Drawing.SystemColors.Control;
-            this.metDtGv.Location = new System.Drawing.Point(3, 3);
+            this.metDtGv.Location = new System.Drawing.Point(3, 108);
             this.metDtGv.MultiSelect = false;
             this.metDtGv.Name = "metDtGv";
             this.metDtGv.ReadOnly = true;
@@ -337,17 +346,89 @@ namespace Desktop.Mets
             this.metDtGv.RowTemplate.Height = 25;
             this.metDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metDtGv.Size = new System.Drawing.Size(194, 179);
+            this.metDtGv.Size = new System.Drawing.Size(292, 288);
             this.metDtGv.TabIndex = 5;
+            this.metDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metDtGv_CellDoubleClick);
+            this.metDtGv.SelectionChanged += new System.EventHandler(this.metDtGv_SelectionChanged);
             // 
-            // listBox1
+            // triPnl
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(3, 188);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 94);
-            this.listBox1.TabIndex = 6;
+            this.triPnl.Controls.Add(this.lessPopularityCheckBox);
+            this.triPnl.Controls.Add(this.IngredientTBox);
+            this.triPnl.Controls.Add(this.typeMetCBox);
+            this.triPnl.Controls.Add(this.ingredientCheckBox);
+            this.triPnl.Controls.Add(this.typePlatCheckBox);
+            this.triPnl.Controls.Add(this.mostPopularityCheckBox);
+            this.triPnl.Controls.Add(this.label2);
+            this.triPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.triPnl.Location = new System.Drawing.Point(3, 3);
+            this.triPnl.Name = "triPnl";
+            this.triPnl.Size = new System.Drawing.Size(292, 99);
+            this.triPnl.TabIndex = 6;
+            // 
+            // lessPopularityCheckBox
+            // 
+            this.lessPopularityCheckBox.AutoSize = true;
+            this.lessPopularityCheckBox.Location = new System.Drawing.Point(131, 19);
+            this.lessPopularityCheckBox.Name = "lessPopularityCheckBox";
+            this.lessPopularityCheckBox.Size = new System.Drawing.Size(134, 19);
+            this.lessPopularityCheckBox.TabIndex = 8;
+            this.lessPopularityCheckBox.Text = "les moins populaires";
+            this.lessPopularityCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // IngredientTBox
+            // 
+            this.IngredientTBox.Location = new System.Drawing.Point(131, 69);
+            this.IngredientTBox.Name = "IngredientTBox";
+            this.IngredientTBox.Size = new System.Drawing.Size(158, 23);
+            this.IngredientTBox.TabIndex = 7;
+            // 
+            // typeMetCBox
+            // 
+            this.typeMetCBox.FormattingEnabled = true;
+            this.typeMetCBox.Location = new System.Drawing.Point(131, 41);
+            this.typeMetCBox.Name = "typeMetCBox";
+            this.typeMetCBox.Size = new System.Drawing.Size(121, 23);
+            this.typeMetCBox.TabIndex = 6;
+            // 
+            // ingredientCheckBox
+            // 
+            this.ingredientCheckBox.AutoSize = true;
+            this.ingredientCheckBox.Location = new System.Drawing.Point(7, 71);
+            this.ingredientCheckBox.Name = "ingredientCheckBox";
+            this.ingredientCheckBox.Size = new System.Drawing.Size(80, 19);
+            this.ingredientCheckBox.TabIndex = 5;
+            this.ingredientCheckBox.Text = "Ingredient";
+            this.ingredientCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // typePlatCheckBox
+            // 
+            this.typePlatCheckBox.AutoSize = true;
+            this.typePlatCheckBox.Location = new System.Drawing.Point(7, 45);
+            this.typePlatCheckBox.Name = "typePlatCheckBox";
+            this.typePlatCheckBox.Size = new System.Drawing.Size(89, 19);
+            this.typePlatCheckBox.TabIndex = 4;
+            this.typePlatCheckBox.Text = "Type de Plat";
+            this.typePlatCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // mostPopularityCheckBox
+            // 
+            this.mostPopularityCheckBox.AutoSize = true;
+            this.mostPopularityCheckBox.Location = new System.Drawing.Point(7, 19);
+            this.mostPopularityCheckBox.Name = "mostPopularityCheckBox";
+            this.mostPopularityCheckBox.Size = new System.Drawing.Size(118, 19);
+            this.mostPopularityCheckBox.TabIndex = 3;
+            this.mostPopularityCheckBox.Text = "les plus populaire";
+            this.mostPopularityCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tri par :";
             // 
             // ListMetForm
             // 
@@ -364,8 +445,10 @@ namespace Desktop.Mets
             this.DescRepasPnl.ResumeLayout(false);
             this.DescRepasPnl.PerformLayout();
             this.refreshDeleteTLP.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.listMetDtgvTlp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metDtGv)).EndInit();
+            this.triPnl.ResumeLayout(false);
+            this.triPnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,8 +473,15 @@ namespace Desktop.Mets
         private System.Windows.Forms.Button NextMetBtn;
         private System.Windows.Forms.Label CurentPageMetLbl;
         private System.Windows.Forms.Button AddMetBtn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel listMetDtgvTlp;
         private System.Windows.Forms.DataGridView metDtGv;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel triPnl;
+        private System.Windows.Forms.TextBox IngredientTBox;
+        private System.Windows.Forms.ComboBox typeMetCBox;
+        private System.Windows.Forms.CheckBox ingredientCheckBox;
+        private System.Windows.Forms.CheckBox typePlatCheckBox;
+        private System.Windows.Forms.CheckBox mostPopularityCheckBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox lessPopularityCheckBox;
     }
 }

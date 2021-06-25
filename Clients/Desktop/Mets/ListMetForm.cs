@@ -24,6 +24,7 @@ namespace Desktop.Mets
         //initialisation des parametres
         private readonly IRestaurantService _restaurantService;
         private BindingSource bindingSource = new BindingSource();
+        private BindingSource bindingSourceTypeRepas = new BindingSource();
         private int currentPage = 1;
         private int defaultPageSize = 15;
         private int maxPage;
@@ -35,7 +36,7 @@ namespace Desktop.Mets
             _restaurantService = new RestaurantService();
             InitializeComponent();
             LoadMets(false);
-           
+            LoadListBox();
             metDtGv.ReadOnly = true;
         }
 
@@ -47,8 +48,9 @@ namespace Desktop.Mets
         /// <param name="clearSelection">Indique que la ligne selectionnée est à désactivé</param>
         private async Task LoadMets(bool clearSelection = false)
         {
-            var metsPageTask = _restaurantService.GetAllMet(new PageRequest(currentPage, defaultPageSize));
+            var metsPageTask = _restaurantService.GetAllMet(new FilterMetPaged(currentPage, defaultPageSize));
             //var metPage = await metsPageTask;
+            ComputeFilter();
             Grisage();
             PageResponse<Met> metPage = await metsPageTask;
             if (metPage == null)
@@ -66,10 +68,10 @@ namespace Desktop.Mets
             metDtGv.Columns["Id"].Visible = false;
             metDtGv.Columns["Description"].Visible = false;
             metDtGv.Columns["TypeRepas"].HeaderText = "Type de Repas";
-            List<Met> met = (List<Met>)bindingSource.DataSource;
-            var test = met.Select(m => new { m.Libelle, TypeRepasLibelle = m.TypeRepas.Libelle }).ToList();
-            var test2 = met.Where(m => m.TypeRepas.Libelle == "Dessert").ToList();
-            listBox1.DataSource = test2;
+            //List<Met> met = (List<Met>)bindingSource.DataSource;
+            //var test = met.Select(m => new { m.Libelle, TypeRepasLibelle = m.TypeRepas.Libelle }).ToList();
+            //var test2 = met.Where(m => m.TypeRepas.Libelle == "Dessert").ToList();
+           // listBox1.DataSource = test2;
    
        
   
@@ -128,6 +130,7 @@ namespace Desktop.Mets
                     CurrentMetLbl.Text = met.Libelle;
                     CurrentDescLabel.Text = met.Description;
                     typeLbl.Text = met.TypeRepas?.Libelle;
+                    typeMetCBox.SelectedIndex = -1;
                     if (met.ListDesIngredients?.Count() > 0)
                         //transforme la liste des ingredients en chaine de string
                         CurrentIngredientsLbl.Text = met.ListDesIngredients.Select(ingredientMet => $"{ingredientMet.Ingredient.Nom}( {ingredientMet.Quantite} )").Aggregate((s1, s2) => $"{s1}, {s2}");
@@ -262,6 +265,39 @@ namespace Desktop.Mets
                 }
             }
 
+        }
+        private async void LoadListBox()
+        {
+            Task<PageResponse<TypeRepas>> typeRepasPageTask = _restaurantService.GetAllTypeRepas(new PageRequest(currentPage, defaultPageSize));
+            PageResponse<TypeRepas> typeRepas = await typeRepasPageTask;
+            bindingSourceTypeRepas.DataSource = typeRepas.Data;
+            typeMetCBox.DataSource = bindingSourceTypeRepas;
+            typeMetCBox.DisplayMember = "Libelle";
+
+
+        }
+
+        private void ComputeFilter()
+        {
+            typeMetCBox.Visible = false;
+            IngredientTBox.Visible = false;
+
+            if (lessPopularityCheckBox.Checked = true )
+            {
+
+            }
+            if (mostPopularityCheckBox.Checked = true )
+            {
+
+            }
+            if (typePlatCheckBox.Checked = true)
+            {
+                typeMetCBox.Visible = true;
+            }
+            if (ingredientCheckBox.Checked = true)
+            {
+                IngredientTBox.Visible = true;
+            }
         }
     }
 }

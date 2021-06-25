@@ -203,11 +203,11 @@ namespace BLL.Services
                 return null;
             }
         }
-        public async Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest)
+        public async Task<PageResponse<Met>> GetAllMet(FilterMetPaged filterMetPaged)
         {
             IMetsRepository _met = _db.GetRepository<IMetsRepository>();
 
-            var Type = (await _met.GetAllAsync(pageRequest));
+            var Type = (await _met.GetAllAsync(filterMetPaged));
 
             return Type;
         }

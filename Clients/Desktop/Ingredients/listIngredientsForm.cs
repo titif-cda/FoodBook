@@ -148,10 +148,5 @@ namespace Desktop.Ingredients
         }
 
     
-        private void searchTbox_TextChanged(object sender, EventArgs e)
-        {
-        
-        
-        }
     }
 }

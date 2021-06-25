@@ -13,7 +13,7 @@ namespace DAL.Repository
      
     public interface IMetsRepository : IGenericRepository<Met>
     {
-        Task<PageResponse<Met>> GetAllAsync(PageRequest pageRequest);
+        Task<PageResponse<Met>> GetAllAsync(FilterMetPaged pageRequest);
         Task<Met> GetIngredientForMetAsync(int id);
         
     }

@@ -187,7 +187,6 @@ namespace Desktop.Ingredients
             this.searchTbox.Name = "searchTbox";
             this.searchTbox.Size = new System.Drawing.Size(194, 23);
             this.searchTbox.TabIndex = 7;
-            this.searchTbox.TextChanged += new System.EventHandler(this.searchTbox_TextChanged);
             // 
             // searchLbl
             // 

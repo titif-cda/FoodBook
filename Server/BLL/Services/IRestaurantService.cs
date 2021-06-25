@@ -62,7 +62,7 @@ namespace BLL.Services
         #region Met
         Task<Met> CreateMet(Met Repas);
 
-        Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest);
+        Task<PageResponse<Met>> GetAllMet(FilterMetPaged filterMetPaged);
 
         Task<Met> GetMetById(int id);
 

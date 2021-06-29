@@ -60,5 +60,19 @@ namespace Desktop.Gestion
             ServiceBtn.ForeColor = Color.White;
             CommandesBtn.ForeColor = Color.Black;
         }
+
+        private void reservationsBtn_Click(object sender, EventArgs e)
+        {
+            NavFormPanel(new reservationsForm());
+            string hoverColor = "#CA5100";
+            string originColor = "#8C52FF";
+
+            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
+            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
+            CommandesBtn.BackColor = ColorHover;
+            ServiceBtn.BackColor = ColorOrigin;
+            ServiceBtn.ForeColor = Color.White;
+            CommandesBtn.ForeColor = Color.Black;
+        }
     }
 }

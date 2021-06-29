@@ -35,34 +35,34 @@ namespace BO.Entity
         public bool Plat{ get; set; }
         public bool Dessert{ get; set; }
 
-public Reservation()
-        {
-        }
+
         /// <summary>
-        /// constructeur avec tous les arguments
+        /// 
         /// </summary>
-        /// <param name="idResa">Identifiant reservation</param>
+        /// <param name="id">Identifiant reservation</param>
         /// <param name="client">Objet Client</param>
         /// <param name="service">Objet Service</param>
-        /// <param name="dateResa">Date de reservation</param>
-        /// <param name="nbResa">Nombre de reservations</param>
+        /// <param name="date">Date de reservation</param>
+        /// <param name="nb">Nombre de reservations</param>
         /// <param name="entree">choisir entrée</param>
         /// <param name="plat">choisir plat</param>
         /// <param name="dessert">choisir dessert</param>
-
-        public Reservation(int? idResa, Client client, Service service , DateTime dateResa, int? nbResa,bool entree,bool plat,bool dessert)
+        public Reservation(int? id, Client client, Service service, DateTime date, int? nb, bool entree, bool plat, bool dessert)
         {
-            Id = idResa;
+            Id = id;
             Client = client;
             Service = service;
-            Date = dateResa;
-            Nb = nbResa;
+            Date = date;
+            Nb = nb;
             Entree = entree;
             Plat = plat;
             Dessert = dessert;
-
-
         }
+
+        public Reservation()
+        {
+        }
+        
 
         public override bool Equals(object obj)
         {
@@ -76,9 +76,6 @@ public Reservation()
                 Plat == resa.Plat &&
                 Dessert == resa.Dessert;
 
-            ;
-              
-            
         }
 
         public override int GetHashCode()

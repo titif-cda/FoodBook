@@ -31,11 +31,11 @@ namespace Desktop.Gestion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionForm));
             this.GestionTlp = new System.Windows.Forms.TableLayoutPanel();
+            this.reservationsBtn = new System.Windows.Forms.Button();
             this.CommandesBtn = new System.Windows.Forms.Button();
             this.ServiceBtn = new System.Windows.Forms.Button();
             this.GestionPnl = new System.Windows.Forms.Panel();
             this.GestionPBox = new System.Windows.Forms.PictureBox();
-            this.reservationsBtn = new System.Windows.Forms.Button();
             this.GestionTlp.SuspendLayout();
             this.GestionPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GestionPBox)).BeginInit();
@@ -58,6 +58,21 @@ namespace Desktop.Gestion
             this.GestionTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.GestionTlp.Size = new System.Drawing.Size(800, 67);
             this.GestionTlp.TabIndex = 0;
+            // 
+            // reservationsBtn
+            // 
+            this.reservationsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.reservationsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reservationsBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.reservationsBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.reservationsBtn.Location = new System.Drawing.Point(266, 0);
+            this.reservationsBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.reservationsBtn.Name = "reservationsBtn";
+            this.reservationsBtn.Size = new System.Drawing.Size(266, 67);
+            this.reservationsBtn.TabIndex = 6;
+            this.reservationsBtn.Text = "Reservations";
+            this.reservationsBtn.UseVisualStyleBackColor = false;
+            this.reservationsBtn.Click += new System.EventHandler(this.reservationsBtn_Click);
             // 
             // CommandesBtn
             // 
@@ -109,20 +124,6 @@ namespace Desktop.Gestion
             this.GestionPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GestionPBox.TabIndex = 7;
             this.GestionPBox.TabStop = false;
-            // 
-            // reservationsBtn
-            // 
-            this.reservationsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.reservationsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reservationsBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reservationsBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.reservationsBtn.Location = new System.Drawing.Point(266, 0);
-            this.reservationsBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.reservationsBtn.Name = "reservationsBtn";
-            this.reservationsBtn.Size = new System.Drawing.Size(266, 67);
-            this.reservationsBtn.TabIndex = 6;
-            this.reservationsBtn.Text = "Reservations";
-            this.reservationsBtn.UseVisualStyleBackColor = false;
             // 
             // GestionForm
             // 

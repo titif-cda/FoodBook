@@ -311,13 +311,13 @@
         </member>
         <member name="M:BO.Entity.Reservation.#ctor(System.Nullable{System.Int32},BO.Entity.Client,BO.Entity.Service,System.DateTime,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-            constructeur avec tous les arguments
+            
             </summary>
-            <param name="idResa">Identifiant reservation</param>
+            <param name="id">Identifiant reservation</param>
             <param name="client">Objet Client</param>
             <param name="service">Objet Service</param>
-            <param name="dateResa">Date de reservation</param>
-            <param name="nbResa">Nombre de reservations</param>
+            <param name="date">Date de reservation</param>
+            <param name="nb">Nombre de reservations</param>
             <param name="entree">choisir entrée</param>
             <param name="plat">choisir plat</param>
             <param name="dessert">choisir dessert</param>

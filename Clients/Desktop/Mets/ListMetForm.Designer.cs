@@ -51,12 +51,12 @@ namespace Desktop.Mets
             this.listMetDtgvTlp = new System.Windows.Forms.TableLayoutPanel();
             this.metDtGv = new System.Windows.Forms.DataGridView();
             this.triPnl = new System.Windows.Forms.Panel();
-            this.lessPopularityCheckBox = new System.Windows.Forms.CheckBox();
+            this.ingrSearchLbl = new System.Windows.Forms.Label();
+            this.tplatlbl = new System.Windows.Forms.Label();
+            this.PopoularityLessRadioBtn = new System.Windows.Forms.RadioButton();
+            this.PopoularityMoreRadioBtn = new System.Windows.Forms.RadioButton();
             this.IngredientTBox = new System.Windows.Forms.TextBox();
             this.typeMetCBox = new System.Windows.Forms.ComboBox();
-            this.ingredientCheckBox = new System.Windows.Forms.CheckBox();
-            this.typePlatCheckBox = new System.Windows.Forms.CheckBox();
-            this.mostPopularityCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -321,8 +321,8 @@ namespace Desktop.Mets
             this.listMetDtgvTlp.Location = new System.Drawing.Point(3, 3);
             this.listMetDtgvTlp.Name = "listMetDtgvTlp";
             this.listMetDtgvTlp.RowCount = 2;
-            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.56642F));
-            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.43359F));
+            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.57644F));
+            this.listMetDtgvTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.42356F));
             this.listMetDtgvTlp.Size = new System.Drawing.Size(298, 399);
             this.listMetDtgvTlp.TabIndex = 9;
             // 
@@ -338,7 +338,7 @@ namespace Desktop.Mets
             this.metDtGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metDtGv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metDtGv.GridColor = System.Drawing.SystemColors.Control;
-            this.metDtGv.Location = new System.Drawing.Point(3, 108);
+            this.metDtGv.Location = new System.Drawing.Point(3, 125);
             this.metDtGv.MultiSelect = false;
             this.metDtGv.Name = "metDtGv";
             this.metDtGv.ReadOnly = true;
@@ -346,35 +346,67 @@ namespace Desktop.Mets
             this.metDtGv.RowTemplate.Height = 25;
             this.metDtGv.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metDtGv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metDtGv.Size = new System.Drawing.Size(292, 288);
+            this.metDtGv.Size = new System.Drawing.Size(292, 271);
             this.metDtGv.TabIndex = 5;
             this.metDtGv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metDtGv_CellDoubleClick);
             this.metDtGv.SelectionChanged += new System.EventHandler(this.metDtGv_SelectionChanged);
             // 
             // triPnl
             // 
-            this.triPnl.Controls.Add(this.lessPopularityCheckBox);
+            this.triPnl.Controls.Add(this.ingrSearchLbl);
+            this.triPnl.Controls.Add(this.tplatlbl);
+            this.triPnl.Controls.Add(this.PopoularityLessRadioBtn);
+            this.triPnl.Controls.Add(this.PopoularityMoreRadioBtn);
             this.triPnl.Controls.Add(this.IngredientTBox);
             this.triPnl.Controls.Add(this.typeMetCBox);
-            this.triPnl.Controls.Add(this.ingredientCheckBox);
-            this.triPnl.Controls.Add(this.typePlatCheckBox);
-            this.triPnl.Controls.Add(this.mostPopularityCheckBox);
             this.triPnl.Controls.Add(this.label2);
             this.triPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.triPnl.Location = new System.Drawing.Point(3, 3);
             this.triPnl.Name = "triPnl";
-            this.triPnl.Size = new System.Drawing.Size(292, 99);
+            this.triPnl.Size = new System.Drawing.Size(292, 116);
             this.triPnl.TabIndex = 6;
             // 
-            // lessPopularityCheckBox
+            // ingrSearchLbl
             // 
-            this.lessPopularityCheckBox.AutoSize = true;
-            this.lessPopularityCheckBox.Location = new System.Drawing.Point(131, 19);
-            this.lessPopularityCheckBox.Name = "lessPopularityCheckBox";
-            this.lessPopularityCheckBox.Size = new System.Drawing.Size(134, 19);
-            this.lessPopularityCheckBox.TabIndex = 8;
-            this.lessPopularityCheckBox.Text = "les moins populaires";
-            this.lessPopularityCheckBox.UseVisualStyleBackColor = true;
+            this.ingrSearchLbl.AutoSize = true;
+            this.ingrSearchLbl.Location = new System.Drawing.Point(7, 77);
+            this.ingrSearchLbl.Name = "ingrSearchLbl";
+            this.ingrSearchLbl.Size = new System.Drawing.Size(61, 15);
+            this.ingrSearchLbl.TabIndex = 12;
+            this.ingrSearchLbl.Text = "Ingredient";
+            // 
+            // tplatlbl
+            // 
+            this.tplatlbl.AutoSize = true;
+            this.tplatlbl.Location = new System.Drawing.Point(6, 49);
+            this.tplatlbl.Name = "tplatlbl";
+            this.tplatlbl.Size = new System.Drawing.Size(70, 15);
+            this.tplatlbl.TabIndex = 11;
+            this.tplatlbl.Text = "Type de Plat";
+            // 
+            // PopoularityLessRadioBtn
+            // 
+            this.PopoularityLessRadioBtn.AutoSize = true;
+            this.PopoularityLessRadioBtn.Location = new System.Drawing.Point(131, 19);
+            this.PopoularityLessRadioBtn.Name = "PopoularityLessRadioBtn";
+            this.PopoularityLessRadioBtn.Size = new System.Drawing.Size(87, 19);
+            this.PopoularityLessRadioBtn.TabIndex = 10;
+            this.PopoularityLessRadioBtn.TabStop = true;
+            this.PopoularityLessRadioBtn.Text = "popularité -";
+            this.PopoularityLessRadioBtn.UseVisualStyleBackColor = true;
+            this.PopoularityLessRadioBtn.CheckedChanged += new System.EventHandler(this.PopoularityLessRadioBtn_CheckedChanged);
+            // 
+            // PopoularityMoreRadioBtn
+            // 
+            this.PopoularityMoreRadioBtn.AutoSize = true;
+            this.PopoularityMoreRadioBtn.Location = new System.Drawing.Point(7, 19);
+            this.PopoularityMoreRadioBtn.Name = "PopoularityMoreRadioBtn";
+            this.PopoularityMoreRadioBtn.Size = new System.Drawing.Size(90, 19);
+            this.PopoularityMoreRadioBtn.TabIndex = 9;
+            this.PopoularityMoreRadioBtn.TabStop = true;
+            this.PopoularityMoreRadioBtn.Text = "popularité +";
+            this.PopoularityMoreRadioBtn.UseVisualStyleBackColor = true;
+            this.PopoularityMoreRadioBtn.CheckedChanged += new System.EventHandler(this.PopoularityMoreRadioBtn_CheckedChanged);
             // 
             // IngredientTBox
             // 
@@ -382,6 +414,7 @@ namespace Desktop.Mets
             this.IngredientTBox.Name = "IngredientTBox";
             this.IngredientTBox.Size = new System.Drawing.Size(158, 23);
             this.IngredientTBox.TabIndex = 7;
+            this.IngredientTBox.TextChanged += new System.EventHandler(this.IngredientTBox_TextChanged);
             // 
             // typeMetCBox
             // 
@@ -390,36 +423,7 @@ namespace Desktop.Mets
             this.typeMetCBox.Name = "typeMetCBox";
             this.typeMetCBox.Size = new System.Drawing.Size(121, 23);
             this.typeMetCBox.TabIndex = 6;
-            // 
-            // ingredientCheckBox
-            // 
-            this.ingredientCheckBox.AutoSize = true;
-            this.ingredientCheckBox.Location = new System.Drawing.Point(7, 71);
-            this.ingredientCheckBox.Name = "ingredientCheckBox";
-            this.ingredientCheckBox.Size = new System.Drawing.Size(80, 19);
-            this.ingredientCheckBox.TabIndex = 5;
-            this.ingredientCheckBox.Text = "Ingredient";
-            this.ingredientCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // typePlatCheckBox
-            // 
-            this.typePlatCheckBox.AutoSize = true;
-            this.typePlatCheckBox.Location = new System.Drawing.Point(7, 45);
-            this.typePlatCheckBox.Name = "typePlatCheckBox";
-            this.typePlatCheckBox.Size = new System.Drawing.Size(89, 19);
-            this.typePlatCheckBox.TabIndex = 4;
-            this.typePlatCheckBox.Text = "Type de Plat";
-            this.typePlatCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // mostPopularityCheckBox
-            // 
-            this.mostPopularityCheckBox.AutoSize = true;
-            this.mostPopularityCheckBox.Location = new System.Drawing.Point(7, 19);
-            this.mostPopularityCheckBox.Name = "mostPopularityCheckBox";
-            this.mostPopularityCheckBox.Size = new System.Drawing.Size(118, 19);
-            this.mostPopularityCheckBox.TabIndex = 3;
-            this.mostPopularityCheckBox.Text = "les plus populaire";
-            this.mostPopularityCheckBox.UseVisualStyleBackColor = true;
+            this.typeMetCBox.SelectedIndexChanged += new System.EventHandler(this.typeMetCBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -478,10 +482,10 @@ namespace Desktop.Mets
         private System.Windows.Forms.Panel triPnl;
         private System.Windows.Forms.TextBox IngredientTBox;
         private System.Windows.Forms.ComboBox typeMetCBox;
-        private System.Windows.Forms.CheckBox ingredientCheckBox;
-        private System.Windows.Forms.CheckBox typePlatCheckBox;
-        private System.Windows.Forms.CheckBox mostPopularityCheckBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox lessPopularityCheckBox;
+        private System.Windows.Forms.RadioButton PopoularityLessRadioBtn;
+        private System.Windows.Forms.RadioButton PopoularityMoreRadioBtn;
+        private System.Windows.Forms.Label ingrSearchLbl;
+        private System.Windows.Forms.Label tplatlbl;
     }
 }

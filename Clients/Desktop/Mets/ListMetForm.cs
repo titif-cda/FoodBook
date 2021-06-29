@@ -48,22 +48,47 @@ namespace Desktop.Mets
         /// <param name="clearSelection">Indique que la ligne selectionnée est à désactivé</param>
         private async Task LoadMets(bool clearSelection = false)
         {
-            var metsPageTask = _restaurantService.GetAllMet(new FilterMetPaged(currentPage, defaultPageSize));
-            //var metPage = await metsPageTask;
-            ComputeFilter();
+            var filter = new FilterMetPaged(currentPage, defaultPageSize);
+            
+
+            if (PopoularityMoreRadioBtn.Checked)
+            {
+                filter.Popularite = -1;
+            }
+            if (PopoularityLessRadioBtn.Checked)
+            {
+                filter.Popularite = 1;
+
+            }
+            if ((typeMetCBox.SelectedItem as TypeRepas) != null && (typeMetCBox.SelectedItem as TypeRepas).Id > 0)
+            {
+                var IdSelect = (typeMetCBox.SelectedItem as TypeRepas).Id;
+                filter.typeRepasId = IdSelect.Value;
+
+            }
+            if (!string.IsNullOrEmpty(IngredientTBox.Text))
+            {
+                
+                    filter.Recherche = IngredientTBox.Text;
+                
+                
+            }
+            
+            PageResponse<Met> met = await _restaurantService.GetAllMet(filter);
             Grisage();
-            PageResponse<Met> metPage = await metsPageTask;
-            if (metPage == null)
+            //PageResponse<Met> metPage = await metsPageTask;
+          
+            if (met == null)
             {
                 MessageBox.Show("erreur ");
                 return;
             }
-            else if(metPage.TotalPages < currentPage)
+            else if(met.TotalPages < currentPage)
             {
                 PreviousPage();
             }
-            maxPage = metPage.TotalPages.GetValueOrDefault();
-            bindingSource.DataSource = metPage.Data;
+            maxPage = met.TotalPages.GetValueOrDefault();
+            bindingSource.DataSource = met.Data;
             metDtGv.DataSource = bindingSource;
             metDtGv.Columns["Id"].Visible = false;
             metDtGv.Columns["Description"].Visible = false;
@@ -130,7 +155,6 @@ namespace Desktop.Mets
                     CurrentMetLbl.Text = met.Libelle;
                     CurrentDescLabel.Text = met.Description;
                     typeLbl.Text = met.TypeRepas?.Libelle;
-                    typeMetCBox.SelectedIndex = -1;
                     if (met.ListDesIngredients?.Count() > 0)
                         //transforme la liste des ingredients en chaine de string
                         CurrentIngredientsLbl.Text = met.ListDesIngredients.Select(ingredientMet => $"{ingredientMet.Ingredient.Nom}( {ingredientMet.Quantite} )").Aggregate((s1, s2) => $"{s1}, {s2}");
@@ -270,34 +294,43 @@ namespace Desktop.Mets
         {
             Task<PageResponse<TypeRepas>> typeRepasPageTask = _restaurantService.GetAllTypeRepas(new PageRequest(currentPage, defaultPageSize));
             PageResponse<TypeRepas> typeRepas = await typeRepasPageTask;
+            typeRepas.Data.Insert(0, new TypeRepas() { Id = -1, Libelle = "Tous" });
             bindingSourceTypeRepas.DataSource = typeRepas.Data;
             typeMetCBox.DataSource = bindingSourceTypeRepas;
             typeMetCBox.DisplayMember = "Libelle";
+            typeMetCBox.SelectedIndex = 0;
 
 
         }
 
-        private void ComputeFilter()
+        private async void ComputeFilter()
         {
-            typeMetCBox.Visible = false;
-            IngredientTBox.Visible = false;
+            //var metsPageTask = _restaurantService.GetAllMet(new FilterMetPaged(currentPage, defaultPageSize));
+           
 
-            if (lessPopularityCheckBox.Checked = true )
-            {
+        }
 
-            }
-            if (mostPopularityCheckBox.Checked = true )
-            {
+        private void typeMetCBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadMets();
+        }
 
-            }
-            if (typePlatCheckBox.Checked = true)
-            {
-                typeMetCBox.Visible = true;
-            }
-            if (ingredientCheckBox.Checked = true)
-            {
-                IngredientTBox.Visible = true;
-            }
+        private void IngredientTBox_TextChanged(object sender, EventArgs e)
+        {
+            
+                LoadMets();
+          
+            
+        }
+
+        private void PopoularityMoreRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadMets();
+        }
+
+        private void PopoularityLessRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+               LoadMets();
         }
     }
 }

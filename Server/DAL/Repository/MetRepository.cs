@@ -52,7 +52,7 @@ namespace DAL.Repository
                 var temp = "%" + filterMetPaged.Recherche + "%";
 
                 filterMetPaged.Recherche = temp;
-                whereClause += " i.Nom LIKE(@Recherche)"; 
+                whereClause += " i.Nom collate SQL_Latin1_General_CP1_CI_AS LIKE(@Recherche)"; 
             }
 
             if(filterMetPaged.Popularite != 0)

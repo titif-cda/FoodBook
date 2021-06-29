@@ -41,9 +41,9 @@ namespace Desktop.Gestion
             Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
             Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
             ServiceBtn.BackColor = ColorHover;
-            ReservationBtn.BackColor = ColorOrigin;
+            CommandesBtn.BackColor = ColorOrigin;
             ServiceBtn.ForeColor = Color.Black;
-            ReservationBtn.ForeColor = Color.White;
+            CommandesBtn.ForeColor = Color.White;
             //ServiceBtn.Font = new Font(ServiceBtn.Font, FontStyle.Bold);
         }
 
@@ -55,10 +55,10 @@ namespace Desktop.Gestion
 
             Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
             Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
-            ReservationBtn.BackColor = ColorHover;
+            CommandesBtn.BackColor = ColorHover;
             ServiceBtn.BackColor = ColorOrigin;
             ServiceBtn.ForeColor = Color.White;
-            ReservationBtn.ForeColor = Color.Black;
+            CommandesBtn.ForeColor = Color.Black;
         }
     }
 }

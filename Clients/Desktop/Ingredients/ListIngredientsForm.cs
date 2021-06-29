@@ -16,6 +16,7 @@ namespace Desktop.Ingredients
 {
     public partial class ListIngredientsForm : Form
     {
+     
 
         private readonly IRestaurantService _restaurantService;
         private BindingSource bindingSource = new BindingSource();
@@ -63,16 +64,11 @@ namespace Desktop.Ingredients
             //currentPageLabel.Text = currentPageLabel.ToString();
             this.LoadIngredients();
         }
-
         private void ErrorMessage()
         {
             MessageBox.Show("Erreur: Comunication impossible avec le service distant.");
             return;
         }   
-
-
-
-
         private void PreviousPage()
         {
            if (currentPage > 1)
@@ -151,7 +147,6 @@ namespace Desktop.Ingredients
             }
         }
 
-       
-
+    
     }
 }

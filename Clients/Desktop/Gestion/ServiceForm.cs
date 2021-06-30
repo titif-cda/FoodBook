@@ -166,7 +166,7 @@ namespace Desktop.Gestion
 
         private async void serviceDtGv_SelectionChanged(object sender, EventArgs e)
         {
-            if (serviceDtGv.CurrentRow.DataBoundItem != null && serviceDtGv.CurrentRow != null && selectedService?.Id != (serviceDtGv.CurrentRow.DataBoundItem as Service).Id)
+            if (serviceDtGv.CurrentRow != null && serviceDtGv.CurrentRow.DataBoundItem != null && serviceDtGv.CurrentRow != null && selectedService?.Id != (serviceDtGv.CurrentRow.DataBoundItem as Service).Id)
             {
                 Service serviceSelected = (serviceDtGv.CurrentRow.DataBoundItem as Service);
                 selectedService = serviceSelected;

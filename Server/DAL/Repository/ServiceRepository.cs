@@ -46,6 +46,8 @@ namespace DAL.Repository
             return new PageResponse<Service>(pageRequest.Page, pageRequest.PageSize, countTask, serviceTask.ToList());
         }
 
+
+
         public async Task<Service> GetAsync(int id)
         {
             //Evité l'injection sql avec des reqêtes paramétrées

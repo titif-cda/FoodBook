@@ -65,5 +65,9 @@ namespace BO.Entity
         {
             return HashCode.Combine(Id, Midi, Date, ListPlats);
         }
+        public override string ToString()
+        {
+            return Id.ToString();
+        }
     }
 }

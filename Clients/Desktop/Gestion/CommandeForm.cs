@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Desktop.Extensions;
 namespace Desktop.Gestion
 {
     public partial class CommandeForm : Form
@@ -33,25 +33,26 @@ namespace Desktop.Gestion
 
 
 			dataGridView1.DataSource = bindingSourceCommande;
-
+			
 		}
 
+        private void DateSelectDTP_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dateSelected;
+            dateSelected = DateSelectDTP.Value;
+           
+            DateTime firstDate = dateSelected.Date.GetFirstDateOfWeek(DayOfWeek.Monday);
+            DateTime lastDate = dateSelected.Date.GetLastDateOfWeek(DayOfWeek.Sunday);
+           
+            label1.Text = firstDate.ToString("dddd dd MMM");
+            label2.Text = lastDate.ToString("dddd dd MMM");
 
-		private async void btnAfficher_Click(object sender, EventArgs e)
-		{
-			try
-			{
 
 
 
-				await _commandeService.GetCommande();
-				MessageBox.Show("Voici la commande");
-			}
-			catch (Exception)
-			{
+        }
+      
+        
 
-				MessageBox.Show("Votre commande ne peut etre visualisée");
-			}
-		}
-	}
+    }
 }

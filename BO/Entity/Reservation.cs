@@ -82,5 +82,10 @@ namespace BO.Entity
         {
                 return HashCode.Combine(Id,Client,Service,Date,Nb,Entree,Plat,Dessert);
         }
+
+        public override string ToString()
+        {
+            return Nb.ToString();
+        }
     }
 }

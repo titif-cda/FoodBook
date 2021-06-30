@@ -91,5 +91,11 @@ namespace BO.Entity
         {
             return HashCode.Combine(Id, Nom, Prenom, Tel, Email, Login, Password, Role);
         }
+
+        public override string ToString()
+        {
+            return Nom + " " + Prenom;
+           
+        }
     }
 }

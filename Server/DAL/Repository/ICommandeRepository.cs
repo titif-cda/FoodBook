@@ -6,5 +6,6 @@ namespace DAL.Repository
     public interface ICommandeRepository
     {
         Task<CommandeDto> GetAsync();
+        //Task<CommandeDto> GetCommandeByDate();
     }
 }

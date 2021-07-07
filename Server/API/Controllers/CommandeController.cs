@@ -42,9 +42,9 @@ namespace API.Controllers.V1
 		[HttpGet("afficher")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public async Task<IActionResult> GetCommande([FromQuery] CommandeDto commandeRequest)
+		public async Task<IActionResult> GetCommande([FromQuery] CommandRequest commandeRequest)
 		{
-			CommandeDto commande = await _commandeService.GetCommande();
+			CommandeDto commande = await _commandeService.GetCommandeByDate(commandeRequest.DateDebut, commandeRequest.DateFin);
 			if (commande == null)
 			{
 				return NotFound(); // StatusCode = 404
@@ -54,7 +54,6 @@ namespace API.Controllers.V1
 				return Ok(commande); // StatusCode = 200
 			}
 		}
-
 
 		/// <summary>
 		/// Permet de créer une commande en BDD

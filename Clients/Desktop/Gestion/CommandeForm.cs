@@ -22,12 +22,18 @@ namespace Desktop.Gestion
         {
 			_commandeService = new CommandeService();
 			InitializeComponent();
-			LoadCommande();
+			
 		}
 		public async void LoadCommande()
 		{
-			Task<CommandeDto> commandeTask = _commandeService.GetCommande();
-			CommandeDto commande = await commandeTask;
+            DateTime dateSelected;
+            dateSelected = DateSelectDTP.Value;
+
+            DateTime firstDate = dateSelected.Date.GetFirstDateOfWeek(DayOfWeek.Monday);
+            DateTime lastDate = dateSelected.Date.GetLastDateOfWeek(DayOfWeek.Sunday);
+            //Task<CommandeDto> commandeTask = _commandeService.GetCommande();
+            Task<CommandeDto> commandeTask = _commandeService.GetCommandeByDate(firstDate, lastDate);
+            CommandeDto commande = await commandeTask;
 			bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
 			montantTotalLbl.Text = commande.TotalPrix.ToString();
 
@@ -36,7 +42,7 @@ namespace Desktop.Gestion
 			
 		}
 
-        private void DateSelectDTP_ValueChanged(object sender, EventArgs e)
+        public void DateSelectDTP_ValueChanged(object sender, EventArgs e)
         {
             DateTime dateSelected;
             dateSelected = DateSelectDTP.Value;
@@ -51,8 +57,10 @@ namespace Desktop.Gestion
 
 
         }
-      
-        
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadCommande();
+        }
     }
 }

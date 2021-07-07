@@ -38,6 +38,7 @@ namespace Desktop.Gestion
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DateSelectDTP = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.CommandeTlp.SuspendLayout();
             this.Totalpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,6 +104,7 @@ namespace Desktop.Gestion
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.DateSelectDTP);
@@ -138,6 +140,16 @@ namespace Desktop.Gestion
             this.DateSelectDTP.TabIndex = 3;
             this.DateSelectDTP.ValueChanged += new System.EventHandler(this.DateSelectDTP_ValueChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(259, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CommandeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -167,5 +179,6 @@ namespace Desktop.Gestion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

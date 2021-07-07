@@ -40,6 +40,18 @@ namespace BLL.Services
             //retour de la nouvelle commande 
             return Commande;
         }
+        public async Task<CommandeDto> GetCommandeByDate(DateTime dateDebut,DateTime dateFin)
+        {
+            _db.BeginTransaction();
+            //Récupération de l'Interface du repository Commande (ICommandeRepository)
+            ICommandeRepository _commandes = _db.GetRepository<ICommandeRepository>();
+          
+            CommandeDto Commande = await _commandes.GetCommandeByDate(dateDebut,dateFin);
+            //Fin transaction
+            _db.Commit();
+            //retour de la nouvelle commande 
+            return Commande;
+        }
 
     }
 

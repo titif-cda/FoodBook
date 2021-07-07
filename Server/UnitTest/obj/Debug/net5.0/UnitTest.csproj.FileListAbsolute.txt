@@ -164,3 +164,8 @@ D:\FilRougeFoodBook\FoodBook\FoodBook\Server\UnitTest\bin\Debug\net5.0\DAL.xml
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\UnitTest\bin\Debug\net5.0\DocFx.pdb
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\UnitTest\obj\Debug\net5.0\UnitTest.csproj.CopyComplete
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\UnitTest\obj\Debug\net5.0\UnitTest.genruntimeconfig.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\UnitTest\obj\Debug\net5.0\UnitTest.csproj.AssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\UnitTest\obj\Debug\net5.0\UnitTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\UnitTest\obj\Debug\net5.0\UnitTest.AssemblyInfoInputs.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\UnitTest\obj\Debug\net5.0\UnitTest.AssemblyInfo.cs
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\UnitTest\obj\Debug\net5.0\UnitTest.csproj.CoreCompileInputs.cache

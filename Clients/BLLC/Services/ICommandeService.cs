@@ -10,5 +10,6 @@ namespace BLLC.Services
     public interface ICommandeService
     {
         Task<CommandeDto> GetCommande();
+        Task<CommandeDto> GetCommandeByDate(DateTime dateDebut, DateTime dateFin);
     }
 }

@@ -96,7 +96,7 @@ namespace Desktop.Mets
             return;
         }
 
-
+        //Boutton ajout d'un repas
         private async void AddMetBtn_Click(object sender, EventArgs e)
         {
             CurrentMet = Compute();
@@ -106,13 +106,13 @@ namespace Desktop.Mets
                 if (met == null)
                 {
                    // MessageBox.Show("Service Indisponible");
-                    MessageBox.Show("Le plat : " + met.Libelle.ToString() + " a échoué");
+                    MessageBox.Show("La création du plat : " + met.Libelle.ToString() + " a échoué");
                     
                 }
                 else
                 {
                     DialogResult = DialogResult.OK;
-                    MessageBox.Show("Le plat : " + met.Libelle.ToString() + " a été modifié");
+                    MessageBox.Show("La création du plat : " + met.Libelle.ToString() + " a été crée");
                 }
                
             }
@@ -121,13 +121,13 @@ namespace Desktop.Mets
                 if (CurrentMet == null)
                 {
                     // MessageBox.Show("La modification n'a pas eté faite Service Indisponible");
-                    MessageBox.Show("Le plat : " + CurrentMet.Libelle.ToString() + " a échoué");
+                    MessageBox.Show("La modification du plat : " + CurrentMet.Libelle.ToString() + " a échoué");
                 }
                 else
                 {
                     CurrentMet = await _restaurantService.PutMet(CurrentMet);
                     DialogResult = DialogResult.OK;
-                    MessageBox.Show("Le plat : " + CurrentMet.Libelle.ToString() + " a été modifié");
+                    MessageBox.Show("La modification du : " + CurrentMet.Libelle.ToString() + " a été modifié");
                 }
             }
         }
@@ -195,6 +195,7 @@ namespace Desktop.Mets
                 var lTrier = l.Where(i => ! met.ListDesIngredients.Select(mi => mi.Ingredient).Contains(i));
                 bindingSourceDeLaListeDesIngredients.DataSource = lTrier;
                 
+
             }
            
         }
@@ -205,8 +206,9 @@ namespace Desktop.Mets
             bindingSourceTypeRepas.DataSource = typeRepas.Data;
             TypeRepasCBox.DataSource = bindingSourceTypeRepas;
             TypeRepasCBox.DisplayMember = "Libelle";
-            
-            
+           
+
+
         }
 
         private void AddToListForMetBtn_Click(object sender, EventArgs e)

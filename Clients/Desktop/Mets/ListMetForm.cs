@@ -96,10 +96,10 @@ namespace Desktop.Mets
             //List<Met> met = (List<Met>)bindingSource.DataSource;
             //var test = met.Select(m => new { m.Libelle, TypeRepasLibelle = m.TypeRepas.Libelle }).ToList();
             //var test2 = met.Where(m => m.TypeRepas.Libelle == "Dessert").ToList();
-           // listBox1.DataSource = test2;
-   
-       
-  
+            //listBox1.DataSource = test2;
+
+
+
             if (clearSelection)
             {
                 metDtGv.ClearSelection();
@@ -305,7 +305,7 @@ namespace Desktop.Mets
 
         private async void ComputeFilter()
         {
-            //var metsPageTask = _restaurantService.GetAllMet(new FilterMetPaged(currentPage, defaultPageSize));
+           // var metsPageTask = _restaurantService.GetAllMet(new FilterMetPaged(currentPage, defaultPageSize));
            
 
         }

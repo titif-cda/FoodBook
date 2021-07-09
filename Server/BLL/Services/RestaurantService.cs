@@ -260,6 +260,7 @@ namespace BLL.Services
             _db.BeginTransaction();
             IServiceRepository _service = _db.GetRepository<IServiceRepository>();
             Service newService = await _service.InsertAsync(service);
+
             _db.Commit();
 
             return newService;

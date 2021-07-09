@@ -135,6 +135,15 @@ namespace DAL.Repository
             var stmt = @"insert into Service( Midi , Date)  output INSERTED.Id
             values (@Midi, @Date)";
             int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
+            //Ajout des plats liés
+            List<Met> listeMets = entity.ListPlats;
+
+            var req = @"INSERT INTO ServiceMets(IdService, IdMet) VALUES(@idService, @idMet)";
+
+            foreach (var met in listeMets)
+            {
+                await _session.Connection.QueryAsync(req, param: new { idService=i, idMet = met.Id}, _session.Transaction);
+            }
             return await GetAsync(i);
         }
 

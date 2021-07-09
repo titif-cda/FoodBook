@@ -53,5 +53,6 @@ namespace BO.DTO.Responses
             TotalRecords = totalRecords;
             Data = data;
         }
+
     }
 }

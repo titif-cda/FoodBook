@@ -41,7 +41,6 @@ namespace Desktop.Gestion
             this.platCBox = new System.Windows.Forms.ComboBox();
             this.dessertCBox = new System.Windows.Forms.ComboBox();
             this.ActionCrudServiceBtn = new System.Windows.Forms.Button();
-            this.deleteserviceBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -146,26 +145,14 @@ namespace Desktop.Gestion
             this.ActionCrudServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.ActionCrudServiceBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ActionCrudServiceBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.ActionCrudServiceBtn.Location = new System.Drawing.Point(38, 296);
+            this.ActionCrudServiceBtn.Location = new System.Drawing.Point(88, 296);
             this.ActionCrudServiceBtn.Margin = new System.Windows.Forms.Padding(0);
             this.ActionCrudServiceBtn.Name = "ActionCrudServiceBtn";
-            this.ActionCrudServiceBtn.Size = new System.Drawing.Size(121, 39);
+            this.ActionCrudServiceBtn.Size = new System.Drawing.Size(166, 39);
             this.ActionCrudServiceBtn.TabIndex = 12;
             this.ActionCrudServiceBtn.Text = "Ajouter";
             this.ActionCrudServiceBtn.UseVisualStyleBackColor = false;
-            // 
-            // deleteserviceBtn
-            // 
-            this.deleteserviceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.deleteserviceBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.deleteserviceBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.deleteserviceBtn.Location = new System.Drawing.Point(167, 296);
-            this.deleteserviceBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.deleteserviceBtn.Name = "deleteserviceBtn";
-            this.deleteserviceBtn.Size = new System.Drawing.Size(121, 39);
-            this.deleteserviceBtn.TabIndex = 13;
-            this.deleteserviceBtn.Text = "Supprimer";
-            this.deleteserviceBtn.UseVisualStyleBackColor = false;
+            this.ActionCrudServiceBtn.Click += new System.EventHandler(this.ActionCrudServiceBtn_Click);
             // 
             // label1
             // 
@@ -182,7 +169,6 @@ namespace Desktop.Gestion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 344);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.deleteserviceBtn);
             this.Controls.Add(this.ActionCrudServiceBtn);
             this.Controls.Add(this.dessertCBox);
             this.Controls.Add(this.platCBox);
@@ -216,7 +202,6 @@ namespace Desktop.Gestion
         private System.Windows.Forms.ComboBox platCBox;
         private System.Windows.Forms.ComboBox dessertCBox;
         private System.Windows.Forms.Button ActionCrudServiceBtn;
-        private System.Windows.Forms.Button deleteserviceBtn;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -57,12 +57,9 @@ namespace BO.Entity
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            return obj is Met met &&
-                   Id == met.Id &&
-                   Libelle == met.Libelle &&
-                   Description == met.Description &&
-                   TypeRepas.Equals(met.TypeRepas) &&
-                   ListDesIngredients == met.ListDesIngredients;
+            var r = obj is Met met &&
+                   Id == met.Id;
+            return r;
         }
 
         /// <summary>

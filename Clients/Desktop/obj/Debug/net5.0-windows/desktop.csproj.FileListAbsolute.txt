@@ -85,8 +85,10 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.AccueilForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.CrudClientForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.ListClientsForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.CommandeForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.CrudServiceForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.GestionForm.resources
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.reservationsForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.ServiceForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Ingredients.CrudIngredientsForm.resources
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Ingredients.ListIngredientsForm.resources
@@ -108,5 +110,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.CommandeForm.resources
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Clients\Desktop\obj\Debug\net5.0-windows\Desktop.Gestion.reservationsForm.resources

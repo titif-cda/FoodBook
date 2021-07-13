@@ -28,19 +28,25 @@ namespace Desktop.Gestion
 		{
             DateTime dateSelected;
             dateSelected = DateSelectDTP.Value;
-
+            
             DateTime firstDate = dateSelected.Date.GetFirstDateOfWeek(DayOfWeek.Monday);
             DateTime lastDate = dateSelected.Date.GetLastDateOfWeek(DayOfWeek.Sunday);
             //Task<CommandeDto> commandeTask = _commandeService.GetCommande();
             Task<CommandeDto> commandeTask = _commandeService.GetCommandeByDate(firstDate, lastDate);
             CommandeDto commande = await commandeTask;
-			bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
-			montantTotalLbl.Text = commande.TotalPrix.ToString();
-			dataGridView1.DataSource = bindingSourceCommande;
-            dataGridView1.ClearSelection();
-          
+            if (commande !=null)
+            {
+                bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
+                montantTotalLbl.Text = commande.TotalPrix.ToString();
+                aCommanderDTGV.DataSource = bindingSourceCommande;
+                aCommanderDTGV.ClearSelection();
+            }
+            else
+            {
+                MessageBox.Show("Aucune réservations n'est faite pour la semaine du : " + firstDate.ToString("dd MM yyyy") +" au "+ lastDate.ToString("dd MM yyyy"));
 
-
+            }
+			
         }
 
         public void DateSelectDTP_ValueChanged(object sender, EventArgs e)

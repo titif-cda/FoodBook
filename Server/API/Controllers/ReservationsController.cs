@@ -15,7 +15,7 @@ namespace API.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion=}/reservations")]
+    [Route("api/v{version:apiVersion}/reservations")]
     [Produces(MediaTypeNames.Application.Json)]
     [Consumes(MediaTypeNames.Application.Json)]
     public class ReservationsController : ControllerBase

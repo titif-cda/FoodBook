@@ -41,7 +41,7 @@ namespace DAL.Repository
 				ListIngredientQteDTOs = commandes
 			};
 		}
-		public async Task<CommandeDto> GetCommandeByDate(DateTime dateDebut, DateTime dateFin)
+		public async Task<CommandeDto> GetCommandeByDate(DateTime? dateDebut, DateTime? dateFin)
 		{
 			var stmt = @"select I.Nom as Nom, Sum(Mi.Quantite) AS Quantite, Sum(Mi.Quantite* I.Prix) AS Price
 				  From Ingredient as I 

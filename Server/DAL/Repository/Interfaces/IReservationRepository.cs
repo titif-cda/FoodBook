@@ -12,5 +12,6 @@ namespace DAL.Repository
     public interface IReservationRepository : IGenericRepository<Reservation>
     {
         Task<PageResponse<Reservation>> GetAllAsync(PageRequest pageRequest);
+        
     }
 }

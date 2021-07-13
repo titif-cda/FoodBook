@@ -166,6 +166,24 @@ namespace BLLC.Services
             }
         }
 
+        public async Task<Reservation> GetDetailsResa(int idResa)
+        {
+            var reponse = await _httpClient.GetAsync($"reservations/{idResa}");
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Reservation reservation = await JsonSerializer.DeserializeAsync<Reservation>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return reservation;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public async Task<Reservation> PutReservations(Reservation reservation)
         {
             var reponse = await _httpClient.PutAsync($"reservations/" + reservation.Id

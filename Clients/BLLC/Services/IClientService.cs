@@ -20,6 +20,7 @@ namespace BLLC.Services
 
         Task<Reservation> CreateReservations(Reservation reservation);
         Task<PageResponse<Reservation>> GetAllReservations(PageRequest pageRequest);
+        Task<Reservation> GetDetailsResa(int idResa);
 
         Task<Reservation> PutReservations(Reservation reservation);
         Task<bool> DeleteReservations(Reservation reservation);

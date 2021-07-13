@@ -23,7 +23,7 @@ namespace BO.Entity
         /// <summary>
         /// Date de reservation
         /// </summary>
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
         /// <summary>
         /// nombre de reservations
         /// </summary>

@@ -33,7 +33,7 @@ namespace Desktop.Gestion
             this.Totalpnl = new System.Windows.Forms.Panel();
             this.montantTotalLbl = new System.Windows.Forms.Label();
             this.totalLbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aCommanderDTGV = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@ namespace Desktop.Gestion
             this.DateSelectDTP = new System.Windows.Forms.DateTimePicker();
             this.CommandeTlp.SuspendLayout();
             this.Totalpnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCommanderDTGV)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@ namespace Desktop.Gestion
             this.CommandeTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.CommandeTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.CommandeTlp.Controls.Add(this.Totalpnl, 0, 1);
-            this.CommandeTlp.Controls.Add(this.dataGridView1, 1, 0);
+            this.CommandeTlp.Controls.Add(this.aCommanderDTGV, 1, 0);
             this.CommandeTlp.Controls.Add(this.panel1, 0, 0);
             this.CommandeTlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CommandeTlp.Location = new System.Drawing.Point(0, 0);
@@ -90,24 +90,24 @@ namespace Desktop.Gestion
             this.totalLbl.TabIndex = 0;
             this.totalLbl.Text = "Montant Total :";
             // 
-            // dataGridView1
+            // aCommanderDTGV
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(403, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(394, 400);
-            this.dataGridView1.TabIndex = 0;
+            this.aCommanderDTGV.AllowUserToAddRows = false;
+            this.aCommanderDTGV.AllowUserToDeleteRows = false;
+            this.aCommanderDTGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.aCommanderDTGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.aCommanderDTGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.aCommanderDTGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.aCommanderDTGV.ColumnHeadersVisible = false;
+            this.aCommanderDTGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aCommanderDTGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.aCommanderDTGV.Location = new System.Drawing.Point(403, 3);
+            this.aCommanderDTGV.Name = "aCommanderDTGV";
+            this.aCommanderDTGV.RowHeadersVisible = false;
+            this.aCommanderDTGV.RowTemplate.Height = 25;
+            this.aCommanderDTGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.aCommanderDTGV.Size = new System.Drawing.Size(394, 400);
+            this.aCommanderDTGV.TabIndex = 0;
             // 
             // panel1
             // 
@@ -168,7 +168,7 @@ namespace Desktop.Gestion
             this.CommandeTlp.ResumeLayout(false);
             this.Totalpnl.ResumeLayout(false);
             this.Totalpnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCommanderDTGV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,7 +178,7 @@ namespace Desktop.Gestion
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel CommandeTlp;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView aCommanderDTGV;
         private System.Windows.Forms.Panel Totalpnl;
         private System.Windows.Forms.Label montantTotalLbl;
         private System.Windows.Forms.Label totalLbl;

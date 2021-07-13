@@ -8,6 +8,6 @@ namespace DAL.Repository
     {
         Task<CommandeDto> GetAsync();
         //Task<CommandeDto> GetCommandeByDate();
-        Task<CommandeDto> GetCommandeByDate(DateTime dateDebut, DateTime dateFin);
+        Task<CommandeDto> GetCommandeByDate(DateTime? dateDebut, DateTime? dateFin);
     }
 }

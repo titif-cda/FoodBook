@@ -153,5 +153,33 @@ namespace DAL.Repository
             var nbModifiedLines = await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction);
             return nbModifiedLines > 0;
         }
+
+        public async Task<Service> UpdateAllAsync(Service entity)
+        {
+            var stmt = @"UPDATE Service SET Midi = @Midi, Date=@Date WHERE Id = @Id";
+
+            if (entity.ListPlats.Count > 0)
+            {
+                var reqDelete = @"delete from ServiceMets where IdService = @idService";
+                var reqInsert = @"insert into ServiceMets (IdService , IdMet) VALUES (@idService , @idMet)";
+
+                await _session.Connection.ExecuteAsync(reqDelete, new { idService = entity.Id }, _session.Transaction);
+                List<Met> listeMets = entity.ListPlats;
+                foreach (var met in listeMets)
+                {
+                    await _session.Connection.QueryAsync(reqInsert, param: new { idService =  entity.Id , idMet = met.Id }, _session.Transaction);
+                }
+              
+            }
+            if ( await _session.Connection.ExecuteAsync(stmt, entity, _session.Transaction) > 0)
+            {
+                return await GetAsync((int)entity.Id);
+            }
+            else
+            {
+                return null;
+            }
+          
+        }
     }
 }

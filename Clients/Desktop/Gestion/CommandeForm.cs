@@ -36,11 +36,12 @@ namespace Desktop.Gestion
             CommandeDto commande = await commandeTask;
 			bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
 			montantTotalLbl.Text = commande.TotalPrix.ToString();
-
-
 			dataGridView1.DataSource = bindingSourceCommande;
-			
-		}
+            dataGridView1.ClearSelection();
+          
+
+
+        }
 
         public void DateSelectDTP_ValueChanged(object sender, EventArgs e)
         {

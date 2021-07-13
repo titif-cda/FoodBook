@@ -353,7 +353,7 @@
             </summary>
             
         </member>
-        <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.DateTime,System.Collections.Generic.List{BO.Entity.Met})">
+        <member name="M:BO.Entity.Service.#ctor(System.Int32,System.Boolean,System.Nullable{System.DateTime},System.Collections.Generic.List{BO.Entity.Met})">
             <summary>
             Constructeur aves parametres
             </summary>

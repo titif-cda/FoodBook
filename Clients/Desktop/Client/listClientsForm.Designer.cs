@@ -38,12 +38,8 @@ namespace Desktop
             this.NextBtn = new System.Windows.Forms.Button();
             this.CurentPageLbl = new System.Windows.Forms.Label();
             this.NbPagesCombo = new System.Windows.Forms.ComboBox();
-            this.SearchFlp = new System.Windows.Forms.FlowLayoutPanel();
-            this.SearchLbl = new System.Windows.Forms.Label();
-            this.SearchtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.SearchFlp.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,7 +52,6 @@ namespace Desktop
             this.tableLayoutPanel1.Controls.Add(this.AddClientBtn, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.RefreshClientBtn, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.SearchFlp, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -179,34 +174,6 @@ namespace Desktop
             this.NbPagesCombo.Size = new System.Drawing.Size(106, 23);
             this.NbPagesCombo.TabIndex = 3;
             // 
-            // SearchFlp
-            // 
-            this.SearchFlp.Controls.Add(this.SearchLbl);
-            this.SearchFlp.Controls.Add(this.SearchtBox);
-            this.SearchFlp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchFlp.Location = new System.Drawing.Point(3, 3);
-            this.SearchFlp.Name = "SearchFlp";
-            this.SearchFlp.Size = new System.Drawing.Size(279, 26);
-            this.SearchFlp.TabIndex = 4;
-            // 
-            // SearchLbl
-            // 
-            this.SearchLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SearchLbl.AutoSize = true;
-            this.SearchLbl.Location = new System.Drawing.Point(3, 7);
-            this.SearchLbl.Name = "SearchLbl";
-            this.SearchLbl.Size = new System.Drawing.Size(68, 15);
-            this.SearchLbl.TabIndex = 0;
-            this.SearchLbl.Text = "Recherche :";
-            // 
-            // SearchtBox
-            // 
-            this.SearchtBox.Location = new System.Drawing.Point(77, 3);
-            this.SearchtBox.Name = "SearchtBox";
-            this.SearchtBox.Size = new System.Drawing.Size(130, 23);
-            this.SearchtBox.TabIndex = 1;
-            this.SearchtBox.TextChanged += new System.EventHandler(this.SearchtBox_TextChanged);
-            // 
             // ListClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -219,8 +186,6 @@ namespace Desktop
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.SearchFlp.ResumeLayout(false);
-            this.SearchFlp.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -35,7 +35,6 @@ namespace Desktop.Gestion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceForm));
             this.serviceTlp = new System.Windows.Forms.TableLayoutPanel();
             this.addDeleteServiceTlp = new System.Windows.Forms.TableLayoutPanel();
-            this.DeleteServiceBtn = new System.Windows.Forms.Button();
             this.AddServiceBtn = new System.Windows.Forms.Button();
             this.btnTlp = new System.Windows.Forms.TableLayoutPanel();
             this.previousServiceBtn = new System.Windows.Forms.Button();
@@ -83,10 +82,9 @@ namespace Desktop.Gestion
             // 
             // addDeleteServiceTlp
             // 
-            this.addDeleteServiceTlp.ColumnCount = 2;
-            this.addDeleteServiceTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.addDeleteServiceTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.addDeleteServiceTlp.Controls.Add(this.DeleteServiceBtn, 0, 0);
+            this.addDeleteServiceTlp.ColumnCount = 1;
+            this.addDeleteServiceTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.addDeleteServiceTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.addDeleteServiceTlp.Controls.Add(this.AddServiceBtn, 0, 0);
             this.addDeleteServiceTlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addDeleteServiceTlp.Location = new System.Drawing.Point(0, 309);
@@ -97,20 +95,6 @@ namespace Desktop.Gestion
             this.addDeleteServiceTlp.Size = new System.Drawing.Size(392, 35);
             this.addDeleteServiceTlp.TabIndex = 0;
             // 
-            // DeleteServiceBtn
-            // 
-            this.DeleteServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DeleteServiceBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteServiceBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeleteServiceBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.DeleteServiceBtn.Location = new System.Drawing.Point(235, 0);
-            this.DeleteServiceBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.DeleteServiceBtn.Name = "DeleteServiceBtn";
-            this.DeleteServiceBtn.Size = new System.Drawing.Size(157, 35);
-            this.DeleteServiceBtn.TabIndex = 7;
-            this.DeleteServiceBtn.Text = "Supprimer";
-            this.DeleteServiceBtn.UseVisualStyleBackColor = false;
-            // 
             // AddServiceBtn
             // 
             this.AddServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -120,7 +104,7 @@ namespace Desktop.Gestion
             this.AddServiceBtn.Location = new System.Drawing.Point(0, 0);
             this.AddServiceBtn.Margin = new System.Windows.Forms.Padding(0);
             this.AddServiceBtn.Name = "AddServiceBtn";
-            this.AddServiceBtn.Size = new System.Drawing.Size(235, 35);
+            this.AddServiceBtn.Size = new System.Drawing.Size(392, 35);
             this.AddServiceBtn.TabIndex = 2;
             this.AddServiceBtn.Text = "Ajouter";
             this.AddServiceBtn.UseVisualStyleBackColor = false;
@@ -205,6 +189,9 @@ namespace Desktop.Gestion
             // 
             // serviceDtGv
             // 
+            this.serviceDtGv.AllowUserToAddRows = false;
+            this.serviceDtGv.AllowUserToDeleteRows = false;
+            this.serviceDtGv.AllowUserToOrderColumns = true;
             this.serviceDtGv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -425,7 +412,6 @@ namespace Desktop.Gestion
 
         private System.Windows.Forms.TableLayoutPanel serviceTlp;
         private System.Windows.Forms.TableLayoutPanel addDeleteServiceTlp;
-        private System.Windows.Forms.Button DeleteServiceBtn;
         private System.Windows.Forms.Button AddServiceBtn;
         private System.Windows.Forms.TableLayoutPanel btnTlp;
         private System.Windows.Forms.Button RefreshServiceBtn;

@@ -23,7 +23,7 @@ namespace BO.Entity
         /// <summary>
         /// Date du service
         /// </summary>
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Liste des plats
@@ -44,7 +44,7 @@ namespace BO.Entity
         /// <param name="midi">Service du midi ou non, 1 si oui</param>
         /// <param name="date">Date du service</param>
         /// /// <param name="listMets">recupere la liste des plats</param>
-        public Service(int id, bool midi, DateTime date, List<Met> listMets)
+        public Service(int id, bool midi, DateTime? date, List<Met> listMets)
         {
             Id = id;
             Midi = midi;

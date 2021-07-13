@@ -24,9 +24,11 @@ namespace Desktop.Gestion
         private int defaultPageSize = 20;
         private int IdTypePlat;
         Service currentService;
-        public CrudServiceForm()
+
+        public CrudServiceForm(Service service = null)
         {
             InitializeComponent();
+            Initialize(service);
         }
 
         public async void Initialize(Service service = null)
@@ -56,8 +58,8 @@ namespace Desktop.Gestion
                 //modif
                 currentService = service;
                 ActionCrudServiceBtn.Text = "Modifier";
-                label1.Text = service.Date.ToString("dd MMMM yyyy");
-                serviceDateTP.Value = service.Date;
+                label1.Text = service.Date?.ToString("dd MMMM yyyy");
+                serviceDateTP.Value = service.Date ?? DateTime.Now;
                 // service
                 if (service.Midi)
                 {
@@ -120,12 +122,6 @@ namespace Desktop.Gestion
             dessertCBox.DataSource = listDessert;
             //dessertCBox.DataSource = bindingSourceDessert;
             dessertCBox.DisplayMember = "Libelle";
-
-
-
-
-
-
         }
 
         private async void ActionCrudServiceBtn_Click(object sender, EventArgs e)
@@ -150,7 +146,7 @@ namespace Desktop.Gestion
                         }
                         serviceLibelle = "soir";
                         DialogResult = DialogResult.OK;
-                        MessageBox.Show("La service du " + serviceLibelle +  " le " + service.Date.ToString("dd MMMM yyyy") + " a été créé");
+                        MessageBox.Show("La service du " + serviceLibelle +  " le " + service.Date?.ToString("dd MMMM yyyy") + " a été créé");
                     }
                 }
             }
@@ -158,14 +154,24 @@ namespace Desktop.Gestion
             {
                 if (currentService == null)
                 {
-                    MessageBox.Show("La modification du service du  : " + currentService.Date.ToString("dd MMMM yyyy") + " a échoué");
+                    MessageBox.Show("La modification du service du  : " + currentService.Date?.ToString("dd MMMM yyyy") + " a échoué");
                 }
                 else
                 {
                     currentService = await _restaurantService.PutService(currentService);
                     DialogResult = DialogResult.OK;
-                    MessageBox.Show("La service du "  + currentService.Date.ToString("dd MMMM yyyy") + " a été créé");
+                    MessageBox.Show("La service du "  + currentService.Date?.ToString("dd MMMM yyyy") + " a été créé");
                 }
+            }
+        }
+
+        private async void DeleteBtnCrudService_Click(object sender, EventArgs e)
+        {
+            if (!isCreation)
+            {
+                currentService = Compute();
+                await _restaurantService.DeleteService(currentService);
+                DialogResult = DialogResult.OK;
             }
         }
     }

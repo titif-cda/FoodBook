@@ -58,7 +58,7 @@ namespace Desktop.Gestion
             {
                 serviceDtGv.ClearSelection();
             }
-
+            serviceDtGv.ClearSelection();
         }
 
         /// <summary>
@@ -193,9 +193,9 @@ namespace Desktop.Gestion
                         serviceLbl.Text = "Service du soir";
                         serviceType = "soir";
                     }
-                    dateServiceLbl.Text = service.Date.ToString("dd MMMM yyyy");
+                    dateServiceLbl.Text = service.Date?.ToString("dd MMMM yyyy");
 
-                    titreServiceLbl.Text = "Service du " + service.Date.ToString("dddd dd MMM",CultureInfo.CreateSpecificCulture("fr-FR")) + " (" + serviceType.ToString() + ")";
+                    titreServiceLbl.Text = "Service du " + service.Date?.ToString("dddd dd MMM",CultureInfo.CreateSpecificCulture("fr-FR")) + " (" + serviceType.ToString() + ")";
                 }
                
             }   
@@ -223,7 +223,7 @@ namespace Desktop.Gestion
             {
                 Service selectedService = (Service)serviceDtGv.SelectedRows[0].DataBoundItem;
                 Service service = await _restaurantService.GetDetailsService(selectedService.Id);
-                using (var modifyServiceForm = new CrudServiceForm())
+                using (var modifyServiceForm = new CrudServiceForm(service) )
                 {
                     modifyServiceForm.Initialize(service);
                     var result = modifyServiceForm.ShowDialog();
@@ -232,6 +232,7 @@ namespace Desktop.Gestion
                         RefreshPage();
                     }
                 }
+               
             }
         }
     }

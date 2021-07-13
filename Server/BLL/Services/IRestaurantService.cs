@@ -98,6 +98,8 @@ namespace BLL.Services
 
         Task<Service> ModifyService(Service service);
 
+        Task<Service> ModifyAllService(Service service);
+
         Task<bool> RemoveServiceById(int id);
         #endregion
 

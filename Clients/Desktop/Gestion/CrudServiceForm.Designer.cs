@@ -42,6 +42,7 @@ namespace Desktop.Gestion
             this.dessertCBox = new System.Windows.Forms.ComboBox();
             this.ActionCrudServiceBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.DeleteBtnCrudService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // datelbl
@@ -145,10 +146,10 @@ namespace Desktop.Gestion
             this.ActionCrudServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.ActionCrudServiceBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ActionCrudServiceBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.ActionCrudServiceBtn.Location = new System.Drawing.Point(88, 296);
+            this.ActionCrudServiceBtn.Location = new System.Drawing.Point(25, 296);
             this.ActionCrudServiceBtn.Margin = new System.Windows.Forms.Padding(0);
             this.ActionCrudServiceBtn.Name = "ActionCrudServiceBtn";
-            this.ActionCrudServiceBtn.Size = new System.Drawing.Size(166, 39);
+            this.ActionCrudServiceBtn.Size = new System.Drawing.Size(113, 39);
             this.ActionCrudServiceBtn.TabIndex = 12;
             this.ActionCrudServiceBtn.Text = "Ajouter";
             this.ActionCrudServiceBtn.UseVisualStyleBackColor = false;
@@ -163,11 +164,26 @@ namespace Desktop.Gestion
             this.label1.TabIndex = 14;
             this.label1.Text = "label1";
             // 
+            // DeleteBtnCrudService
+            // 
+            this.DeleteBtnCrudService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.DeleteBtnCrudService.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteBtnCrudService.ForeColor = System.Drawing.SystemColors.Control;
+            this.DeleteBtnCrudService.Location = new System.Drawing.Point(159, 296);
+            this.DeleteBtnCrudService.Margin = new System.Windows.Forms.Padding(0);
+            this.DeleteBtnCrudService.Name = "DeleteBtnCrudService";
+            this.DeleteBtnCrudService.Size = new System.Drawing.Size(113, 39);
+            this.DeleteBtnCrudService.TabIndex = 15;
+            this.DeleteBtnCrudService.Text = "Supprimer";
+            this.DeleteBtnCrudService.UseVisualStyleBackColor = false;
+            this.DeleteBtnCrudService.Click += new System.EventHandler(this.DeleteBtnCrudService_Click);
+            // 
             // CrudServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 344);
+            this.Controls.Add(this.DeleteBtnCrudService);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ActionCrudServiceBtn);
             this.Controls.Add(this.dessertCBox);
@@ -203,5 +219,6 @@ namespace Desktop.Gestion
         private System.Windows.Forms.ComboBox dessertCBox;
         private System.Windows.Forms.Button ActionCrudServiceBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button DeleteBtnCrudService;
     }
 }

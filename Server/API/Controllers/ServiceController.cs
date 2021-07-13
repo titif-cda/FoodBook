@@ -130,7 +130,8 @@ namespace API.Controllers
         /// <param name="id">identifiant</param>
         /// <returns>succes ou echec</returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
+        //[Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteService([FromRoute] int id)
@@ -155,7 +156,8 @@ namespace API.Controllers
         /// <param name="service">service concerné</param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Administrateur")]
+        [AllowAnonymous]
+        //[Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -168,7 +170,7 @@ namespace API.Controllers
             }
             else
             {
-                Service serviceModified = await _restaurantService.ModifyService(service);
+                Service serviceModified = await _restaurantService.ModifyAllService(service);
                 if (serviceModified != null)
                 {
                     // Renvoie la ressource modifiée
@@ -176,7 +178,7 @@ namespace API.Controllers
                 }
                 else
                 {
-                    // Renvoie un code 404: la ressource est introuvable
+                    // Renvoie un code 404: le service est introuvable
                     return NotFound();
                 }
             }

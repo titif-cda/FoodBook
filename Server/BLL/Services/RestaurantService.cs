@@ -328,6 +328,17 @@ namespace BLL.Services
                 return null;
             }
         }
+
+        public async Task<Service> ModifyAllService(Service service)
+        {
+            _db.BeginTransaction();
+            IServiceRepository _service = _db.GetRepository<IServiceRepository>();
+
+            Service newService = await _service.UpdateAllAsync(service);
+            _db.Commit();
+            return newService;
+            
+        }
         /// <summary>
         /// Suppression du service par l'identifiant
         /// </summary>

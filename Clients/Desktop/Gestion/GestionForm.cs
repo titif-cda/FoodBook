@@ -12,6 +12,8 @@ namespace Desktop.Gestion
 {
     public partial class GestionForm : Form
     {
+        Color ColorHover = System.Drawing.ColorTranslator.FromHtml("#CA5100");
+        Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml("#8C52FF");
         public GestionForm()
         {
             InitializeComponent();
@@ -35,11 +37,7 @@ namespace Desktop.Gestion
         private void ServiceBtn_Click(object sender, EventArgs e)
         {
             NavFormPanel(new ServiceForm());
-            string hoverColor = "#CA5100";
-            string originColor = "#8C52FF";
-
-            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
-            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
+            
             ServiceBtn.BackColor = ColorHover;
             CommandesBtn.BackColor = ColorOrigin;
             ReservationsBtn.BackColor = ColorOrigin;
@@ -49,17 +47,11 @@ namespace Desktop.Gestion
             //ServiceBtn.Font = new Font(ServiceBtn.Font, FontStyle.Bold);
         }
 
-   
-      
 
         private void ReservationsBtn_Click(object sender, EventArgs e)
         {
             NavFormPanel(new reservationsForm());
-            string hoverColor = "#CA5100";
-            string originColor = "#8C52FF";
-
-            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
-            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
+            
             ReservationsBtn.BackColor = ColorHover;
             ServiceBtn.BackColor = ColorOrigin;
             CommandesBtn.BackColor = ColorOrigin;
@@ -72,11 +64,7 @@ namespace Desktop.Gestion
         {
 
             NavFormPanel(new CommandeForm());
-            string hoverColor = "#CA5100";
-            string originColor = "#8C52FF";
-
-            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
-            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
+            
             CommandesBtn.BackColor = ColorHover;
             ServiceBtn.BackColor = ColorOrigin;
             ReservationsBtn.BackColor = ColorOrigin;

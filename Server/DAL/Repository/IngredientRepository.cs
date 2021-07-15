@@ -27,7 +27,7 @@ namespace DAL.Repository
 
         public async Task<PageResponse<Ingredient>> GetAllAsync(PageRequest pageRequest)
         {
-            var stmt = @"select * from Ingredient 
+            var stmt = @"select Id, Nom, Round(Prix,2) as Prix from Ingredient 
                         ORDER BY Id
                         OFFSET @PageSize * (@Page - 1) rows
                         FETCH NEXT @PageSize rows only";

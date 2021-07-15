@@ -37,9 +37,15 @@ namespace Desktop.Gestion
             if (commande !=null)
             {
                 bindingSourceCommande.DataSource = commande.ListIngredientQteDTOs;
-                montantTotalLbl.Text = commande.TotalPrix.ToString();
+                montantTotalLbl.Text = Math.Round(commande.TotalPrix, 2).ToString() + " €";
                 aCommanderDTGV.DataSource = bindingSourceCommande;
                 aCommanderDTGV.ClearSelection();
+                dDebutLbl.Font = new Font(dDebutLbl.Font, FontStyle.Bold);
+                dDebutLbl.Text = firstDate.ToString("dd MM yyyy");
+                dDebutLbl.ForeColor = System.Drawing.ColorTranslator.FromHtml("#8C52FF");
+                dFin.Text = firstDate.ToString("dd MM yyyy");
+                dFin.ForeColor = System.Drawing.ColorTranslator.FromHtml("#8C52FF");
+                recapDateslbl.Text = "Commande pour la semaine du : " + firstDate.ToString("dd MM yyyy") + " au " + lastDate.ToString("dd MM yyyy") ; 
             }
             else
             {
@@ -56,16 +62,10 @@ namespace Desktop.Gestion
            
             DateTime firstDate = dateSelected.Date.GetFirstDateOfWeek(DayOfWeek.Monday);
             DateTime lastDate = dateSelected.Date.GetLastDateOfWeek(DayOfWeek.Sunday);
-           
-            label1.Text = firstDate.ToString("dddd dd MMM");
-            label2.Text = lastDate.ToString("dddd dd MMM");
-
-
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void validDateBtn_Click(object sender, EventArgs e)
         {
             LoadCommande();
         }

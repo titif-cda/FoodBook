@@ -199,6 +199,9 @@ namespace Desktop.Mets
             }
            
         }
+        /// <summary>
+        /// Charge la liste des types repas dans la combobox
+        /// </summary>
         private async void LoadListBox()
         {
             Task<PageResponse<TypeRepas>> typeRepasPageTask = _restaurantService.GetAllTypeRepas(new PageRequest(currentPage, defaultPageSize));
@@ -254,12 +257,17 @@ namespace Desktop.Mets
             }
           
         }
-
+        /// <summary>
+        /// Rafraichit la page
+        /// </summary>
         private void RefreshPage()
         {
             CurrentMetIngredientLbl.Text = currentPage.ToString();
             this.LoadIngredient();
         }
+       /// <summary>
+       /// Renvoie à la page precedente
+       /// </summary>
         private void PreviousPage()
         {
             if (currentPage > 1)
@@ -268,6 +276,9 @@ namespace Desktop.Mets
                 RefreshPage();
             }
         }
+       /// <summary>
+       /// renvoie à la page suivante
+       /// </summary>
         private void NextPage()
         {
             if (currentPage < maxPage)
@@ -276,7 +287,9 @@ namespace Desktop.Mets
                 RefreshPage();
             }
         }
-       
+       /// <summary>
+       /// Grise les boutons
+       /// </summary>
         private void Grisage()
         {
             if (currentPage == 1)
@@ -298,6 +311,11 @@ namespace Desktop.Mets
             }
         }
 
+        /// <summary>
+        /// Evenement sur le boutton precedent
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PreviousMetIngredientBtn_Click(object sender, EventArgs e)
         {
             PreviousPage();
@@ -308,6 +326,12 @@ namespace Desktop.Mets
             NextPage();
         }
 
-      
+        private void QuantiteIngredientParMetTxBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals('.') || e.KeyChar.Equals(','))
+            {
+                e.KeyChar = ((System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture).NumberFormat.NumberDecimalSeparator.ToCharArray()[0];
+            }
+        }
     }
 }

@@ -30,19 +30,22 @@ namespace Desktop.Gestion
         private void InitializeComponent()
         {
             this.CommandeTlp = new System.Windows.Forms.TableLayoutPanel();
+            this.validDateBtn = new System.Windows.Forms.Button();
             this.Totalpnl = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dFin = new System.Windows.Forms.Label();
+            this.dDebutLbl = new System.Windows.Forms.Label();
+            this.recapDateslbl = new System.Windows.Forms.Label();
             this.montantTotalLbl = new System.Windows.Forms.Label();
             this.totalLbl = new System.Windows.Forms.Label();
             this.aCommanderDTGV = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.titleCdePnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.DateSelectDTP = new System.Windows.Forms.DateTimePicker();
             this.CommandeTlp.SuspendLayout();
             this.Totalpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aCommanderDTGV)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.titleCdePnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CommandeTlp
@@ -50,43 +53,108 @@ namespace Desktop.Gestion
             this.CommandeTlp.ColumnCount = 2;
             this.CommandeTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.CommandeTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CommandeTlp.Controls.Add(this.Totalpnl, 0, 1);
+            this.CommandeTlp.Controls.Add(this.validDateBtn, 0, 1);
+            this.CommandeTlp.Controls.Add(this.Totalpnl, 1, 1);
             this.CommandeTlp.Controls.Add(this.aCommanderDTGV, 1, 0);
-            this.CommandeTlp.Controls.Add(this.panel1, 0, 0);
+            this.CommandeTlp.Controls.Add(this.titleCdePnl, 0, 0);
             this.CommandeTlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CommandeTlp.Location = new System.Drawing.Point(0, 0);
             this.CommandeTlp.Name = "CommandeTlp";
             this.CommandeTlp.RowCount = 2;
-            this.CommandeTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.22222F));
-            this.CommandeTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.777778F));
+            this.CommandeTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.66666F));
+            this.CommandeTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.33333F));
+            this.CommandeTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.CommandeTlp.Size = new System.Drawing.Size(800, 450);
             this.CommandeTlp.TabIndex = 0;
             // 
+            // validDateBtn
+            // 
+            this.validDateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.validDateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.validDateBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.validDateBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.validDateBtn.Location = new System.Drawing.Point(0, 372);
+            this.validDateBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.validDateBtn.Name = "validDateBtn";
+            this.validDateBtn.Size = new System.Drawing.Size(400, 78);
+            this.validDateBtn.TabIndex = 13;
+            this.validDateBtn.Text = "Valider";
+            this.validDateBtn.UseVisualStyleBackColor = false;
+            this.validDateBtn.Click += new System.EventHandler(this.validDateBtn_Click);
+            // 
             // Totalpnl
             // 
+            this.Totalpnl.Controls.Add(this.label4);
+            this.Totalpnl.Controls.Add(this.dFin);
+            this.Totalpnl.Controls.Add(this.dDebutLbl);
+            this.Totalpnl.Controls.Add(this.recapDateslbl);
             this.Totalpnl.Controls.Add(this.montantTotalLbl);
             this.Totalpnl.Controls.Add(this.totalLbl);
             this.Totalpnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Totalpnl.Location = new System.Drawing.Point(3, 409);
+            this.Totalpnl.Location = new System.Drawing.Point(403, 375);
             this.Totalpnl.Name = "Totalpnl";
-            this.Totalpnl.Size = new System.Drawing.Size(394, 38);
+            this.Totalpnl.Size = new System.Drawing.Size(394, 72);
             this.Totalpnl.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(285, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 19);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "au";
+            // 
+            // dFin
+            // 
+            this.dFin.AutoSize = true;
+            this.dFin.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dFin.Location = new System.Drawing.Point(306, 4);
+            this.dFin.Name = "dFin";
+            this.dFin.Size = new System.Drawing.Size(79, 19);
+            this.dFin.TabIndex = 4;
+            this.dFin.Text = "01/01/2021";
+            // 
+            // dDebutLbl
+            // 
+            this.dDebutLbl.AutoSize = true;
+            this.dDebutLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dDebutLbl.Location = new System.Drawing.Point(213, 4);
+            this.dDebutLbl.Name = "dDebutLbl";
+            this.dDebutLbl.Size = new System.Drawing.Size(79, 19);
+            this.dDebutLbl.TabIndex = 3;
+            this.dDebutLbl.Text = "01/01/2021";
+            // 
+            // recapDateslbl
+            // 
+            this.recapDateslbl.AutoSize = true;
+            this.recapDateslbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.recapDateslbl.Location = new System.Drawing.Point(4, 4);
+            this.recapDateslbl.Name = "recapDateslbl";
+            this.recapDateslbl.Size = new System.Drawing.Size(210, 19);
+            this.recapDateslbl.TabIndex = 2;
+            this.recapDateslbl.Text = "Commande pour la semaine du :";
             // 
             // montantTotalLbl
             // 
             this.montantTotalLbl.AutoSize = true;
-            this.montantTotalLbl.Location = new System.Drawing.Point(314, 16);
+            this.montantTotalLbl.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.montantTotalLbl.Location = new System.Drawing.Point(319, 36);
             this.montantTotalLbl.Name = "montantTotalLbl";
-            this.montantTotalLbl.Size = new System.Drawing.Size(38, 15);
+            this.montantTotalLbl.Size = new System.Drawing.Size(72, 30);
             this.montantTotalLbl.TabIndex = 1;
             this.montantTotalLbl.Text = "label1";
             // 
             // totalLbl
             // 
             this.totalLbl.AutoSize = true;
-            this.totalLbl.Location = new System.Drawing.Point(211, 17);
+            this.totalLbl.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.totalLbl.Location = new System.Drawing.Point(127, 36);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(87, 15);
+            this.totalLbl.Size = new System.Drawing.Size(165, 30);
             this.totalLbl.TabIndex = 0;
             this.totalLbl.Text = "Montant Total :";
             // 
@@ -106,52 +174,31 @@ namespace Desktop.Gestion
             this.aCommanderDTGV.RowHeadersVisible = false;
             this.aCommanderDTGV.RowTemplate.Height = 25;
             this.aCommanderDTGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.aCommanderDTGV.Size = new System.Drawing.Size(394, 400);
+            this.aCommanderDTGV.Size = new System.Drawing.Size(394, 366);
             this.aCommanderDTGV.TabIndex = 0;
             // 
-            // panel1
+            // titleCdePnl
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.DateSelectDTP);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 384);
-            this.panel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(259, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "DateFin";
+            this.titleCdePnl.Controls.Add(this.label1);
+            this.titleCdePnl.Controls.Add(this.DateSelectDTP);
+            this.titleCdePnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.titleCdePnl.Location = new System.Drawing.Point(3, 3);
+            this.titleCdePnl.Name = "titleCdePnl";
+            this.titleCdePnl.Size = new System.Drawing.Size(394, 366);
+            this.titleCdePnl.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 78);
+            this.label1.Location = new System.Drawing.Point(55, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "DatreDebut";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Size = new System.Drawing.Size(184, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Selectionner une date puis valider";
             // 
             // DateSelectDTP
             // 
-            this.DateSelectDTP.Location = new System.Drawing.Point(139, 6);
+            this.DateSelectDTP.Location = new System.Drawing.Point(117, 129);
             this.DateSelectDTP.Name = "DateSelectDTP";
             this.DateSelectDTP.Size = new System.Drawing.Size(200, 23);
             this.DateSelectDTP.TabIndex = 3;
@@ -169,8 +216,8 @@ namespace Desktop.Gestion
             this.Totalpnl.ResumeLayout(false);
             this.Totalpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aCommanderDTGV)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.titleCdePnl.ResumeLayout(false);
+            this.titleCdePnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,10 +229,13 @@ namespace Desktop.Gestion
         private System.Windows.Forms.Panel Totalpnl;
         private System.Windows.Forms.Label montantTotalLbl;
         private System.Windows.Forms.Label totalLbl;
-        private System.Windows.Forms.DateTimePicker DateSelectDTP;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel titleCdePnl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button validDateBtn;
+        private System.Windows.Forms.DateTimePicker DateSelectDTP;
+        private System.Windows.Forms.Label recapDateslbl;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label dFin;
+        private System.Windows.Forms.Label dDebutLbl;
     }
 }

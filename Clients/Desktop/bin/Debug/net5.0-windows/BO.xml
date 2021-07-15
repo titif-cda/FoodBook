@@ -51,8 +51,15 @@
         </member>
         <member name="M:BO.DTO.Requests.PageRequest.#ctor">
             <summary>
-            Constructeur
+            Constructeur de base avec pagination par defaut
             </summary>
+        </member>
+        <member name="M:BO.DTO.Requests.PageRequest.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Constructeur complet permettant une mise en page précise
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
         </member>
         <member name="P:BO.DTO.Responses.CommandeDto.TotalPrix">
             <summary>

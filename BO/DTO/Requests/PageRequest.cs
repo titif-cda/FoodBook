@@ -19,7 +19,7 @@ namespace BO.DTO.Requests
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de base avec pagination par defaut
         /// </summary>
         public PageRequest()
         {
@@ -27,6 +27,11 @@ namespace BO.DTO.Requests
             PageSize = 10;
         }
 
+        /// <summary>
+        /// Constructeur complet permettant une mise en page précise
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
         public PageRequest(int? page, int? pageSize)
         {
             Page = page;

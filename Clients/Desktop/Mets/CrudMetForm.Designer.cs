@@ -350,6 +350,7 @@ namespace Desktop.Mets
             this.QuantiteIngredientParMetTxBox.Name = "QuantiteIngredientParMetTxBox";
             this.QuantiteIngredientParMetTxBox.Size = new System.Drawing.Size(67, 23);
             this.QuantiteIngredientParMetTxBox.TabIndex = 2;
+            this.QuantiteIngredientParMetTxBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QuantiteIngredientParMetTxBox_KeyPress);
             // 
             // DeleteFromListForMetBtn
             // 

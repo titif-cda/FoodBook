@@ -1,19 +1,14 @@
 {
   "runtimeOptions": {
     "tfm": "net5.0",
-    "frameworks": [
-      {
-        "name": "Microsoft.WindowsDesktop.App",
-        "version": "5.0.0"
-      },
-      {
-        "name": "Microsoft.AspNetCore.App",
-        "version": "5.0.0"
-      }
-    ],
+    "framework": {
+      "name": "Microsoft.WindowsDesktop.App",
+      "version": "5.0.0"
+    },
     "additionalProbingPaths": [
       "C:\\Users\\cda3elji\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\cda3elji\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {

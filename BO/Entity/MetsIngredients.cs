@@ -61,13 +61,13 @@ namespace BO.Entity
                    
         }
 
-        /// <summary>
-        /// Override GetHashCode our metsIngredients (Liste d'ingredients)
-        /// </summary>
-        /// <returns></returns>
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdMet, Ingredient, Quantite);
+            int hashCode = 997116032;
+            hashCode = hashCode * -1521134295 + Quantite.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Ingredient>.Default.GetHashCode(Ingredient);
+            hashCode = hashCode * -1521134295 + IdMet.GetHashCode();
+            return hashCode;
         }
     }
 }

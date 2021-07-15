@@ -209,7 +209,7 @@ namespace Desktop.Gestion
                 crudServiceForm.ShowDialog();
                 if (crudServiceForm.DialogResult == DialogResult.OK)
                 {
-                    LastPage();
+                    RefreshPage();
 
                 }
             }

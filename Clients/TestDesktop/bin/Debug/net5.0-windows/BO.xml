@@ -227,12 +227,6 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:BO.Entity.Met.GetHashCode">
-            <summary>
-            Override GetHashCode for met
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:BO.Entity.MetsIngredients">
             <summary>
             Classe de la table de liaison MetsIngredients
@@ -271,12 +265,6 @@
             verride Equals Methode pour metsIngredients (Liste d'ingredients)
             </summary>
             <param name="obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:BO.Entity.MetsIngredients.GetHashCode">
-            <summary>
-            Override GetHashCode our metsIngredients (Liste d'ingredients)
-            </summary>
             <returns></returns>
         </member>
         <member name="P:BO.Entity.Reservation.Id">

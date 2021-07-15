@@ -33,8 +33,11 @@ namespace BO.Entity
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(IdRepas,IdIngr,Quantite);
+            int hashCode = -1576246575;
+            hashCode = hashCode * -1521134295 + IdRepas.GetHashCode();
+            hashCode = hashCode * -1521134295 + IdIngr.GetHashCode();
+            hashCode = hashCode * -1521134295 + Quantite.GetHashCode();
+            return hashCode;
         }
-
     }
 }

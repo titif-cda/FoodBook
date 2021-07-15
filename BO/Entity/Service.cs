@@ -61,13 +61,20 @@ namespace BO.Entity
                    ListPlats == service.ListPlats; 
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id, Midi, Date, ListPlats);
-        }
+     
         public override string ToString()
         {
             return Id.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1130172050;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + Midi.GetHashCode();
+            hashCode = hashCode * -1521134295 + Date.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<Met>>.Default.GetHashCode(ListPlats);
+            return hashCode;
         }
     }
 }

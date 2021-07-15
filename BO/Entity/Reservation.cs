@@ -78,14 +78,25 @@ namespace BO.Entity
 
         }
 
-        public override int GetHashCode()
-        {
-                return HashCode.Combine(Id,Client,Service,Date,Nb,Entree,Plat,Dessert);
-        }
+     
 
         public override string ToString()
         {
             return Nb.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 1117746175;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Client>.Default.GetHashCode(Client);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Service>.Default.GetHashCode(Service);
+            hashCode = hashCode * -1521134295 + Date.GetHashCode();
+            hashCode = hashCode * -1521134295 + Nb.GetHashCode();
+            hashCode = hashCode * -1521134295 + Entree.GetHashCode();
+            hashCode = hashCode * -1521134295 + Plat.GetHashCode();
+            hashCode = hashCode * -1521134295 + Dessert.GetHashCode();
+            return hashCode;
         }
     }
 }

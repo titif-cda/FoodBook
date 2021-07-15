@@ -138,15 +138,20 @@ namespace Desktop.Gestion
                 {
                    
                     string serviceLibelle;
-                    if (service.Midi)
+                    
+                    if (MidiCheckBox.Checked)
                     {
-                        if (MidiCheckBox.Checked)
-                        {
-                            serviceLibelle = "Midi";
-                        }
+                        SoirCheckBox.Checked = false;
+                        serviceLibelle = "Midi";
+                        DialogResult = DialogResult.OK;
+                        MessageBox.Show("La service du " + serviceLibelle + " le " + service.Date?.ToString("dd MMMM yyyy") + " a été créé");
+                    }
+                    else if (SoirCheckBox.Checked)
+                    {
+                        MidiCheckBox.Checked = false;
                         serviceLibelle = "soir";
                         DialogResult = DialogResult.OK;
-                        MessageBox.Show("La service du " + serviceLibelle +  " le " + service.Date?.ToString("dd MMMM yyyy") + " a été créé");
+                        MessageBox.Show("La service du " + serviceLibelle + " le " + service.Date?.ToString("dd MMMM yyyy") + " a été créé");
                     }
                 }
             }
@@ -173,6 +178,23 @@ namespace Desktop.Gestion
                 await _restaurantService.DeleteService(currentService);
                 DialogResult = DialogResult.OK;
             }
+        }
+
+        private void MidiCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MidiCheckBox.Checked)
+            {
+                SoirCheckBox.Checked = false;
+            }
+        }
+
+        private void SoirCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoirCheckBox.Checked)
+            {
+                MidiCheckBox.Checked = false;
+            }
+
         }
     }
 

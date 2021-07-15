@@ -144,6 +144,7 @@ namespace Desktop.Gestion
             this.previousServiceBtn.TabIndex = 13;
             this.previousServiceBtn.Text = "<";
             this.previousServiceBtn.UseVisualStyleBackColor = false;
+            this.previousServiceBtn.Click += new System.EventHandler(this.previousBtn_Click);
             // 
             // RefreshServiceBtn
             // 
@@ -158,6 +159,7 @@ namespace Desktop.Gestion
             this.RefreshServiceBtn.TabIndex = 8;
             this.RefreshServiceBtn.Text = "Rafraichir";
             this.RefreshServiceBtn.UseVisualStyleBackColor = false;
+            this.RefreshServiceBtn.Click += new System.EventHandler(this.RefreshServiceBtn_Click);
             // 
             // nextServiceBtn
             // 
@@ -172,6 +174,7 @@ namespace Desktop.Gestion
             this.nextServiceBtn.TabIndex = 12;
             this.nextServiceBtn.Text = ">";
             this.nextServiceBtn.UseVisualStyleBackColor = false;
+            this.nextServiceBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // CurrentPageServiceLbl
             // 

@@ -27,16 +27,17 @@ namespace DAL.Repository
 
         public async Task<IEnumerable<Service>> GetAllAsync()
         {
-            var stmt = @"select * from Met";
+            var stmt = @"select * from Service";
             return await _session.Connection.QueryAsync<Service>(stmt, null, _session.Transaction);
         }
 
         public async Task<PageResponse<Service>> GetAllAsync(PageRequest pageRequest)
         {
             var stmt = @"select * from Service 
-                        ORDER BY Id
+                        ORDER BY Date desc
                         OFFSET @PageSize * (@Page - 1) rows
-                        FETCH NEXT @PageSize rows only";
+                        FETCH NEXT @PageSize rows only
+                        ";
             string queryCount = " SELECT COUNT(*) FROM Service";
 
             IEnumerable<Service> serviceTask = await _session.Connection.QueryAsync<Service>(stmt, pageRequest, _session.Transaction);

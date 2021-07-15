@@ -39,5 +39,20 @@ namespace BO.Entity
         {
             return Libelle;
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is TypeRepas repas &&
+                   Id == repas.Id &&
+                   Libelle == repas.Libelle;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1077963510;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Libelle);
+            return hashCode;
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace BLLC.Services
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    Console.WriteLine("An error occurred" + e.Message);
                     return false;
                 }
             }
@@ -184,7 +184,7 @@ namespace BLLC.Services
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    Console.WriteLine("An error occurred " + e.Message);
                     return false;
                 }
             }
@@ -287,7 +287,7 @@ namespace BLLC.Services
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    Console.WriteLine("An error occurred " + e.Message);
                     return false;
                 }
             }
@@ -392,7 +392,7 @@ namespace BLLC.Services
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    Console.WriteLine("An error occurred " + e.Message);
                     return false;
                 }
             }

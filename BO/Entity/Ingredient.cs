@@ -55,14 +55,19 @@ namespace BO.Entity
 
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id, Nom, Prix);
-        }
 
         public override string ToString()
         {
             return Nom;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 791861747;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nom);
+            hashCode = hashCode * -1521134295 + Prix.GetHashCode();
+            return hashCode;
         }
     }
 }

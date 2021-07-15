@@ -62,19 +62,21 @@ namespace BO.Entity
             return r;
         }
 
-        /// <summary>
-        /// Override GetHashCode for met
-        /// </summary>
-        /// <returns></returns>
-        public override int GetHashCode()
-
-        {
-            return HashCode.Combine(Id, Libelle, Description, TypeRepas, ListDesIngredients);
-        }
 
         public override string ToString()
         {
             return Libelle;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 600343996;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Libelle);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Description);
+            hashCode = hashCode * -1521134295 + EqualityComparer<TypeRepas>.Default.GetHashCode(TypeRepas);
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<MetsIngredients>>.Default.GetHashCode(ListDesIngredients);
+            return hashCode;
         }
     }
 }

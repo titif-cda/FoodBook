@@ -87,15 +87,26 @@ namespace BO.Entity
                    ;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id, Nom, Prenom, Tel, Email, Login, Password, Role);
-        }
+     
 
         public override string ToString()
         {
             return Nom + " " + Prenom;
            
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1053445959;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nom);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Prenom);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Tel);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Login);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Password);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Role);
+            return hashCode;
         }
     }
 }

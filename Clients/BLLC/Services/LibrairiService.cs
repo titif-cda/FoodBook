@@ -36,7 +36,7 @@ namespace BLLC.Services
                 }
                 catch (HttpRequestException e)
                 {
-                    Console.WriteLine("An error occurred. (code:" + e.StatusCode.Value + ") => " + e.Message);
+                    Console.WriteLine("An error occurred. (code:" + e.Data + ") => " + e.Message);
                     return false;
                 }
             }

@@ -79,6 +79,7 @@ namespace Desktop.Gestion
             this.MidiCheckBox.TabIndex = 4;
             this.MidiCheckBox.Text = "Midi";
             this.MidiCheckBox.UseVisualStyleBackColor = true;
+            this.MidiCheckBox.CheckedChanged += new System.EventHandler(this.MidiCheckBox_CheckedChanged);
             // 
             // SoirCheckBox
             // 
@@ -89,6 +90,7 @@ namespace Desktop.Gestion
             this.SoirCheckBox.TabIndex = 5;
             this.SoirCheckBox.Text = "Soir";
             this.SoirCheckBox.UseVisualStyleBackColor = true;
+            this.SoirCheckBox.CheckedChanged += new System.EventHandler(this.SoirCheckBox_CheckedChanged);
             // 
             // entreelbl
             // 

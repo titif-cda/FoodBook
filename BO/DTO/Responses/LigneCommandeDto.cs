@@ -29,10 +29,6 @@ namespace BO.DTO.Responses
                    Price == dTO.Price;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Nom, Quantite, Price);
-        }
 
         public LigneCommandeDto()
         {

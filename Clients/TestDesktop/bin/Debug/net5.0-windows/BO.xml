@@ -41,12 +41,17 @@
         </member>
         <member name="P:BO.DTO.Requests.PageRequest.Page">
             <summary>
-            Current Page
+            Numéro de la page
             </summary>
         </member>
         <member name="P:BO.DTO.Requests.PageRequest.PageSize">
             <summary>
-            Limit entities on one page
+            Taille de la page
+            </summary>
+        </member>
+        <member name="M:BO.DTO.Requests.PageRequest.#ctor">
+            <summary>
+            Constructeur
             </summary>
         </member>
         <member name="P:BO.DTO.Responses.CommandeDto.TotalPrix">

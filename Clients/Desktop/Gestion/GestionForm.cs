@@ -42,13 +42,35 @@ namespace Desktop.Gestion
             Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
             ServiceBtn.BackColor = ColorHover;
             CommandesBtn.BackColor = ColorOrigin;
+            ReservationsBtn.BackColor = ColorOrigin;
             ServiceBtn.ForeColor = Color.Black;
             CommandesBtn.ForeColor = Color.White;
+            ReservationsBtn.ForeColor = Color.White;
             //ServiceBtn.Font = new Font(ServiceBtn.Font, FontStyle.Bold);
         }
 
-        private void ReservationBtn_Click(object sender, EventArgs e)
+   
+      
+
+        private void ReservationsBtn_Click(object sender, EventArgs e)
         {
+            NavFormPanel(new reservationsForm());
+            string hoverColor = "#CA5100";
+            string originColor = "#8C52FF";
+
+            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
+            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
+            ReservationsBtn.BackColor = ColorHover;
+            ServiceBtn.BackColor = ColorOrigin;
+            CommandesBtn.BackColor = ColorOrigin;
+            ReservationsBtn.ForeColor = Color.Black;
+            ServiceBtn.ForeColor = Color.White;
+            CommandesBtn.ForeColor = Color.White;
+        }
+
+        private void CommandesBtn_Click(object sender, EventArgs e)
+        {
+
             NavFormPanel(new CommandeForm());
             string hoverColor = "#CA5100";
             string originColor = "#8C52FF";
@@ -57,22 +79,11 @@ namespace Desktop.Gestion
             Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
             CommandesBtn.BackColor = ColorHover;
             ServiceBtn.BackColor = ColorOrigin;
-            ServiceBtn.ForeColor = Color.White;
+            ReservationsBtn.BackColor = ColorOrigin;
             CommandesBtn.ForeColor = Color.Black;
-        }
-
-        private void reservationsBtn_Click(object sender, EventArgs e)
-        {
-            NavFormPanel(new reservationsForm());
-            string hoverColor = "#CA5100";
-            string originColor = "#8C52FF";
-
-            Color ColorHover = System.Drawing.ColorTranslator.FromHtml(hoverColor);
-            Color ColorOrigin = System.Drawing.ColorTranslator.FromHtml(originColor);
-            CommandesBtn.BackColor = ColorHover;
-            ServiceBtn.BackColor = ColorOrigin;
             ServiceBtn.ForeColor = Color.White;
-            CommandesBtn.ForeColor = Color.Black;
+            ReservationsBtn.ForeColor = Color.White;
+
         }
     }
 }

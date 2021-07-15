@@ -9,15 +9,18 @@ namespace BO.DTO.Requests
     public class PageRequest
     {
         /// <summary>
-        /// Current Page
+        /// Numéro de la page
         /// </summary>
         public int? Page { get; set; }
 
         /// <summary>
-        /// Limit entities on one page
+        /// Taille de la page
         /// </summary>
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public PageRequest()
         {
             Page = 1;

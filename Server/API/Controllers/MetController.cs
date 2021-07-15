@@ -22,7 +22,7 @@ namespace API.Controllers
     public class MetController : ControllerBase
     {
 
-        //Service qui gère la librairi
+        //Appel service restauration via injecteur de dependancese
         private readonly IRestaurantService _restaurantService = null;
 
         public MetController(IRestaurantService restaurantService)
@@ -32,7 +32,7 @@ namespace API.Controllers
 
 
         /// <summary>
-        /// Permet de récupérer la liste des Mets
+        /// Permet de récupérer la liste des Mets avec pagination
         /// </summary>
         /// <returns>La liste des met</returns>
         [HttpGet]

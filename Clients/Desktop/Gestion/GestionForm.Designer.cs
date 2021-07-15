@@ -31,7 +31,7 @@ namespace Desktop.Gestion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionForm));
             this.GestionTlp = new System.Windows.Forms.TableLayoutPanel();
-            this.reservationsBtn = new System.Windows.Forms.Button();
+            this.ReservationsBtn = new System.Windows.Forms.Button();
             this.CommandesBtn = new System.Windows.Forms.Button();
             this.ServiceBtn = new System.Windows.Forms.Button();
             this.GestionPnl = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@ namespace Desktop.Gestion
             this.GestionTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.GestionTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.GestionTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.GestionTlp.Controls.Add(this.reservationsBtn, 0, 0);
+            this.GestionTlp.Controls.Add(this.ReservationsBtn, 0, 0);
             this.GestionTlp.Controls.Add(this.CommandesBtn, 1, 0);
             this.GestionTlp.Controls.Add(this.ServiceBtn, 0, 0);
             this.GestionTlp.Dock = System.Windows.Forms.DockStyle.Top;
@@ -59,20 +59,20 @@ namespace Desktop.Gestion
             this.GestionTlp.Size = new System.Drawing.Size(800, 67);
             this.GestionTlp.TabIndex = 0;
             // 
-            // reservationsBtn
+            // ReservationsBtn
             // 
-            this.reservationsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.reservationsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reservationsBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reservationsBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.reservationsBtn.Location = new System.Drawing.Point(266, 0);
-            this.reservationsBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.reservationsBtn.Name = "reservationsBtn";
-            this.reservationsBtn.Size = new System.Drawing.Size(266, 67);
-            this.reservationsBtn.TabIndex = 6;
-            this.reservationsBtn.Text = "Reservations";
-            this.reservationsBtn.UseVisualStyleBackColor = false;
-            this.reservationsBtn.Click += new System.EventHandler(this.reservationsBtn_Click);
+            this.ReservationsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.ReservationsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReservationsBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ReservationsBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.ReservationsBtn.Location = new System.Drawing.Point(266, 0);
+            this.ReservationsBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.ReservationsBtn.Name = "ReservationsBtn";
+            this.ReservationsBtn.Size = new System.Drawing.Size(266, 67);
+            this.ReservationsBtn.TabIndex = 6;
+            this.ReservationsBtn.Text = "Reservations";
+            this.ReservationsBtn.UseVisualStyleBackColor = false;
+            this.ReservationsBtn.Click += new System.EventHandler(this.ReservationsBtn_Click);
             // 
             // CommandesBtn
             // 
@@ -87,7 +87,7 @@ namespace Desktop.Gestion
             this.CommandesBtn.TabIndex = 5;
             this.CommandesBtn.Text = "Commande";
             this.CommandesBtn.UseVisualStyleBackColor = false;
-            this.CommandesBtn.Click += new System.EventHandler(this.ReservationBtn_Click);
+            this.CommandesBtn.Click += new System.EventHandler(this.CommandesBtn_Click);
             // 
             // ServiceBtn
             // 
@@ -148,6 +148,6 @@ namespace Desktop.Gestion
         private System.Windows.Forms.Button ServiceBtn;
         private System.Windows.Forms.Panel GestionPnl;
         private System.Windows.Forms.PictureBox GestionPBox;
-        private System.Windows.Forms.Button reservationsBtn;
+        private System.Windows.Forms.Button ReservationsBtn;
     }
 }

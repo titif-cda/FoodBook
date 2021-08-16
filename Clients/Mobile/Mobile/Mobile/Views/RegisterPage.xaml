@@ -1,0 +1,141 @@
+﻿<Page
+    x:Class="Mobile.Views.RegisterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#8C52FF">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+           
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="1"
+                   FontSize="40"
+                   Text="Créer un compte"
+                   FontWeight="Bold"
+                   Foreground="Black"
+                   HorizontalAlignment="Center"
+                   />
+        <TextBlock Grid.Row="2"
+                   FontSize="30"
+                   Text="Nom"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <TextBox Grid.Row="3"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="4"
+                   FontSize="30"
+                   Text="Prenom"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <TextBox Grid.Row="5"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="6"
+                   FontSize="30"
+                   Text="Email"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <TextBox Grid.Row="7"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="8"
+                   FontSize="30"
+                   Text="Telephone"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <TextBox Grid.Row="9"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="10"
+                   FontSize="30"
+                   Text="Login"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <TextBox Grid.Row="11"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="12"
+                   FontSize="30"
+                   Text="Mot de passe"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <PasswordBox Grid.Row="13"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <TextBlock Grid.Row="14"
+                   FontSize="30"
+                   Text="Confirmer Mot de passe"
+                   FontWeight="Bold"
+                   Margin="50,20,0,0"
+                   />
+        <PasswordBox Grid.Row="15"
+                 FontSize="30"
+                 Margin="50,20,50,20"
+                 BorderThickness="0,0,0,3"
+                 BorderBrush="WhiteSmoke"
+                 />
+        <Button Grid.Row="16"
+                Margin="50,0,0,0"
+                Content="Ajouter"
+                FontSize="35"
+                Background="#8C52FF"
+                Foreground="White"
+                FontWeight="Bold"
+                Padding="15,5,15,5"
+                HorizontalAlignment="Center"
+                BorderThickness="3,3,3,3"
+                BorderBrush="WhiteSmoke"
+                CornerRadius="10" Click="Button_Click">
+        </Button>
+
+        
+    </Grid>
+</Page>

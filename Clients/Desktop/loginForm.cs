@@ -35,34 +35,34 @@ namespace Desktop
             passwordTBox.UseSystemPasswordChar = true;
 
             //TODO - en fin de projet - supprimer lihne suivante pour cacher le bouton valider , dé commenter les methode passwordTBox_TextChanged et loginTbox_TextChanged 
-            ValidLoginBtn.Visible = true;
+            //ValidLoginBtn.Visible = true;
 
         }
 
         private void passwordTBox_TextChanged(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
-            //{ 
-            //    //TODO remettre a false
-            //    //ValidLoginBtn.Visible = false;
-            //    ValidLoginBtn.Visible = true;
-            //}
-            //else
-            //{
-            //    ValidLoginBtn.Visible = true;
-            //}
+            if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
+            {
+                //TODO remettre a false
+                ValidLoginBtn.Visible = false;
+                //ValidLoginBtn.Visible = true;
+            }
+            else
+            {
+                ValidLoginBtn.Visible = true;
+            }
         }
 
         private void loginTbox_TextChanged(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
-            //{
-            //    ValidLoginBtn.Visible = false;
-            //}
-            //else
-            //{
-            //    ValidLoginBtn.Visible = true;
-            //}
+            if (string.IsNullOrEmpty(loginTbox.Text) || string.IsNullOrEmpty(passwordTBox.Text))
+            {
+                ValidLoginBtn.Visible = false;
+            }
+            else
+            {
+                ValidLoginBtn.Visible = true;
+            }
         }
 
         private void registerLbl_Click(object sender, EventArgs e)

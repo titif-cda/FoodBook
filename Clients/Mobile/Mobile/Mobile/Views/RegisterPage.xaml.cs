@@ -19,5 +19,10 @@ namespace Mobile.Views
         {
             Frame.Navigate(typeof(RegisterPage));
         }
+
+        private void AnnulerButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

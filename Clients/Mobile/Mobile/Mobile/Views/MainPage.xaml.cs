@@ -33,7 +33,10 @@ namespace Mobile.Views
             Frame.Navigate(typeof(RegisterPage));
         }
 
-
+        private void ValiderButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MetsPage));
+        }
     }
     
 }

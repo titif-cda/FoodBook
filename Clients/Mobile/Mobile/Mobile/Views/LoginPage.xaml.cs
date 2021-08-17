@@ -1,5 +1,4 @@
-﻿using Mobile.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,25 +13,33 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Mobile.Views
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LoginPage : Page
     {
-        public MainPage()
+        public LoginPage()
         {
             this.InitializeComponent();
         }
 
-       
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MetsPage));
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ValiderButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ResaPage));
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(RegisterPage));
         }
     }
-    
 }

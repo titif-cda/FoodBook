@@ -26,5 +26,15 @@ namespace Mobile.Views
         {
             this.InitializeComponent();
         }
+
+        private void ResaButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
+        }
+
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MetsPage));
+        }
     }
 }

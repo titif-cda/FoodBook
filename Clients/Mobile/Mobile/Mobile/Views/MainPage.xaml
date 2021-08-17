@@ -9,82 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#8C52FF">
-     
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
+
         <Image Grid.Row="0" 
             Source="../Assets/Images/logoFoodBook.png"
                MaxHeight="150"
-               Margin="50"
-        />
-        <TextBlock Grid.Row="1"
-                   FontSize="50"
-                   Text="Connexion"
-                   FontWeight="Bold"
-                   Foreground="Black"
-                   HorizontalAlignment="Center"
-        />
-        <TextBlock Grid.Row="2"
-                   FontSize="20"
-                   Text="Login"
-                   FontWeight="Bold"
-                   Margin="50,20,0,0"
-        />
-        <TextBox Grid.Row="3"
-                 FontSize="20"
-                 Margin="50,20,50,20"
-                 BorderThickness="0,0,0,3"
-                 BorderBrush="WhiteSmoke"
-        />
-        <TextBlock Grid.Row="4"
-                   FontSize="20"
-                   Text="Mot de passe"
-                   FontWeight="Bold"
-                   Margin="50,20,0,0"
-        />
-        <PasswordBox Grid.Row="5"
-                 FontSize="20"
-                 Margin="50,20,50,20"
-                 BorderThickness="0,0,0,3"
-                 BorderBrush="WhiteSmoke"
-        />
-
-        <Button x:Name="ValiderButton" Grid.Row="6"
-                Margin="0,30,0,0"
-                Content="Valider"
-                FontSize="35"
-                Background="#8C52FF"
-                Foreground="White"
-                FontWeight="Bold"
-                Padding="15,5,15,5"
-                HorizontalAlignment="Center"
-                BorderThickness="3,3,3,3"
-                BorderBrush="WhiteSmoke"
-                CornerRadius="10" Click="ValiderButton_Click" 
-        />
-
-        <Button Grid.Row="7"
-                x:Name="RegisterButton"
-                x:Uid="MainPage_ButtonRegister"
-               
-                Content="Créer un compte"
-                FontSize="15"
-                Background="#8C52FF"
-                Foreground="Black"
-                FontWeight="Bold"
-                Padding="15,5,15,5"
-                HorizontalAlignment="Center"
-                BorderThickness="3,3,3,3"
-                Click="RegisterButton_Click"
+               Margin="50" Tapped="Image_Tapped"
         />
 
     </Grid>

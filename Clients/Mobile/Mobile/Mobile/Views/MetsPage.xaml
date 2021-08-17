@@ -30,138 +30,78 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            
+            <Image Grid.Row="0" 
+                   Style="{StaticResource logoPages}"
+                   Tapped="Image_Tapped"
+            />
             <TextBlock Grid.Row="1"
-                   FontSize="40"
-                   Text="Créer un compte"
-                   FontWeight="Bold"
-                   Foreground="Black"
-                   HorizontalAlignment="Center"
-                       Margin="0,20,0,0"
-                   />
+                       Text="Nos Plats"
+                       Style="{StaticResource StyleTitre}"
+            />
             <TextBlock Grid.Row="2"
-                       FontSize="20"
-                       Text="Nom"
-                       Foreground="WhiteSmoke"
-                       FontWeight="Bold"
-                       Margin="50,20,0,0"
-                       />
-            <TextBox Grid.Row="3"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
+                       Text="Saisir une date :"
+                       Style="{StaticResource TextBoxTitre}"
+                       
+            />
+            <CalendarDatePicker Grid.Row="3"
+                                Margin="20,20,0,0"/>
+            
+            
             <TextBlock Grid.Row="4"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Prenom"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <TextBox Grid.Row="5"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <TextBlock Grid.Row="6"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Email"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <TextBox Grid.Row="7"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <TextBlock Grid.Row="8"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Telephone"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <TextBox Grid.Row="9"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <TextBlock Grid.Row="10"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Login"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <TextBox Grid.Row="11"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <TextBlock Grid.Row="12"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Mot de passe"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <PasswordBox Grid.Row="13"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <TextBlock Grid.Row="14"
-                       Foreground="WhiteSmoke"
-                       FontSize="20"
-                       Text="Confirmer Mot de passe"
-                       FontWeight="Bold"
-                       Margin="50,10,0,0"
-                       />
-            <PasswordBox Grid.Row="15"
-                     FontSize="20"
-                     Margin="50,10,50,10"
-                     BorderThickness="0,0,0,3"
-                     BorderBrush="WhiteSmoke"
-                     />
-            <StackPanel Grid.Row="16"  Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,30">
-                <Button Margin="50,0,0,0"
-                        Content="Ajouter"
-                        FontSize="20"
-                        Background="#8C52FF"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Padding="15,5,15,5"
-                        HorizontalAlignment="Center"
-                        BorderThickness="3,3,3,3"
-                        BorderBrush="WhiteSmoke"
-                        CornerRadius="10" >
-                </Button>
-                <Button x:Name="AnnulerButton" Margin="50,0,0,0"
-                        Content="Annuler"
-                        FontSize="20"
-                        Background="#8C52FF"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Padding="15,5,15,5"
-                        HorizontalAlignment="Center"
-                        BorderThickness="3,3,3,3"
-                        BorderBrush="WhiteSmoke"
-                        CornerRadius="10" >
-                </Button>
-
+                   Text="Choisir un service"
+                   Style="{StaticResource TextBoxTitre}"
+            />
+            <StackPanel Grid.Row="5"  
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Center" >
+                <RadioButton x:Name="MidiButton" 
+                             Content="Midi"
+                             Style="{StaticResource StyleRadioButton}"
+                             />
+                <RadioButton x:Name="SoirButton" 
+                             Content="Soir"
+                             Style="{StaticResource StyleRadioButton}"
+                             />
             </StackPanel>
-            <Image Grid.Row="17" 
-            Source="../Assets/Images/logoFoodBook.png"
-               MaxHeight="50"
-               
-        />
+            <TextBlock Grid.Row="6"
+                       Text="Plats du jour"
+                       FontSize="20"
+                       Foreground="DarkRed"
+                       FontWeight="Bold"
+                       Margin="50,20,0,0" 
+                       TextDecorations="Underline"
+            />
+            <TextBlock Grid.Row="7"
+                       Text="Entree"
+                       Style="{StaticResource TextBoxTitre}"
+            />
+            <TextBlock Grid.Row="8"
+                       Text="Entree"
+                       Style="{StaticResource TextBoxText}"
+            />
+            
+            <TextBlock Grid.Row="9"
+                       Text="Plat"
+                        Style="{StaticResource TextBoxTitre}"
+            />
+            <TextBlock Grid.Row="10"
+                       Text="Plat"
+                        Style="{StaticResource TextBoxText}"
+                   
+                     />
+            <TextBlock Grid.Row="11"
+                       Text="Dessert"
+                        Style="{StaticResource TextBoxTitre}"
+                   />
+            <TextBlock Grid.Row="12"
+                       Text="Dessert"
+                        Style="{StaticResource TextBoxText}"
+            />
+            <Button x:Name="ResaButton" Grid.Row="13"
+                    Content="Réserver"
+                    Style="{StaticResource BouttonValid}"  
+                    Click="ResaButton_Click" 
+            />
         </Grid>
     </ScrollViewer>
 </Page>

@@ -24,5 +24,10 @@ namespace Mobile.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void Image_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

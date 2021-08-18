@@ -25,14 +25,14 @@ namespace Mobile.ViewModels
             }
         }
 
-        private string _login;
+        private string _login = "Admin@01";
         public string Login 
         {
             get => _login;
             set => Set(ref _login, value);
         }
 
-        private string _password;
+        private string _password = "Admin@01";
         public string Password
         {
             get => _password;
@@ -52,7 +52,7 @@ namespace Mobile.ViewModels
             if(!r)
             {
                 Password = "";
-                Login = "";
+                
             }
             return r;
         }

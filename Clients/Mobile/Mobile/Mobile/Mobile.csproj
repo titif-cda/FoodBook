@@ -124,6 +124,7 @@
     <Compile Include="ViewModels\LoginVM.cs" />
     <Compile Include="ViewModels\PlatsVM.cs" />
     <Compile Include="ViewModels\RegisterVM.cs" />
+    <Compile Include="ViewModels\ResaVM.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>

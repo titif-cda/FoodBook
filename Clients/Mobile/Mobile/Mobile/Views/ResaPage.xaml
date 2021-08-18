@@ -95,16 +95,16 @@
                         />
                 <StackPanel Grid.Column="1" 
                         HorizontalAlignment="left">
-                    <CheckBox Content="Entrée" 
+                    <CheckBox Content="{x:Bind VM.Entree, Mode=TwoWay}" 
                           x:Name="entreeCheckbox"
                           Style="{StaticResource StyleChkBox}"
                           
             />
-                    <CheckBox Content="Plat" 
+                    <CheckBox Content="{x:Bind VM.Plat, Mode=TwoWay}" 
                           x:Name="platCheckbox"
                           Style="{StaticResource StyleChkBox}"
             />
-                    <CheckBox Content="Dessert" 
+                    <CheckBox Content="{x:Bind VM.Dessert, Mode=TwoWay}" 
                           x:Name="dessertCheckbox"
                           Style="{StaticResource StyleChkBox}"
             />
@@ -135,14 +135,16 @@
                             Margin="20,20,0,20"
                             Minimum="0"
                             Maximum="30"
-                            Value="0"
+                            Value="{x:Bind VM.QuantiteResa, Mode=TwoWay}"
+                                
                 />
             </StackPanel>
 
 
             <StackPanel Grid.Row="11"  Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,30">
-                <Button Content="Valider"
+                <Button x:Name="AddResa" Content="Valider"
                         Style="{StaticResource BouttonValid}"
+                        IsEnabled="{x:Bind VM.ActivateBtnResa, Mode=TwoWay}" Click="AddResa_Click"
                         >
                 </Button>
                 <Button x:Name="AnnulerResa" 

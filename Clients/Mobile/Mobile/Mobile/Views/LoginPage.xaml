@@ -40,6 +40,7 @@
                  Margin="50,20,50,20"
                  BorderThickness="0,0,0,3"
                  BorderBrush="WhiteSmoke"
+                 
                  Text="{x:Bind VM.Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
         />
         <TextBlock Grid.Row="4"
@@ -54,6 +55,8 @@
                  BorderThickness="0,0,0,3"
                  BorderBrush="WhiteSmoke"
                  Password="{x:Bind VM.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 
+                 
         />
 
         <Button x:Name="ValiderButton" Grid.Row="6"

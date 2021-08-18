@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,19 +23,43 @@ namespace Mobile.Views
     /// </summary>
     public sealed partial class ResaPage : Page
     {
-        public ResaPage()
+        private ResaVM VM;
+            
+            public ResaPage()
         {
+            VM = new ResaVM();
             this.InitializeComponent();
         }
 
-        private void AnnulerResa_Click(object sender, RoutedEventArgs e)
+        private async void AnnulerResa_Click(object sender, RoutedEventArgs e)
         {
+            ContentDialog contentDialog = new ContentDialog()
+            {
+                Title = "Bye",
+                Content = "Vous avez annulé ",
+                CloseButtonText = "Ok"
+            };
+            await contentDialog.ShowAsync();
             Frame.Navigate(typeof(MetsPage));
         }
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void AddResa_Click(object sender, RoutedEventArgs e)
+        {
+            if (VM.AdBooking())
+            {
+                ContentDialog contentDialog = new ContentDialog()
+                {
+                    Title = "Bravo",
+                    Content = "Reservation réussie",
+                    CloseButtonText = "Ok"
+                };
+                await contentDialog.ShowAsync();
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Mobile.ViewModels
     {
         public PlatsVM()
         {
-                this.PropertyChanged += PlatsVM_PropertyChanged;
+            this.PropertyChanged += PlatsVM_PropertyChanged;
         }
 
         private void PlatsVM_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

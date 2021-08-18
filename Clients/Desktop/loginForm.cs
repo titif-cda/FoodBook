@@ -73,18 +73,14 @@ namespace Desktop
         private async void ValidLoginBtn_Click(object sender, EventArgs e)
         {
             
-            string mdpHash;
             login = loginTbox.Text;
           
             motdepasse = passwordTBox.Text;
 
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                mdpHash = GetHash(sha256Hash, motdepasse);
-            }
+           
 
             
-            var result = await AuthentificationService.Instance.Signin(login, mdpHash);
+            var result = await AuthentificationService.Instance.Signin(login, motdepasse);
             
 
             if (result)
@@ -106,26 +102,7 @@ namespace Desktop
             }
         }
 
-        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
-        {
-
-            // Convert the input string to a byte array and compute the hash.
-            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            // Create a new Stringbuilder to collect the bytes
-            // and create a string.
-            var sBuilder = new StringBuilder();
-
-            // Loop through each byte of the hashed data
-            // and format each one as a hexadecimal string.
-            for (int i = 0; i < data.Length; i++)
-            {
-                sBuilder.Append(data[i].ToString("x2"));
-            }
-
-            // Return the hexadecimal string.
-            return sBuilder.ToString();
-        }
+        
 
         private void hideMDP_CBox_CheckedChanged(object sender, EventArgs e)
         {

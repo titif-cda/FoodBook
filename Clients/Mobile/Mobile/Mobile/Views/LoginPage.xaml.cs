@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,8 +23,11 @@ namespace Mobile.Views
     /// </summary>
     public sealed partial class LoginPage : Page
     {
+        private LoginVM VM;
+
         public LoginPage()
         {
+            VM = new LoginVM();
             this.InitializeComponent();
         }
 
@@ -32,9 +36,33 @@ namespace Mobile.Views
             Frame.Navigate(typeof(MainPage));
         }
 
-        private void ValiderButton_Click(object sender, RoutedEventArgs e)
+        private async void ValiderButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ResaPage));
+            var loginProcess = VM.SignIn();
+            ContentDialog contentDialogCon = new ContentDialog()
+            {
+                Content = "Connexion en cours",
+                DefaultButton = ContentDialogButton.None
+            };
+            contentDialogCon.ShowAsync();
+
+            if (await loginProcess)
+            {
+                contentDialogCon.Hide();
+                Frame.Navigate(typeof(ResaPage));
+            }
+            else
+            {
+                contentDialogCon.Hide();
+
+                ContentDialog contentDialog = new ContentDialog()
+                {
+                    Title = "Erreur de connexion",
+                    Content = "Password ou Login invalide",
+                    CloseButtonText = "Ok"
+                };
+                await contentDialog.ShowAsync();
+            }
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

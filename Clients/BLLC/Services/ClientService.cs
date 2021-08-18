@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http.Json;
+using BO.DTO;
 
 namespace BLLC.Services
 {
@@ -39,7 +40,24 @@ namespace BLLC.Services
             }
         }
 
+        public async Task<ProfileDto> GetProfileByIdClient(int idClient)
+        {
+            //  var reponse = await _httpClient.GetAsync($"books?page={pageRequest.Page}&pageSize={pageRequest.PageSize}");
+            var reponse = await _httpClient.GetAsync($"clients/{idClient}");
 
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    ProfileDto clientPage = await JsonSerializer.DeserializeAsync<ProfileDto>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return clientPage;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public async Task<Client> CreateClient(Client client)
         {

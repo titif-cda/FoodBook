@@ -44,7 +44,10 @@
                        
             />
             <CalendarDatePicker Grid.Row="3"
-                                Margin="20,20,0,0"/>
+                                Margin="20,20,0,0"
+                                Date="{x:Bind VM.DateMet, Mode=TwoWay}"
+                                
+                                />
             
             
             <TextBlock Grid.Row="4"
@@ -56,10 +59,12 @@
                         HorizontalAlignment="Center" >
                 <RadioButton x:Name="MidiButton" 
                              Content="Midi"
+                             IsChecked="{x:Bind VM.Midi, Mode=TwoWay}"
                              Style="{StaticResource StyleRadioButton}"
                              />
                 <RadioButton x:Name="SoirButton" 
                              Content="Soir"
+                             IsChecked="{x:Bind VM.Soir, Mode=TwoWay}"
                              Style="{StaticResource StyleRadioButton}"
                              />
             </StackPanel>
@@ -76,7 +81,7 @@
                        Style="{StaticResource TextBoxTitre}"
             />
             <TextBlock Grid.Row="8"
-                       Text="Entree"
+                       Text="{x:Bind VM.Entree, Mode=TwoWay}"
                        Style="{StaticResource TextBoxText}"
             />
             
@@ -85,7 +90,7 @@
                         Style="{StaticResource TextBoxTitre}"
             />
             <TextBlock Grid.Row="10"
-                       Text="Plat"
+                       Text="{x:Bind VM.Plat, Mode=TwoWay}"
                         Style="{StaticResource TextBoxText}"
                    
                      />
@@ -94,13 +99,14 @@
                         Style="{StaticResource TextBoxTitre}"
                    />
             <TextBlock Grid.Row="12"
-                       Text="Dessert"
+                       Text="{x:Bind VM.Dessert, Mode=TwoWay}"
                         Style="{StaticResource TextBoxText}"
             />
             <Button x:Name="ResaButton" Grid.Row="13"
                     Content="Réserver"
                     Style="{StaticResource BouttonValid}"  
                     Click="ResaButton_Click" 
+                    IsEnabled="{x:Bind VM.ActivateBtnBooking, Mode=OneWay}"
             />
         </Grid>
     </ScrollViewer>

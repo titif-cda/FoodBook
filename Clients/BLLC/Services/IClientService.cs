@@ -1,4 +1,5 @@
-﻿using BO.DTO.Requests;
+﻿using BO.DTO;
+using BO.DTO.Requests;
 using BO.DTO.Responses;
 using BO.Entity;
 using System;
@@ -16,7 +17,7 @@ namespace BLLC.Services
 
         Task<Client> PutClient(Client client);
         Task<bool> DeleteClient(Client client);
-
+        Task<ProfileDto> GetProfileByIdClient(int idClient);
 
         Task<Reservation> CreateReservations(Reservation reservation);
         Task<PageResponse<Reservation>> GetAllReservations(PageRequest pageRequest);

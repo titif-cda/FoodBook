@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,7 +35,8 @@ namespace BLLC.Services
         //Pour pouvoir recuperer l'instance
         public static AuthentificationService Instance
         {
-            get { 
+            get
+            {
                 if (instance == null)
                 {
                     lock (verrou)
@@ -44,25 +46,57 @@ namespace BLLC.Services
                         {
                             instance = new AuthentificationService();
                         }
-                    
+
                     }
                 }
-            
-            //retourne l'instance du singleton
-            return instance;
+
+                //retourne l'instance du singleton
+                return instance;
             }
         }
 
+        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
+        {
 
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            var sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
 
         public async Task<bool> Signin(string login, string password)
         {
-           var _httpClient = new HttpClient();
-            var loginRequest = new LoginRequest() 
-                { 
+            var mdpHash = "";
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                mdpHash = GetHash(sha256Hash, password);
+            }
+
+
+            var handler = new HttpClientHandler()
+            {
+                ClientCertificateOptions = ClientCertificateOption.Manual,
+            };
+            handler.ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, cetChain, policyErrors) => true;
+            var _httpClient = new HttpClient(handler);
+
+            var loginRequest = new LoginRequest()
+            {
                 Login = login,
-                Password = password
-                };
+                Password = mdpHash
+            };
 
 
             _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
@@ -84,18 +118,26 @@ namespace BLLC.Services
                 return false;
             }
 
-           
+
         }
 
 
-        public HttpClient httpClient { get
+        public HttpClient httpClient
+        {
+            get
             {
-                var _httpClient = new HttpClient();
+                var handler = new HttpClientHandler()
+                {
+                    ClientCertificateOptions = ClientCertificateOption.Manual,
+                };
+                handler.ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, cetChain, policyErrors) => true;
+                  
+                var _httpClient = new HttpClient(handler);
                 _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
                 _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {AuthentificationService.Instance.Token}");
-            
+
                 return _httpClient;
-            } 
+            }
         }
 
 
@@ -103,13 +145,13 @@ namespace BLLC.Services
         {
             var readerHandler = new JwtSecurityTokenHandler();
             var decodedToken = readerHandler.ReadJwtToken(Token);
-            return decodedToken.Claims.ToList().Find(c => c.Type == type)?.Value;    
+            return decodedToken.Claims.ToList().Find(c => c.Type == type)?.Value;
         }
 
-         /// <summary>
-         /// Methode qui recupère le rôle de l'utilisateur
-         /// </summary>
-         /// <returns></returns>
+        /// <summary>
+        /// Methode qui recupère le rôle de l'utilisateur
+        /// </summary>
+        /// <returns></returns>
         public string GetRoleUser()
         {
             return GetValueClaimToken(ClaimTypes.Role);

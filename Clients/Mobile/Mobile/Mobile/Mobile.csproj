@@ -119,7 +119,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuthentificationModel.cs" />
     <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
+    <Compile Include="ViewModels\PlatsVM.cs" />
+    <Compile Include="ViewModels\RegisterVM.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -188,7 +192,16 @@
       <Version>2.6.2-prerelease.210811003</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BO\BO.csproj">
+      <Project>{B475B698-6C56-434D-9C2C-3BF6E108DE7D}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\BLLC\BLLC.csproj">
+      <Project>{BB79EF61-6564-4675-B175-B41D01C0671E}</Project>
+      <Name>BLLC</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

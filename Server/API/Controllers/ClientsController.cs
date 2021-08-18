@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using BO.DTO.Requests;
 using BO.DTO.Responses;
 using Microsoft.AspNetCore.Authorization;
+using BO.DTO;
 
 namespace API.Controllers
 {
@@ -90,7 +91,14 @@ namespace API.Controllers
             }
             else
             {
-                return Ok(client); // StatusCode = 200
+                return Ok(new ProfileDto()
+                {
+                    Email = client.Email,
+                    Login = client.Login,
+                    Nom = client.Nom,
+                    Prenom = client.Prenom,
+                    Tel = client.Tel
+                }); ; // StatusCode = 200
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,14 +23,20 @@ namespace Mobile.Views
     /// </summary>
     public sealed partial class MetsPage : Page
     {
+        private PlatsVM VM;
+
         public MetsPage()
         {
+            VM = new PlatsVM();
             this.InitializeComponent();
         }
 
         private void ResaButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(LoginPage));
+            if(VM.Booking())
+            {
+                Frame.Navigate(typeof(LoginPage));
+            }
         }
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)

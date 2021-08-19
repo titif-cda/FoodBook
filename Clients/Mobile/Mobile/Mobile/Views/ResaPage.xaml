@@ -48,7 +48,7 @@
                 <TextBlock Text="Nom :"
                             Style="{StaticResource TextBoxTitre}" 
                 />
-                <TextBlock Text="Nom"
+                <TextBlock Text="{x:Bind VM.Nom, Mode=OneWay}"
                             Style="{StaticResource TextBoxText}" 
                 />
             </StackPanel>
@@ -58,7 +58,7 @@
                 <TextBlock Text="Prénom :"
                             Style="{StaticResource TextBoxTitre}"
                 />
-                <TextBlock Text="Prénom"
+                <TextBlock Text="{x:Bind VM.Prenom, Mode=OneWay}"
                             Style="{StaticResource TextBoxText}"
                 />
             </StackPanel>
@@ -68,7 +68,7 @@
                 <TextBlock Text="Date :"
                             Style="{StaticResource TextBoxTitre}"
                 />
-                <TextBlock Text="date"
+                <TextBlock Text="{x:Bind VM.DateResa, Mode=OneWay}"
                             Style="{StaticResource TextBoxText}" 
                 />
             </StackPanel>
@@ -78,7 +78,7 @@
                 <TextBlock Text="Service :"
                             Style="{StaticResource TextBoxTitre}"
                 />
-                <TextBlock Text="service"
+                <TextBlock Text="{x:Bind VM.Service, Mode=OneWay}"
                             Style="{StaticResource TextBoxText}"
                 />
             </StackPanel>
@@ -95,16 +95,22 @@
                         />
                 <StackPanel Grid.Column="1" 
                         HorizontalAlignment="left">
-                    <CheckBox Content="{x:Bind VM.Entree, Mode=TwoWay}" 
+                    <CheckBox 
+                            Content="{x:Bind VM.Entree}"
+                          IsChecked="{x:Bind VM.IsResaEntree, Mode=TwoWay}" 
                           x:Name="entreeCheckbox"
                           Style="{StaticResource StyleChkBox}"
                           
             />
-                    <CheckBox Content="{x:Bind VM.Plat, Mode=TwoWay}" 
+                    <CheckBox 
+                        Content="{x:Bind VM.Plat}"
+                        IsChecked="{x:Bind VM.IsResaPlat, Mode=TwoWay}" 
                           x:Name="platCheckbox"
                           Style="{StaticResource StyleChkBox}"
             />
-                    <CheckBox Content="{x:Bind VM.Dessert, Mode=TwoWay}" 
+                    <CheckBox 
+                        Content="{x:Bind VM.Dessert}"
+                        IsChecked="{x:Bind VM.IsResaDessert, Mode=TwoWay}" 
                           x:Name="dessertCheckbox"
                           Style="{StaticResource StyleChkBox}"
             />
@@ -120,6 +126,7 @@
                        FontStyle="Italic"
                        Margin="20,20,0,20"/>
             <TextBlock Grid.Row="8"
+                      
                        x:Name="toppingsList"/>
             
             <StackPanel Grid.Row="9"  

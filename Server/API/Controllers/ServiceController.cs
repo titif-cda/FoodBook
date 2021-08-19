@@ -86,9 +86,9 @@ namespace API.Controllers
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetServiceByDate([FromQuery] DateTime date)
+        public async Task<IActionResult> GetServiceByDate([FromQuery] DateTime date, [FromQuery] bool midi)
         {
-            var service = await _restaurantService.GetServiceByDate(date);
+            var service = await _restaurantService.GetServiceByDateAndService(date,midi);
             if (service == null)
             {
                 return NotFound(); // StatusCode = 404

@@ -31,7 +31,7 @@ namespace Mobile.Views
        
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MetsPage));
+            Frame.Navigate(typeof(ServicePage));
         }
     }
     

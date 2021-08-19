@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Mobile.Views.MetsPage"
+    x:Class="Mobile.Views.ServicePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Mobile.Views"
@@ -59,12 +59,12 @@
                         HorizontalAlignment="Center" >
                 <RadioButton x:Name="MidiButton" 
                              Content="Midi"
-                             IsChecked="{x:Bind VM.Midi, Mode=TwoWay}"
+                             IsChecked="{x:Bind VM.IsMidi, Mode=TwoWay}"
                              Style="{StaticResource StyleRadioButton}"
                              />
                 <RadioButton x:Name="SoirButton" 
                              Content="Soir"
-                             IsChecked="{x:Bind VM.Soir, Mode=TwoWay}"
+                             IsChecked="{x:Bind VM.IsMidi, Mode=TwoWay, Converter={StaticResource InverseBoolConverter}}"
                              Style="{StaticResource StyleRadioButton}"
                              />
             </StackPanel>

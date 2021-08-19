@@ -93,12 +93,13 @@ namespace API.Controllers
             {
                 return Ok(new ProfileDto()
                 {
+                    Id = client.Id.GetValueOrDefault(),
                     Email = client.Email,
                     Login = client.Login,
                     Nom = client.Nom,
                     Prenom = client.Prenom,
                     Tel = client.Tel
-                }); ; // StatusCode = 200
+                }); // StatusCode = 200
             }
         }
 

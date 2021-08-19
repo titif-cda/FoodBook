@@ -37,7 +37,6 @@ namespace BO.Entity
         /// <summary>
         /// Password du client
         /// </summary>
-     [Required]
         public string Password { get; set; }
         /// <summary>
         /// Role du client

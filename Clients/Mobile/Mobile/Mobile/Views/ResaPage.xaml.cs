@@ -40,7 +40,7 @@ namespace Mobile.Views
                 CloseButtonText = "Ok"
             };
             await contentDialog.ShowAsync();
-            Frame.Navigate(typeof(MetsPage));
+            Frame.Navigate(typeof(ServicePage));
         }
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
@@ -50,16 +50,8 @@ namespace Mobile.Views
 
         private async void AddResa_Click(object sender, RoutedEventArgs e)
         {
-            if (VM.AdBooking())
-            {
-                ContentDialog contentDialog = new ContentDialog()
-                {
-                    Title = "Bravo",
-                    Content = "Reservation réussie",
-                    CloseButtonText = "Ok"
-                };
-                await contentDialog.ShowAsync();
-            }
+            VM.AdBooking();
+           
         }
     }
 }

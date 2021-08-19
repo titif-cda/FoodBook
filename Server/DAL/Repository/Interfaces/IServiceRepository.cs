@@ -13,7 +13,7 @@ namespace DAL.Repository
     {
         Task<PageResponse<Service>> GetAllAsync(PageRequest pageRequest);
         Task<Service> GetMetForServiceAsync(int id);
-        Task<IEnumerable<Service>> GetServiceByDate(DateTime date);
+        Task<Service> GetServiceByDateAndService(DateTime date, bool midi);
         Task<Service> UpdateAllAsync(Service entity);
     }
 }

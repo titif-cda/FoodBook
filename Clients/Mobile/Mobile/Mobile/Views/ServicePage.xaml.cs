@@ -21,19 +21,19 @@ namespace Mobile.Views
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MetsPage : Page
+    public sealed partial class ServicePage : Page
     {
-        private PlatsVM VM;
+        private ServiceVM VM;
 
-        public MetsPage()
+        public ServicePage()
         {
-            VM = new PlatsVM();
+            VM = new ServiceVM();
             this.InitializeComponent();
         }
 
         private void ResaButton_Click(object sender, RoutedEventArgs e)
         {
-            if(VM.Booking())
+            if(VM.LoadService())
             {
                 Frame.Navigate(typeof(LoginPage));
             }
@@ -41,7 +41,7 @@ namespace Mobile.Views
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MetsPage));
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

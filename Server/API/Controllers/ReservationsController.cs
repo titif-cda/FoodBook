@@ -74,11 +74,11 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateResa([FromBody] Reservation resa)
         {
-            // Ajout du livre avec la bll server
+            // Ajout de la resa avec la bll server
             Reservation newResa = await _clientService.CreateResa(resa);
             if (newResa != null)
             {
-                // Créer une redirection vers GetBookById(newBook.BookId);
+               
                 return CreatedAtAction(nameof(GetResaById), new { id = newResa.Id}, newResa);
             }
             else
@@ -87,6 +87,8 @@ namespace API.Controllers
                 return BadRequest();
             }
         }
+
+
 
         /// <summary>
         /// Supprime une reservation de la bdd

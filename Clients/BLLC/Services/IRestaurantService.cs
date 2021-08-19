@@ -40,6 +40,7 @@ namespace BLLC.Services
         Task<Service> GetDetailsService(int id);
         Task<Service> PutService(Service service);
         Task<bool> DeleteService(Service service);
+        Task<Service> GetServiceByDateAndService(DateTime? date, bool midi);
         #endregion
     }
 }

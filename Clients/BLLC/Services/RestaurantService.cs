@@ -4,6 +4,7 @@ using BO.DTO.Responses;
 using BO.Entity;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -343,6 +344,24 @@ namespace BLLC.Services
         public async Task<Service> GetDetailsService(int id)
         {
             var reponse = await _httpClient.GetAsync($"services/all/{id}");
+
+            if (reponse.IsSuccessStatusCode)
+            {
+                using (var stream = await reponse.Content.ReadAsStreamAsync())
+                {
+                    Service service = await JsonSerializer.DeserializeAsync<Service>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    return service;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<Service> GetServiceByDateAndService(DateTime? date, bool midi)
+        {
+            var reponse = await _httpClient.GetAsync($"services/filter?date={date.GetValueOrDefault().ToString("d", CultureInfo.InvariantCulture)}&midi={midi.ToString()}");
 
             if (reponse.IsSuccessStatusCode)
             {

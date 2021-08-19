@@ -94,7 +94,7 @@ namespace BLL.Services
 
         Task<Service> GetMetForServiceAsync(int id);
 
-        Task<IEnumerable<Service>> GetServiceByDate(DateTime date);
+        Task<Service> GetServiceByDateAndService(DateTime date, bool midi);
 
         Task<Service> ModifyService(Service service);
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO.Entity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,8 @@ namespace BO.DTO
 {
     public class ProfileDto
     {
-       
+        public int Id { get; set; }
+
         public string Nom { get; set; }
 
         public string Prenom { get; set; }
@@ -49,6 +51,19 @@ namespace BO.DTO
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Tel);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Login);
             return hashCode;
+        }
+
+        public Client ConvertToClient()
+        {
+            return new Client()
+            {
+                Id = Id,
+                Email = Email,
+                Login = Login,
+                Nom = Nom,
+                Prenom = Prenom,
+                Tel = Tel
+            };
         }
     }
 }

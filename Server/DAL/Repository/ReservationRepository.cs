@@ -76,9 +76,18 @@ namespace DAL.Repository
 
         public async Task<Reservation> InsertAsync(Reservation entity)
         {
-            var stmt = @"insert into RESERVATION(IdClient, IdService, Date, Nb, Entree, Plat, Dessert)  output INSERTED.Id
-            values ( @IdClient, @IdService, @Date, @Nb, @Entree, @Plat, @Dessert)";
-            int i = await _session.Connection.QuerySingleAsync<int>(stmt, entity, _session.Transaction);
+            var stmt = @"insert into Reservation (IdClient, IdService, Date, Nb, Entree, Plat, Dessert)  output INSERTED.Id
+            values (@IdClient, @IdService, @Date, @Nb, @Entree, @Plat, @Dessert)";
+            int i = await _session.Connection.QuerySingleAsync<int>(stmt, param: new
+            {
+                IdClient = entity.Client.Id,
+                IdService = entity.Service.Id,
+                Date = DateTime.Now,
+                Nb = entity.Nb,
+                Entree = entity.Entree,
+                Plat = entity.Plat,
+                Dessert = entity.Dessert
+            }, _session.Transaction);
             return await GetAsync(i);
         }
 

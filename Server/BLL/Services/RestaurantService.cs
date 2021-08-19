@@ -302,11 +302,11 @@ namespace BLL.Services
         }
 
 
-        public async Task<IEnumerable<Service>> GetServiceByDate(DateTime date)
+        public async Task<Service> GetServiceByDateAndService(DateTime date, bool midi)
         {
             IServiceRepository _service = _db.GetRepository<IServiceRepository>();
 
-            return await _service.GetServiceByDate(date);
+            return await _service.GetServiceByDateAndService(date,midi);
         }
        
         

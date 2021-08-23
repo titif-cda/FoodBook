@@ -35,9 +35,9 @@ namespace API.Controllers.V1
 
 
 		/// <summary>
-		/// Permet de récupérer une commande en fonction de son Identifiant
+		/// Permet de récupérer la liste des ingrédients à commander  
 		/// </summary>
-		/// <param name="id"></param>
+		/// <param name="commandeRequest">Les dates de début et fin </param>
 		/// <returns></returns>
 		[HttpGet("afficher")]
 		[ProducesResponseType(StatusCodes.Status200OK)]

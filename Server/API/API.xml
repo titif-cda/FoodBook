@@ -52,9 +52,9 @@
         </member>
         <member name="M:API.Controllers.V1.CommandeController.GetCommande(BO.DTO.Requests.CommandRequest)">
             <summary>
-            Permet de récupérer une commande en fonction de son Identifiant
+            Permet de récupérer la liste des ingrédients à commander  
             </summary>
-            <param name="id"></param>
+            <param name="commandeRequest">Les dates de début et fin </param>
             <returns></returns>
         </member>
         <member name="T:API.Controllers.IngredientsController">

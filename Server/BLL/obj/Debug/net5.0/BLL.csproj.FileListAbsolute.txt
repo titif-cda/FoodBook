@@ -35,10 +35,6 @@ D:\FilRougeFoodBook\FoodBook\FoodBook\Server\BLL\obj\Debug\net5.0\BLL.csproj.Cop
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\BLL\obj\Debug\net5.0\BLL.dll
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\BLL\obj\Debug\net5.0\ref\BLL.dll
 D:\FilRougeFoodBook\FoodBook\FoodBook\Server\BLL\obj\Debug\net5.0\BLL.pdb
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5.0\BLL.deps.json
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5.0\BLL.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5.0\ref\BLL.dll
@@ -51,6 +47,10 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5.0\DAL.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\bin\Debug\net5.0\DAL.xml
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\BLL.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\BLL\obj\Debug\net5.0\ref\BLL.dll

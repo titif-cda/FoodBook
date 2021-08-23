@@ -50,8 +50,29 @@ namespace Mobile.Views
 
         private async void AddResa_Click(object sender, RoutedEventArgs e)
         {
-            VM.AdBooking();
-           
+           var t = VM.AdBooking();
+            if (await t)
+            {
+                ContentDialog contentDialog = new ContentDialog()
+                {
+                    Title = "Bravo " + VM.Nom,
+                    Content = " Votre Réservation à été prise en compte le :" + VM.DateResa.ToString("dd MM yyyy"),
+                    CloseButtonText = "Ok"
+                };
+                await contentDialog.ShowAsync();
+                Frame.Navigate(typeof(ServicePage));
+            }
+            else
+            {
+                ContentDialog contentDialog = new ContentDialog()
+                {
+                    Title = "Attention " + VM.Nom,
+                    Content = "Votre Réservation a échouée",
+                    CloseButtonText = "Ok"
+                };
+                await contentDialog.ShowAsync();
+            }
+
         }
     }
 }

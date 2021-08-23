@@ -35,7 +35,20 @@ namespace Mobile.Views
         {
             if(VM.LoadService())
             {
-                Frame.Navigate(typeof(LoginPage));
+                myCalendarDatePicker.DateFormat = "{dayofweek.full}‎ {day.integer} {month.full}‎ ‎‎{year.full}";
+                //!not logged
+                
+                if (VM.IsLog)
+                {
+                    Frame.Navigate(typeof(ResaPage));
+                }
+                else
+                {
+                    Frame.Navigate(typeof(LoginPage));
+                }
+               
+                //else
+                //Resa page
             }
         }
 
@@ -43,5 +56,6 @@ namespace Mobile.Views
         {
             Frame.Navigate(typeof(MainPage));
         }
+
     }
 }

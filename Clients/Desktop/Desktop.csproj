@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BO\BO.csproj" />
     <ProjectReference Include="..\BLLC\BLLC.csproj" />
-    <ProjectReference Include="..\TestDesktop\TestDesktop.csproj" />
   </ItemGroup>
 
   <ItemGroup>

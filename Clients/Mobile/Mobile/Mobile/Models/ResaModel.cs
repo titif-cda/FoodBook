@@ -86,7 +86,7 @@ namespace Mobile.Models
 
         public async Task<bool> SaveResa()
         {
-            if(DateResa.HasValue)
+            if(DateResa.HasValue && !(IsResaPlat == false && IsResaEntree == false && IsResaDessert == false) && Nb > 0)
             {
                 var resa = await _clientService.CreateReservations(new Reservation(null, _client, _service, _dateResa.GetValueOrDefault(), _nb, IsResaEntree, IsResaPlat, IsResaDessert));
                 if(resa != null)

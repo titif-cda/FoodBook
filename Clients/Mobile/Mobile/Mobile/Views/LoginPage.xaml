@@ -62,23 +62,9 @@
         <Button x:Name="ValiderButton" Grid.Row="6"
                 Content="Valider"
                 Style="{StaticResource BouttonValid}"  
+                HorizontalAlignment="center"
                 Click="ValiderButton_Click" 
                 IsEnabled="{x:Bind VM.ActivateBtnSignIn, Mode=OneWay}"
-        />
-
-        <Button Grid.Row="7"
-                x:Name="RegisterButton"
-                x:Uid="MainPage_ButtonRegister"
-               
-                Content="Créer un compte"
-                FontSize="15"
-                Background="#8C52FF"
-                Foreground="Black"
-                FontWeight="Bold"
-                Padding="15,5,15,5"
-                HorizontalAlignment="Center"
-                BorderThickness="3,3,3,3"
-                Click="RegisterButton_Click"
         />
     </Grid>
 </Page>

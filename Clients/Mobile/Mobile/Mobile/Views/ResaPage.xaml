@@ -45,33 +45,15 @@
             <StackPanel Grid.Row="2"  
                         Orientation="Horizontal" 
                         HorizontalAlignment="left" >
-                <TextBlock Text="Nom :"
+                <TextBlock Text="Identité :"
                             Style="{StaticResource TextBoxTitre}" 
                 />
                 <TextBlock Text="{x:Bind VM.Nom, Mode=OneWay}"
                             Style="{StaticResource TextBoxText}" 
                 />
             </StackPanel>
-            <StackPanel Grid.Row="3"  
-                        Orientation="Horizontal" 
-                        HorizontalAlignment="left" >
-                <TextBlock Text="Prénom :"
-                            Style="{StaticResource TextBoxTitre}"
-                />
-                <TextBlock Text="{x:Bind VM.Prenom, Mode=OneWay}"
-                            Style="{StaticResource TextBoxText}"
-                />
-            </StackPanel>
-            <StackPanel Grid.Row="4"  
-                        Orientation="Horizontal" 
-                        HorizontalAlignment="left" >
-                <TextBlock Text="Date :"
-                            Style="{StaticResource TextBoxTitre}"
-                />
-                <TextBlock Text="{x:Bind VM.DateResa, Mode=OneWay}"
-                            Style="{StaticResource TextBoxText}" 
-                />
-            </StackPanel>
+            
+            
             <StackPanel Grid.Row="5"  
                         Orientation="Horizontal" 
                         HorizontalAlignment="left" >

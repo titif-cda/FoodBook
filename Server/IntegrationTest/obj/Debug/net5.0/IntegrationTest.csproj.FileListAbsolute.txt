@@ -703,8 +703,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bi
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.Encoding.CodePages.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.Encoding.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.Encoding.Extensions.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.Encodings.Web.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.Json.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Text.RegularExpressions.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Threading.Channels.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\refs\System.Threading.dll
@@ -889,3 +887,5 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\ob
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\obj\Debug\net5.0\ref\IntegrationTest.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\obj\Debug\net5.0\IntegrationTest.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\obj\Debug\net5.0\IntegrationTest.genruntimeconfig.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\IntegrationTest\bin\Debug\net5.0\System.Text.Json.dll

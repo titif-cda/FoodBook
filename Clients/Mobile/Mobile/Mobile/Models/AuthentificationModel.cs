@@ -59,7 +59,6 @@ namespace Mobile.Models
             var r = await AuthentificationService.Instance.Signin(login, password);
             IsLogged = r;
 
-            await Task.Delay(2000);
 
             if (IsLogged)
             {

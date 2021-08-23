@@ -1,6 +1,7 @@
 ﻿using BO.DTO;
 using BO.Entity;
 using Mobile.Models;
+using Mobile.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +23,20 @@ namespace Mobile.ViewModels
             _authM = AuthentificationModel.Instance;
             this.PropertyChanged += ResaVM_PropertyChanged;
 
-            Nom = _authM.Client.Nom;
+            Nom = _authM.Client.Nom +" "+ _authM.Client.Prenom;
             Prenom = _authM.Client.Prenom;
 
             DateResa = new DateTimeOffset(_serviceM.DateMet.GetValueOrDefault());
-            Service = (_serviceM.IsMidi) ? "Midi" : "Soir";
+            if (_serviceM.IsMidi)
+            {
+                Service = " du Midi le : " + DateResa.ToString("dd MM yyyy");
+            }
+            else
+            {
+                Service = " du Soir le : " + DateResa.ToString("dd MM yyyy");
+            }
+
+            //Service = (_serviceM.IsMidi) ? "Midi" : "Soir";
             Entree = _serviceM.Mets[0].Libelle;
             Plat = _serviceM.Mets[1].Libelle;
             Dessert = _serviceM.Mets[2].Libelle;
@@ -121,37 +131,22 @@ namespace Mobile.ViewModels
             set => Set(ref _activateBtnResa, value);
         }
 
-        public async void AdBooking()
+        public async Task<bool> AdBooking()
         {
             if (_serviceM.Service != null && _authM.Client != null)
             {
-                var resaM = new ResaModel(_serviceM.Service, _authM.Client.ConvertToClient(), DateResa.DateTime, QuantiteResa, IsResaEntree, IsResaPlat, IsResaDessert);
-
-                //Lancement resa
-                bool success = await resaM.SaveResa();
-                //finResa
-                if(success) {
-                    ContentDialog contentDialog = new ContentDialog()
-                    {
-                        Title = "Bravo",
-                        Content = "Reservation réussie",
-                        CloseButtonText = "Ok"
-                    };
-                    await contentDialog.ShowAsync();
-                }
-                else
+                if (!(IsResaPlat == false && IsResaEntree == false && IsResaDessert == false && QuantiteResa < 0))
                 {
-                    ContentDialog contentDialog = new ContentDialog()
-                    {
-                        Title = "Attention",
-                        Content = "Reservation a échouée",
-                        CloseButtonText = "Ok"
-                    };
-                    await contentDialog.ShowAsync();
+                    var resaM = new ResaModel(_serviceM.Service, _authM.Client.ConvertToClient(), DateResa.DateTime, QuantiteResa, IsResaEntree, IsResaPlat, IsResaDessert);
+
+                    //Lancement resa
+                    return await resaM.SaveResa();
+                    //finResa
                 }
+
 
             }
-
+            return false;
             
         }
 

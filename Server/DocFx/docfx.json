@@ -6,7 +6,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL\\Server"
+          "src": "D:\\M6\\Cours-20210415\\SEED-API-BLL-DAL\\SEED-API-BLL-DAL"
         }
       ],
       "dest": "api",

@@ -44,14 +44,17 @@
                        
             />
             <CalendarDatePicker Grid.Row="3"
-                                Margin="20,20,0,0"
+                                Margin="50,20,0,0"
                                 Date="{x:Bind VM.DateMet, Mode=TwoWay}"
+                                x:Name="myCalendarDatePicker"
+                                DateFormat = "{}{dayofweek.full}‎ {day.integer} {month.full}‎ ‎{year.full}"
+                                
                                 
                                 />
             
             
             <TextBlock Grid.Row="4"
-                   Text="Choisir un service"
+                   Text="Choisir un service :"
                    Style="{StaticResource TextBoxTitre}"
             />
             <StackPanel Grid.Row="5"  
@@ -77,7 +80,7 @@
                        TextDecorations="Underline"
             />
             <TextBlock Grid.Row="7"
-                       Text="Entree"
+                       Text="Entree :"
                        Style="{StaticResource TextBoxTitre}"
             />
             <TextBlock Grid.Row="8"
@@ -86,7 +89,7 @@
             />
             
             <TextBlock Grid.Row="9"
-                       Text="Plat"
+                       Text="Plat :"
                         Style="{StaticResource TextBoxTitre}"
             />
             <TextBlock Grid.Row="10"
@@ -95,7 +98,7 @@
                    
                      />
             <TextBlock Grid.Row="11"
-                       Text="Dessert"
+                       Text="Dessert :"
                         Style="{StaticResource TextBoxTitre}"
                    />
             <TextBlock Grid.Row="12"

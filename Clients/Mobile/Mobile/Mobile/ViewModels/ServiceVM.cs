@@ -11,7 +11,7 @@ namespace Mobile.ViewModels
     internal class ServiceVM : ViewModelBase
     {
         private ServiceModel _serviceM = ServiceModel.Instance;
-
+        private AuthentificationModel _auth = AuthentificationModel.Instance;
         public ServiceVM()
         {
             this.PropertyChanged += ServiceVM_PropertyChanged;
@@ -81,6 +81,10 @@ namespace Mobile.ViewModels
             get => _dateSelected;
             set => Set(ref _dateSelected, value);
         }
+
+        public bool IsLog => _auth.IsLogged;
+            
+        //isLogged => bool
 
         public bool LoadService()
         {    

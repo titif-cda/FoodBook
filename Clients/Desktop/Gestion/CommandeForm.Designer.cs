@@ -166,7 +166,6 @@ namespace Desktop.Gestion
             this.aCommanderDTGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.aCommanderDTGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.aCommanderDTGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aCommanderDTGV.ColumnHeadersVisible = false;
             this.aCommanderDTGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aCommanderDTGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.aCommanderDTGV.Location = new System.Drawing.Point(403, 3);

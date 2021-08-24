@@ -21,7 +21,8 @@ namespace Desktop.Gestion
 		public CommandeForm()
         {
 			_commandeService = new CommandeService();
-			InitializeComponent();
+
+            InitializeComponent();
 			
 		}
 		public async void LoadCommande()
@@ -43,7 +44,7 @@ namespace Desktop.Gestion
                 dDebutLbl.Font = new Font(dDebutLbl.Font, FontStyle.Bold);
                 dDebutLbl.Text = firstDate.ToString("dd MM yyyy");
                 dDebutLbl.ForeColor = System.Drawing.ColorTranslator.FromHtml("#8C52FF");
-                dFin.Text = firstDate.ToString("dd MM yyyy");
+                dFin.Text = lastDate.ToString("dd MM yyyy");
                 dFin.ForeColor = System.Drawing.ColorTranslator.FromHtml("#8C52FF");
                 recapDateslbl.Text = "Commande pour la semaine du : " + firstDate.ToString("dd MM yyyy") + " au " + lastDate.ToString("dd MM yyyy") ; 
             }

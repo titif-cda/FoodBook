@@ -9,8 +9,7 @@
       "Desktop/1.0.0": {
         "dependencies": {
           "BLLC": "1.0.0",
-          "BO": "1.0.0",
-          "TestDesktop": "1.0.0"
+          "BO": "1.0.0"
         },
         "runtime": {
           "Desktop.dll": {}
@@ -683,15 +682,6 @@
         "runtime": {
           "BO.dll": {}
         }
-      },
-      "TestDesktop/1.0.0": {
-        "dependencies": {
-          "BLLC": "1.0.0",
-          "BO": "1.0.0"
-        },
-        "runtime": {
-          "TestDesktop.dll": {}
-        }
       }
     }
   },
@@ -1239,11 +1229,6 @@
       "sha512": ""
     },
     "BO/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TestDesktop/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

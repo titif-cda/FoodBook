@@ -21,4 +21,3 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBoo
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\UnitTest\Debug\net5.0\UnitTest.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\UnitTest\Debug\net5.0\ref\UnitTest.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\UnitTest\Debug\net5.0\UnitTest.genruntimeconfig.cache
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\UnitTest\Debug\net5.0\UnitTest.csprojAssemblyReference.cache

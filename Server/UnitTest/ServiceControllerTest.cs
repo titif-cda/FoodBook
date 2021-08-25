@@ -96,59 +96,77 @@ namespace UnitTest
             {
                 Date = DateTime.Now,
                 Midi = true,
-                Id = 4,
+                Id = 2,
                 ListPlats = new List<Met>()
                             {
                                 new Met
                                 {
                                     Id = 7,
                                     Description = "DescRepas7",
-                                    IdType = 1,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 1,
+                                        Libelle ="Entree"
+                                    },
                                     Libelle = "LibelleRepas7"
                                 },
                                 new Met
                                 {
                                     Id = 8,
                                     Description = "DescRepas8",
-                                    IdType = 2,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 2,
+                                        Libelle ="Plat"
+                                    },
                                     Libelle = "LibelleRepas8"
                                 },
                                 new Met
                                 {
                                     Id = 9,
                                     Description = "DescRepas9",
-                                    IdType = 3,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 3,
+                                        Libelle ="Dessert"
+                                    },
                                     Libelle = "LibelleRepas9"
                                 }
                             }
             };
 
-            //Manque l'argument midi
+            //Id manquant
             Service Paques = new Service()
             {
+                Midi= true,
                 Date = DateTime.Now.AddDays(25),
-                Id = 5,
                 ListPlats = new List<Met>()
                             {
                                 new Met
                                 {
                                     Id = 10,
                                     Description = "DescRepas10",
-                                    IdType = 1,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 1,
+                                        Libelle ="Entree"
+                                    },
                                     Libelle = "LibelleRepas10"
                                 },
                                 new Met
                                 {
                                     Id = 11,
                                     Description = "DescRepas11",
-                                    IdType = 2,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 2,
+                                        Libelle ="Plat"
+                                    },
                                     Libelle = "LibelleRepas11"
                                 },
                                 new Met
                                 {
                                     Id = 12,
                                     Description = "DescRepas12",
-                                    IdType = 3,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 3,
+                                        Libelle ="Dessert"
+                                    },
                                     Libelle = "LibelleRepas12"
                                 }
                             }
@@ -172,29 +190,38 @@ namespace UnitTest
             Service Rentree = new Service()
             {
                 Date = DateTime.Now.AddDays(3),
-                
-                Id = 5,
+                Midi = true,
+                Id = 1,
                 ListPlats = new List<Met>()
                             {
                                 new Met
                                 {
                                     Id = 10,
                                     Description = "DescRepas10",
-                                    IdType = 1,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 1,
+                                        Libelle ="Entree"
+                                    },
                                     Libelle = "LibelleRepas10"
                                 },
                                 new Met
                                 {
                                     Id = 11,
                                     Description = "DescRepas11",
-                                    IdType = 2,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 2,
+                                        Libelle ="Plat"
+                                    },
                                     Libelle = "LibelleRepas11"
                                 },
                                 new Met
                                 {
                                     Id = 12,
                                     Description = "DescRepas12",
-                                    IdType = 3,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 3,
+                                        Libelle ="Dessert"
+                                    },
                                     Libelle = "LibelleRepas12"
                                 }
                             }
@@ -204,27 +231,37 @@ namespace UnitTest
                 Date = DateTime.Now.AddDays(25),
                 //NomMenu = "Menu covid",
                 Id = 198,
+                Midi = true,
                 ListPlats = new List<Met>()
                             {
                                 new Met
                                 {
                                     Id = 10,
                                     Description = "DescRepas10",
-                                    IdType = 1,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 1,
+                                        Libelle ="Entree"
+                                    },
                                     Libelle = "LibelleRepas10"
                                 },
                                 new Met
                                 {
                                     Id = 11,
                                     Description = "DescRepas11",
-                                    IdType = 2,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 2,
+                                        Libelle ="Plat"
+                                    },
                                     Libelle = "LibelleRepas11"
                                 },
                                 new Met
                                 {
                                     Id = 12,
                                     Description = "DescRepas12",
-                                    IdType = 3,
+                                    TypeRepas = new TypeRepas() {
+                                        Id = 3,
+                                        Libelle ="Dessert"
+                                    },
                                     Libelle = "LibelleRepas12"
                                 }
                             }
@@ -235,9 +272,9 @@ namespace UnitTest
 
 
             ////Act
-            OkObjectResult modifyMenu = await menuController.ModifyMenu(5, Rentree) as OkObjectResult;
-            BadRequestResult badRequestResult = await menuController.ModifyMenu(5, null) as BadRequestResult;
-            BadRequestResult badRequestResult1 = await menuController.ModifyMenu(33, Rentree) as BadRequestResult;
+            OkObjectResult modifyMenu = await menuController.ModifyMenu(1, Rentree) as OkObjectResult;
+            BadRequestResult badRequestResult = await menuController.ModifyMenu(15, null) as BadRequestResult;
+            BadRequestResult badRequestResult1 = await menuController.ModifyMenu(5, Rentree) as BadRequestResult;
             NotFoundResult notFoundMenuActionResult = await menuController.ModifyMenu(198, Covid) as NotFoundResult;
 
             ////Asserts

@@ -51,6 +51,16 @@ namespace UnitTest.Services
                 return Task.FromResult<Service>(null);
         }
 
+        public Task<Service> GetMetForServiceAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Service> GetServiceByDateAndService(DateTime date, bool midi)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<Service> InsertAsync(Service entity)
         {
             if(entity == null)
@@ -62,6 +72,11 @@ namespace UnitTest.Services
                 entity.Id = 1;
                 return Task.FromResult(entity);
             }
+        }
+
+        public Task<Service> UpdateAllAsync(Service entity)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateAsync(Service entity)

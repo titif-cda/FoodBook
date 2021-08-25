@@ -6,7 +6,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBoo
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\Server\API\bin\Debug\net5.0\API.runtimeconfig.dev.json
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\Server\API\bin\Debug\net5.0\API.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\Server\API\bin\Debug\net5.0\ref\API.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\API\net5.0\API.csprojAssemblyReference.cache
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\API\net5.0\API.csproj.AssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\API\net5.0\API.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\API\net5.0\API.AssemblyInfoInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\API\net5.0\API.AssemblyInfo.cs

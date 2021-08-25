@@ -19,31 +19,34 @@ namespace IntegrationTest
         [Fact]
         public async Task GetClientsById_Should_Be_OK()
         {
+           
             //Arrange
             Client expected = new Client()
             {
+            
+                Id = 1,
+                Nom = "MATHIEU",
+                Prenom = "Julien",
+                Tel = "0625869845",
+                Email = "j.m@yahoo.fr",
+                Login = "juju"
 
-               Id = 1,
-               Nom = "Allo",
-               Prenom = "Bundyde",
-               Tel = "06050360650",
-               Email = "adedel@ebay.com",
             };
             //Act
             try
             {
                 var response = await _clientHttp.GetFromJsonAsync<Client>("api/v1/clients/1");
-             //Assert
-                Assert.Equal( response, expected);
+                //Assert
+                Assert.Equal(response, expected);
             }
             catch (Exception)
             {
 
                 Assert.True(false);
             }
-            
 
-            
+
+
         }
 
         [Fact]

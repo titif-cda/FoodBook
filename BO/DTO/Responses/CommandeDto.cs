@@ -17,7 +17,7 @@ namespace BO.DTO.Responses
         ///// </summary>
         //public DateTime DateFinSemaine { get; set; }
         /// <summary>
-        /// Montant de la reservation
+        /// Montant total de la commande
         /// </summary>
         public float TotalPrix { get; set; }
         /// <summary>
@@ -31,7 +31,7 @@ namespace BO.DTO.Responses
         {
         }
         /// <summary>
-        /// Construceur avec arguments
+        /// Constructeur avec arguments
         /// </summary>
         /// <param name="dateDebutSemaine"></param>
         /// <param name="dateFinSemaine"></param>
@@ -39,8 +39,6 @@ namespace BO.DTO.Responses
         /// <param name="listIngredientQteDTOs"></param>
         public CommandeDto( float prix, List<LigneCommandeDto> listIngredientQteDTOs)
         {
-        //    DateDebutSemaine = dateDebutSemaine;
-        //    DateFinSemaine = dateFinSemaine;
             TotalPrix = prix;
             ListIngredientQteDTOs = listIngredientQteDTOs;
         }

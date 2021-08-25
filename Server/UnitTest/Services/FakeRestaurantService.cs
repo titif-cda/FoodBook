@@ -18,6 +18,37 @@ namespace UnitTest.Services
             new Ingredient(3,"gingembre",3)
         };
 
+        public List<Met> MetDB = new List<Met>()
+        {
+            new Met(){
+                Id = 1,
+                Libelle = "Soupe à l'oignon ",
+                Description = " Soupe à l'oignon",
+                TypeRepas = new TypeRepas() {
+                                    Id = 1,
+                                    Libelle ="Entree"
+                                },
+            },
+            new Met()
+            {
+                Id = 1,
+                Libelle = "pizza 4 fromage ",
+                Description = " descriptif1",
+                TypeRepas = new TypeRepas() {
+                                    Id = 2,
+                                    Libelle ="Plat"
+                                },
+            },
+            new Met(){
+                Id = 3,
+                Libelle = "boule de glace ",
+                Description = " descriptif2",
+                TypeRepas = new TypeRepas() {
+                                    Id = 1,
+                                    Libelle ="Entree"
+                                },
+            },
+        };
         public List<Service> MenuDb = new List<Service>()
                 {
                     new Service()
@@ -30,21 +61,30 @@ namespace UnitTest.Services
                             {
                                 Id = 1,
                                 Description = "DescRepas1",
-                                IdType = 1,
+                                TypeRepas = new TypeRepas() {
+                                    Id = 1,
+                                    Libelle ="Entree"
+                                },
                                 Libelle = "LibelleRepas1"
                             },
                             new Met
                             {
                                 Id = 2,
                                 Description = "DescRepas2",
-                                IdType = 2,
+                               TypeRepas = new TypeRepas() {
+                                    Id = 2,
+                                    Libelle ="Plat"
+                                },
                                 Libelle = "LibelleRepas2"
                             },
                             new Met
                             {
                                 Id = 3,
                                 Description = "DescRepas3",
-                                IdType = 3,
+                                TypeRepas = new TypeRepas() {
+                                    Id = 3,
+                                    Libelle ="Dessert"
+                                },
                                 Libelle = "LibelleRepas3"
                             }
                         }
@@ -59,27 +99,50 @@ namespace UnitTest.Services
                             {
                                 Id = 4,
                                 Description = "DescRepas4",
-                                IdType = 1,
+                                TypeRepas = new TypeRepas() {
+                                    Id = 1,
+                                    Libelle ="Entree"
+                                },
                                 Libelle = "LibelleRepas4"
                             },
                             new Met
                             {
                                 Id = 5,
                                 Description = "DescRepas5",
-                                IdType = 2,
+                                TypeRepas = new TypeRepas() {
+                                    Id = 2,
+                                    Libelle ="Plat"
+                                },
                                 Libelle = "LibelleRepas5"
                             },
                             new Met
                             {
                                 Id = 6,
                                 Description = "DescRepas6",
-                                IdType = 3,
+                                TypeRepas = new TypeRepas() {
+                                    Id = 3,
+                                    Libelle ="Dessert"
+                                },
                                 Libelle = "LibelleRepas6"
                             }
                         }
                     }
                 };
-
+        public List<TypeRepas> TypeDB = new List<TypeRepas>()
+        {
+             new TypeRepas(){
+                Id = 1,
+                Libelle = "Entree",
+            },
+             new TypeRepas(){
+                Id = 2,
+                Libelle = "Plat",
+            },
+             new TypeRepas(){
+                Id = 2,
+                Libelle = "Dessert",
+            }
+        };
 
 
 
@@ -124,8 +187,8 @@ namespace UnitTest.Services
             List<Ingredient> data = null;
             if (pageRequest.Page * pageRequest.PageSize < IngredientsDB.Count)
             {
-                int firstIndex = (pageRequest.Page * pageRequest.PageSize);
-                int lastIndex = ((pageRequest.Page * pageRequest.PageSize) + pageRequest.PageSize);
+                int firstIndex = (pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault());
+                int lastIndex = ((pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault()) + pageRequest.PageSize.GetValueOrDefault());
                 Math.Clamp(lastIndex, 0, IngredientsDB.Count);
 
                 data = IngredientsDB.GetRange(firstIndex, lastIndex - firstIndex);
@@ -145,8 +208,8 @@ namespace UnitTest.Services
             List<Service> data = null;
             if (pageRequest.Page * pageRequest.PageSize < MenuDb.Count)
             {
-                int firstIndex = (pageRequest.Page * pageRequest.PageSize);
-                int lastIndex = ((pageRequest.Page * pageRequest.PageSize) + pageRequest.PageSize);
+                int firstIndex = (pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault());
+                int lastIndex = ((pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault()) + pageRequest.PageSize.GetValueOrDefault());
                 Math.Clamp(lastIndex, 0, MenuDb.Count);
 
                 data = MenuDb.GetRange(firstIndex, lastIndex - firstIndex);
@@ -160,83 +223,48 @@ namespace UnitTest.Services
                 Data = data
             });
 
-            //return Task.FromResult(new PageResponse<Menu>()
-            //{
-            //    Data = new List<Menu>()
-            //    {
-            //        new Menu()
-            //        {
-            //            DateMenu = DateTime.Now,
-            //            IdMenu = 1,
-            //            ListPlats = new List<Repas>()
-            //            {
-            //                new Repas
-            //                {
-            //                    IdRepas = 1,
-            //                    DescRepas = "DescRepas1",
-            //                    IdTypeRepas = 1,
-            //                    LibelleRepas = "LibelleRepas1"
-            //                },
-            //                new Repas
-            //                {
-            //                    IdRepas = 2,
-            //                    DescRepas = "DescRepas2",
-            //                    IdTypeRepas = 2,
-            //                    LibelleRepas = "LibelleRepas2"
-            //                },
-            //                new Repas
-            //                {
-            //                    IdRepas = 3,
-            //                    DescRepas = "DescRepas3",
-            //                    IdTypeRepas = 3,
-            //                    LibelleRepas = "LibelleRepas3"
-            //                }
-            //            }
-            //        },
-            //        new Menu()
-            //        {
-            //            DateMenu = DateTime.Now.AddDays(1),
-            //            IdMenu = 1,
-            //            ListPlats = new List<Repas>()
-            //            {
-            //                new Repas
-            //                {
-            //                    IdRepas = 4,
-            //                    DescRepas = "DescRepas4",
-            //                    IdTypeRepas = 1,
-            //                    LibelleRepas = "LibelleRepas4"
-            //                },
-            //                new Repas
-            //                {
-            //                    IdRepas = 5,
-            //                    DescRepas = "DescRepas5",
-            //                    IdTypeRepas = 2,
-            //                    LibelleRepas = "LibelleRepas5"
-            //                },
-            //                new Repas
-            //                {
-            //                    IdRepas = 6,
-            //                    DescRepas = "DescRepas6",
-            //                    IdTypeRepas = 3,
-            //                    LibelleRepas = "LibelleRepas6"
-            //                }
-            //            }
-            //        }
-            //    },
-            //    Page = pageRequest.Page,
-            //    PageSize = pageRequest.PageSize,
-            //    TotalRecords = pageRequest.PageSize * 10,
-            //});
         }
 
-        public Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, Filter filter)
+        public Task<PageResponse<Met>> GetAllMet(PageRequest pageRequest, FilterMetPaged filter)
         {
-            throw new NotImplementedException();
+            List<Met> data = null;
+            if (pageRequest.Page * pageRequest.PageSize < MenuDb.Count)
+            {
+                int firstIndex = (pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault());
+                int lastIndex = ((pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault()) + pageRequest.PageSize.GetValueOrDefault());
+                Math.Clamp(lastIndex, 0, MenuDb.Count);
+
+                data = MetDB.GetRange(firstIndex, lastIndex - firstIndex);
+
+            }
+            return Task.FromResult(new PageResponse<Met>()
+            {
+                Page = pageRequest.Page,
+                PageSize = pageRequest.PageSize,
+                TotalRecords = MenuDb.Count,
+                Data = data
+            });
         }
 
         public Task<PageResponse<TypeRepas>> GetAllTypeRepas(PageRequest pageRequest)
         {
-            throw new NotImplementedException();
+            List<TypeRepas> data = null;
+            if (pageRequest.Page * pageRequest.PageSize < MenuDb.Count)
+            {
+                int firstIndex = (pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault());
+                int lastIndex = ((pageRequest.Page.GetValueOrDefault() * pageRequest.PageSize.GetValueOrDefault()) + pageRequest.PageSize.GetValueOrDefault());
+                Math.Clamp(lastIndex, 0, MenuDb.Count);
+
+                data = TypeDB.GetRange(firstIndex, lastIndex - firstIndex);
+
+            }
+            return Task.FromResult(new PageResponse<TypeRepas>()
+            {
+                Page = pageRequest.Page,
+                PageSize = pageRequest.PageSize,
+                TotalRecords = MenuDb.Count,
+                Data = data
+            });
         }
 
         public Task<Ingredient> GetIngredientById(int id)
@@ -251,12 +279,13 @@ namespace UnitTest.Services
 
         public Task<Met> GetMetById(int id)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(MetDB.Find(b => b.Id == id));
         }
 
         public Task<TypeRepas> GetTypeRepasById(int id)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(TypeDB.Find(b => b.Id == id));
+            
         }
 
         public Task<Ingredient> ModifyIngredient(Ingredient ingredient)
@@ -286,18 +315,41 @@ namespace UnitTest.Services
             }
             _Menu.Id = menus.Id;
             _Menu.Date = menus.Date;
+            _Menu.Midi = menus.Midi;
+            _Menu.ListPlats = menus.ListPlats;
 
             return Task.FromResult(_Menu);
         }
 
         public Task<Met> ModifyMet(Met Repas)
         {
-            throw new NotImplementedException();
+            if (Repas.Id == 0)
+                return null;
+            var _Met = MetDB.Find(b => b.Id == Repas.Id);
+            if (_Met == null)
+            {
+                return Task.FromResult<Met>(null);
+            }
+            _Met.Id = Repas.Id;
+            _Met.Libelle = Repas.Libelle;
+            _Met.Description = Repas.Description;
+            _Met.TypeRepas = Repas.TypeRepas;
+            _Met.ListDesIngredients = Repas.ListDesIngredients;
+            return Task.FromResult(_Met);
         }
 
         public Task<TypeRepas> ModifyTypeRepas(TypeRepas tRepas)
         {
-            throw new NotImplementedException();
+            if (tRepas.Id == 0)
+                return null;
+            var _TRepas = TypeDB.Find(b => b.Id == tRepas.Id);
+            if (_TRepas == null)
+            {
+                return Task.FromResult<TypeRepas>(null);
+            }
+            _TRepas.Id = tRepas.Id;
+            _TRepas.Libelle = tRepas.Libelle;
+            return Task.FromResult(_TRepas);
         }
 
         public Task<bool> RemoveIngredientById(int id)
@@ -314,10 +366,74 @@ namespace UnitTest.Services
 
         public Task<bool> RemoveMetById(int id)
         {
-            throw new NotImplementedException();
+            int i = MetDB.RemoveAll(b => b.Id == id);
+            return Task.FromResult(i > 0);
         }
 
         public Task<bool> RemoveTypeRepasById(int id)
+        {
+            int i = TypeDB.RemoveAll(b => b.Id == id);
+            return Task.FromResult(i > 0);
+        }
+
+        public Task<PageResponse<Met>> GetAllMet(FilterMetPaged filterMetPaged)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Met> GetIngredientParMetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Service> GetMetForServiceAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Service> GetServiceByDateAndService(DateTime date, bool midi)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Service> ModifyAllService(Service service)
+        {
+            if (service.Id == 0)
+                return null;
+            var _Service = MenuDb.Find(b => b.Id == service.Id);
+            if (_Service == null)
+            {
+                return Task.FromResult<Service>(null);
+            }
+            _Service.Id = service.Id;
+            _Service.Date = service.Date;
+            _Service.Midi = service.Midi;
+            _Service.ListPlats = service.ListPlats;
+
+            return Task.FromResult(_Service);
+        }
+
+        public Task<MetsIngredients> CreateListeIngredients(MetsIngredients ListeIngredients)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PageResponse<MetsIngredients>> GetAllListeIngredients(PageRequest pageRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<MetsIngredients> GetAllListeIngredientsById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<MetsIngredients> ModifyAllListeIngredients(MetsIngredients ListeIngredients)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RemovAllListeIngredientsById(int id)
         {
             throw new NotImplementedException();
         }

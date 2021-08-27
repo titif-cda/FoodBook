@@ -1,4 +1,3 @@
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\testhost.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\API.deps.json
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\API.runtimeconfig.json
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\API.runtimeconfig.dev.json
@@ -6,6 +5,7 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBoo
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\appsettings.json
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\API.exe
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\testhost.exe
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\testhost.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
@@ -288,7 +288,6 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBoo
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\refs\System.Xml.XPath.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\refs\System.Xml.XPath.XDocument.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\b\IntegrationTest\Debug\net5.0\refs\WindowsBase.dll
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\IntegrationTest\Debug\net5.0\IntegrationTest.csproj.AssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\IntegrationTest\Debug\net5.0\IntegrationTest.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\IntegrationTest\Debug\net5.0\IntegrationTest.AssemblyInfoInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\.vs\Server_FoodBook\v16\lut\0\i\IntegrationTest\Debug\net5.0\IntegrationTest.AssemblyInfo.cs

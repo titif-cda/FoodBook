@@ -132,11 +132,11 @@ namespace API
                 endpoints.MapControllers();
             });
 
-
-            app.UseDocFx(config =>
-            {
-                config.roothPath = "/doc";
-            });
+            //TODO a ecommenter lors de la réactivation de docfx
+            //app.UseDocFx(config =>
+            //{
+            //    config.roothPath = "/doc";
+            //});
 
 
             // MiddleWare de generation du OpenApi.Json

@@ -118,52 +118,52 @@ namespace Desktop
 
         private bool Controles()
         {
-            //if (String.IsNullOrWhiteSpace(NomCrudClientTbox.Text) || String.IsNullOrWhiteSpace(PrenomCrudClientTbox.Text))
-            //{
-            //    if (String.IsNullOrWhiteSpace(NomCrudClientTbox.Text))
-            //    {
-            //        MessageBox.Show("Saisie du Nom incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (String.IsNullOrWhiteSpace(NomCrudClientTbox.Text) || String.IsNullOrWhiteSpace(PrenomCrudClientTbox.Text))
+            {
+                if (String.IsNullOrWhiteSpace(NomCrudClientTbox.Text))
+                {
+                    MessageBox.Show("Saisie du Nom incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            //        NomCrudClientTbox.Select();
-            //        NomCrudClientTbox.Focus();
-            //        return false;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Saisie du Prenom incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    NomCrudClientTbox.Select();
+                    NomCrudClientTbox.Focus();
+                    return false;
+                }
+                else
+                {
+                    MessageBox.Show("Saisie du Prenom incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            //        PrenomCrudClientTbox.Select();
-            //        PrenomCrudClientTbox.Focus();
-            //        return false;
-            //    }
-            //}
+                    PrenomCrudClientTbox.Select();
+                    PrenomCrudClientTbox.Focus();
+                    return false;
+                }
+            }
 
-            ////on teste la validité du format de l'email
-            //if (!String.IsNullOrWhiteSpace(EmailCrudClientTbox.Text) && !ValidMail(EmailCrudClientTbox.Text))
-            //{
-            //    MessageBox.Show("Le Format de l'Email est incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    EmailCrudClientTbox.Select();
-            //    EmailCrudClientTbox.Focus();
-            //    return false;
-            //}
-            ////on teste la validité du format du telephone
+            //on teste la validité du format de l'email
+            if (!String.IsNullOrWhiteSpace(EmailCrudClientTbox.Text) && !ValidMail(EmailCrudClientTbox.Text))
+            {
+                MessageBox.Show("Le Format de l'Email est incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EmailCrudClientTbox.Select();
+                EmailCrudClientTbox.Focus();
+                return false;
+            }
+            //on teste la validité du format du telephone
 
-            //if (!String.IsNullOrWhiteSpace(TelCrudClientTbox.Text) && !PhoneNumber.IsPhoneNbr(TelCrudClientTbox.Text))
-            //{
-            //    MessageBox.Show("Le Format du telephone est incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TelCrudClientTbox.Select();
-            //    TelCrudClientTbox.Focus();
-            //    return false;
-            //}
-            ////on teste si le password1 et password2 sont les memes
+            if (!String.IsNullOrWhiteSpace(TelCrudClientTbox.Text) && !PhoneNumber.IsPhoneNbr(TelCrudClientTbox.Text))
+            {
+                MessageBox.Show("Le Format du telephone est incorrect", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TelCrudClientTbox.Select();
+                TelCrudClientTbox.Focus();
+                return false;
+            }
+            //on teste si le password1 et password2 sont les memes
 
-            //if (Password1TBox.Text != pasword2TBox.Text)
-            //{
-            //    MessageBox.Show("Les mots de passes saisis ne sont pas identiques", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TelCrudClientTbox.Select();
-            //    TelCrudClientTbox.Focus();
-            //    return false;
-            //}
+            if (Password1TBox.Text != pasword2TBox.Text)
+            {
+                MessageBox.Show("Les mots de passes saisis ne sont pas identiques", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TelCrudClientTbox.Select();
+                TelCrudClientTbox.Focus();
+                return false;
+            }
 
             return true;
         }

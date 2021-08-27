@@ -13,7 +13,6 @@ C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Rel
 C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Release\net5.0\DAL.dll
 C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Release\net5.0\ref\DAL.dll
 C:\Users\Fabien\Documents\AMIO\CDA3\CSHARP\Demos\SEED-API-BLL\Server\DAL\obj\Release\net5.0\DAL.pdb
-D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.csprojAssemblyReference.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.AssemblyInfoInputs.cache
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.AssemblyInfo.cs
@@ -28,3 +27,4 @@ D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\bin\Release\ne
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\bin\Release\net5.0\BO.dll
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\bin\Release\net5.0\BO.pdb
 D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.csproj.CopyComplete
+D:\M6\Cours-20210415\SEED-API-BLL-DAL\SEED-API-BLL-DAL\Server\DAL\obj\Release\net5.0\DAL.csproj.AssemblyReference.cache

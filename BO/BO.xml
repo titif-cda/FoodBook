@@ -63,7 +63,7 @@
         </member>
         <member name="P:BO.DTO.Responses.CommandeDto.TotalPrix">
             <summary>
-            Montant de la reservation
+            Montant total de la commande
             </summary>
         </member>
         <member name="P:BO.DTO.Responses.CommandeDto.ListIngredientQteDTOs">
@@ -78,7 +78,7 @@
         </member>
         <member name="M:BO.DTO.Responses.CommandeDto.#ctor(System.Single,System.Collections.Generic.List{BO.DTO.Responses.LigneCommandeDto})">
             <summary>
-            Construceur avec arguments
+            Constructeur avec arguments
             </summary>
             <param name="dateDebutSemaine"></param>
             <param name="dateFinSemaine"></param>

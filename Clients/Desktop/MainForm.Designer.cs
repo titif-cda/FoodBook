@@ -112,7 +112,7 @@ namespace Desktop
             this.clientBtn.TabIndex = 0;
             this.clientBtn.Text = "Clients";
             this.clientBtn.UseVisualStyleBackColor = false;
-            this.clientBtn.Click += new System.EventHandler(this.ClientBtn_Click);
+            this.clientBtn.Click += new System.EventHandler(this.clientBtn_Click);
             // 
             // IngredientBtn
             // 

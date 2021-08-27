@@ -58,7 +58,7 @@ namespace DAL.Repository
 
         public async Task<Service> GetMetForServiceAsync(int id)
         {
-            //Evité l'injection sql avec des reqêtes paramétrées
+            //Eviter l'injection sql avec des reqêtes paramétrées
             
             var req = @" select s.Midi, s.Date, s.Id, m.Id, m.Libelle, tp.Id, tp.Libelle from Service as s 
                 left join ServiceMets as sm on sm.IdService = s.Id 
@@ -71,13 +71,7 @@ namespace DAL.Repository
                  met.TypeRepas = typeRepas;
                  service.ListPlats = service.ListPlats ?? new List<Met>();
                  service.ListPlats.Add(met);
-                // met.ListDesIngredients = met.ListDesIngredients ?? new List<MetsIngredients>();
-                //if (serviceMet != null)
-                // {
-                //     serviceMet.Met = met;
-                //     service.ListPlats.Add(met);
-                // }
-
+               
                  return service;
              }, new { Id = id }, transaction: _session.Transaction, splitOn: "Id");
             

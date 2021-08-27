@@ -144,7 +144,10 @@ namespace UnitTest.Services
             }
         };
 
-
+        public Task<Service> GetServiceById(int id)
+        {
+            return Task.FromResult(MenuDb.Find(b => b.Id == id));
+        }
 
         public Task<Ingredient> CreateIngredient(Ingredient ingredient)
         {
@@ -272,10 +275,7 @@ namespace UnitTest.Services
             return Task.FromResult(IngredientsDB.Find(b => b.Id == id));
         }
 
-        public Task<Service> GetServiceById(int id)
-        {
-            return Task.FromResult(MenuDb.Find(b => b.Id == id));
-        }
+      
 
         public Task<Met> GetMetById(int id)
         {

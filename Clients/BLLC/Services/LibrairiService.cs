@@ -15,7 +15,7 @@ namespace BLLC.Services
 {
     public class LibrairiService : ILibrairiService
     {
-        private readonly HttpClient _httpClient;
+        private readonly HttpClient _httpClient ;
         public LibrairiService()
         {
             _httpClient = new HttpClient();

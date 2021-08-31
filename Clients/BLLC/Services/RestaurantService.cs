@@ -16,9 +16,12 @@ namespace BLLC.Services
 {
     public class RestaurantService : IRestaurantService
     {
+
         private readonly HttpClient _httpClient = AuthentificationService.Instance.httpClient;
 
-        public RestaurantService(){ }
+        public RestaurantService()
+        {
+        }
 
         #region Ingredient
         public async Task<Ingredient> CreateIngredient(Ingredient ingredient)

@@ -52,6 +52,7 @@ namespace Desktop
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+
         private void NavFormPanel(object Formulaire)
         {
             if (this.ContenuPnl.Controls.Count > 0)
@@ -93,19 +94,6 @@ namespace Desktop
         }
         #endregion
 
-        private void ClientBtn_Click(object sender, EventArgs e)
-        {
-           
-            
-            NavFormPanel(new ListClientsForm());
-            //if (this.WindowState == FormWindowState.Maximized)
-            //{
-               
-            //}
-        }
-
-       
-
         private void pnlMenuHorizontal_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -144,6 +132,11 @@ namespace Desktop
         {
             NavFormPanel(new GestionForm());
             //NavFormPanel(new CommandeForm());
+        }
+
+        private void clientBtn_Click(object sender, EventArgs e)
+        {
+            NavFormPanel(new ListClientsForm());
         }
     }
 }

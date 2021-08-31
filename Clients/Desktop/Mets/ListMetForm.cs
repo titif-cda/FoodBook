@@ -122,18 +122,32 @@ namespace Desktop.Mets
         /// <param name="e"></param>
         private async void DeleteMetBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (metDtGv.SelectedRows.Count ==1)
             {
-                Met met = metDtGv.CurrentRow.DataBoundItem as Met;
-                await _restaurantService.DeleteMet(met);
-                MessageBox.Show("Le plat : " + met.Libelle + " a été supprimé");
-                RefreshPage();
-            }
-            catch (Exception)
-            {
+                DialogResult result = MessageBox.Show("Voulez-vous vraiment supprimer ce plat ?",
+                                                        "Attention",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question,
+                                                        MessageBoxDefaultButton.Button2);
 
-                MessageBox.Show("Le plat selectionné n'a pas été supprimé");
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Met met = metDtGv.CurrentRow.DataBoundItem as Met;
+                        await _restaurantService.DeleteMet(met);
+                        MessageBox.Show("Le plat : " + met.Libelle + " a été supprimé");
+                        RefreshPage();
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                }
+
             }
+           
 
         }
         /// <summary>

@@ -89,9 +89,35 @@ namespace Desktop
         {
             if (!isCreation)
             {
+                
                 CurrentClient = Compute();
-                await _clientSercice.DeleteClient(CurrentClient);
-                DialogResult = DialogResult.OK;
+                if (CurrentClient.Id >0)
+                {
+                    DialogResult result = MessageBox.Show("Voulez-vous vraiment supprimer L'utilisateur : " + CurrentClient.Nom + " " + CurrentClient.Prenom + " ?",
+                                                        "Attention",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question,
+                                                        MessageBoxDefaultButton.Button2);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            await _clientSercice.DeleteClient(CurrentClient);
+                            MessageBox.Show("L'utilisateur : " + CurrentClient.Nom + " " + CurrentClient.Prenom + " a été supprimé");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                          
+                           
+                        }
+                        catch (Exception)
+                        {
+
+                            MessageBox.Show("L'utilisateur selectionné n'a pas été supprimé");
+                        }
+                    } 
+                }
+                
             }
         }
 

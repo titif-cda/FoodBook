@@ -18,6 +18,13 @@ namespace BLLC.Services
 
     public class AuthentificationService
     {
+
+#if DEBUG
+        private Uri BaseAddress = new Uri("https://localhost:5001/api/v1/");
+#else
+        private Uri BaseAddress = new Uri("http://user06.2isa.org/api/v1/");
+#endif
+
         private static AuthentificationService instance;
         private static object verrou = new object();
 
@@ -98,8 +105,9 @@ namespace BLLC.Services
                 Password = mdpHash
             };
 
+            _httpClient.BaseAddress = BaseAddress;
 
-            _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
+           
             try
             {
                 var httpResponse = await _httpClient.PostAsJsonAsync("clients/login", loginRequest);
@@ -133,7 +141,8 @@ namespace BLLC.Services
                 handler.ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, cetChain, policyErrors) => true;
                   
                 var _httpClient = new HttpClient(handler);
-                _httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
+
+                _httpClient.BaseAddress = BaseAddress;
                 _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {AuthentificationService.Instance.Token}");
 
                 return _httpClient;

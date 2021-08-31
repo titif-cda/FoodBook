@@ -206,6 +206,7 @@ namespace BLL.Services
 
             //Create JWT Token Object
             var token = new JwtSecurityToken(
+
                 _configuration["JwtIssuer"],
                 _configuration["JwtIssuer"],
                 claims,

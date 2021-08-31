@@ -14,12 +14,11 @@ namespace BLLC.Services
 {
 	public class CommandeService : ICommandeService
 	{
-		private readonly HttpClient _httpClient;
+		private readonly HttpClient _httpClient = AuthentificationService.Instance.httpClient;
 
 		public CommandeService()
 		{
-			_httpClient = new HttpClient();
-			_httpClient.BaseAddress = new Uri("https://localhost:5001/api/v1/");
+			
 		}
 
 		public async Task<CommandeDto> GetCommande()

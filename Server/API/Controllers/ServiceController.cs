@@ -130,8 +130,8 @@ namespace API.Controllers
         /// <param name="id">identifiant</param>
         /// <returns>succes ou echec</returns>
         [HttpDelete("{id}")]
-        [AllowAnonymous]
-        //[Authorize(Roles = "Administrateur")]
+       
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteService([FromRoute] int id)
@@ -156,8 +156,8 @@ namespace API.Controllers
         /// <param name="service">service concerné</param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        [AllowAnonymous]
-        //[Authorize(Roles = "Administrateur")]
+        
+        [Authorize(Roles = "Administrateur")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

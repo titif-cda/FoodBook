@@ -133,10 +133,10 @@ namespace API
             });
 
             //TODO a ecommenter lors de la réactivation de docfx
-            //app.UseDocFx(config =>
-            //{
-            //    config.roothPath = "/doc";
-            //});
+            app.UseDocFx(config =>
+            {
+                config.roothPath = "/doc";
+            });
 
 
             // MiddleWare de generation du OpenApi.Json

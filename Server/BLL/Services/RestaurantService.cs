@@ -259,23 +259,11 @@ namespace BLL.Services
 
             _db.BeginTransaction();
             IServiceRepository _service = _db.GetRepository<IServiceRepository>();
+            Service newService = await _service.InsertAsync(service);
 
-            
-            var serviceExist = await _service.GetServiceByDateAndService(service.Date.GetValueOrDefault().Date, service.Midi);
-            if (serviceExist.Date.GetValueOrDefault().Date == service.Date.GetValueOrDefault().Date && serviceExist.Midi == service.Midi)
-            {
-                Service newService = await _service.InsertAsync(service);
-                return newService;
-
-            }
-            else
-            {
-                return null;
-                
-            }
             _db.Commit();
 
-            return service;
+            return newService;
         }
         
         /// <summary>
@@ -303,6 +291,8 @@ namespace BLL.Services
 
             return await _service.GetAsync(id);
         }
+
+
 
         public async Task<Service> GetMetForServiceAsync(int id)
         {

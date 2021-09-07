@@ -9,7 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto"  >
-        <Grid Background="#8C52FF">
+        <Grid >
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/Images/backMobileService.png" />
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -20,15 +23,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                
             </Grid.RowDefinitions>
             <Image Grid.Row="0" 
                    Style="{StaticResource logoPages}"
@@ -43,16 +38,23 @@
                        Style="{StaticResource TextBoxTitre}"
                        
             />
-            <CalendarDatePicker Grid.Row="3"
+            <!--<CalendarDatePicker Grid.Row="3"
                                 Margin="50,20,0,0"
                                 Date="{x:Bind VM.DateMet, Mode=TwoWay}"
                                 x:Name="myCalendarDatePicker"
+                                FontSize="15"
                                 DateFormat = "{}{dayofweek.full}‎ {day.integer} {month.full}‎ ‎{year.full}"
-                                
-                                
-                                />
-            
-            
+                                />-->
+
+            <DatePicker  Grid.Row="3"  
+                         x:Name="myCalendarDatePicker"  
+                         Date="{x:Bind VM.DateMet , Mode=TwoWay}" 
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Background="Black"
+                         Foreground="WhiteSmoke"
+                         YearVisible="True"
+                         Width="200" FontSize="15"/>
             <TextBlock Grid.Row="4"
                    Text="Choisir un service :"
                    Style="{StaticResource TextBoxTitre}"
@@ -71,43 +73,62 @@
                              Style="{StaticResource StyleRadioButton}"
                              />
             </StackPanel>
-            <TextBlock Grid.Row="6"
-                       Text="Plats du jour"
-                       FontSize="20"
-                       Foreground="DarkRed"
-                       FontWeight="Bold"
-                       Margin="50,20,0,0" 
-                       TextDecorations="Underline"
-            />
-            <TextBlock Grid.Row="7"
-                       Text="Entree :"
-                       Style="{StaticResource TextBoxTitre}"
-            />
-            <TextBlock Grid.Row="8"
-                       Text="{x:Bind VM.Entree, Mode=TwoWay}"
-                       Style="{StaticResource TextBoxText}"
-            />
+
+
+            <StackPanel Grid.Row="6">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="../Assets/Images/tableau.png"  ></ImageBrush>
+                </StackPanel.Background>
+                 
+                    <TextBlock 
+                           Text="Plats du jour"
+                           FontSize="20"
+                           Foreground="WhiteSmoke"
+                           FontWeight="Bold"
+                           Margin="50,30,0,0" 
+                           HorizontalAlignment="Center"
+                    />
+                    <TextBlock 
+                               Text="Entree :"
+                               Style="{StaticResource TextBoxTitre}"
+                               Margin="150,30,0,0"
+                       
+                    />
+                    <TextBlock
+                               Text="{x:Bind VM.Entree, Mode=TwoWay}"
+                               Style="{StaticResource TextBoxText}"
+                         Foreground="WhiteSmoke"
+                        Margin="200,30,0,0"
+                    />
+                
+                    <TextBlock 
+                               Text="Plat :"
+                                Style="{StaticResource TextBoxTitre}"
+                        Margin="150,30,0,0"
+                    />
+                    <TextBlock
+                               Text="{x:Bind VM.Plat, Mode=TwoWay}"
+                                Style="{StaticResource TextBoxText}"
+                        Foreground="WhiteSmoke"
+                        Margin="200,30,0,0"
+                             />
+                    <TextBlock 
+                               Text="Dessert :"
+                                Style="{StaticResource TextBoxTitre}"
+                        Margin="150,30,0,0"
+                           />
+                    <TextBlock 
+                               Text="{x:Bind VM.Dessert, Mode=TwoWay}"
+                                Style="{StaticResource TextBoxText}"
+                         Foreground="WhiteSmoke"
+                        Margin="200,30,0,90"
+                    />
+                </StackPanel>
             
-            <TextBlock Grid.Row="9"
-                       Text="Plat :"
-                        Style="{StaticResource TextBoxTitre}"
-            />
-            <TextBlock Grid.Row="10"
-                       Text="{x:Bind VM.Plat, Mode=TwoWay}"
-                        Style="{StaticResource TextBoxText}"
-                   
-                     />
-            <TextBlock Grid.Row="11"
-                       Text="Dessert :"
-                        Style="{StaticResource TextBoxTitre}"
-                   />
-            <TextBlock Grid.Row="12"
-                       Text="{x:Bind VM.Dessert, Mode=TwoWay}"
-                        Style="{StaticResource TextBoxText}"
-            />
-            <Button x:Name="ResaButton" Grid.Row="13"
+            <Button x:Name="ResaButton" Grid.Row="8"
                     Content="Réserver"
                     Style="{StaticResource BouttonValid}"  
+                    Margin="0,20,0,0"
                     Click="ResaButton_Click" 
                     IsEnabled="{x:Bind VM.ActivateBtnBooking, Mode=OneWay}"
             />

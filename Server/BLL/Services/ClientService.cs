@@ -43,9 +43,6 @@ namespace BLL.Services
 
             return newResa;
         }
-
-       
-
         public async Task<PageResponse<Reservation>> GetAllResa(PageRequest pageRequest)
         {
             IReservationRepository _reservations = _db.GetRepository<IReservationRepository>();
@@ -53,16 +50,12 @@ namespace BLL.Services
 
             return resas;
         }
-       
-
         public async Task<Reservation> GetResaById(int id)
         {
             IReservationRepository _reservations = _db.GetRepository<IReservationRepository>();
 
             return await _reservations.GetAsync(id);
         }
-       
-
         public async Task<Reservation> ModifyResa(Reservation resa)
         {
             _db.BeginTransaction();

@@ -152,7 +152,13 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\backMobile.png" />
+    <Content Include="Assets\Images\backMobileLogin.png" />
+    <Content Include="Assets\Images\backMobileResa.png" />
+    <Content Include="Assets\Images\backMobileService.png" />
     <Content Include="Assets\Images\logoFoodBook.png" />
+    <Content Include="Assets\Images\logosansContour.png" />
+    <Content Include="Assets\Images\tableau.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />

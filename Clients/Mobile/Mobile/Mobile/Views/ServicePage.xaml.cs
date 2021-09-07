@@ -35,7 +35,7 @@ namespace Mobile.Views
         {
             if(VM.LoadService())
             {
-                myCalendarDatePicker.DateFormat = "{dayofweek.full}‎ {day.integer} {month.full}‎ ‎‎{year.full}";
+                myCalendarDatePicker.DayFormat = "{dayofweek.full}‎ {day.integer} {month.full}‎ ‎‎{year.full}";
                 //!not logged
                 
                 if (VM.IsLog)

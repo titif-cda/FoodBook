@@ -21,12 +21,12 @@
                     </Style>
                     <Style x:Key="TextBoxTitre" TargetType="TextBlock">
                         <Setter Property="FontSize" Value="20"></Setter>
-                        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                        <Setter Property="Foreground" Value="#8C52FF"></Setter>
                         <Setter Property="FontWeight" Value="Bold"></Setter>
                         <Setter Property="Margin" Value="50,20,0,0"></Setter>
                     </Style>
                     <Style x:Key="TextBoxText" TargetType="TextBlock">
-                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="FontSize" Value="15"></Setter>
                         <Setter Property="Foreground" Value="Black"></Setter>
                         <Setter Property="FontWeight" Value="Bold"></Setter>
                         <Setter Property="Margin" Value="100,20,0,0"></Setter>
@@ -34,7 +34,7 @@
                     <Style x:Key="logoPages" TargetType="Image">
                         <Setter Property="MaxHeight" Value="150"></Setter>
                         <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-                        <Setter Property="Source" Value="../Assets/Images/logoFoodBook.png"></Setter>
+                        <Setter Property="Source" Value="../Assets/Images/logosansContour.png"></Setter>
                         <Setter Property="Margin" Value="20"></Setter>
                     </Style>
                     <Style x:Key="BouttonValid" TargetType="Button">
@@ -63,14 +63,14 @@
                     </Style>
                     <Style x:Key="StyleRadioButton" TargetType="RadioButton">
                         <Setter Property="Margin" Value="15"></Setter>
-                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="FontSize" Value="15"></Setter>
                         <Setter Property="FontWeight" Value="Bold"></Setter>
                         <Setter Property="Foreground" Value="Black"></Setter>
                     </Style>
                     <Style x:Key="StyleChkBox" TargetType="CheckBox">
                         <Setter Property="FontWeight" Value="Bold"></Setter>
                         <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
-                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="FontSize" Value="15"></Setter>
                         <Setter Property="Margin" Value="50,20,0,0"></Setter>
                     </Style>
                 </ResourceDictionary>

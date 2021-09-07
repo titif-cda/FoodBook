@@ -217,6 +217,16 @@
             Description du Met (plat)
              </summary>
         </member>
+        <member name="P:BO.Entity.Met.TypeRepas">
+            <summary>
+            Objet TypeRepas
+            </summary>
+        </member>
+        <member name="P:BO.Entity.Met.ListDesIngredients">
+            <summary>
+            Liste des ingredients pour un met
+            </summary>
+        </member>
         <member name="M:BO.Entity.Met.#ctor">
             <summary>
             Constructeur par defaut

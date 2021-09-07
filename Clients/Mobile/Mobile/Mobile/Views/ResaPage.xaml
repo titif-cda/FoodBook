@@ -11,7 +11,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto"  >
-        <Grid Background="#8C52FF"> 
+        <Grid >
+            <Grid.Background>
+                <ImageBrush ImageSource="../Assets/Images/backMobileResa.png" />
+        </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -103,7 +106,7 @@
 
             <!-- Display the selected toppings. -->
             <TextBlock Grid.Row="7"  
-                       Text="Plats sélectionnés :"
+                       Text=""
                        FontWeight="SemiBold"
                        FontStyle="Italic"
                        Margin="20,20,0,20"/>

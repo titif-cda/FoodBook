@@ -306,6 +306,7 @@ namespace BLLC.Services
 
         public async Task<Service> CreateService(Service service)
         {
+           
             var reponse = await _httpClient.PostAsync("services",
                    new StringContent(
                        JsonSerializer.Serialize(service), Encoding.UTF8, "application/json"
@@ -371,6 +372,7 @@ namespace BLLC.Services
                 using (var stream = await reponse.Content.ReadAsStreamAsync())
                 {
                     Service service = await JsonSerializer.DeserializeAsync<Service>(stream, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                    
                     return service;
                 }
             }

@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#8C52FF">
+    <!--<Grid Background="#8C52FF">
 
         <Image Grid.Row="0" 
             Source="../Assets/Images/logoFoodBook.png"
@@ -16,5 +16,20 @@
                Margin="50" Tapped="Image_Tapped"
         />
 
+    </Grid>-->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/backMobile.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="700"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="1" 
+            Source="../Assets/Images/logosansContour.png" 
+                MaxHeight="150"
+              Tapped="Image_Tapped" Margin="0,87,0,-87"
+        />
     </Grid>
+    
 </Page>

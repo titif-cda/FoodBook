@@ -23,9 +23,13 @@ namespace BO.Entity
         ///Description du Met (plat)
         /// </summary>
         public string Description { get; set; }
-   
+        /// <summary>
+        /// Objet TypeRepas
+        /// </summary>
         public TypeRepas TypeRepas { get; set; }
-
+        /// <summary>
+        /// Liste des ingredients pour un met
+        /// </summary>
         public List<MetsIngredients> ListDesIngredients { get; set; }
         /// <summary>
         /// Constructeur par defaut

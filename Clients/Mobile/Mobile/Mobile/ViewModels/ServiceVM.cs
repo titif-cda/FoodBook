@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace Mobile.ViewModels
 {
-    internal class ServiceVM : ViewModelBase
+    internal class ServiceVM : ViewModelBase, IDisposable
     {
         private ServiceModel _serviceM = ServiceModel.Instance;
         private AuthentificationModel _auth = AuthentificationModel.Instance;
@@ -16,6 +16,7 @@ namespace Mobile.ViewModels
         {
             this.PropertyChanged += ServiceVM_PropertyChanged;
             _serviceM.Mets.CollectionChanged += Mets_CollectionChanged;
+
         }
 
         private void ServiceVM_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -31,8 +32,8 @@ namespace Mobile.ViewModels
             }
         }
 
-        private DateTimeOffset? _dateMet;
-        public DateTimeOffset? DateMet
+        private DateTimeOffset _dateMet = DateTimeOffset.Now;
+        public DateTimeOffset DateMet
         {
             get => _dateMet;
             set => Set(ref _dateMet, value);
@@ -46,21 +47,21 @@ namespace Mobile.ViewModels
         }
 
 
-        private string _entree;
+        private string _entree = null;
         public string Entree
         {
             get => _entree;
             set => Set(ref _entree, value);
         }
 
-        private string _plat;
+        private string _plat = null;
         public string Plat
         {
             get => _plat;
             set => Set(ref _plat, value);
         }
 
-        private string _dessert;
+        private string _dessert = null;
         public string Dessert
         {
             get => _dessert;
@@ -75,8 +76,8 @@ namespace Mobile.ViewModels
             set => Set(ref _activateBtnBooking, value);
         }
 
-        private DateTimeOffset? _dateSelected;
-        public DateTimeOffset? DateSelected
+        private DateTimeOffset _dateSelected;
+        public DateTimeOffset DateSelected
         {
             get => _dateSelected;
             set => Set(ref _dateSelected, value);
@@ -96,13 +97,13 @@ namespace Mobile.ViewModels
         /// </summary>
         private void RefreshActivateBooking()
         {
-            ActivateBtnBooking = !(DateMet == null);
+            ActivateBtnBooking = !(DateMet == DateTimeOffset.Now);
         }
 
         private void RefreshModel()
         {
            
-            _serviceM.DateMet = DateMet.GetValueOrDefault().DateTime;
+            _serviceM.DateMet = DateMet.DateTime;
             _serviceM.IsMidi = IsMidi;
             _serviceM.Load();
         }
@@ -117,9 +118,16 @@ namespace Mobile.ViewModels
             }
             else
             {
-                Entree = Plat = Dessert = null;
+                Entree = "Aucun service";
+                Plat = "Aucun service";
+                Dessert = "Aucun service";
             }
         }
 
+        public void Dispose()
+        {
+            this.PropertyChanged -= ServiceVM_PropertyChanged;
+            _serviceM.Mets.CollectionChanged -= Mets_CollectionChanged;
+        }
     }
 }

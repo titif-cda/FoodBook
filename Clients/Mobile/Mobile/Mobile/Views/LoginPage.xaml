@@ -8,7 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#8C52FF">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Images/backMobileLogin.png" />
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>

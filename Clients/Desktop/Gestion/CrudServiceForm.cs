@@ -23,8 +23,10 @@ namespace Desktop.Gestion
         private int maxPage;
         private int defaultPageSize = 20;
         private int IdTypePlat;
+        bool existDate = false;
+        bool existMidi = false;
         Service currentService;
-
+        
         public CrudServiceForm(Service service = null)
         {
             InitializeComponent();
@@ -94,14 +96,17 @@ namespace Desktop.Gestion
             }
             return new Service()
             {
+                
                 Id = Convert.ToInt32(id),
                 Date = serviceDateTP.Value,
                 Midi = ckboxMidi,
+
                 ListPlats = new List<Met>() { 
                     entreeCBox.SelectedItem as Met,
                     platCBox.SelectedItem as Met,
                     dessertCBox.SelectedItem as Met
                 }
+
             };
         }
 
@@ -126,20 +131,41 @@ namespace Desktop.Gestion
 
         private async void ActionCrudServiceBtn_Click(object sender, EventArgs e)
         {
+            var servicesDatabase = _restaurantService.GetAllService(new PageRequest(currentPage, defaultPageSize));
+            PageResponse<Service> servicesData = await servicesDatabase;
+            
+            //Service serviceExistant = await servicesDatabase ;
             currentService = Compute();
+            
+
+
             if (isCreation)
             {
-                var service = await _restaurantService.CreateService(currentService);
-                if (service == null)
+                List<Service> servicesBdd = servicesData.Data.ToList();
+                foreach (var s in servicesBdd)
                 {
-                    MessageBox.Show("La création du service à échoué ");
+                    if (s.Midi == currentService.Midi && s.Date.GetValueOrDefault().Date == currentService.Date.GetValueOrDefault().Date)
+                    {
+                        var d = MessageBox.Show("Le service existe déjà");
+                        if(d == DialogResult.OK)
+                            return;
+                    }
                 }
-                else
-                {
-                   
-                    string serviceLibelle;
-                    
-                    if (MidiCheckBox.Checked)
+                var service = await _restaurantService.CreateService(currentService);
+                //var testDate = servicesData.Data.Where(m => m.Date.GetValueOrDefault().Date == service.Date.GetValueOrDefault().Date).ToList();
+                //var testisMidi = servicesData.Data.Where(m => m.Midi == service.Midi).ToList();
+                //if (testDate.Count != 0 && testisMidi.Count != 0)
+                //{
+                //    MessageBox.Show("Le service existe déjà");
+                //}
+                //else
+                //{
+
+                //}
+
+                string serviceLibelle;
+                
+                if (MidiCheckBox.Checked)
                     {
                         SoirCheckBox.Checked = false;
                         serviceLibelle = "Midi";
@@ -153,7 +179,6 @@ namespace Desktop.Gestion
                         DialogResult = DialogResult.OK;
                         MessageBox.Show("La service du " + serviceLibelle + " le " + service.Date?.ToString("dd MMMM yyyy") + " a été créé");
                     }
-                }
             }
             else
             {

@@ -23,7 +23,6 @@ namespace UnitTest
 
             //Act
             OkObjectResult ingredientActionResult = await ingredientController.GetIngredientById(1) as OkObjectResult;
-
             NotFoundResult notFoundingredientActionResult = await ingredientController.GetIngredientById(10) as NotFoundResult;
 
             //Assert

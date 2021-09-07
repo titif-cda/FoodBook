@@ -57,7 +57,7 @@ namespace BO.Entity
             return obj is Service service &&
                    Id == service.Id &&
                    Midi == service.Midi &&
-                   Date == service.Date&&
+                   Date == service.Date &&
                    ListPlats == service.ListPlats; 
         }
 

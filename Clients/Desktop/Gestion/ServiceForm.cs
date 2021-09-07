@@ -174,28 +174,33 @@ namespace Desktop.Gestion
                 if (serviceId != null)
                 {
                     Service service = await _restaurantService.GetDetailsService(serviceId.Value);
+                    if (service != null)
+                    {
 
-                    if (service.ListPlats?.Count() > 0)
-                    {
-                      
-                        entreeServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 1).Select(met => met.Libelle).FirstOrDefault();
-                        platServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 2).Select(met => met.Libelle).FirstOrDefault();
-                        dessertServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 3).Select(met => met.Libelle).FirstOrDefault();
-                    }
-                    var serviceType = "";
-                    if (service.Midi)
-                    {
-                        serviceLbl.Text = "Service du midi";
-                        serviceType = "midi";
-                    }
-                    else
-                    {
-                        serviceLbl.Text = "Service du soir";
-                        serviceType = "soir";
-                    }
-                    dateServiceLbl.Text = service.Date?.ToString("dd MMMM yyyy");
 
-                    titreServiceLbl.Text = "Service du " + service.Date?.ToString("dddd dd MMM",CultureInfo.CreateSpecificCulture("fr-FR")) + " (" + serviceType.ToString() + ")";
+                        if (service.ListPlats?.Count() > 0)
+                        {
+
+                            entreeServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 1).Select(met => met.Libelle).FirstOrDefault();
+                            platServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 2).Select(met => met.Libelle).FirstOrDefault();
+                            dessertServiceLbl.Text = service.ListPlats.Where(metType => metType.TypeRepas.Id == 3).Select(met => met.Libelle).FirstOrDefault();
+                        }
+                        var serviceType = "";
+                        if (service.Midi)
+                        {
+                            serviceLbl.Text = "Service du midi";
+                            serviceType = "midi";
+                        }
+                        else
+                        {
+                            serviceLbl.Text = "Service du soir";
+                            serviceType = "soir";
+                        }
+                        dateServiceLbl.Text = service.Date?.ToString("dd MMMM yyyy");
+
+                        titreServiceLbl.Text = "Service du " + service.Date?.ToString("dddd dd MMM", CultureInfo.CreateSpecificCulture("fr-FR")) + " (" + serviceType.ToString() + ")";
+
+                    }
                 }
                
             }   
@@ -235,5 +240,7 @@ namespace Desktop.Gestion
                
             }
         }
+
+        
     }
 }

@@ -5,6 +5,7 @@ using Mobile.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,11 +30,11 @@ namespace Mobile.ViewModels
             DateResa = new DateTimeOffset(_serviceM.DateMet.GetValueOrDefault());
             if (_serviceM.IsMidi)
             {
-                Service = " du Midi le : " + DateResa.ToString("dd MM yyyy");
+                Service = " du Midi le " + DateResa.ToString("dddd dd MMM yyyy", CultureInfo.CreateSpecificCulture("fr-FR"));
             }
             else
             {
-                Service = " du Soir le : " + DateResa.ToString("dd MM yyyy");
+                Service = " du Soir le " + DateResa.ToString("dddd dd MMM yyyy", CultureInfo.CreateSpecificCulture("fr-FR"));
             }
 
             //Service = (_serviceM.IsMidi) ? "Midi" : "Soir";

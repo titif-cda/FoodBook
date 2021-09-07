@@ -41,7 +41,6 @@ namespace Desktop.Gestion
             this.platCBox = new System.Windows.Forms.ComboBox();
             this.dessertCBox = new System.Windows.Forms.ComboBox();
             this.ActionCrudServiceBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.DeleteBtnCrudService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -157,15 +156,6 @@ namespace Desktop.Gestion
             this.ActionCrudServiceBtn.UseVisualStyleBackColor = false;
             this.ActionCrudServiceBtn.Click += new System.EventHandler(this.ActionCrudServiceBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
-            // 
             // DeleteBtnCrudService
             // 
             this.DeleteBtnCrudService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
@@ -186,7 +176,6 @@ namespace Desktop.Gestion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 344);
             this.Controls.Add(this.DeleteBtnCrudService);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ActionCrudServiceBtn);
             this.Controls.Add(this.dessertCBox);
             this.Controls.Add(this.platCBox);

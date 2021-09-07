@@ -18,7 +18,7 @@ namespace Mobile.Models
             Client = client;
             DateResa = dateResa;
             Nb = nb;
-            IsResaEntree = isResaDessert;
+            IsResaEntree = isResaEntree;
             IsResaPlat = isResaPlat;
             IsResaDessert = isResaDessert;
         }

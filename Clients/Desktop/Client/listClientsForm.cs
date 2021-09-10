@@ -174,7 +174,7 @@ namespace Desktop
             }
             else
             {
-                defaultPageSize = 3;
+                defaultPageSize = 10;
                 Refresh();
             }
 

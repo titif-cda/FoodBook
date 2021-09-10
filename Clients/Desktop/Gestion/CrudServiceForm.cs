@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace Desktop.Gestion
                 //modif
                 currentService = service;
                 ActionCrudServiceBtn.Text = "Modifier";
-                label1.Text = service.Date?.ToString("dd MMMM yyyy");
+                //label1.Text = service.Date?.ToString("dd MMMM yyyy");
                 serviceDateTP.Value = service.Date ?? DateTime.Now;
                 // service
                 if (service.Midi)
@@ -112,7 +113,7 @@ namespace Desktop.Gestion
 
         private async Task LoadCheckBoxListBox()
         {
-            var filter = new FilterMetPaged(currentPage, defaultPageSize);
+            var filter = new FilterMetPaged(currentPage, 1000000);
 
             PageResponse<Met> met = await _restaurantService.GetAllMet(filter);
             bindingSourceplats.DataSource = met.Data;
@@ -152,17 +153,7 @@ namespace Desktop.Gestion
                     }
                 }
                 var service = await _restaurantService.CreateService(currentService);
-                //var testDate = servicesData.Data.Where(m => m.Date.GetValueOrDefault().Date == service.Date.GetValueOrDefault().Date).ToList();
-                //var testisMidi = servicesData.Data.Where(m => m.Midi == service.Midi).ToList();
-                //if (testDate.Count != 0 && testisMidi.Count != 0)
-                //{
-                //    MessageBox.Show("Le service existe déjà");
-                //}
-                //else
-                //{
-
-                //}
-
+                
                 string serviceLibelle;
                 
                 if (MidiCheckBox.Checked)
@@ -197,10 +188,32 @@ namespace Desktop.Gestion
 
         private async void DeleteBtnCrudService_Click(object sender, EventArgs e)
         {
+            
             if (!isCreation)
             {
-                currentService = Compute();
-                await _restaurantService.DeleteService(currentService);
+                
+                DialogResult result = MessageBox.Show("Voulez-vous vraiment supprimer ce service ?",
+                                                        "Attention",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question,
+                                                        MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Yes)
+                {
+                    currentService = Compute();
+                   
+                    try
+                    {
+                        await _restaurantService.DeleteService(currentService);
+                        MessageBox.Show("Le service du : " + currentService.Date?.ToString("dddd dd MMM", CultureInfo.CreateSpecificCulture("fr-FR")) + " à été supprimé");
+                        
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Le service n'a pas été supprimé");
+                        throw;
+                    }
+                }
+                
                 DialogResult = DialogResult.OK;
             }
         }

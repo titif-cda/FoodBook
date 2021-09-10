@@ -26,7 +26,7 @@ namespace Desktop.Mets
         private BindingSource bindingSource = new BindingSource();
         private BindingSource bindingSourceTypeRepas = new BindingSource();
         private int currentPage = 1;
-        private int defaultPageSize = 15;
+        private int defaultPageSize = 10;
         private int maxPage;
         private Met selectedMet;
         
@@ -132,17 +132,18 @@ namespace Desktop.Mets
 
                 if (result == DialogResult.Yes)
                 {
+                    Met met = metDtGv.CurrentRow.DataBoundItem as Met;
                     try
                     {
-                        Met met = metDtGv.CurrentRow.DataBoundItem as Met;
+                       
                         await _restaurantService.DeleteMet(met);
                         MessageBox.Show("Le plat : " + met.Libelle + " a été supprimé");
                         RefreshPage();
                     }
                     catch (Exception)
                     {
+                        MessageBox.Show("Le plat : " + met.Libelle + " n'a pas été supprimé");
 
-                        
                     }
                 }
 

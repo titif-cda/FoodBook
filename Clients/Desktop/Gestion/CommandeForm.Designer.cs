@@ -142,17 +142,17 @@ namespace Desktop.Gestion
             // 
             this.montantTotalLbl.AutoSize = true;
             this.montantTotalLbl.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.montantTotalLbl.Location = new System.Drawing.Point(319, 36);
+            this.montantTotalLbl.Location = new System.Drawing.Point(261, 36);
             this.montantTotalLbl.Name = "montantTotalLbl";
-            this.montantTotalLbl.Size = new System.Drawing.Size(72, 30);
+            this.montantTotalLbl.Size = new System.Drawing.Size(55, 30);
             this.montantTotalLbl.TabIndex = 1;
-            this.montantTotalLbl.Text = "label1";
+            this.montantTotalLbl.Text = "0.00";
             // 
             // totalLbl
             // 
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.totalLbl.Location = new System.Drawing.Point(127, 36);
+            this.totalLbl.Location = new System.Drawing.Point(69, 36);
             this.totalLbl.Name = "totalLbl";
             this.totalLbl.Size = new System.Drawing.Size(165, 30);
             this.totalLbl.TabIndex = 0;

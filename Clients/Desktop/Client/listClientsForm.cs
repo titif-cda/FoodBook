@@ -26,6 +26,7 @@ namespace Desktop
         private int defaultPageSize;
         private int maxPage;
 
+
         public SemaphoreSlim verrou = new SemaphoreSlim(1);
 
         public ListClientsForm()
@@ -33,6 +34,7 @@ namespace Desktop
             DoubleBuffered = true;
             InitializeComponent();
             clientTlp.DoubleBuffer(true);
+            clientTlp.AutoScroll = true;
             Responsive();
             Refresh();
             LoadClients();
@@ -169,12 +171,12 @@ namespace Desktop
         {
             if (this.Height >= 500 && this.Width >= 900)
             {
-                defaultPageSize = 6;
+                defaultPageSize = 10;
                 Refresh();
             }
             else
             {
-                defaultPageSize = 10;
+                defaultPageSize = 6;
                 Refresh();
             }
 
